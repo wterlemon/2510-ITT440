@@ -4,6 +4,8 @@
 **Assessment:** 1 (10%)  
 **Name:** MUHAMMAD SYAZWI BIN ISA 
 **Matrix Number:** 2024783361
+**Test Type:** Smoke Test (Basic Health Check)  
+
 
 ---
 
@@ -20,74 +22,52 @@ I have selected **`k6`** as my performance testing tool.
 
 ---
 
-## 🧪 Application Under Test (AUT)
+## 🧪 Test Strategy: Smoke Test
 
-I tested the public demo of **Sauce Demo**, a sample e-commerce website.
+I conducted a **Smoke Test** to verify basic system health and core functionality under minimal load.
 
-*   **Application URL:** [https://www.saucedemo.com/](https://www.saucedemo.com/)
-*   **Reason for Choice:** It provides a realistic user flow (login, product browsing, cart management) without requiring any setup, making it an ideal candidate for consistent and repeatable performance tests.
+*   **Objective:** Quick verification that critical endpoints are available and responsive
+*   **Load Profile:** Minimal load (3 virtual users) for short duration
+*   **Success Criteria:** High availability and fast response times
 
----
-
-## ⚡ Performance Test Executed: Spike Test
-
-The type of performance test I conducted is a **Spike Test**.
-
-*   **Objective:** To determine how the application behaves under a sudden and massive increase in load, simulating a scenario like a "flash sale" or a mention by a popular influencer.
-*   **What it measures:** The system's ability to handle abrupt traffic surges and its recovery process once the surge subsides.
+### Tested Endpoints:
+- `https://jsonplaceholder.typicode.com/posts/1`
+- `https://jsonplaceholder.typicode.com/users/1` 
+- `https://httpbin.org/status/200`
 
 ---
 
-## 🎬 Video Demonstration
+## 📊 Test Results & Analysis
 
----
+### 🎯 Executive Summary
+**STATUS: PASSED ✅** - The smoke test successfully verified system health with excellent performance metrics.
 
-## 📝 Test Plan & Script
+### 📈 Key Performance Indicators
 
-### Scenario: User Login Spike
-Simulate a scenario where 300 virtual users simultaneously attempt to log into the Sauce Demo application over a very short period (15 seconds).
+| Metric | Result | Assessment |
+|--------|--------|------------|
+| **Check Success Rate** | 97.97% | ✅ **Excellent** |
+| **HTTP Failure Rate** | 0.31% | ✅ **Excellent** |
+| **Average Response Time** | 279.39ms | ✅ **Excellent** |
+| **95th Percentile Response** | 1.28s | ✅ **Good** |
+| **Virtual Users** | 3 | ✅ **As Configured** |
 
-### k6 Test Script (`spike_test.js`)
+### 📋 Detailed Results
 
-```javascript
-import http from 'k6/http';
-import { check, sleep } from 'k6';
+```yaml
+Checks:
+  Total Checks: 2,568
+  Succeeded: 2,516 (97.97%) ✅
+  Failed: 52 (2.02%) ⚠️
 
-// Define test configuration
-export const options = {
-  stages: [
-    { duration: '5s', target: 10 },  // Ramp-up to 10 users quickly
-    { duration: '15s', target: 300 }, // SPIKE: Rapidly ramp-up to 300 users
-    { duration: '5s', target: 0 },    // Ramp-down to 0 users
-  ],
-};
+HTTP Metrics:
+  Total Requests: 1,284
+  Failed Requests: 4 (0.31%) ✅
+  Average Duration: 279.39ms ✅
+  P95 Duration: 1.28s ✅
+  Maximum Duration: 12.68s ⚠️
 
-export default function () {
-  // Step 1: Navigate to the login page (GET request)
-  let res = http.get('https://www.saucedemo.com/');
-
-  // Check if the page loaded successfully
-  check(res, {
-    'is status 200': (r) => r.status === 200,
-    'body contains login form': (r) => r.body.includes('login-button'),
-  });
-
-  // Step 2: Submit login credentials (POST request)
-  const loginPayload = {
-    'user-name': 'standard_user',
-    'password': 'secret_sauce',
-  };
-
-  res = res.submitForm({
-    formSelector: 'form',
-    fields: loginPayload,
-  });
-
-  // Check if login was successful by looking for the products page
-  check(res, {
-    'login successful': (r) => r.status === 200 && r.url.includes('inventory.html'),
-  });
-
-  // A short think time to simulate a user reading the page
-  sleep(1);
-}  
+Execution:
+  Iterations: 428
+  Virtual Users: 3 (consistent)
+  Test Duration: 2 minutes
