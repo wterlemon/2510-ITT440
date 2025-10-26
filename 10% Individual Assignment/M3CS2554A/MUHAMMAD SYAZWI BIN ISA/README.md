@@ -2,8 +2,8 @@
 
 **Course:** 2510-ITT440  
 **Assessment:** 1 (10%)  
-**Author:** [Your Name]  
-**Video Demo:** [Link to your YouTube Video Here]
+**Name:** MUHAMMAD SYAZWI BIN ISA 
+**Matrix Number:** 2024783361
 
 ---
 
@@ -39,12 +39,6 @@ The type of performance test I conducted is a **Spike Test**.
 ---
 
 ## 🎬 Video Demonstration
-
-A full screen capture of the test planning, execution, and result analysis is available on YouTube.
-
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
-
-*(Click the image above to watch the video)*
 
 ---
 
