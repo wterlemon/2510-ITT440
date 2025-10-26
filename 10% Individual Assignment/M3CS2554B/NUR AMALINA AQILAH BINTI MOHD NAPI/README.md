@@ -15,6 +15,9 @@ To evaluate the performance and stability of the Wikipedia website under simulat
 - To analyze how the website responds to continuous user access and identify any potential performance bottlenecks.
 - To demonstrate the use of Apache JMeter components for conducting web performance testing and analyzing test results effectively.
 ---
+## Hyphothesis
+
+---
 ## Tool and Targer Site Selection
 | Category | Description |
 |---------|-----------|
@@ -74,7 +77,7 @@ A user-Agent header was added using the HTTP Header Manager to make the requests
 The test shows that all the requests were successful with 0% error, which confirms that the Wikipedia website conducted the load test correctly. The average response time of about 2.15 seconds shows that performance was stable, although there were some slower requests which is up to 6 seconds due to lag in networks or servers. The rate of 1.2 requests per second means that the site was capable of processing several requests at one time. In general terms, the test results confirm that the website remained stable, responsive, and error-free while under simulated user load using Apache JMeter
 
 ---
-## Analysis and Discussion
+## Interpretation of Results and Identified Bottlenecks
 - All 10 samples were successfully completed with 0% error, showing that the Wikipedia website responded to every request without failure.
 - The average response time of 2153 ms equal to 2.15 seconds indicates that the website responded at a moderate speed under the simulated load.
 - The minimum response time of 608 ms equal to 0.61 seconds shows that some requests were processed quickly, while the maximum response time of 6002 ms equal to 6.00 seconds suggests a delay occurred during a few requests.
@@ -84,7 +87,19 @@ The test shows that all the requests were successful with 0% error, which confir
 - The results indicate that the Wikipedia website maintained good stability and was able to handle the simulated user load efficiently.
 - Overall, the test demonstrates that Apache JMeter is effective in measuring and analyzing website performance under load conditions.
 
+---
+## Recommendtions for Improvement
+- Implement content caching to reduce response time for repeated page requests.
+- Optimize server-side processing to handle higher user traffic more efficiently
+- Use Content Delivery Networks (CDN) to improve response speed for global users.
 
+  ---
+## Conclusion
+The performance test using Apache JMeter showed that the Wikipedia website maintained good stability and reliability under simulated user load. All requests were completed successfully with 0% error, and the average response time of about 2.15 seconds indicates acceptable performance. The overall results confirm that the website is capable of handling multiple user requests efficiently and can be considered stable for general web access.
+
+---
+## Demostrate video on Youtube
+https://youtu.be/Tb11D6PPvB0
 
 
 
