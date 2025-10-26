@@ -38,17 +38,16 @@ The goal is to collect baseline performance data, apply optimization techniques 
 
 ---
 
-## 🔍 Test Targets (URLs)
+## 🌐 Test Links (Endpoints Tested)
 
-All URLs tested are valid and return 200/301/302 responses:
+| Endpoint | Description | Status |
+|-----------|--------------|---------|
+| 🔹 [`/index.php`](http://localhost/wordpress/index.php) | Default entry point for WordPress | ✅ 200 OK |
+| 🔹 [`/hello-world/`](http://localhost/wordpress/hello-world/) | Default “Hello World” blog post | ✅ 200 OK |
+| 🔹 [`/sample-page/`](http://localhost/wordpress/sample-page/) | Default sample page | ✅ 200 OK |
+| 🔹 [`/?s=test`](http://localhost/wordpress/?s=test) | Search query for “test” keyword | ✅ 200 OK |
 
-http://localhost/wordpress/index.php
-
-http://localhost/wordpress/hello-world/
-
-http://localhost/wordpress/sample-page/
-
-http://localhost/wordpress/?s=test
+> All endpoints were verified manually in the browser and validated by k6.
 
 ---
 
