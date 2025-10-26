@@ -73,7 +73,7 @@ A user-Agent header was added using the HTTP Header Manager to make the requests
 | Sent KB/sec | 0.12 KB/sec | The average amount of data sent from JMeter to the website every second. |
 | Average Bytes | 1040.2 bytes | The average size of the response received from the server. |
 
-### Analysis Sumamry:
+### Analysis Summary:
 The test shows that all the requests were successful with 0% error, which confirms that the Wikipedia website conducted the load test correctly. The average response time of about 2.15 seconds shows that performance was stable, although there were some slower requests which is up to 6 seconds due to lag in networks or servers. The rate of 1.2 requests per second means that the site was capable of processing several requests at one time. In general terms, the test results confirm that the website remained stable, responsive, and error-free while under simulated user load using Apache JMeter
 
 ---
