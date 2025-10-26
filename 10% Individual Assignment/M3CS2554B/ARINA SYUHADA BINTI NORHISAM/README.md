@@ -111,7 +111,4 @@ Overall, the system showed **good stability and responsiveness**, making it reli
 
 ## Embedded YouTube Video
 
-[https://youtu.be/your-video-link-here](https://youtu.be/your-video-link-here)
-
-*(Replace the above link with your recorded video of running JMeter in VMware via MobaXterm.)*
 
