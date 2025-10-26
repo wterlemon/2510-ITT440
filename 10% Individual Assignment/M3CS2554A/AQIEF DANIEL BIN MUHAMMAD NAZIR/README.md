@@ -1,5 +1,10 @@
 # ⚡ Optimization on WordPress Using k6
 
+# ⚡ Optimization on WordPress Using k6  
+![Made with k6](https://img.shields.io/badge/Made%20with-k6-4B3263?style=for-the-badge&logo=k6)
+![Built on WordPress](https://img.shields.io/badge/Platform-WordPress-blue?style=for-the-badge&logo=wordpress)
+![Performance Testing](https://img.shields.io/badge/Tested%20With-Grafana%20k6-green?style=for-the-badge&logo=grafana)
+
 ### 👨‍💻 Name: Aqief Daniel Bin Muhammad Nazir  
 ### 🎓 Student ID: 2024125923  
 ### 🧾 Course: ITT440 – Individual Assignment  
