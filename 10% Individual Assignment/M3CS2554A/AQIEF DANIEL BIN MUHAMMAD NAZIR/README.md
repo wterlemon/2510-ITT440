@@ -123,14 +123,7 @@ By performing different types of load tests (smoke, load, stress, and soak), the
 
 ---
 
-## 📈 Visual Comparison (Optional)
-
-You can include screenshots of your k6 summary or graphs for:
-- Response time (p95)
-- Throughput (RPS)
-- Error rate comparison  
-Example:
-
+## 📈 Visual Comparison 
 ```text
 Baseline vs Optimized – p95 Latency
 
