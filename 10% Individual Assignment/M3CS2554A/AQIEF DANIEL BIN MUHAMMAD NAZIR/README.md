@@ -128,4 +128,38 @@ Using k6, measurable improvements were achieved in response time, throughput, an
 
 ## 📂 Folder Structure
 
+wordpress-k6-performance/
+│
+├── scripts/
+│ ├── load-test.js
+│ ├── stress-test.js
+│ ├── soak-test.js
+│ └── smoke-test.js
+│
+├── data/
+│ └── urls.txt
+│
+├── results/
+│ ├── baseline/
+│ └── optimized/
+│
+└── README.md
+
+
+---
+
+## 🏁 References
+- Grafana Labs. *k6 Documentation.* https://k6.io/docs/  
+- WordPress.org. *Optimization Guide.* https://wordpress.org/support/article/optimization/  
+- Apache Friends. *XAMPP for Windows.* https://www.apachefriends.org/  
+
+---
+
+*Prepared by:* **Aqief Daniel Bin Muhammad Nazir**  
+*Course:* (Your Course Code / Module Name)  
+*Semester:* October 2025
+
+Added performance results and conclusion sections to README
+
+
 
