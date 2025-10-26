@@ -17,7 +17,6 @@ This project demonstrates web application performance testing using **k6** to co
 | **Testing Tool** | k6 v0.45.0 |
 | **Application Under Test** | JSONPlaceholder REST API |
 | **Test Type** | Spike Test |
-| **Endpoint** | `https://jsonplaceholder.typicode.com/posts/1` |
 
 ## 🎯 Test Objectives
 
