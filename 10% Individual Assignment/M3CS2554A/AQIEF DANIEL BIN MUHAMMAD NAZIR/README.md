@@ -135,6 +135,7 @@ Example:
 Baseline vs Optimized – p95 Latency
 
 950ms ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
 420ms ▒▒▒▒▒▒▒▒▒▒▒▒
 
 
