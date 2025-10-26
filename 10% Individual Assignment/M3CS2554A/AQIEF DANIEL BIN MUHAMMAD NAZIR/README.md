@@ -208,15 +208,6 @@ Soak Test ▒▒▒▒▒▒▒ 2% → 0%
 > - No error spikes or slowdowns occurred during the soak test.  
 > - Final setup fully meets the ITT440 performance testing objectives.  
 
----
-
-💡 **Tip:**  
-If you want, you can add one more small touch — a code-style “performance badge” for quick visualization:
-
-```markdown
-![Performance Improved](https://img.shields.io/badge/Performance-Improved-brightgreen?style=for-the-badge)
-![Load%20Time-Reduced](https://img.shields.io/badge/Load%20Time-Reduced%20by%2056%25-blue?style=for-the-badge)
-![Error%20Rate-0%25-success](https://img.shields.io/badge/Error%20Rate-0%25-success?style=for-the-badge)
 
 
 
