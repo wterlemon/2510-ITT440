@@ -2,8 +2,8 @@
 
 ### 👨‍💻 Name: Aqief Daniel Bin Muhammad Nazir  
 ### 🎓 Student ID: 2024125923  
-### 🧾 Course: 2510-ITT440 – Individual Assignment  
-### 🧠 Lecturer: M3CS2554A  
+### 🧾 Course: ITT440 – Individual Assignment  
+### 🧠 Group: M3CS2554A  
 
 ---
 
