@@ -132,6 +132,5 @@ You can include screenshots of your k6 summary or graphs for:
 Example:
 
 ```text
-Baseline vs Optimized – p95 Latency
-950ms ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-420ms ▒▒▒▒▒▒▒▒▒▒▒▒
+![Load test summary](images/load-test-summary.png)
+
