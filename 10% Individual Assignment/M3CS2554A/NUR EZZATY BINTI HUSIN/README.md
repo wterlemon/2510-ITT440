@@ -1,4 +1,6 @@
-#### STUDENT NAME : NUR EZZATY BINTI HUSIN
+<img width="323" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
+
+### STUDENT NAME : NUR EZZATY BINTI HUSIN
 #### STUDENT ID : 2024528299
 # 🔍 Soak Testing of ChatGPT using JMeter
 ### 🎓 INTRODUCTION
@@ -12,11 +14,12 @@ Performance testing helps us understand how a website works when many people use
 - To analyze the results and give recommendations for better performance and stability.
 
   ### TOOL SELECTION
-| Reason |	Justification
-| Free and Open-Source |	Apache JMeter is free to use and open-source, making it suitable for both academic and professional projects |
-| User-Friendly Interface |	It allows easy creation of test plans and thread groups without complex setup |
-| Supports Multiple Test Types |	JMeter can perform load, stress, and soak testing effectively |
-| Detailed Performance Metrics |	It provides graphs, reports, and logs for detailed performance analysis |
-| Web Application Simulation |	JMeter can simulate multiple users sending HTTP requests, making it ideal for web-based performance testing |
+| **Reason** |	**Justification** |
+|------------|----------|
+| **Free and Open-Source** |	Apache JMeter is free to use and open-source, making it suitable for both academic and professional projects |
+| **User-Friendly Interface** |	It allows easy creation of test plans and thread groups without complex setup |
+| **Supports Multiple Test Types** |	JMeter can perform load, stress, and soak testing effectively |
+| **Detailed Performance Metrics** |	It provides graphs, reports, and logs for detailed performance analysis |
+| **Web Application Simulation** |	JMeter can simulate multiple users sending HTTP requests, making it ideal for web-based performance testing |
 
   
