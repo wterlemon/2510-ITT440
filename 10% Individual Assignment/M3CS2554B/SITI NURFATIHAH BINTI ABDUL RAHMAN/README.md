@@ -90,4 +90,48 @@ scenarios:
 - Some **HTTP 429 (Too Many Requests)** codes appeared, indicating that the API enforces rate limiting after a certain threshold — a normal behavior for public APIs.  
 - Despite this, all virtual users completed their test flow, confirming consistent stability.
 
+---
+
+## 🔍 Analysis & Discussion
+
+During the soak test, the **ReqRes API** demonstrated stable response times throughout the **15-minute duration**.  
+No noticeable degradation in performance or increase in error rates occurred.  
+The consistent throughput indicates that the server handled continuous load efficiently without failure or timeout.  
+
+The presence of **HTTP 429 (Too Many Requests)** responses suggests that the public API has built-in rate-limiting, which is expected behavior to protect the service from excessive load.  
+Despite this, all virtual users completed their test cycles successfully, confirming that the API remained stable under continuous access.
+
+---
+
+## 💡 Recommendations
+
+1. Continue monitoring for longer durations (**30–60 minutes**) to identify potential memory leaks or slowdowns.  
+2. Gradually increase the user load (e.g., 5–10 users/sec) to evaluate scalability limits.  
+3. Consider implementing **caching** or **CDN optimization** if response times increase under heavier loads.  
+4. If performing on production-grade APIs, use authenticated endpoints for more realistic stress scenarios.
+
+---
+
+## 🏁 Conclusion
+
+The **ReqRes API** successfully maintained stability and low latency during a **15-minute soak test** at **2 virtual users per second**.  
+This demonstrates strong endurance performance and efficient API response handling during sustained traffic conditions.  
+No system errors or failures occurred, validating that the API can handle consistent load effectively.
+
+---
+
+## 🎥 YouTube Demo Link
+
+📺 **Watch my Artillery test execution and report analysis here:**  
+[]
+
+---
+
+## 🧾 References
+
+- [Artillery Official Documentation](https://www.artillery.io/docs)  
+- [ReqRes API Documentation](https://reqres.in/)  
+- [Node.js Documentation](https://nodejs.org/en/docs)
+
+
 
