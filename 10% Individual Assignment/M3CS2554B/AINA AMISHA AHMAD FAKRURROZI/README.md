@@ -1,14 +1,14 @@
 # AINA AMISHA AHMAD FAKRURROZI
 ```markdown
-# 📊 Load Testing on Wikipedia using Grafana K6
+## 📊 Load Testing on Wikipedia using Grafana K6
 
-**Name:*AINA AMISHA BINTI AHMAD FAKRURROZI
-*Matrix ID:* 2024541935
-*Class:* M3CS2554B  
+Name: AINA AMISHA BINTI AHMAD FAKRURROZI
+Matrix ID: 2024541935
+Class: M3CS2554B  
 
 ---
 
-# 🧠 Introduction
+## 🧠 Introduction
 
 This performance testing project was conducted using **Grafana K6**, a modern open-source load testing tool built for developers. The goal was to evaluate the performance and stability of the **Wikipedia homepage** under simulated user load. K6 was chosen for its scripting flexibility, CLI-based execution, and ability to export results in JSON format for further analysis.
 
@@ -16,7 +16,7 @@ The test simulated virtual users accessing the Wikipedia homepage using a simple
 
 ---
 
-# 🎯 Objectives
+## 🎯 Objectives
 
 - Evaluate the performance and responsiveness of Wikipedia under simulated load  
 - Measure key metrics: request count, response time, error rate, and throughput  
@@ -26,7 +26,7 @@ The test simulated virtual users accessing the Wikipedia homepage using a simple
 
 ---
 
-# 🛠️ Tool and Target Site Selection
+## 🛠️ Tool and Target Site Selection
 
 | Category              | Description                                                                 |
 |-----------------------|------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ The test simulated virtual users accessing the Wikipedia homepage using a simple
 
 ---
 
-# ⚙️ Test Setup and Configuration
+## ⚙️ Test Setup and Configuration
 
 | Configuration Item         | Details                        |
 |----------------------------|--------------------------------|
@@ -56,7 +56,7 @@ The test script was written in JavaScript and executed using the K6 CLI. It simu
 
 ---
 
-# 🚀 Test Execution Steps
+## 🚀 Test Execution Steps
 
 | Step | Description |
 |------|-------------|
@@ -71,7 +71,7 @@ The test script was written in JavaScript and executed using the K6 CLI. It simu
 
 ---
 
-# 📈 Sample Test Results
+## 📈 Sample Test Results
 
 | Metric               | Value          | Description |
 |----------------------|----------------|-------------|
@@ -85,7 +85,7 @@ The test script was written in JavaScript and executed using the K6 CLI. It simu
 
 ---
 
-# 🧠 Interpretation and Bottlenecks
+## 🧠 Interpretation and Bottlenecks
 
 - All requests completed successfully with **0% error**
 - Average response time of **2.15s** indicates stable performance
@@ -95,7 +95,7 @@ The test script was written in JavaScript and executed using the K6 CLI. It simu
 
 ---
 
-# 🛠️ Recommendations
+## 🛠️ Recommendations
 
 - Use caching to reduce repeated request latency  
 - Optimize server-side logic for better scalability  
@@ -103,13 +103,13 @@ The test script was written in JavaScript and executed using the K6 CLI. It simu
 
 ---
 
-# ✅ Conclusion
+## ✅ Conclusion
 
 This test demonstrates that **Grafana K6** is an effective tool for simulating user load and analyzing web performance. The Wikipedia homepage remained stable and responsive under the configured load, and the exported results provided clear insights into system behavior. The integration with Node.js and conversion tools allowed for flexible reporting and visualization.
 
 ---
 
-# 🎥 Demonstration Video
+## 🎥 Demonstration Video
 
 Watch the full test execution and result analysis on YouTube:  
 🔗 
