@@ -56,23 +56,26 @@ export default function () {
 
 ```
 ## 🖥️ CLI Output
-<img width="1200" height="916" alt="image" src="https://github.com/user-attachments/assets/ed17ee76-3818-4d55-b07b-4bbd4e2a42a8" />
+<img width="918" height="507" alt="image" src="https://github.com/user-attachments/assets/8ed82623-99b8-4fde-ac57-244cd8e983c2" />
 
-Figure 1: CLI output from K6 stress test on Wikipedia
+Figure 1: CLI output from K6 stress test on Wikipedia 
 
 
 ## 📊 Results Summary
-Metric	Value
-Total HTTP Requests	1
-Checks Passed	2 / 2 (100%)
-Checks Failed	0
-Data Received	243 kB
-Data Sent	12 kB
-Virtual Users (VUs)	1
-Max VUs	1
-Response Time (avg)	324.18 ms
-Response Time (p95)	324.18 ms
-HTTP Request Failures	0.00%
+| 📊 **Metric**               | **Value**           |
+|----------------------------|---------------------|
+| Total HTTP Requests        | 1                   |
+| Checks Passed              | 2 / 2 (100%)        |
+| Checks Failed              | 0                   |
+| Data Received              | 243 kB              |
+| Data Sent                  | 12 kB               |
+| Virtual Users (VUs)        | 1                   |
+| Max VUs                    | 1                   |
+| Response Time (avg)        | 324.18 ms           |
+| Response Time (p95)        | 324.18 ms           |
+| HTTP Request Failures      | 0.00%               |
+
+
 ## 🔍 Interpretation
 Stability: The Wikipedia main page responded successfully with a 200 status code and passed all checks, indicating stable behavior under minimal load.
 
