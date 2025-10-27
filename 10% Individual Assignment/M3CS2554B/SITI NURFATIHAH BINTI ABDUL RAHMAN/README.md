@@ -66,12 +66,12 @@ scenarios:
 
 ---
 ## 📈 Response Time Chart
-![Response Time Chart](<img width="702" height="338" alt="response-time png" src="https://github.com/user-attachments/assets/d29db11c-dcb0-487e-a311-0c88da1bad1c" />
-)
+<img width="702" height="338" alt="response-time png" src="https://github.com/user-attachments/assets/94190e73-646b-40b0-8859-64819a7f5898" />
+
 
 ## ⚙️ Requests per Second (Throughput)
-![Throughput Chart](<img width="707" height="405" alt="rps-chart png" src="https://github.com/user-attachments/assets/5ff32cac-cf0d-4519-a8ca-6d853d7721a0" />
-)
+<img width="707" height="405" alt="rps-chart png" src="https://github.com/user-attachments/assets/30c98a82-89a8-447f-8b28-4e56521e81ef" />
+
 
 ---
 
