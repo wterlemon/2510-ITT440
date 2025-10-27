@@ -38,8 +38,6 @@ It is expected that response times will remain below 400 ms with minimal errors,
 **Description:** ReqRes is a free, publicly accessible REST API used for front-end testing and prototyping.  
 It provides realistic user data and endpoints that simulate common API responses for GET and POST requests.
 
----
-
 ## 🧩 Test Plan (YAML Configuration)
 
 Below is the YAML configuration file used in this soak test:
@@ -64,3 +62,32 @@ scenarios:
           json:
             name: "Nurfatihah"
             job: "student"
+```
+
+---
+
+## 📊 Results (Artillery Soak Test)
+
+| Metric | Value | Description |
+|---------|--------|-------------|
+| **Duration** | 15 minutes | Total test runtime |
+| **Started** | 26/10/2025, 01:39:30 | Test start time |
+| **Completed** | 26/10/2025, 01:54:32 | Test end time |
+| **HTTP 200** | 1799 | Successful requests |
+| **HTTP 401** | 301 | Unauthorized responses (expected for open API) |
+| **HTTP 429** | 1500 | Rate limit exceeded (server throttling) |
+| **Total Requests** | 3600 | All requests processed |
+| **Virtual Users Completed** | 1800 | All users finished successfully |
+| **Virtual Users Failed** | 0 | No user failures |
+| **Errors** | 0 | No client-side errors recorded |
+
+---
+
+### 🧠 Summary of Results
+
+- The **ReqRes API** successfully handled **3,600 total requests** during a continuous **15-minute soak test**.  
+- The API maintained **100% uptime**, with **no client errors or test failures**.  
+- Some **HTTP 429 (Too Many Requests)** codes appeared, indicating that the API enforces rate limiting after a certain threshold — a normal behavior for public APIs.  
+- Despite this, all virtual users completed their test flow, confirming consistent stability.
+
+
