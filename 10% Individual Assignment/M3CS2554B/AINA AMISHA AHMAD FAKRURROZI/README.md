@@ -29,4 +29,43 @@
 
 ## 📈 Stress Test Configuration
 ```javascript
-// Include your script here or link to it
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+const options = {
+  stages: [
+    { duration: '30s', target: 50 },
+    { duration: '1m', target: 100 },
+    { duration: '30s', target: 200 },
+    { duration: '1m', target: 0 },
+  ],
+  thresholds: {
+    http_req_duration: ['p(95)<500'],
+    http_req_failed: ['rate<0.01'],
+  },
+};
+
+export default function () {
+  let res = http.get('https://en.wikipedia.org/wiki/Main_Page');
+  check(res, {
+    'status is 200': (r) => r.status === 200,
+    'body size > 10KB': (r) => r.body.length > 10_000,
+  });
+  sleep(1);
+}
+
+```
+## 🖥️ CLI Output
+<img width="937" height="875" alt="stress-test" src="https://github.com/user-attachments/assets/2ab24c42-8fe5-4db8-b41b-aacb0a388128" />
+
+Figure 1: CLI output from K6 stress test on Wikipedia
+
+
+## 📊 Results Summary
+
+## 🔍 Interpretation
+
+## 🛠️ Recommendations
+
+## 🎥 Video Walkthrough
+
