@@ -65,6 +65,15 @@ scenarios:
 ```
 
 ---
+## 📈 Response Time Chart
+![Response Time Chart](<img width="702" height="338" alt="response-time png" src="https://github.com/user-attachments/assets/21519d62-6bbb-437f-ac54-dab8b601c4b5" />
+)
+
+## ⚙️ Requests per Second (Throughput)
+![Throughput Chart](<img width="707" height="405" alt="rps-chart png" src="https://github.com/user-attachments/assets/cdc2ec01-72e3-4223-a83d-47940fa5affd" />
+)
+
+---
 
 ## 📊 Results (Artillery Soak Test)
 
