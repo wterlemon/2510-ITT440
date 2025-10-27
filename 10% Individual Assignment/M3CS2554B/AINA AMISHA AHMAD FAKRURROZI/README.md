@@ -56,7 +56,7 @@ export default function () {
 
 ```
 ## 🖥️ CLI Output
-<img width="1042" height="807" alt="stress-test" src="https://github.com/user-attachments/assets/70f7a1ee-b54c-4c65-8459-62b33a4ab246" />
+<img width="1200" height="916" alt="image" src="https://github.com/user-attachments/assets/ed17ee76-3818-4d55-b07b-4bbd4e2a42a8" />
 
 Figure 1: CLI output from K6 stress test on Wikipedia
 
