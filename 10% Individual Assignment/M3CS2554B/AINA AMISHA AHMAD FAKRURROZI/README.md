@@ -56,14 +56,31 @@ export default function () {
 
 ```
 ## 🖥️ CLI Output
-<img width="937" height="875" alt="stress-test" src="https://github.com/user-attachments/assets/2ab24c42-8fe5-4db8-b41b-aacb0a388128" />
+<img width="1042" height="807" alt="stress-test" src="https://github.com/user-attachments/assets/70f7a1ee-b54c-4c65-8459-62b33a4ab246" />
 
 Figure 1: CLI output from K6 stress test on Wikipedia
 
 
 ## 📊 Results Summary
-
+Metric	Value
+Total HTTP Requests	1
+Checks Passed	2 / 2 (100%)
+Checks Failed	0
+Data Received	243 kB
+Data Sent	12 kB
+Virtual Users (VUs)	1
+Max VUs	1
+Response Time (avg)	324.18 ms
+Response Time (p95)	324.18 ms
+HTTP Request Failures	0.00%
 ## 🔍 Interpretation
+Stability: The Wikipedia main page responded successfully with a 200 status code and passed all checks, indicating stable behavior under minimal load.
+
+Latency: The average response time of ~324 ms is well within acceptable limits for public web applications.
+
+Reliability: No failed requests were recorded, suggesting strong availability and fault tolerance at this load level.
+
+Scale Limitation: With only 1 virtual user and 1 request, this test does not yet simulate stress conditions. It serves as a functional baseline.
 
 ## 🛠️ Recommendations
 
