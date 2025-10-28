@@ -224,12 +224,7 @@ It includes:
 - 🚀 Final conclusion and reflection on performance improvements
 
 👉 **Watch the full presentation here:**  
-🎬 [https://youtu.be/YOUR_VIDEO_LINK_HERE](https://youtu.be/YOUR_VIDEO_LINK_HERE)
-
-> 🧩 *Note:* The video was recorded locally using OBS Studio,  
-> featuring on-screen text captions for clarity (no voice narration).  
-> Each test was executed on a real localhost WordPress environment,  
-> and all results match the performance data shown in this report.
+🎬 coming soon....
 
 ---
 
