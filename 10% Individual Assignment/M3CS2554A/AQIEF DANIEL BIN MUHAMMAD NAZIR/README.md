@@ -17,8 +17,7 @@ By performing different types of load tests (smoke, load, stress, and soak), the
 
 ---
 
-## 🧰 Test Environment<img width="621" height="308" alt="Screenshot 2025-06-24 102600" src="https://github.com/user-attachments/assets/9ef34549-16f0-4f21-9775-dee10889078b" />
-
+## 🧰 Test Environment
 
 | Component | Details |
 |------------|----------|
