@@ -16,9 +16,10 @@ To evaluate the performance and stability of the Wikipedia website under simulat
 - To demonstrate the use of Apache JMeter components for conducting web performance testing and analyzing test results effectively.
 ---
 ## Hyphothesis
+It is hypothesized that the Wikipedia website will demonstrate stable performance and minimal error rate under a moderate simulated user load test using Apache JMeter. The website is expected to maintain stable response time and constant throughput, indicating successful handling of concurrent requests. However, when the load is escalated even more, there may be some degradation in performance in terms od slowed response time or reduced throughput due to heightened processing on the server and network resources.
 
 ---
-## Tool and Targer Site Selection
+## Tool and Target Site Selection
 | Category | Description |
 |---------|-----------|
 | Tool Name | Apache JMeter |
@@ -59,6 +60,13 @@ A user-Agent header was added using the HTTP Header Manager to make the requests
 | Step 8: Analyze Test Results | After execution, data from the Summary Report was analyzed to evaluate website performance, response stability, and throughput under simulated load conditions. |
 
 ---
+## Raw data 
+<img width="552" height="344" alt="Screenshot 2025-10-27 232926" src="https://github.com/user-attachments/assets/83e886b8-fbfd-4bb5-884c-21169d0f2fb0" />
+
+<img width="500" height="294" alt="Data transfer Rate " src="https://github.com/user-attachments/assets/5bab0ea4-c4ea-4e5a-8926-11b124379c7a" />
+
+
+
 ## Test Result and Analysis
 | Metric | Result | Explanation |
 |-----------|:------------:|-----------|
