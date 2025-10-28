@@ -209,6 +209,29 @@ Soak Test ▒▒▒▒▒▒▒ 2% → 0%
 > - No error spikes or slowdowns occurred during the soak test.  
 > - Final setup fully meets the ITT440 performance testing objectives.  
 
+---
+
+## 🎥 Project Walkthrough Presentation
+
+This video presentation demonstrates the **complete testing and optimization process** for the project  
+**“⚡ Optimization on WordPress Using Grafana k6.”**
+
+It includes:
+- ✅ Environment setup using **XAMPP** and **WordPress**
+- 🧪 Running the **Smoke, Load, Stress, and Soak** tests with **Grafana k6**
+- ⚙️ Applying **optimization techniques** (WP Super Cache + Autoptimize)
+- 📊 Comparing **Baseline vs Optimized performance**
+- 🚀 Final conclusion and reflection on performance improvements
+
+👉 **Watch the full presentation here:**  
+🎬 [https://youtu.be/YOUR_VIDEO_LINK_HERE](https://youtu.be/YOUR_VIDEO_LINK_HERE)
+
+> 🧩 *Note:* The video was recorded locally using OBS Studio,  
+> featuring on-screen text captions for clarity (no voice narration).  
+> Each test was executed on a real localhost WordPress environment,  
+> and all results match the performance data shown in this report.
+
+---
 
 
 
