@@ -212,7 +212,6 @@ Soak Test ▒▒▒▒▒▒▒ 2% → 0%
 
 
 
-<img width="5361" height="3801" alt="bmc iot" src="https://github.com/user-attachments/assets/2444e291-e416-4b66-ae37-9edc14e86cad" />
 
 
 
