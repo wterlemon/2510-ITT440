@@ -1,3 +1,4 @@
 # 💬 Stress Testing of BlazeDemo using Gatling
 
-<img width="323" height="174" alt="image" src="https://github.com/user-attachments/assets/0060b1f0-3d6e-4aad-b1e9-9489550435bc" />
+<img width="52" height="52" alt="image" src="https://github.com/user-attachments/assets/0a319224-a6dd-4664-a9c7-c35d97ed4dbf" />
+
