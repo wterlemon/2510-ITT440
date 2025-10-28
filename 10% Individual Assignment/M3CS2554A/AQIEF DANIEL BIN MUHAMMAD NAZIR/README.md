@@ -17,7 +17,8 @@ By performing different types of load tests (smoke, load, stress, and soak), the
 
 ---
 
-## 🧰 Test Environment
+## 🧰 Test Environment<img width="621" height="308" alt="Screenshot 2025-06-24 102600" src="https://github.com/user-attachments/assets/9ef34549-16f0-4f21-9775-dee10889078b" />
+
 
 | Component | Details |
 |------------|----------|
@@ -211,6 +212,7 @@ Soak Test ▒▒▒▒▒▒▒ 2% → 0%
 
 
 
+<img width="5361" height="3801" alt="bmc iot" src="https://github.com/user-attachments/assets/2444e291-e416-4b66-ae37-9edc14e86cad" />
 
 
 
