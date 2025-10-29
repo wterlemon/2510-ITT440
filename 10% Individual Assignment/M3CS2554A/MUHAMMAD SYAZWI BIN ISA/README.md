@@ -1,6 +1,6 @@
 # 🚀 Web Application Performance Testing - E-commerce Platform Analysis
 
-**Course:** 2510-ITT440  
+**Course:** ITT440  
 **Name:** MUHAMMAD SYAZWI BIN ISA  
 **Matrix Number:** 2024783361  
 **Test Type:** Smoke Test (Basic Health Check)  
