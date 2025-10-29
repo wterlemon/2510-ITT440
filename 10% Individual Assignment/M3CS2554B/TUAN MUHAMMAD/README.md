@@ -1,6 +1,11 @@
-###  STUDENT NAME : TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM
-###  ITT440 - INDIVIDUAL ASSIGNMENT
-###  GROUP : M3CS2554B
+
+
+<p align="center">
+<img width="400" height="400" alt="Picture1" src="https://github.com/user-attachments/assets/84ac953a-e51a-47b3-b158-802c5d97b005" />
+
+### STUDENT NAME : TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM
+### ITT440 - INDIVIDUAL ASSIGNMENT
+### GROUP : M3CS2554B
 ---
 
 #  Performance Testing Report – Stress Test (Taurus + Reqres.in)
