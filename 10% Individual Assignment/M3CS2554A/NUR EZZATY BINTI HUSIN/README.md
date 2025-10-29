@@ -1,6 +1,6 @@
-# 🔥 *Endurance Testing of ChatGPT using JMeter*
+# <h1 align="center">🔥 *Endurance Testing of ChatGPT using JMeter*</h1>
 <p align="center">
-<img width="180" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
+<img width="250" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
 
 #### 🧑‍🎓 STUDENT NAME : NUR EZZATY BINTI HUSIN
 #### 📝 ITT440 - INDIVIDUAL ASSIGNMENT
