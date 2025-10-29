@@ -46,6 +46,7 @@ and the **throughput (requests per second)** will change depending on server cap
 ## 🌐 Target Application Description
 
 **Target URL:** [https://reqres.in](https://reqres.in)
+
 **Description:** ReqRes is a free, public REST API designed for testing and front-end prototyping.
 It provides endpoints for simulating typical API responses for GET and POST requests.
 
@@ -298,8 +299,3 @@ The analysis showed predictable response time growth under heavier load, proving
 * [ReqRes API Documentation](https://reqres.in/)
 * [Pandas Documentation](https://pandas.pydata.org/docs/)
 * [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-
----
-
-Would you like me to add a **bash `.sh` file** section (so you can re-run all 3 commands automatically next time)?
-
