@@ -10,6 +10,13 @@
 Performance testing helps us understand how a website works when many people use it at the same time or for a long period. It checks if the website stays fast, stable, and reliable. For this assignment, I choose ChatGPT as the web application to test. ChatGPT is a popular AI chatbot that lets users talk to it by typing messages. I focused on a type of performance test called a Soak Test. This test checks how well the system performs when it is used continuously for a long time. It helps find problems like slow responses or crashes that might happen after hours of use. To do this test, I used Apache JMeter, a tool commonly used for performance testing. Since we are not allowed to test ChatGPT’s real servers, I created simulated results. These results show what we might expect if we tested a similar system for a long time.
 
 ---
+
+### What is soak test?
+Soak Testing tests the ability of your software to perform under expected user traffic over a long period of time.
+- The user traffic is high over a long period of time.
+- Possibility in real-life
+
+---
 ### 🧠 Objectives
 - To simulate a continuous number of virtual users interacting with the ChatGPT web interface over an extended period.
 - To observe the system’s response time, throughput, and error rate.
@@ -31,12 +38,11 @@ Performance testing helps us understand how a website works when many people use
 | **Component** |	**Description** |
 |------------|----------|
 | **Tool Used** |	Apache JMeter 5.6 |
-| **Operating System** |	Windows 10 |
-| **Memory** |	8 GB |
+| **Operating System** |	Windows 11 |
 | **Processor**	| Intel Core i5 |
 | **Target Application** |	https://chat.openai.com |
 | **Test Duration** |	1 hour |
-| **Virtual Users** (Threads) |	50 |
+| **Virtual Users** (Threads) |	10 |
 | **Ramp-up Period** | 5 minutes |
 
 The test simulates 50 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
