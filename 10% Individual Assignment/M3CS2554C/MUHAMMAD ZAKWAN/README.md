@@ -21,26 +21,34 @@ Belum siap lagi <br>
 
 # 🧰 TOOL SELECTION
 - Apache JMeter <br>
-<img width="378" height="173" alt="image-removebg-preview (2)" src="https://github.com/user-attachments/assets/acd5f43f-02a9-4d83-a8a4-c3ef369ce28d" /> <br>
+<img width="349" height="104" alt="image" src="https://github.com/user-attachments/assets/564c25c4-bad6-4d3f-b6a4-ce40440f31eb" />
+ <br>
 I'm using this powerful open-source tool to perform spike testing by simulating sudden surges in user traffic. JMeter allows me to configure thread groups that rapidly increase load, helping me observe how the system responds under pressure. <br>
 <br>
 
 - UBuntu Linux <br>
-<img width="406" height="204" alt="image-removebg-preview (3)" src="https://github.com/user-attachments/assets/1a615dc2-72fa-4aca-8559-a494f9f7357a" /> <br>
+<img width="297" height="134" alt="image" src="https://github.com/user-attachments/assets/19746cc7-2c56-4f8b-b5f0-3e80789f76ca" />
+ <br>
 I'm using Ubuntu Linux as the operating system to host and execute my performance tests. Its stability, security, and lightweight footprint make it ideal for server-side testing environments. <br>
 <br>
 
-## 🧰 4. Test Environment Setup  
+# 💻 TEST ENVIRONMENT SETUP & METHODOLOGY 
 
 | Component | Description |
 |------------|-------------|
-| **Operating System** | Linux |
-| **Tool** |  |
-| **Connection** |  |
-| **Target URL** | |
+| **Platform** | Ubuntu 22.04 LTS (Linux-based) |
+| **Tool** | JMeter |
+| **Target Website** | JSONPlaceHolder |
 
+ **Step by step**
+ 1.
+ 2.
+ 3.
+ 4.
+ 5.
+ 
 
-## 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
+# 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
 
 - 🚀 **Custom Thread Groups**  
   can simulate sudden traffic spikes using custom thread groups like Ultimate Thread Group.
@@ -54,19 +62,17 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 
 <br>
 <br>
-## 🧪 TEST ENVIRONMENT SETUP & METHODOLOGY  
-ABC
 
-## 📂 RAW DATA PRESENTATION
+# 📂 RAW DATA PRESENTATION
 UUU
 
-## 📊INTERPRETATION OF RESULT & IDENTIFIED BOTTLENECKS
+# 📊INTERPRETATION OF RESULT & IDENTIFIED BOTTLENECKS
 ASDFG
 
-## 🆕RECOMMENDATION FOR IMPROVEMENT
+# 🆕RECOMMENDATION FOR IMPROVEMENT
 TYUI
 
-## 🗒️ CONCLUSION
+# 🗒️ CONCLUSION
 LALALA
 I
 
