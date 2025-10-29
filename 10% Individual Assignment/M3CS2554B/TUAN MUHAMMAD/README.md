@@ -1,84 +1,87 @@
 # TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM
 
-# Performance Testing Report – Stress Test (Taurus + Mercury Tours)
+# 🧪 Performance Testing Report – Stress Test (Taurus + Reqres.in)
 
 ## **Title & Introduction**
 
 ### **Title:**
-Performance Testing on Mercury Tours Website using Taurus (Stress Test)
+Performance Testing on Reqres.in API using Taurus (Stress Test)
 
 ### **Introduction:**
-This report documents a **stress testing exercise** performed on the **Mercury Tours flight booking web application** using **Taurus**, an open-source performance testing framework.  
-The goal of this assessment is to evaluate how the application behaves under **increasing and extreme user load**, to determine its breaking point, and to identify potential performance bottlenecks.
+This report documents a **stress test** performed on the **Reqres.in** public REST API using **Taurus**, an open-source performance testing framework.  
+The purpose of this assessment is to evaluate how the API behaves under **heavy concurrent user load**, to identify response trends, rate-limiting behavior, and potential bottlenecks.
 
 ---
 
-## **Objective**
+## **Objectives**
 
-- Evaluate the **performance and stability** of Mercury Tours under heavy concurrent user load.  
-- Measure **response time**, **throughput**, and **error rates** as load increases.  
-- Identify the **maximum load capacity** before performance degradation occurs.  
-- Assess whether the application can **recover** after sustained stress.  
+- Evaluate the **performance and stability** of Reqres.in under increasing concurrent user load.  
+- Measure **response time**, **throughput**, and **error rates** as load grows.  
+- Observe **rate-limiting thresholds** for write operations (POST, PUT, DELETE).  
+- Assess API **resilience** and responsiveness during sustained stress.
 
 ---
 
-##  **Tool & Test Environment**
+## **Tool & Test Environment**
 
 | **Item** | **Description** |
 |-----------|----------------|
 | **Tool** | Taurus (bzt) |
-| **Version** | 1.16.x |
+| **Version** | 1.16.46 |
 | **Operating System** | Ubuntu 22.04 LTS |
-| **Dependency** | Python 3.8+ |
+| **Dependency** | Python 3.10 + OpenJDK 11 |
 | **Test Type** | Stress Test |
-| **Target Website** | [http://newtours.demoaut.com](http://newtours.demoaut.com) |
-| **Reason for Selection** | Mercury Tours is a publicly accessible demo website commonly used for LoadRunner and performance testing training. It provides realistic flight booking workflows suitable for load and stress testing. |
+| **Target API** | [https://reqres.in](https://reqres.in) |
+| **Reason for Selection** | Reqres.in is a public, mock REST API for learning and testing HTTP requests; ideal for controlled stress scenarios without authentication. |
 
 ---
 
-##  **Test Plan & Configuration**
+## **Test Plan & Configuration**
 
 ### **Overview**
-The stress test simulates **100 concurrent users** performing sequential booking operations (login → search → book → logout).  
-The test was designed to identify at which point performance metrics begin to degrade.
+The test simulated **100 concurrent virtual users** performing sequential REST API operations (GET → POST → PUT → DELETE) for 3 minutes.  
+The goal was to determine how the API responds under increasing stress levels.
 
-### **Taurus Configuration (YAML File: `mercury_stress.yml`)**
+### **Taurus YAML Configuration (`reqres_stress.yml`)**
 
 ```yaml
 ---
 execution:
-  - scenario: MercuryToursStress
+  - scenario: ReqresStress
     concurrency: 100
     ramp-up: 2m
     hold-for: 3m
     iterations: 1
 
 scenarios:
-  MercuryToursStress:
-    default-address: http://newtours.demoaut.com
+  ReqresStress:
+    default-address: https://reqres.in
     requests:
-      - url: /mercurysignon.php
-        label: Open Login Page
+      - label: Get User List
         method: GET
-      - url: /mercurysignon.php
-        label: Login Attempt
+        url: /api/users?page=2
+      - label: Get Single User
+        method: GET
+        url: /api/users/2
+      - label: Create User
         method: POST
+        url: /api/users
         body:
-          userName: tutorial
-          password: mercury
-      - url: /mercuryreservation.php
-        label: Search Flight
-        method: GET
-      - url: /mercurypurchase.php
-        label: Book Flight
-        method: POST
+          name: Taurus
+          job: PerformanceTester
+        headers:
+          Content-Type: application/json
+      - label: Update User
+        method: PUT
+        url: /api/users/2
         body:
-          fromPort: Paris
-          toPort: London
-          findFlights: Find+Flights
-      - url: /mercurysignoff.php
-        label: Logout
-        method: GET
+          name: Taurus
+          job: SeniorTester
+        headers:
+          Content-Type: application/json
+      - label: Delete User
+        method: DELETE
+        url: /api/users/2
 
 reporting:
   - module: console
@@ -88,104 +91,102 @@ reporting:
 
 ---
 
-##  **Test Scenarios**
+## **Execution (on Ubuntu)**
 
-| **Step** | **Description** | **HTTP Method** | **Endpoint** |
-|-----------|----------------|------------------|---------------|
-| 1 | Open login page | GET | `/mercurysignon.php` |
-| 2 | User login with valid credentials | POST | `/mercurysignon.php` |
-| 3 | Search available flights | GET | `/mercuryreservation.php` |
-| 4 | Book selected flight | POST | `/mercurypurchase.php` |
-| 5 | Logout from session | GET | `/mercurysignoff.php` |
-
-Each virtual user executes these steps in sequence, representing a complete end-to-end user session.
-
----
-
-##  **Execution (on Ubuntu)**
-
-The stress test was executed from the Ubuntu terminal using the following command:
-
+Command used:
 ```bash
-bzt mercury_stress.yml
+bzt reqres_stress.yml
 ```
 
-During execution, Taurus displayed real-time metrics including:
-- **Response time (ms)**
-- **Throughput (requests/sec)**
-- **Error percentage**
-- **Success rate**
+Artifacts directory example:
+```
+/home/baihaqi/taurus-mercury/2025-10-30_00-41-03.268917/
+```
 
-Taurus automatically generated result folders and logs at:
-```
-./mercury_stress/YYYY-MM-DD_HH-MM-SS/
-```
+Taurus produced real-time metrics for:
+- Response time (s)
+- Throughput (requests/sec)
+- Error percentage
+- Success rate
+- Percentile latency
 
 ---
 
-##  **Results (Example Data)**
+##  **Results (Actual Run)**
 
-| **Transaction** | **Samples** | **Avg (ms)** | **Min** | **Max** | **Error %** | **Throughput (req/sec)** |
-|-----------------|--------------|--------------|----------|----------|--------------|---------------------------|
-| Open Login Page | 500 | 420 | 280 | 790 | 0.00% | 22.1 |
-| Login Attempt | 500 | 460 | 320 | 850 | 0.50% | 21.8 |
-| Search Flight | 500 | 620 | 410 | 1100 | 1.00% | 21.4 |
-| Book Flight | 500 | 950 | 520 | 1800 | 3.00% | 20.9 |
-| Logout | 500 | 410 | 260 | 740 | 0.00% | 22.3 |
+| **Request Label** | **Status** | **Success %** | **Avg RT (s)** | **Error Message** |
+|--------------------|-------------|----------------|----------------|------------------|
+| Get User List | ✅ OK | 100 % | 0.238 | — |
+| Get Single User | ✅ OK | 100 % | 0.030 | — |
+| Create User | ⚠️ FAIL | 0 % | 0.201 | Too Many Requests (429) |
+| Update User | ⚠️ FAIL | 0 % | 0.196 | Too Many Requests (429) |
+| Delete User | ⚠️ FAIL | 0 % | 0.196 | Too Many Requests (429) |
 
-### **Suggested Charts**
-- **Response Time by Transaction** (bar chart)  
-- **Throughput Over Time** (line chart)  
-- **Error Rate Trend** (line or pie chart)
+**Summary:**
+- **Samples:** 500  
+- **Failures:** 60 % (mostly rate-limited requests)  
+- **Average response time:** **0.172 s (172 ms)**  
+- **Median (50%) RT:** 0.189 s  
+- **99% RT:** 1.07 s  
+- **Max:** 3.10 s  
 
- *Insert your Taurus console output and report screenshots here.*
+**Percentile Table**
+
+| Percentile (%) | Response Time (s) |
+|----------------|-------------------|
+| 0 % | 0.02 |
+| 50 % | 0.189 |
+| 90 % | 0.203 |
+| 95 % | 0.210 |
+| 99 % | 1.072 |
+| 100 % | 3.102 |
 
 ---
 
 ##  **Analysis & Discussion**
 
-- The **average response time** was below 1 second up to around 80–100 concurrent users.  
-- As concurrency increased, the **Book Flight** transaction exhibited the largest delay, likely due to backend data processing.  
-- **Error rates** began increasing after 100 users, indicating the system’s stress threshold.  
-- **Throughput** plateaued at approximately 21 requests/sec, suggesting the web server reached its maximum handling capacity.
+- **GET** operations remained fully successful with low latency (average < 250 ms).  
+- **POST**, **PUT**, and **DELETE** requests failed due to *HTTP 429 Too Many Requests*, indicating the API’s built-in **rate-limiting** for write operations.  
+- The **average total response time** of 0.172 s shows excellent API responsiveness.  
+- Latency spiked beyond 1 s only for the slowest 1 % of samples (under heavy concurrency).  
+- The API remained **stable and recoverable** despite load saturation.
 
-### **Interpretation:**
-The Mercury Tours application handled moderate user load effectively but began to degrade under heavy stress.  
-This indicates that optimization is needed for database and backend operations, especially during flight booking.
-
----
-
-##  **Recommendations**
-
-1. **Implement caching** for static pages and flight search results.  
-2. **Optimize SQL queries** and backend logic in the booking process.  
-3. **Introduce load balancing** to distribute user traffic across multiple servers.  
-4. **Enable compression (e.g., gzip)** to reduce response size.  
-5. Conduct a **soak test** for long-term stability verification.
+### **Interpretation**
+Reqres.in handles concurrent **read-only traffic** efficiently but throttles **write operations** under high stress.  
+This behavior demonstrates realistic cloud API protection mechanisms that prevent overload or abuse.
 
 ---
 
-##  **Conclusion**
+## **Recommendations**
 
-The stress test conducted with Taurus on the Mercury Tours web application successfully identified the site’s performance limits under high concurrency.  
-The system maintained good responsiveness up to approximately **100 virtual users**, after which response times and error rates increased.  
-Overall, the site demonstrated **reasonable stability** and **recoverability**, making it suitable for moderate traffic levels with room for optimization.
+1. **Reduce concurrency** (e.g., 50 users) when testing public APIs to avoid hitting rate limits.  
+2. Include **delay (think-time)** between requests for more realistic user pacing.  
+3. For enterprise APIs, configure **authentication and throttling policies** for controlled stress tests.  
+4. Run **soak or endurance tests** to measure long-term stability.  
+5. Use a **private/local API** for unrestricted high-load testing.
 
 ---
 
-##  **References**
+## **Conclusion**
+
+The Taurus stress test on **Reqres.in** successfully demonstrated API performance behavior under 100 concurrent users.  
+While all **GET** requests completed successfully with fast responses, **write operations** encountered expected *429 Too Many Requests* errors due to API rate limiting.  
+Overall, Reqres.in exhibited **excellent responsiveness**, stable throughput, and predictable throttling—making it an ideal platform for educational performance testing.
+
+---
+
+## **References**
 
 - Taurus Documentation – [https://gettaurus.org/](https://gettaurus.org/)  
+- Reqres API – [https://reqres.in](https://reqres.in)  
 - Apache JMeter Documentation – [https://jmeter.apache.org](https://jmeter.apache.org)  
-- Mercury Tours Demo Website – [http://newtours.demoaut.com](http://newtours.demoaut.com)  
-- Ubuntu Official Documentation – [https://ubuntu.com](https://ubuntu.com)  
+- Ubuntu Documentation – [https://ubuntu.com](https://ubuntu.com)  
 - Software Testing Help – *Performance Testing Fundamentals (2024)*  
 
 ---
 
-**Prepared by:**  
-**[Your Full Name]**  
+**Prepared by:** _Baihaqi_  
 **Course:** ITT440 – Web Application Performance Testing  
-**Date:** [Insert Date]  
-**GitHub Repository:** [Insert GitHub Link]  
-**YouTube Presentation:** [Insert YouTube Video Link]
+**Date:** 30 Oct 2025  
+**GitHub Repository:** [👉 View on GitHub](https://github.com/baihaqi-itt440/Performance-Test-Reqres)  
+**YouTube Presentation:** [🎥 Watch Presentation](https://youtube.com/)
