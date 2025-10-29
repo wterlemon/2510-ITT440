@@ -143,6 +143,30 @@ Taurus produced real-time metrics for:
 
 ---
 
+## 📊 Visual Performance Analysis
+
+### **1. Average Response Time per Endpoint**
+![Average Response Time per Endpoint](./graph_avg_rt.png)
+
+**Explanation:**  
+This bar chart compares the average response time (in seconds) across all tested endpoints.  
+- `Get Single User` was the fastest, averaging **0.03 s**.  
+- `Get User List` maintained strong performance with **0.238 s**.  
+- The `Create`, `Update`, and `Delete` endpoints all failed due to **HTTP 429 Too Many Requests**, but their recorded times (~0.20 s) show consistent pre-failure latency.
+
+---
+
+### **2. Response Time Percentiles**
+![Response Time Percentiles](./graph_percentile.png)
+
+**Explanation:**  
+This line chart visualizes percentile-based response time distribution from all requests.  
+- **50% of requests** completed in under **0.189 s**, indicating quick average responsiveness.  
+- **99%** of requests stayed below **1.07 s**, showing rare spikes in latency.  
+- The **maximum** response time reached **3.1 s**, observed during peak concurrency when throttling occurred.
+
+---
+
 ##  **Analysis & Discussion**
 
 - **GET** operations remained fully successful with low latency (average < 250 ms).  
