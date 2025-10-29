@@ -147,8 +147,6 @@ Taurus produced real-time metrics for:
 
 ### **1. Average Response Time per Endpoint**
 <p align="center">
-<img width="600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/c4decc81-7936-45e5-99cd-6faed710adf4" />
-
 **Explanation:**  
 This bar chart compares the average response time (in seconds) across all tested endpoints.  
 - `Get Single User` was the fastest, averaging **0.03 s**.  
@@ -159,7 +157,6 @@ This bar chart compares the average response time (in seconds) across all tested
 
 ### **2. Response Time Percentiles**
 <p align="center">
-<img width="600" height="1000" alt="graph_percentile" src="https://github.com/user-attachments/assets/f73b8d91-46d8-4d3c-bc25-4be267efbe36" />
 
 **Explanation:**  
 This line chart visualizes percentile-based response time distribution from all requests.  
