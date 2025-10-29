@@ -24,9 +24,9 @@
 | **Target Application URL** | ‘https://demo.nopcommerce.com’ |
 
 ---
-## Test Methodology: Simulating Realistic Behaviour
+## :microscope: Test Methodology: Simulating Realistic Behaviour
 ## To ensure the testing is valid, a realistic user scenario was created. The test simulates a user browsing the site, searching for a product and viewing certain product's page, with random pause between each steps.
 
 ---
-## Soak Test: Configuration and Execution
-##  The k6 'options' were configured to simulate a sustained, moderate load over a certain period of time such as 1 hours. The test ramps up to 50 Virtual Users over 5 minutes and holds that load for the entire test duration.
+## :train: Soak Test: Configuration and Execution
+##  The k6 'options' were configured to simulate a sustained, moderate load over a certain period of time such for 35 minutes. The test ramps up to 50 Virtual Users over 5 minutes then continues to rises up to 200 Virtual Users and then 300 Virtual Users and will be hold at that for the duration of the test.
