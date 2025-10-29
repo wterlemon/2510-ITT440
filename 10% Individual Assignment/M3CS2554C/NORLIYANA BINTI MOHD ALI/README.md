@@ -299,5 +299,3 @@ The analysis showed predictable response time growth under heavier load, proving
 * [ReqRes API Documentation](https://reqres.in/)
 * [Pandas Documentation](https://pandas.pydata.org/docs/)
 * [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-Would you like me to add a **bash `.sh` file** section (so you can re-run all 3 commands automatically next time)?
-
