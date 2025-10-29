@@ -5,7 +5,8 @@
 
 ## 📊 Assignment Overview
 - **Course**: ITT440 - Network Programming
-- **Assessment**: 10% Individual Assignment 1
+- **Name**: MUHAMMAD ARIFF ATHRAS BIN FAREEDIL ATHRAS   
+- **Student ID**: 2024783705
 - **Tool**: Locust (Python-based load testing tool)
 - **Target**: OWASP Juice Shop Web Application
 - **Test Type**: Stress Testing
