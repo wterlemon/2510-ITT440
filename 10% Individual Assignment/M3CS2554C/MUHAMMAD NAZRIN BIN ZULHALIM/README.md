@@ -7,11 +7,11 @@
 
 ---
 ## :building_construction: Project Objective
-## The objective of this is to analyse how ‘https://demo.nopcommerce.com’ will behave under soak testing using Grafana k6. k6 is used to simulate real life traffic loads and identify performance bottlenecks.
+## The objective of this is to analyse how ‘https://demo.nopcommerce.com’ will behave under soak testing using Grafana k6. k6 is used to simulate continuous real life traffic loads and identify performance degradation, memory and resource leaks and stability issues. The result of the test will be the indicators(KPIs) of the key performance and application endurance.
 
 ---
 ## :dart: Target Application
-## The application selected for this analysis is 'https://demo.nopcommerce.com', a publicly accessible demo e-commerce platform. This application was chosen because e-commerce needs to be able to handle heavy traffic and complex user flows.
+## The application selected for this analysis is 'https://demo.nopcommerce.com', a publicly accessible demo e-commerce platform. This application was chosen because e-commerce needs to be able to handle continuous traffic and complex user flows.
 
 ---
 ## 🛠️ Test Environment
@@ -22,3 +22,11 @@
 | **RAM** | 16GB DDR4 |
 | **Tool** | Grafana k6 v1.3.0 |
 | **Target Application URL** | ‘https://demo.nopcommerce.com’ |
+
+---
+## Test Methodology: Simulating Realistic Behaviour
+To ensure the testing is valid, a realistic user scenario was created. The test simulates a user browsing the site, searching for a product and viewing certain product's page, with random pause between each steps.
+
+---
+## Soak Test: Configuration and Execution
+The k6 'options' were configured to simulate a sustained, moderate load over a certain period of time such as 1 hours. The test ramps up to 50 Virtual Users over 5 minutes and holds that load for the entire test duration.
