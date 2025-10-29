@@ -30,7 +30,7 @@ The goal of this test is to analyze how a WordPress site performs under differen
 
 ## 📊 Test Results
 
-> 📌 *Add your BlazeMeter result screenshots or charts below.*
+> 📌 <img width="1283" height="112" alt="image" src="https://github.com/user-attachments/assets/e9675d04-4dcc-480d-95ac-7d3657054cbd" />
 
 ### 🔹 Summary Report
 | Metric | Result |
@@ -42,20 +42,24 @@ The goal of this test is to analyze how a WordPress site performs under differen
 | **90th Percentile Response Time** | `363 ms` |
 | **Average Bandwidth** | `3.17 MiB/s` |
 
-🖼️ *Paste summary chart screenshot here*  
-`![Summary Chart](./images/summary_chart.png)`
+🖼️ 
 
 ---
 
 ### 🔹 Timeline Report (Response Time vs Load)
-🖼️ *Paste graph image here*  
-`![Timeline Graph](./images/timeline_graph.png)`
+🖼️ Graft for Load Time <br>
+<img width="609" height="406" alt="image" src="https://github.com/user-attachments/assets/dc200594-aa9f-43d1-85ec-407a9c89ea5a" />
+
+🖼️ Graft for Respon Time <br>
+<img width="594" height="406" alt="image" src="https://github.com/user-attachments/assets/4088d0a7-7963-4546-ae97-154a97e72d53" />
+
 
 ---
 
 ### 🔹 Request Statistics
-🖼️ *Paste chart here if you have request-level details*  
-`![Request Stats](./images/request_stats.png)`
+🖼️ Graft for all the data that been gather
+<img width="1920" height="1160" alt="timeline charts" src="https://github.com/user-attachments/assets/c6138158-dc9e-4abc-b538-1330e2d398fb" />
+
 
 ---
 
