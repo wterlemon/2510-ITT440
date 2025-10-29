@@ -146,7 +146,7 @@ Taurus produced real-time metrics for:
 ## Report Performance Analysis
 
 ### **1. Average Response Time per Endpoint**
-![Average Response Time per Endpoint](<img width="1600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/11b079cf-659c-4b34-a90e-7b3576c70ca6" />
+![Average Response Time per Endpoint](<img width="1600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/421b7e80-26f9-4585-89d7-a1ffb6a95463" />
 )
 
 **Explanation:**  
@@ -158,8 +158,7 @@ This bar chart compares the average response time (in seconds) across all tested
 ---
 
 ### **2. Response Time Percentiles**
-![Response Time Percentiles](<img width="1600" height="1000" alt="graph_percentile" src="https://github.com/user-attachments/assets/31fdd639-f9da-44a6-baff-6d1fd606eccf" />
-)
+![Response Time Percentiles](<img width="1600" height="1000" alt="graph_percentile" src="https://github.com/user-attachments/assets/4acdf763-1651-4de7-9fc4-cd9dd212a518" />).
 
 **Explanation:**  
 This line chart visualizes percentile-based response time distribution from all requests.  
