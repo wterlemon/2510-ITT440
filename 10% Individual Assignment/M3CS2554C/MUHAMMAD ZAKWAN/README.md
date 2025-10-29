@@ -19,10 +19,6 @@ Belum siap lagi <br>
 |----------------------|--------------------------------------|
 | Spike testing is a type of performance testing that evaluates how a website or application handles sudden, extreme surges in traffic or load — like flash sales, viral posts, or ticket releases. It helps ensure your system remains stable and responsive under pressure. | JSONPlaceholder is a free online REST API service that provides fake data for testing and prototyping web applications. It's widely used by developers to simulate backend responses without needing a real server — perfect for learning, demos, and mockups. |
 
-
-
-
-
 # 🧰 TOOL SELECTION
 - Apache JMeter <br>
 <img width="378" height="173" alt="image-removebg-preview (2)" src="https://github.com/user-attachments/assets/acd5f43f-02a9-4d83-a8a4-c3ef369ce28d" /> <br>
@@ -33,6 +29,16 @@ I'm using this powerful open-source tool to perform spike testing by simulating 
 <img width="406" height="204" alt="image-removebg-preview (3)" src="https://github.com/user-attachments/assets/1a615dc2-72fa-4aca-8559-a494f9f7357a" /> <br>
 I'm using Ubuntu Linux as the operating system to host and execute my performance tests. Its stability, security, and lightweight footprint make it ideal for server-side testing environments. <br>
 <br>
+
+## 🧰 4. Test Environment Setup  
+
+| Component | Description |
+|------------|-------------|
+| **Operating System** | Linux |
+| **Tool** |  |
+| **Connection** |  |
+| **Target URL** | |
+
 
 ## 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
 
