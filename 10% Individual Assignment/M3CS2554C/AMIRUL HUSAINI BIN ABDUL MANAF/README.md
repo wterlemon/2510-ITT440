@@ -13,9 +13,9 @@
 <p align="justify">
 Web application testing and analysis is a process to evaluate a web application's functionality, performance, security, and usability to find defects and ensure it meets requirements before release. The goal is to identify and fix bugs to provide a seamless user experience and high-quality product, which is achieved through systematic testing and analysis across different environments like browsers and operating systems. </p>
 
-## 💡 Testing Environment & Goal
+## 💡 Testing Environment & Objective
 
-<img width="946" height="900" alt="image" src="https://github.com/user-attachments/assets/990ecd3c-f8ea-47ac-95c1-ee5b653ceaf6" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/990ecd3c-f8ea-47ac-95c1-ee5b653ceaf6" />
 
 This experiment was performed in a Linux environment, specifically Kali Linux, which provides a stable and secure platform for running performance testing tools such as Locust.
 
@@ -46,9 +46,15 @@ Here, we can input these information:
 ## 📊 Raw Data Presentation
 <img width="602" height="179" alt="image" src="https://github.com/user-attachments/assets/1ca721cb-b481-486f-9f35-132db27810bb" />  
 
-<img width="916" height="721" alt="image" src="https://github.com/user-attachments/assets/1e57b317-6aa0-4595-a8c1-026807ae3091" />
+### Result Summary Table
+| Endpoint        | Avg Time (ms) | 95% Time (ms) | Requests/s | Failures |
+|-----------------|---------------|---------------|-------------|-----------|
+| /products       |        93.68       |        570       |       4.1      |     0     |
+| /products/[id]  |        88.78       |        480       |       11.4     |     0     |
+| /posts          |        548.89      |        1600      |       7.7      |     0     |  
 
-<img width="630" height="164" alt="image" src="https://github.com/user-attachments/assets/8eba9e8a-824a-489c-8574-7145b32eee79" />
+
+<img width="630" height="164" alt="image" src="https://github.com/user-attachments/assets/8eba9e8a-824a-489c-8574-7145b32eee79" />  
 
 
 This is the web interface of the LOCUST that is easier to run and monitor. 
@@ -56,12 +62,18 @@ This is the web interface of the LOCUST that is easier to run and monitor.
 
 ## 📝 Interpretation of Results and Identified Bottlenecks
 
-### Result Summary Table
-| Endpoint        | Avg Time (ms) | 95% Time (ms) | Requests/s | Failures |
-|-----------------|---------------|---------------|-------------|-----------|
-| /products       |               |               |             |          |
-| /products/[id]  |               |               |             |          |
-| /posts          |               |               |             |          |
+<img width="916" height="721" alt="image" src="https://github.com/user-attachments/assets/1e57b317-6aa0-4595-a8c1-026807ae3091" />  
+
+<p align="justify"> The DummyJSON API demonstrated stable and consistent performance under a 5-minute simulated load in Locust. All endpoints responded successfully without any failure or timeout. Although average response times were within acceptable limits, certain endpoints like `/products/[id]` showed higher response times at the upper percentiles, suggesting potential areas for backend optimization. </p>
+
+### ⚠️ Identified Bottlenecks
+
+| No. | Bottleneck                        | Description                                                                 | Possible Cause                                 | Recommendation                                                      |
+|:---:|:----------------------------------|:----------------------------------------------------------------------------|:-----------------------------------------------|:-------------------------------------------------------------------|
+| 1   | High latency on `/products/[id]`  | Endpoint avg = **548.89 ms**, 95th = **1600 ms** — much higher than others | Dynamic data retrieval or slow DB queries      | Implement caching (e.g., Redis) and add DB indexing                |
+| 2   | Response time variability         | Aggregated avg = **244.18 ms**, 95th = **1900 ms** — large tail latency     | Backend processing spikes or uneven load       | Profile backend, optimize heavy queries, consider request queueing |
+| 3   | Increasing latency with users     | Latency rose during peak **RPS ≈ 23.2**                                     | Limited server resources or sync/blocking I/O  | Scale resources, use async handlers, or add load balancing        |
+
 
 
 ## 📖 Recommendations For Improvement 
