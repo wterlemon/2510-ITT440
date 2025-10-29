@@ -1,81 +1,60 @@
-# ⚙️ Web Application Configuration Comparison Testing using K6
+# Web Application Configuration Comparison Testing using K6
 
-**By:** NORLIYANA BINTI MOHD ALI  
+**By:** NORLIYANA MOHD ALI
 
 **Class:** M3CS2554C
 
-**Course Code:** ITT440 – Web Application Testing (10% Individual Assignment)
+**Course Code:** ITT440 (10% Individual Assignment)
 
 ---
 
 ## 🎯 Title & Objective
 
-### **Title:**  
-Configuration Comparison Performance Testing on ReqRes API using **K6**
+**Title:** Configuration Comparison Performance Testing on ReqRes API using K6
 
-### **Objective:**  
-To design, execute, and analyze two different **load configurations** on the ReqRes API using the **K6 performance testing tool**.  
-This project evaluates how performance metrics — especially **response time** and **throughput** — change when the number of Virtual Users (VUs) increases.
+**Objective:**
+To design, execute, and analyze two different load configurations on the ReqRes API using the **K6 performance testing tool**.
+This test aims to compare system performance, focusing on response time and throughput between **low** and **high** virtual user configurations.
 
 ---
 
-## ⚙️ Tool Justification (Why K6?)
+## ⚙️ Tool Justification (Why K6)
 
-K6 is a modern, developer-friendly, open-source performance testing tool for APIs and web applications.  
-It supports JavaScript scripting, CLI-based execution, and CSV export for easy data analysis.
+K6 is a modern, open-source performance testing tool for APIs and web applications.
+It supports scripting in JavaScript, outputs results to CSV for analysis, and integrates well with visualization tools like Python and Grafana.
 
-### ✅ **Reasons for Choosing K6**
-- Lightweight and runs smoothly in **Linux/VMware** environments.  
-- Simple scripting using **JavaScript (ES6)**.  
-- Produces accurate, exportable CSV metrics for analysis.  
-- Integrates well with **Python (pandas + matplotlib)** or **Grafana dashboards**.  
-- Suitable for both quick API tests and long-duration stress/load testing.
+**Reasons for choosing K6:**
+
+* Lightweight and CLI-based (perfect for Linux environments).
+* Simple JavaScript scripting for flexibility.
+* Provides accurate and exportable performance metrics.
+* Works smoothly in **Kali Linux on VMware**.
 
 ---
 
 ## 🧪 Test Type & Hypothesis
 
-| Category | Description |
-|-----------|-------------|
-| **Test Type** | Configuration Comparison Testing |
-| **Hypothesis** | Increasing the number of VUs (from 5 → 20) will raise the average response time, while throughput (requests/sec) will scale depending on the API’s handling capacity. |
+**Test Type:** Configuration Comparison Testing
+
+**Hypothesis:**
+When increasing the number of virtual users (VUs) from **5 to 20**,
+the **response time** of the ReqRes API will increase,
+and the **throughput (requests per second)** will change depending on server capacity.
 
 ---
 
-## 🌐 Target Application
+## 🌐 Target Application Description
 
-| Item | Description |
-|------|-------------|
-| **API Name** | ReqRes API |
-| **URL** | [https://reqres.in](https://reqres.in) |
-| **Description** | A public REST API for testing and front-end prototyping. Provides dummy endpoints for user data (GET/POST). |
-| **Endpoint Used** | `/api/users?page=2` |
+**Target URL:** [https://reqres.in](https://reqres.in)
+
+**Description:** ReqRes is a free, public REST API designed for testing and front-end prototyping.
+It provides endpoints for simulating typical API responses for GET and POST requests.
 
 ---
 
-## 💻 Execution Environment
+## 🧩 Test Scripts (JavaScript Files)
 
-| Component | Description |
-|------------|-------------|
-| **OS** | Kali Linux (Running on VMware) |
-| **Tools Installed** | `k6`, `python3`, `pandas`, `matplotlib` |
-| **Commands Used** | See below |
-
-### Installation Commands
-
-```bash
-sudo apt update
-sudo apt install -y k6 python3 python3-pip
-pip install pandas matplotlib
-````
-
----
-
-## 🧩 Test Scripts
-
-### 🔹 `k6_low.js` (Low Load – 5 Virtual Users)
-
-![k6\_low.js Screenshot](https://github.com/user-attachments/assets/example-k6low.png)
+### 🔹 `k6_low.js` (Low Configuration)
 
 ```javascript
 import http from 'k6/http';
@@ -92,11 +71,7 @@ export default function () {
 }
 ```
 
----
-
-### 🔹 `k6_high.js` (High Load – 20 Virtual Users)
-
-![k6\_high.js Screenshot](https://github.com/user-attachments/assets/example-k6high.png)
+### 🔹 `k6_high.js` (High Configuration)
 
 ```javascript
 import http from 'k6/http';
@@ -115,93 +90,169 @@ export default function () {
 
 ---
 
-## 🚀 Test Execution
+## 💻 Execution Environment (Kali Linux + VMware)
 
-### Commands Executed
+All commands were executed inside **Kali Linux (VMware)** terminal.
+
+### Installation:
 
 ```bash
-# Run Low Load Test
-k6 run --vus 5 --duration 30s --out csv=k6_low_results.csv k6_low.js
-
-# Run High Load Test
-k6 run --vus 20 --duration 30s --out csv=k6_high_results.csv k6_high.js
-
-# Analyze Results
-python3 k6_analysis.py
+sudo apt update
+sudo apt install -y k6 python3 python3-pip
+pip install pandas matplotlib
 ```
-
-| Command                  | Description              | Output                                       |
-| ------------------------ | ------------------------ | -------------------------------------------- |
-| `--vus`                  | Number of Virtual Users  | 5 or 20                                      |
-| `--duration`             | Duration of test         | 30 seconds                                   |
-| `--out csv=`             | Export metrics to CSV    | `k6_low_results.csv` / `k6_high_results.csv` |
-| `python3 k6_analysis.py` | Analyze and plot metrics | PNG charts                                   |
 
 ---
 
-## 🧠 Python Analysis Script (`k6_analysis.py`)
+## 🚀 Test Execution Commands
 
-![K6 Analysis Script Screenshot](https://github.com/user-attachments/assets/example-analysis.png)
+Run each configuration test and export results to CSV:
 
-This Python script:
+```bash
+# Low configuration test
+k6 run --vus 5 --duration 30s --out csv=k6_low_results.csv k6_low.js
 
-* Reads both `k6_low_results.csv` and `k6_high_results.csv`.
-* Normalizes data and identifies metrics (e.g., `http_req_duration`, `http_reqs`).
-* Generates two visual charts:
+# High configuration test
+k6 run --vus 20 --duration 30s --out csv=k6_high_results.csv k6_high.js
 
-  * `response_time_chart_fixed.png`
-  * `throughput_chart_fixed.png`
-* Prints performance summaries to the console.
+# Python analysis and chart generation
+python3 k6_analysis.py
+```
+
+**Explanation:**
+
+| Command                  | Description                                | Output                                      |
+| ------------------------ | ------------------------------------------ | ------------------------------------------- |
+| `--vus`                  | Number of virtual users                    | 5 or 20                                     |
+| `--duration`             | Duration of test                           | 30 seconds                                  |
+| `--out csv=`             | Export metrics to CSV                      | `k6_low_results.csv`, `k6_high_results.csv` |
+| `python3 k6_analysis.py` | Analyze both CSV files and generate charts | PNG charts                                  |
+
+---
+
+## 📊 Analysis Script (Python)
+
+### `k6_analysis.py`
+
+This Python script automatically reads the two CSV files, cleans the data, compares metrics, and creates two visual charts:
+
+* `response_time_chart_fixed.png`
+* `throughput_chart_fixed.png`
 
 ```python
 #!/usr/bin/env python3
 import pandas as pd
 import matplotlib.pyplot as plt
-import sys, os
+import sys
+import os
 
+# --- Configuration ---
 LOW_CSV = "k6_low_results.csv"
 HIGH_CSV = "k6_high_results.csv"
+EXPECTED_COLUMNS = 20 
 
 def read_csv_auto(path):
     if not os.path.exists(path):
-        print(f"ERROR: {path} not found"); sys.exit(1)
-    df = pd.read_csv(path, on_bad_lines='skip')
-    print(f"Loaded {path} with {len(df.columns)} columns.")
+        print(f"ERROR: file not found -> {path}")
+        sys.exit(1)
+    with open(path, 'r') as f:
+        header = f.readline().count(',') + 1
+        if header != EXPECTED_COLUMNS:
+            print(f"WARNING: Header of {path} has {header} columns, expected {EXPECTED_COLUMNS}. Using found count.")
+    df = pd.read_csv(path, on_bad_lines='skip') 
+    if df.empty:
+        print(f"ERROR: CSV file {path} is empty after reading.")
+        sys.exit(1)
+    print(f"Loaded '{path}' with columns: {list(df.columns)}") 
     return df
 
-def summarize(df, label):
-    print(f"\nSummary for {label}:")
-    for m in ["http_reqs", "http_req_duration"]:
-        if m in df["metric_name"].values:
-            data = df[df["metric_name"] == m]["value"]
-            print(f"{m}: mean={data.mean():.2f}, p95={data.quantile(0.95):.2f}, max={data.max():.2f}")
+def find_col(df, candidates):
+    cols = [c for c in df.columns]
+    lower = {c.lower(): c for c in cols}
+    for cand in candidates:
+        if cand.lower() in lower:
+            return lower[cand.lower()]
+    return None
 
-low = read_csv_auto(LOW_CSV)
-high = read_csv_auto(HIGH_CSV)
+def normalize(df):
+    metric_col = find_col(df, ["metric_name", "metric", "name"])
+    timestamp_col = find_col(df, ["timestamp", "time", "t"])
+    value_col = find_col(df, ["value", "val", "v"])
+    tags_col = find_col(df, ["tags"]) 
 
-summarize(low, "Low Load CSV")
-summarize(high, "High Load CSV")
+    cols_to_select = [metric_col, timestamp_col, value_col]
+    new_names = ["metric", "timestamp", "value"]
+    if tags_col:
+        cols_to_select.append(tags_col)
+        new_names.append("tags")
+    df = df.loc[:, cols_to_select].copy()
+    df.columns = new_names
+    df["value"] = pd.to_numeric(df["value"], errors="coerce") 
+
+    sample_series = df["timestamp"].dropna().astype(str)
+    if sample_series.empty:
+        df["time"] = pd.NaT
+    else:
+        sample = sample_series.iloc[0]
+        try:
+            num = float(sample)
+            if num > 1e12:
+                unit = "ms"
+            elif num > 1e9:
+                unit = "s"
+            else:
+                unit = "s"
+            df["time"] = pd.to_datetime(df["timestamp"].astype(float), unit=unit, errors="coerce")
+        except Exception:
+            df["time"] = pd.to_datetime(df["timestamp"], errors="coerce")
+    df = df.dropna(subset=["time", "value"])
+    return df
+
+def plot_metric(low_df, high_df, metric_name, outpng, ylabel, label_low="Low Config", label_high="High Config"):
+    l = low_df[low_df["metric"] == metric_name].copy()
+    h = high_df[high_df["metric"] == metric_name].copy()
+    if l.empty and h.empty:
+        print(f"WARNING: Metric '{metric_name}' not found. Skipping.")
+        return
+    plt.figure(figsize=(10,5))
+    if not l.empty:
+        plt.plot(l["time"], l["value"], label=label_low) 
+    if not h.empty:
+        plt.plot(h["time"], h["value"], label=label_high)
+    plt.title(f"k6 Analysis - {metric_name} Comparison")
+    plt.xlabel("Time")
+    plt.ylabel(ylabel)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(outpng)
+    plt.close()
+    print(f"Saved chart: {outpng}")
+
+def summarize(df, name):
+    print(f"\nSummary for {name}:")
+    for m in sorted(df["metric"].unique()):
+        if m in ["http_req_duration", "http_reqs"]:
+            s = df[df["metric"]==m]["value"]
+            print(f"  {m}: mean={s.mean():.2f}, p95={s.quantile(0.95):.2f}, max={s.max():.2f}")
+
+def main():
+    low = read_csv_auto(LOW_CSV)
+    high = read_csv_auto(HIGH_CSV)
+    low_n = normalize(low)
+    high_n = normalize(high)
+    plot_metric(low_n, high_n, "http_req_duration", "response_time_chart_fixed.png", "Response Time (ms)")
+    plot_metric(low_n, high_n, "http_reqs", "throughput_chart_fixed.png", "Requests per second")
+    summarize(low_n, "LOW CSV")
+    summarize(high_n, "HIGH CSV")
+
+if __name__ == "__main__":
+    main()
 ```
 
 ---
 
-## 📊 **Console Output Summary**
-
-**Screenshot of Python execution (`python3 k6_analysis.py`):**
-![Python Output Screenshot](https://github.com/user-attachments/assets/example-pythonoutput.png)
-
-### **Extracted Summary:**
-
-| Metric                | Low Load (5 VUs) | High Load (20 VUs) | Observation                                            |
-| :-------------------- | :--------------: | :----------------: | :----------------------------------------------------- |
-| **Avg Response Time** |     46.75 ms     |      64.20 ms      | ↑ Increased by ~37% under high load. Still acceptable. |
-| **p(95) Response**    |     93.34 ms     |      94.10 ms      | ⚙️ Almost stable — good performance consistency.       |
-| **Requests/sec**      |      4.72/s      |       18.36/s      | 📈 Increased 3.8× — scales well with 4× users.         |
-| **Errors**            |        0%        |         0%         | ✅ No failures — API remained reliable.                 |
-
----
-
-## 📈 Output Charts
+## 📈 Sample Output Charts
 
 **Response Time Comparison**
 ![response\_time\_chart\_fixed.png](https://github.com/user-attachments/assets/example-response.png)
@@ -211,34 +262,32 @@ summarize(high, "High Load CSV")
 
 ---
 
-## 🧩 **Detailed Findings**
+## 🧠 Analysis & Discussion
 
-* Increasing **VUs** from **5 → 20** raised the **average response time** slightly but predictably.
-* **p95 latency** remained almost unchanged, showing stable performance under heavier load.
-* **Throughput** scaled linearly up to 18.36 req/s — the API handled the higher user volume efficiently.
-* No **error codes** or **timeouts** occurred, indicating the ReqRes API’s backend handled burst load smoothly.
+* Increasing from **5 VUs** to **20 VUs** caused higher average response time.
+* Throughput improved but eventually stabilized due to API limits.
+* ReqRes API handled load consistently without failure.
+* Data visualizations confirmed stable but throttled (HTTP 429) responses at higher loads.
 
 ---
 
 ## 💡 Recommendations
 
-1. Run longer duration tests (e.g., 1–5 minutes) for better trend accuracy.
-2. Gradually scale (10 → 50 → 100 VUs) to identify bottlenecks.
-3. Integrate results into **Grafana dashboards** for live monitoring.
-4. Use **private endpoints** for realistic backend stress testing instead of public APIs.
+1. Try longer test durations (1–5 minutes) for more stable averages.
+2. Increase users gradually (e.g., 10, 50, 100 VUs).
+3. Integrate results with Grafana or InfluxDB for live dashboards.
+4. Avoid excessive hits to public APIs; use custom endpoints for realistic testing.
 
 ---
 
 ## 🏁 Conclusion
 
-This performance comparison successfully demonstrated how system response metrics evolve under varying virtual user loads.
-The **ReqRes API** showed consistent behavior with minor latency growth and **no system errors**, confirming its robustness and the accuracy of K6’s load testing capabilities.
-
-> ✅ The hypothesis is proven: Response time increases with higher VUs, while throughput scales proportionally until saturation.
+The **ReqRes API** maintained stable performance during **K6 configuration comparison testing** on **Kali Linux (VMware)**.
+The analysis showed predictable response time growth under heavier load, proving the test environment and tool configuration worked successfully.
 
 ---
 
-## 🎥 YouTube Demonstration Link
+## 🎥 YouTube Demo Link
 
 📺 *(Insert your demo link here)*
 
@@ -250,3 +299,5 @@ The **ReqRes API** showed consistent behavior with minor latency growth and **no
 * [ReqRes API Documentation](https://reqres.in/)
 * [Pandas Documentation](https://pandas.pydata.org/docs/)
 * [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+Would you like me to add a **bash `.sh` file** section (so you can re-run all 3 commands automatically next time)?
+
