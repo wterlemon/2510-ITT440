@@ -14,7 +14,7 @@ The goal of this test is to assess the API’s performance, identify potential b
 
 ---
 
-## **🎯 Objective**
+## **Objective**
 
 - Measure **response time**, **throughput**, and **error rate** as user load increases.  
 - Identify the **maximum concurrent users** the Reqres.in API can handle before performance degradation occurs.  
@@ -22,7 +22,7 @@ The goal of this test is to assess the API’s performance, identify potential b
 
 ---
 
-## **🧰 Tool & Target Site Selection**
+## **Tool & Target Site Selection**
 
 | **Item** | **Description** |
 |-----------|----------------|
@@ -36,7 +36,7 @@ The goal of this test is to assess the API’s performance, identify potential b
 
 ---
 
-## **🧩 Test Plan & Configuration**
+## **Test Plan & Configuration**
 
 | **Parameter** | **Configuration** |
 |----------------|------------------|
@@ -51,7 +51,7 @@ The stress test progressively increased the number of concurrent users to determ
 
 ---
 
-## **🧪 Test Scenarios**
+## **Test Scenarios**
 
 | **Step** | **Description** | **Method** | **Endpoint** |
 |-----------|----------------|-------------|---------------|
@@ -65,7 +65,7 @@ Each virtual user executes all steps sequentially, simulating real-world API usa
 
 ---
 
-## **📊 Results (Example Data)**
+## **Results (Example Data)**
 
 | **Request** | **Samples** | **Avg (ms)** | **Min** | **Max** | **Error %** | **Throughput (req/sec)** |
 |--------------|-------------|--------------|----------|----------|--------------|---------------------------|
@@ -80,11 +80,11 @@ Each virtual user executes all steps sequentially, simulating real-world API usa
 - **Throughput Over Time** – Line Chart  
 - **Error Rate Trend** – Line or Pie Chart  
 
-📸 *(Insert LoadRunner Analysis screenshots or generated graphs here.)*
+ *(Insert LoadRunner Analysis screenshots or generated graphs here.)*
 
 ---
 
-## **🔍 Analysis & Discussion**
+## ** Analysis & Discussion**
 
 - Response times remained consistent for `GET` requests, even under high load.  
 - `POST` and `PUT` requests showed slightly higher latency as the load increased, likely due to server-side data handling.  
@@ -105,7 +105,7 @@ The Reqres.in API maintained stable performance up to approximately **400 concur
 
 ---
 
-## **✅ Conclusion**
+## **Conclusion**
 
 The stress test performed on Reqres.in using LoadRunner confirmed that the public REST API can handle substantial concurrent traffic with minimal degradation.  
 Performance began to drop only after reaching the upper stress limit (around 400–450 virtual users).  
@@ -113,7 +113,7 @@ The test results validate the reliability of Reqres.in as a stable API endpoint 
 
 ---
 
-## **📚 References**
+## **References**
 
 - Micro Focus LoadRunner Documentation – [https://admhelp.microfocus.com/lr/en/latest](https://admhelp.microfocus.com/lr/en/latest)  
 - Reqres.in Public API – [https://reqres.in](https://reqres.in)  
