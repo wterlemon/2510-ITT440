@@ -1,7 +1,6 @@
 # TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM
 
-[Uploading Performance_Test_Report_Taurus_MercuryTours.md…]()
-# 🧪 Performance Testing Report – Stress Test (Taurus + Mercury Tours)
+# Performance Testing Report – Stress Test (Taurus + Mercury Tours)
 
 ## **Title & Introduction**
 
@@ -14,7 +13,7 @@ The goal of this assessment is to evaluate how the application behaves under **i
 
 ---
 
-## 🎯 **Objective**
+## **Objective**
 
 - Evaluate the **performance and stability** of Mercury Tours under heavy concurrent user load.  
 - Measure **response time**, **throughput**, and **error rates** as load increases.  
@@ -23,7 +22,7 @@ The goal of this assessment is to evaluate how the application behaves under **i
 
 ---
 
-## 🧰 **Tool & Test Environment**
+##  **Tool & Test Environment**
 
 | **Item** | **Description** |
 |-----------|----------------|
@@ -37,7 +36,7 @@ The goal of this assessment is to evaluate how the application behaves under **i
 
 ---
 
-## ⚙️ **Test Plan & Configuration**
+##  **Test Plan & Configuration**
 
 ### **Overview**
 The stress test simulates **100 concurrent users** performing sequential booking operations (login → search → book → logout).  
@@ -89,7 +88,7 @@ reporting:
 
 ---
 
-## 🧪 **Test Scenarios**
+##  **Test Scenarios**
 
 | **Step** | **Description** | **HTTP Method** | **Endpoint** |
 |-----------|----------------|------------------|---------------|
@@ -103,7 +102,7 @@ Each virtual user executes these steps in sequence, representing a complete end-
 
 ---
 
-## 💻 **Execution (on Ubuntu)**
+##  **Execution (on Ubuntu)**
 
 The stress test was executed from the Ubuntu terminal using the following command:
 
@@ -124,7 +123,7 @@ Taurus automatically generated result folders and logs at:
 
 ---
 
-## 📊 **Results (Example Data)**
+##  **Results (Example Data)**
 
 | **Transaction** | **Samples** | **Avg (ms)** | **Min** | **Max** | **Error %** | **Throughput (req/sec)** |
 |-----------------|--------------|--------------|----------|----------|--------------|---------------------------|
@@ -139,11 +138,11 @@ Taurus automatically generated result folders and logs at:
 - **Throughput Over Time** (line chart)  
 - **Error Rate Trend** (line or pie chart)
 
-📸 *Insert your Taurus console output and report screenshots here.*
+ *Insert your Taurus console output and report screenshots here.*
 
 ---
 
-## 🔍 **Analysis & Discussion**
+##  **Analysis & Discussion**
 
 - The **average response time** was below 1 second up to around 80–100 concurrent users.  
 - As concurrency increased, the **Book Flight** transaction exhibited the largest delay, likely due to backend data processing.  
@@ -156,7 +155,7 @@ This indicates that optimization is needed for database and backend operations, 
 
 ---
 
-## 🛠️ **Recommendations**
+##  **Recommendations**
 
 1. **Implement caching** for static pages and flight search results.  
 2. **Optimize SQL queries** and backend logic in the booking process.  
@@ -166,7 +165,7 @@ This indicates that optimization is needed for database and backend operations, 
 
 ---
 
-## ✅ **Conclusion**
+##  **Conclusion**
 
 The stress test conducted with Taurus on the Mercury Tours web application successfully identified the site’s performance limits under high concurrency.  
 The system maintained good responsiveness up to approximately **100 virtual users**, after which response times and error rates increased.  
@@ -174,7 +173,7 @@ Overall, the site demonstrated **reasonable stability** and **recoverability**, 
 
 ---
 
-## 📚 **References**
+##  **References**
 
 - Taurus Documentation – [https://gettaurus.org/](https://gettaurus.org/)  
 - Apache JMeter Documentation – [https://jmeter.apache.org](https://jmeter.apache.org)  
