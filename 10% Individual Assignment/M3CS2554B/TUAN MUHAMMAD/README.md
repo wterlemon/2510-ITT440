@@ -4,10 +4,10 @@
 
 ## **Title & Introduction**
 
-### **Title:**
-Performance Testing on Reqres.in API using Taurus (Stress Test)
+### **Title: Performance Testing on Reqres.in API using Taurus (Stress Test)**
 
 ### **Introduction:**
+
 This report documents a **stress test** performed on the **Reqres.in** public REST API using **Taurus**, an open-source performance testing framework.  
 The purpose of this assessment is to evaluate how the API behaves under **heavy concurrent user load**, to identify response trends, rate-limiting behavior, and potential bottlenecks.
 
@@ -212,9 +212,11 @@ Overall, Reqres.in exhibited **excellent responsiveness**, stable throughput, an
 
 ---
 
-**Prepared by:** _Baihaqi_  
-**Course:** ITT440 – Web Application Performance Testing  
+**Prepared by:** TUAN MUHAMMAD BAIHAQI' BIN  TUAN IBRAHIM 
+
+**Course:** ITT440 – Web Application Performance Testing
+
 **Date:** 30 Oct 2025  
-**GitHub Repository:** [👉 View on GitHub](https://github.com/baihaqi-itt440/Performance-Test-Reqres)  
-**YouTube Presentation:** [🎥 Watch Presentation](https://youtube.com/)
+
+## **YouTube Presentation:** [🎥 Watch Presentation](https://youtube.com/)
 
