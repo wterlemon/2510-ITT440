@@ -143,34 +143,6 @@ Taurus produced real-time metrics for:
 
 ---
 
----
-
-## **4. Visual Analysis**
-
-### **4.1 Average Response Time per Endpoint**
-![Average Response Time per Endpoint](<img width="1600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/c1a9c589-7536-4a2e-8c01-523fdc69de2c" />
-)
-
-**Explanation:**  
-The bar chart illustrates the **average response time** for each API endpoint.  
-- The **Get Single User** endpoint is the fastest (≈0.03 s).  
-- The **Get User List** endpoint has a moderate average response time (≈0.24 s).  
-- The **Create**, **Update**, and **Delete** endpoints all failed due to rate-limiting (HTTP 429), but their measured response times before failure were around **0.20 s**.
-
----
-
-### **4.2 Response Time Percentiles**
-![Response Time Percentiles](<img width="1600" height="1000" alt="graph_percentile" src="https://github.com/user-attachments/assets/ae3e7330-0311-4fcd-ac6f-920cb9cffc9d" />
-)
-
-**Explanation:**  
-The line chart shows how response times vary across percentiles:  
-- **50% of requests** completed in under **0.19 s**, showing good baseline responsiveness.  
-- **99% of requests** finished below **1.07 s**, indicating rare but notable latency spikes.  
-- A few extreme outliers reached **3.1 s**, which could be due to server throttling or temporary overload.
-
----
-
 ##  **Analysis & Discussion**
 
 - **GET** operations remained fully successful with low latency (average < 250 ms).  
