@@ -15,6 +15,8 @@ Web application testing and analysis is a process to evaluate a web application'
 
 ## 💡 Testing Environment & Goal
 
+<img width="946" height="900" alt="image" src="https://github.com/user-attachments/assets/990ecd3c-f8ea-47ac-95c1-ee5b653ceaf6" />
+
 This experiment was performed in a Linux environment, specifically Kali Linux, which provides a stable and secure platform for running performance testing tools such as Locust.
 
 The main goal of this testing is to assess the performance and stability of the DummyJSON web API under concurrent user load using Locust load testing tool.  
