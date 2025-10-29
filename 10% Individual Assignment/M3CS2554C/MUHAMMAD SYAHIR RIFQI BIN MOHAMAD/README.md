@@ -3,7 +3,7 @@
 **Author:** Muhammad Syahir Rifqi bin Mohamad Nizam
 **Student ID Number:** 2202539538 
 **Date:** October 2025
-## 📘 Introduction
+## Introduction
 
 In modern web development, ensuring that an application performs reliably under sustained traffic is critical—especially for production environments hosted on cloud platforms like Vercel. This is where **SOAK testing** becomes an essential part of the performance validation toolkit.
 
