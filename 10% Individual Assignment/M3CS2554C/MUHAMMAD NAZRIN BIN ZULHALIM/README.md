@@ -7,11 +7,11 @@
 
 ---
 ## :building_construction: Project Objective
-## The objective of this is to analyse how ‘https://demo.nopcommerce.com’ will behave under soak testing using Grafana k6. k6 is used to simulate continuous real life traffic loads and identify performance degradation, memory and resource leaks and stability issues. The result of the test will be the indicators(KPIs) of the key performance and application endurance.
+### The objective of this is to analyse how ‘https://demo.nopcommerce.com’ will behave under soak testing using Grafana k6. k6 is used to simulate continuous real life traffic loads and identify performance degradation, memory and resource leaks and stability issues. The result of the test will be the indicators(KPIs) of the key performance and application endurance.
 
 ---
 ## :dart: Target Application
-## The application selected for this analysis is 'https://demo.nopcommerce.com', a publicly accessible demo e-commerce platform. This application was chosen because e-commerce needs to be able to handle continuous traffic and complex user flows.
+### The application selected for this analysis is 'https://demo.nopcommerce.com', a publicly accessible demo e-commerce platform. This application was chosen because e-commerce needs to be able to handle continuous traffic and complex user flows.
 
 ---
 ## 🛠️ Test Environment
