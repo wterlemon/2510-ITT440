@@ -1,6 +1,6 @@
 # 🔥 *Endurance Testing of ChatGPT using JMeter*
-
-<img width="150" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
+<p align="center">
+<img width="180" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
 
 #### 🧑‍🎓 STUDENT NAME : NUR EZZATY BINTI HUSIN
 #### 📝 ITT440 - INDIVIDUAL ASSIGNMENT
@@ -61,6 +61,12 @@ The test simulates 10 virtual users continuously sending requests to ChatGPT ove
 | **Error Rate** |	 |	 |
 | **CPU Utilization (Client Machine)** |	 |	 |
 | **Memory Utilization (Client Machine)** |	 |	 |
+
+#### Result Summary :
+#### Graph :
+
+---
+### 🔍 Performance Analysis
 
 ---
 ### 🚧 Bottlenecks and Recommendations
