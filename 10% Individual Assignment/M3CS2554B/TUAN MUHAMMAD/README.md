@@ -1,6 +1,6 @@
 # TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM
 
-# 🧪 Performance Testing Report – Stress Test (Taurus + Reqres.in)
+#  Performance Testing Report – Stress Test (Taurus + Reqres.in)
 
 ## **Title & Introduction**
 
@@ -140,6 +140,32 @@ Taurus produced real-time metrics for:
 | 95 % | 0.210 |
 | 99 % | 1.072 |
 | 100 % | 3.102 |
+
+---
+
+---
+
+## **4. Visual Analysis**
+
+### **4.1 Average Response Time per Endpoint**
+![Average Response Time per Endpoint](graph_avg_rt.png)
+
+**Explanation:**  
+The bar chart illustrates the **average response time** for each API endpoint.  
+- The **Get Single User** endpoint is the fastest (≈0.03 s).  
+- The **Get User List** endpoint has a moderate average response time (≈0.24 s).  
+- The **Create**, **Update**, and **Delete** endpoints all failed due to rate-limiting (HTTP 429), but their measured response times before failure were around **0.20 s**.
+
+---
+
+### **4.2 Response Time Percentiles**
+![Response Time Percentiles](graph_percentile.png)
+
+**Explanation:**  
+The line chart shows how response times vary across percentiles:  
+- **50% of requests** completed in under **0.19 s**, showing good baseline responsiveness.  
+- **99% of requests** finished below **1.07 s**, indicating rare but notable latency spikes.  
+- A few extreme outliers reached **3.1 s**, which could be due to server throttling or temporary overload.
 
 ---
 
