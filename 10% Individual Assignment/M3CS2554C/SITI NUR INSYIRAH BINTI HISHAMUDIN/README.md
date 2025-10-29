@@ -96,12 +96,12 @@ There are some important key metric measures that are looked out in this test su
 
 Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
 
-## Raw Data
+## 📈Raw Data
 <p align="center">
 <img width="600" height="450" alt="Screenshot 2025-10-29 121214" src="https://github.com/user-attachments/assets/aa2960c0-eb8f-45d6-83be-2b15b6810c45" />
 </p>
 
-## Result
+## 📝Result
 upcoming
 
 ### Type of Bottlenecks Observed
@@ -135,7 +135,9 @@ There are several identified bottlenecks based on the result, error message, and
 | **Server Side** | Optimize server-side code by minimizing synchronous or repetitive function calls. Ensure each session request is unique to reduce backend processing time, especially during login or logout operations. |
 | **Caching** | Enable caching at multiple layers — application, database, and browser. This reduces server load and minimizes redundant requests to the backend and database. |
 
-##Video Demonstration
+## CONCLUSION
+
+## ▶️Video Demonstration
 
 
 
