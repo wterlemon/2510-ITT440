@@ -1,4 +1,5 @@
-# 🔍 Endurance Testing of ChatGPT using JMeter
+# 🔥 *Endurance Testing of ChatGPT using JMeter*
+
 <img width="150" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
 
 #### 🧑‍🎓 STUDENT NAME : NUR EZZATY BINTI HUSIN
@@ -66,6 +67,7 @@ The test simulates 10 virtual users continuously sending requests to ChatGPT ove
 
 ---
 ### ✅ Conclusion
+This assignment showed how to use Apache JMeter for a endurance test to evaluate long term web app performance. Although ChatGPT couldn’t be tested directly, simulated results showed stable performance with minimal errors. I learned the importance of setting test parameters, monitoring KPIs, and analyzing results to detect long term issues.
 
 ---
 ### 📚 References
