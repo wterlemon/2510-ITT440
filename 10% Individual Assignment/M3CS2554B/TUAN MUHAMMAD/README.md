@@ -146,7 +146,7 @@ Taurus produced real-time metrics for:
 ## Report Performance Analysis
 
 ### **1. Average Response Time per Endpoint**
-![Average Response Time per Endpoint](<img width="1600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/421b7e80-26f9-4585-89d7-a1ffb6a95463" />
+![Average Response Time per Endpoint](<img width="1600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/ac3aaad0-5f74-40e6-b057-2eca850d6444" />
 )
 
 **Explanation:**  
@@ -215,3 +215,6 @@ Overall, Reqres.in exhibited **excellent responsiveness**, stable throughput, an
 **Date:** 30 Oct 2025  
 **GitHub Repository:** [👉 View on GitHub](https://github.com/baihaqi-itt440/Performance-Test-Reqres)  
 **YouTube Presentation:** [🎥 Watch Presentation](https://youtube.com/)
+<img width="1600" height="1000" alt="graph_percentile" src="https://github.com/user-attachments/assets/f73b8d91-46d8-4d3c-bc25-4be267efbe36" />
+<img width="1600" height="1000" alt="graph_avg_rt" src="https://github.com/user-attachments/assets/c4decc81-7936-45e5-99cd-6faed710adf4" />
+
