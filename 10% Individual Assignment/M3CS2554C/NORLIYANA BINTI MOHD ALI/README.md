@@ -1,9 +1,3 @@
-Perfect 👍 You’re referring to the **GitHub README.md** article (like the Artillery example), but now fully written for **your project** — using **K6**, **configuration comparison testing**, **ReqRes API**, and **executed in Kali Linux (VMware)**.
-
-Here’s your **finalized version**, ready to copy into `README.md` 👇
-
----
-
 # Web Application Configuration Comparison Testing using K6
 
 **By:** NORLIYANA MOHD ALI
