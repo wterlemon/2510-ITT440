@@ -15,13 +15,13 @@
 
 ---
 ## 🛠️ Test Environment
-##| Component | Details |
-##|------------|----------|
-##| **Test Machine** | HP Probook 440 G8 |
-##| **CPU** | 11th Gen Intel(R) Core(TM) i7-1165G7 |
-##| **RAM** | 16GB DDR4 |
-##| **Tool** | Grafana k6 v1.3.0 |
-##| **Target Application URL** | ‘https://demo.nopcommerce.com’ |
+| Component | Details |
+|------------|----------|
+| **Test Machine** | HP Probook 440 G8 |
+| **CPU** | 11th Gen Intel(R) Core(TM) i7-1165G7 |
+| **RAM** | 16GB DDR4 |
+| **Tool** | Grafana k6 v1.3.0 |
+| **Target Application URL** | ‘https://demo.nopcommerce.com’ |
 
 ---
 ## Test Methodology: Simulating Realistic Behaviour
