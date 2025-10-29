@@ -226,5 +226,5 @@ Overall, Reqres.in exhibited **excellent responsiveness**, stable throughput, an
 
 **Date:** 30 Oct 2025  
 
-## **YouTube Presentation:** [🎥 Watch Presentation](https://youtube.com/)
+## **YouTube Presentation:** [🎥 Watch Presentation](https://youtu.be/kfGyRiLsS1w)
 
