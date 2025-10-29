@@ -1,10 +1,11 @@
 # 🚀 Web Application Performance Testing - E-commerce Platform Analysis
 
 **Course:** 2510-ITT440  
-**Assessment:** 1 (10%)  
-**Author:** [Your Name]  
+**Name:** MUHAMMAD SYAZWI BIN ISA  
+**Matrix Number:** 2024783361  
 **Test Type:** Smoke Test (Basic Health Check)  
-**Platforms Tested:** Shopee, Lazada, RedBus  
+**Tools:** K6  
+**Web App:** Shopee, Lazada, Redbus  
 
 ---
 
