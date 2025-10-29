@@ -27,5 +27,6 @@ This project demonstrates a 15-minute soak test on HTTPBin.org using Vegeta load
 
 ### Vegeta Command
 ```bash
-vegeta attack -targets httpbin_targets.txt -rate 4 -duration 15m -output soak_test.bin
+vegeta attack -targets httpbin_optimized.txt -rate 4 -duration 1m -timeout 30s -output optimized_soak.bin
+
 
