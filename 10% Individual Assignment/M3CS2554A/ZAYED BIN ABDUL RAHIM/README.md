@@ -3,15 +3,13 @@
 <img width="600" height="852" alt="image" src="https://github.com/user-attachments/assets/0760177f-6683-4f3f-90e1-6bfb18941c04" />
 
 
-## 📋 Assignment Details
+# 📋 Assignment Details
 - **Course:** 2510-ITT440
-- **Assessment:** 1 (10%)
-- **Tool:** Vegeta
-- **Target Website:** DummyJson.com
-- **Test Type:** Soak Testing (Endurance Testing)
-- **Duration:** 1 minutes
+- **Name: ZAYED BIN ABDUL RAHIM
+- **Matrix Number: 2024776461
+- **Youtube Video:
 
-## 🎯 Project Overview
+# 📱Introduction
 This project demonstrates a 1-minute soak test on DummyJson using Vegeta load testing tool. Soak testing helps identify performance degradation, memory leaks, and stability issues under sustained load over an extended period.
 
 ## 🛠️ Tools & Technologies
@@ -21,20 +19,35 @@ This project demonstrates a 1-minute soak test on DummyJson using Vegeta load te
 - **Load Intensity:** 3 requests per second
 - **Total Requests:** ~180
 
+
+# ⚙️ Test Environment & Methodology
 ## Test Setup
--**Tool: Vegeta v12.12.0
--**Rate: 3
--**Test Duration: 1 Minute
--**Test Type: Soak Test(Reliability Test)
--**Target Website: DummyJson
+- **Tool: Vegeta v12.12.0
+- **Rate: 3
+- **Test Duration: 1 Minute
+- **Test Type: Soak Test(Reliability Test)
+- **Target Website: DummyJson
 
 ## Metrics Tracked
--**Requests
--**Latencies
--**Success rate
--**Status Code
--**Error Set
+- **Requests
+- **Latencies
+- **Success rate
+- **Status Code
+- **Error Set
 
+# ⏱ Test Execution
+
+## Vegeta Command
+```bash
+# Attack configuration
+cd Desktop\vegeta
+vegeta attack -targets dummyjson_targets.txt -rate 3 -duration 1m -output dummyjson_soak.bin
+
+# Attack configuration
+vegeta report dummyjson_soak.bin
+vegeta report -type json dummyjson_soak.bin > dummyjson_metrics.json
+plot -title "DummyJSON 1-min Soak Test" dummyjson_soak.bin > dummyjson_chart.html
+dummyjson_chart.html
 
 ## 📈 Test Results & Analysis
 
@@ -46,17 +59,18 @@ Bytes Out     [total, mean]                     0, 0.00
 Success       [ratio]                           100.00%
 Status Codes  [code:count]                      200:180
 Error Set:
+```
 
-## 📊 Performance Analysis
+# 📊 Performance Analysis
 
-🎯 Latency Performance
+## 🎯 Latency Performance
 -Best Case: 106.267ms - Exceptional minimum response time
 -Average Performance: 391.195ms - Very responsive mean latency
 -Median (50th %ile): 375.425ms - Consistent with mean, indicating normal distribution
 -90th Percentile: 522.065ms - 90% of requests under half-second
 -Worst Case: 883.327ms - Maximum latency under 1 second
 
-📈 Data Transfer Efficiency
+## 📈 Data Transfer Efficiency
 -Total Data Received: 1.58 MB across all requests
 -Average Response Size: 8.79 KB per request
 -Efficient Payloads: Optimal balance between data richness and performance
@@ -83,19 +97,19 @@ Error Set:
 -Stable memory and connection management
 
 
-### 🎯 Key Findings
+# 🎯 Key Findings
 
-#### ✅ Exceptional Reliability
+### ✅ Exceptional Reliability
 - **Perfect Success Rate:** 100.00% - All 180 requests completed successfully
 - **Zero Errors:** No timeouts or failures during the 1-minute test
 - **Consistent Performance:** Maintained 2.99 requests/second throughput
 
-#### ⚡ Outstanding Performance
+### ⚡ Outstanding Performance
 - **Rapid Response Times:** Average latency of 391ms with maximum under 1 second
 - **Efficient Processing:** 90% of requests completed in under 522ms
 - **Optimal Throughput:** Achieved 99% of target request rate (2.99/3.02)
 
-#### 📊 Performance Grade: **Excellent**
+### 📊 Performance Grade: **Excellent**
 - Reliability: 100% ✅
 - Responsiveness: A+ ⚡
 - Consistency: A 📈
@@ -107,16 +121,9 @@ Error Set:
 
 <img width="1904" height="600" alt="image" src="https://github.com/user-attachments/assets/98da063f-9934-45d8-8eee-568870b40a79" />
 
+# ✅ Conclusion
+This soak test successfully validated DummyJSON's ability to maintain stability and performance under sustained load, providing high confidence for production integration and user-facing applications.
 
-### Vegeta Command
-```bash
-# Attack configuration
-cd Desktop\vegeta
-vegeta attack -targets dummyjson_targets.txt -rate 3 -duration 1m -output dummyjson_soak.bin
 
-# Attack configuration
-vegeta report dummyjson_soak.bin
-vegeta report -type json dummyjson_soak.bin > dummyjson_metrics.json
-plot -title "DummyJSON 1-min Soak Test" dummyjson_soak.bin > dummyjson_chart.html
-dummyjson_chart.html
+
  
