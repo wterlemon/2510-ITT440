@@ -1,4 +1,4 @@
-# Web App performance Stress Testing Using Apache JMeter
+# 🚀Web App performance Stress Testing Using Apache JMeter
 BY: SITI NUR INSYIRAH BINTI HISHAMUDIN<br>
 STUDENT ID: 2025128335<br>
 GROUP: M3CDCS2554C<br>
@@ -29,10 +29,11 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Free Open Source Tool** | A free, open-source performance testing tool. It requires no license or trial, making it cost-effective for newcomers in performance testing. |
 | **Wide Range of Protocol Types** | JMeter supports various protocols like HTTP and HTTPS for web applications. It can simulate real-world scenarios using thread groups that users can configure themselves. |
 | **Detailed Report Function** | JMeter provides multiple reporting options (e.g., Summary Report, Response Time Graph, Aggregate Report). Data can be saved in multiple formats such as `.jmx`, `.jtl`, and `.csv`. |
+<br> 
 
 ## 🧪 Test Environment & Configuration
 
-**1️⃣Test Environment**
+**1️⃣ Test Environment**
 
 | Component | Details |
 |------------|----------|
@@ -65,11 +66,13 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Built-in Tools** | Generate HTML Report |
 | **Example Full path** | localhost/LBM/loginLibrary.php |
 
+<br>
+
 ## 🔍Methodology
 
 This stress test has several scenarios or stages that were conducted in order to determine and identify when the performance of this website starts to drop, overload or in a bottleneck that leads to error. Each of the stages was tested and run three times to get overall and accurate results of the stress test for each of the stages with different number of users (thread). All of the pages are tested for both admin and user pages that are important to simulate realistic user behavior, from login pages to pages that contain create, read, update, and delete (CRUD) and lastly logout pages. The table below shows details of each stage. 
 
-**Test Scenario**
+ℹ️ <ins> **Test Scenario** </ins>
 - Number of stages: 12
 - Each stage was tested 3 times and data were combined to get the accurate results of the stage.
 - Sequence of pages tested: <br>1. Login Admin <br>
@@ -79,7 +82,8 @@ This stress test has several scenarios or stages that were conducted in order to
          5. Logout Admin <br>
          6. Logout User	<br>
 
-	
+<div align="center">
+
 | Stage | Number of Users | Duration (s) |
 |:------:|:----------------:|:-------------:|
 | 1 | 500 | 60 |
@@ -93,12 +97,24 @@ This stress test has several scenarios or stages that were conducted in order to
 | 9 | 4500 | 180 |
 | 10 | 5000 | 180 |
 | 11 | 5500 | 180 |
-| 12 | 6000 | 180 | 
+| 12 | 6000 | 180 |
+
 </div>
+<br>
 
-There are some important key metric measures that are looked out in this test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time.//descrb 
+There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time.
 
-**📏Baseline Test**
+| Metric | Explanation |
+|------------|----------|
+| **Average Response Time** | The total time elapsed from when a client sends a request to a server until the client receives the complete response from that server. |
+| **Throughput** | Number of requests or transactions a system processes per second under simulated workloads. |
+| **Percentile 90th** | Response time below which 90% of all request fall. |
+| **Percentile 95th** | Response time below which 95% of all request fall. |
+| **Error** | Number of request that is failed or did not receive a response |
+
+<br>
+
+ℹ️ <ins> **Baseline Test** </ins>
 
 Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
 
@@ -338,9 +354,9 @@ Before starting to run the stress test for each stage, a baseline test will be d
 
 As the user thread at stage 10 until stage 12 which has 5000 to 6000 users within 180 seconds starts to load longer than usual and the error message below appears for all pages that failed to send the request.
 
-**“Non HTTP response code: org.apache.http.conn.HttpHostConnectException/Non HTTP response message: Connect to localhost:80[localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect”**
+***“Non HTTP response code: org.apache.http.conn.HttpHostConnectException/Non HTTP response message: Connect to localhost:80[localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect”***
 
-**“Non HTTP response code: java.net.BindException/Non HTTP response message: Address already in use: connect”**
+***“Non HTTP response code: java.net.BindException/Non HTTP response message: Address already in use: connect”***
 
 The first error message above has a means that the server was too busy to take or make new connections for upcoming new requests. Thus, the server decides to reject the request and that is why at this stage the website shows the error percentage which indicates the failure of requests. Besides that, the web application also takes a longer time to load because the new upcoming request is waiting for the server to process it.
 
