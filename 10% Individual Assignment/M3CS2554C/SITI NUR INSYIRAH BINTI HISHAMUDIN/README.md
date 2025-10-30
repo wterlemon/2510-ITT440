@@ -1,6 +1,6 @@
 # 🚀Web App performance Stress Testing Using Apache JMeter
-BY: SITI NUR INSYIRAH BINTI HISHAMUDIN<br>
-STUDENT ID: 2025128335<br>
+BY: SITI NUR INSYIRAH BINTI HISHAMUDIN<br> <br>
+STUDENT ID: 2025128335<br> <br>
 GROUP: M3CDCS2554C<br>
 
 ## 📌What Is Performance Testing?
@@ -110,7 +110,7 @@ There are some important key metrics to be measures in this stress test such as 
 | **Throughput** | Number of requests or transactions a system processes per second under simulated workloads. |
 | **Percentile 90th** | Response time below which 90% of all request fall. |
 | **Percentile 95th** | Response time below which 95% of all request fall. |
-| **Error** | Number of request that is failed or did not receive a response |
+| **Error (%)** | Number of request that is failed or did not receive a response |
 
 <br>
 
@@ -118,19 +118,36 @@ There are some important key metrics to be measures in this stress test such as 
 
 Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
 
-## 📈Raw Data
-<p align="center">
-<img width="514" height="270" alt="Screenshot 2025-10-29 204453" src="https://github.com/user-attachments/assets/d123442b-4b73-49d8-bf48-b3cd00fff208" /> </p>
+## 📈 Sample Output Data
 
+- Test Summary
 <p align="center">
-<img width="514" height="270" alt="Screenshot 2025-10-29 121214" src="https://github.com/user-attachments/assets/aa2960c0-eb8f-45d6-83be-2b15b6810c45" />
+<img width="650" height="700" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
 </p>
 
+--- 
+- Failed Request 
 <p align="center">
-<img width="514" height="270" alt="image" src="https://github.com/user-attachments/assets/35e1a282-5e67-4ddc-a415-2e5471af6445" /> </p>
+<img width="550" alt="Screenshot 2025-10-29 204453" src="https://github.com/user-attachments/assets/d123442b-4b73-49d8-bf48-b3cd00fff208" /> 
+</p>
 
+--- 
+- Average Response Time
 <p align="center">
-<img width="550" height="270" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> </p>
+<img width="700" alt="Screenshot 2025-10-29 121214" src="https://github.com/user-attachments/assets/5e6b6f7b-a6ba-42bf-b234-b4c230fbf57d" />
+</p>
+
+--- 
+- Throughput
+<p align="center">
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/540d3738-b1a6-4f8c-9de6-f94939059758" />
+</p>
+
+--- 
+- CPU Performence Summary
+<p align="center">
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/35e1a282-5e67-4ddc-a415-2e5471af6445" /> 
+</p>
 
 ## 📝Result
 <div align="center">
@@ -350,7 +367,7 @@ Before starting to run the stress test for each stage, a baseline test will be d
 </div>
 <br>
 
-### ➤Type of Bottlenecks Observed
+### ➤ Type of Bottlenecks Observed
 
 As the user thread at stage 10 until stage 12 which has 5000 to 6000 users within 180 seconds starts to load longer than usual and the error message below appears for all pages that failed to send the request.
 
@@ -371,7 +388,11 @@ There are several identified bottlenecks based on the result, error message, and
 | 3 | **Socket/Port Exhaustion** | Connections to localhost on port 80 fail due to the server being unable to handle additional requests. Processor privilege time exceeds 25%, indicating heavy operating system usage. |
 <br>
 
-## ✅RECOMMENDATIONS BASED ON INDUSTRY BEST PRACTICE
+### ➤ Failure Points
+The failure points start at stage 10 with the settings of 5000 users until 6000 users within 180 seconds this can prove where the error percentage and message appear in web pages that produce more data like login page, borrowing book page, and manage book page.
+
+
+## ✅ RECOMMENDATIONS BASED ON INDUSTRY BEST PRACTICE
 
 | Area | Recommendation |
 |:------|:---------------|
@@ -395,7 +416,17 @@ Last but not least, the logout pages have the least error that is below 4% but a
 In summary, this website's critical breaking point is when the number of users is 6000 which the CPU is almost reaching 100% usage that leads the database, backend, and server to crash thus cannot perform efficiently to complete all of the requests to the web server that lead to error.
 
 
-## ▶️Video Demonstration
+## ▶️ Video Demonstration
 
+## 🌐 References
+- Apache Software Foundation. (2019). Apache JMeterTM. Apache.org. https://jmeter.apache.org/ <br>
+- GeeksforGeeks. (2019, April 18). What is Stress Testing in Software Testing? GeeksforGeeks. https://www.geeksforgeeks.org/software-testing/stress-testing-software-testing/ <br>
+- What Is a Website Performance Test? | Website Testing | Akamai. (2024). Akamai. https://www.akamai.com/glossary/what-is-a-website-performance-test <br>
+- Metrics for performance tests - Performance Testing - Alibaba Cloud Documentation Center. (2024). Alibabacloud.com. https://www.alibabacloud.com/help/en/pts/performance-test-pts-3-0/product-overview/test-metrics
 
+‌
+
+‌
+
+‌
 
