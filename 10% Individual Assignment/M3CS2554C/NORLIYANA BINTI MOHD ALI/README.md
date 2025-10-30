@@ -310,9 +310,9 @@ if __name__ == "__main__":
 
 ## 💡 Recommendations
 
-1.  Try **longer test durations** ($\mathbf{1}$–$\mathbf{5 \text{ minutes}}$) for more stable averages and to observe long-term performance trends.
-2.  Increase virtual users gradually (e.g., $10$, $50$, $100 \text{ VUs}$) to identify the exact **saturation point** of the API.
-3.  Integrate $\text{K}6$ results with **Grafana or InfluxDB** for live, interactive dashboards.
+1.  Try **longer test durations** (1-5 minutes) for more stable averages and to observe long-term performance trends.
+2.  Increase virtual users gradually (e.g., 10, 50, 100 VUs) to identify the exact **saturation point** of the API.
+3.  Integrate K6 results with **Grafana or InfluxDB** for live, interactive dashboards.
 4.  For future realistic testing, consider using custom, private endpoints instead of public APIs to avoid excessive hits.
 
 -----
