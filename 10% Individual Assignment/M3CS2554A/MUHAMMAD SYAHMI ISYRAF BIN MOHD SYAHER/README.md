@@ -63,7 +63,7 @@ It supports **Collection Runner** and **Newman CLI** for automated, repeated, or
 
 *(Insert Postman result screenshot or chart below)*  
 Example chart:  
-<img width="900" height="180" alt="spike chart" src="https://github.com/user-attachments/assets/your-chart-placeholder.png" />
+<img />
 
 ---
 
