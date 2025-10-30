@@ -30,7 +30,9 @@ This endpoint was selected because it returns a paginated list of user data in J
 
 **Screenshot of API response:**
 
-![Reqres API Response](images/reqres_api_response.png)
+<img width="457" height="619" alt="image" src="https://github.com/user-attachments/assets/da7ff3dc-163f-42b7-a51e-3b8e09677f7f" />
+<img width="724" height="414" alt="image" src="https://github.com/user-attachments/assets/282cda18-c468-4050-97fb-7310d1a54bbe" />
+
 
 ---
 
