@@ -15,11 +15,11 @@ This test aims to evaluate how the system reacts to **sudden bursts of high user
 
 ---
 
-## ⚙️ Tool Justification (Why Artillery)
+## ⚙️ Reasoning of using Artillery
 
-Artillery is a **lightweight, open-source load testing tool** for APIs and web applications.  
-It uses simple **YAML-based configuration**, integrates with **Artillery Cloud** for real-time visualization, and supports complex user scenarios.  
-Artillery is ideal for **spike testing** because it can generate sharp, temporary increases in load to evaluate system resilience and stability.
+Artillery is an **open-source performance testing framework** designed for modern web systems and APIs.  
+It allows users to easily create test scenarios using **YAML configuration files** and provides detailed, real-time insights through **Artillery Cloud**.  
+The tool is particularly effective for **spike load simulations**, as it can rapidly scale virtual users to assess how well a system withstands sudden traffic surges and recovers afterward.
 
 ---
 
@@ -107,6 +107,16 @@ Three test phases were defined:
 The test results and metrics were captured and visualized through the **Artillery Cloud Dashboard**.
 
 ---
+
+### 📊 Load Summary Analysis
+<img width="1397" height="456" alt="load summary" src="https://github.com/user-attachments/assets/869a8fc8-957c-4904-94f1-2a542a6ab42d" />
+
+The load summary illustrates how the system handled a rapid increase and decrease in user traffic during the spike test.  
+A total of **1,500 virtual users** were generated, with **665 completing successfully** and **835 failing** due to rate limiting on the OpenCart demo server.  
+Despite the high failure count, the **average request rate of 15 req/s** and a **peak of 76 req/s** show that the server responded quickly to sudden traffic bursts.  
+The graph clearly depicts three phases — warm-up, spike, and recovery — with response times spiking briefly before stabilizing, demonstrating the server’s ability to **recover efficiently after intense load**.
+
+
 
 ## 📈 Spike Load Behavior (Active Users vs Request Rate)
 <img width="1394" height="371" alt="spike load behaviour" src="https://github.com/user-attachments/assets/02435bcb-d9ec-42ce-bdb8-d1dd859a16ab" />
