@@ -4,7 +4,7 @@
 **Course:** ITT440  
 **Name:** MUHAMMAD SYAZWI BIN ISA  
 **Matrix Number:** 2024783361    
-**YouTube Video:** [coming soon
+**YouTube Video:** [[Here we go](https://youtu.be/3_bWidNcf6I)
 
 ---
 
@@ -210,4 +210,4 @@ All platforms passed the smoke test with an overall success rate of 97.97%, conf
 
 ## 🎥 Video Demonstration
 A detailed walkthrough of the test execution and result analysis is available on YouTube:
-[coming soon]   
+[[Here We GO]](https://youtu.be/3_bWidNcf6I)   
