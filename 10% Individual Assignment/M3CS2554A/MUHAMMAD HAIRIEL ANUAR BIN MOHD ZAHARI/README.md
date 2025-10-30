@@ -1,13 +1,13 @@
 # ⚡ **Reqres API Load Test using BlazeMeter**  
 
 
-### Name: Muhammad Hairiel Anuar Bin Mohd Zahari 
+### Name: MUHAMMAD HAIRIEL ANUAR BIN MOHD ZAHARI
 ### Course: ITT440 
 ### Group: M3CS2554A  
 
 ---
 
-## **Introduction**
+## **💻Introduction**
 This project focuses on evaluating the performance of a public API, **Reqres.in**, using a load testing approach.  
 Load testing helps determine how well a system performs under specific user loads and ensures that it can handle concurrent requests without degradation.  
 
@@ -15,7 +15,7 @@ The goal of this test is to measure **response time, throughput, and stability**
 
 ---
 
-## **Project Overview**
+## **📽️Project Overview**
 The target system for this project is **Reqres.in**, a free and publicly available REST API used for testing and prototyping HTTP requests.  
 
 The project aims to:
@@ -34,7 +34,7 @@ This endpoint was selected because it returns a paginated list of user data in J
 
 ---
 
-## **Tool Selection and Justification**
+## **🛠️Tool Selection and Justification**
 The tool selected for this project is **BlazeMeter**, an online performance testing platform that supports **Apache JMeter** scripts and cloud-based execution.
 
 **Reasons for choosing BlazeMeter:**
@@ -48,7 +48,7 @@ BlazeMeter was selected for its simplicity, flexibility, and professional report
 
 ---
 
-## **Test Setup**
+## **🧱Test Setup**
 
 | Category | Details |
 |-----------|----------|
@@ -67,7 +67,7 @@ During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes
 
 ---
 
-## **Test Result**
+## **📄Test Result**
 **Summary of Results (from BlazeMeter Dashboard):**
 
 | Metric | Result | Description |
@@ -85,7 +85,7 @@ During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes
 
 ---
 
-## **Analysis**
+## **🔬Analysis**
 
 ### **Performance**
 The Reqres API maintained excellent performance under a steady load of 50 virtual users.  
@@ -104,7 +104,7 @@ Throughput and bandwidth usage were consistent, indicating predictable and relia
 
 ---
 
-## **Raw Data**
+## **🧬Raw Data**
 | Parameter | Value |
 |------------|--------|
 | **Total Requests Sent** | ~288,000 (480 req/s × 600 seconds) |
@@ -118,7 +118,7 @@ Throughput and bandwidth usage were consistent, indicating predictable and relia
 
 ---
 
-## **Performance Results and Analysis**
+## **🔑Performance Results and Analysis**
 The collected data shows that the Reqres API is **highly stable and responsive** under continuous load conditions.  
 
 **Key Observations:**
@@ -133,7 +133,7 @@ The performance remains stable across all simulated users, which is a strong ind
 
 ---
 
-## **Conclusion and Improvement**
+## **📁Conclusion and Improvement**
 
 ### **Conclusion**
 The BlazeMeter load test confirmed the excellent stability and performance of the Reqres API. With 50 virtual users and zero errors, the system maintained an average response time below 100 ms. It is showing outstanding efficiency and responsiveness.
@@ -146,4 +146,4 @@ The BlazeMeter load test confirmed the excellent stability and performance of th
 
 ---
 
-## **Video Demonstration**
+## **📼Video Demonstration**
