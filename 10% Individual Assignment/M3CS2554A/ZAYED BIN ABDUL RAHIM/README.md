@@ -18,7 +18,7 @@ This project demonstrates a 1-minute soak test on DummyJson using Vegeta load te
 - Tool: Vegeta v12.12.0
 - Rate: 3
 - Test Duration: 1 Minute
-- Test Type: Soak Test(Reliability Test)
+- Test Type: Soak Test (Reliability Test)
 - Target Website: DummyJson
 - Test Duration: 1 minutes
 - Load Intensity: 3 requests per second
