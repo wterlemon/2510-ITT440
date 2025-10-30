@@ -69,7 +69,7 @@ export default function () {
 }
 ```
 
-\<img width="1122" height="540" alt="image" src="[https://github.com/user-attachments/assets/edc4f5a6-025a-44c7-a484-e6c440a635f1](https://github.com/user-attachments/assets/edc4f5a6-025a-44c7-a484-e6c440a635f1)" /\>
+<img width="1189" height="546" alt="image" src="https://github.com/user-attachments/assets/98cd054d-2319-4d94-829a-af70eb018e04" />
 
 ### 🔹 `k6_high.js` (High Configuration)
 
@@ -88,7 +88,7 @@ export default function () {
 }
 ```
 
-\<img width="1243" height="554" alt="image" src="[https://github.com/user-attachments/assets/7f4cf914-fa8a-48e3-ab0d-5ddcf9c00265](https://github.com/user-attachments/assets/7f4cf914-fa8a-48e3-ab0d-5ddcf9c00265)" /\>
+<img width="1187" height="555" alt="image" src="https://github.com/user-attachments/assets/db70fb7f-f820-4035-8754-1a850e119f58" />
 
 -----
 
@@ -285,7 +285,7 @@ if __name__ == "__main__":
     main()
 ```
 
-\<img width="1226" height="580" alt="image" src="[https://github.com/user-attachments/assets/8782025d-dcf6-4d8a-b92c-d13b10f02d9a](https://github.com/user-attachments/assets/8782025d-dcf6-4d8a-b92c-d13b10f02d9a)" /\>
+<img width="1226" height="582" alt="image" src="https://github.com/user-attachments/assets/09919eb2-e268-4758-a422-8a9287eaf933" />
 
 -----
 
@@ -293,11 +293,11 @@ if __name__ == "__main__":
 
 **Response Time Comparison**
 
-\<img width="1318" height="652" alt="image" src="[https://github.com/user-attachments/assets/52a65c3a-c1f9-4de3-8774-7d9f651d819a](https://github.com/user-attachments/assets/52a65c3a-c1f9-4de3-8774-7d9f651d819a)" /\>
+<img width="1359" height="678" alt="image" src="https://github.com/user-attachments/assets/cbe19680-e615-405c-8876-8449885b2415" />
 
 **Throughput Comparison**
 
-\<img width="1262" height="619" alt="image" src="[https://github.com/user-attachments/assets/1d33f42b-2974-4634-94ac-21660d5cf615](https://github.com/user-attachments/assets/1d33f42b-2974-4634-94ac-21660d5cf615)" /\>
+<img width="1274" height="649" alt="image" src="https://github.com/user-attachments/assets/fa7a8533-0558-4be6-b5b2-4fc9c4437acf" />
 
 -----
 
