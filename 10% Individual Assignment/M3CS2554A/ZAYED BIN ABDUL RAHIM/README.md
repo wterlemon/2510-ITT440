@@ -39,7 +39,7 @@ This project demonstrates a 1-minute soak test on DummyJson using Vegeta load te
 cd Desktop\vegeta
 vegeta attack -targets dummyjson_targets.txt -rate 3 -duration 1m -output dummyjson_soak.bin
 
-# Attack configuration
+# Analysis configuration
 vegeta report dummyjson_soak.bin
 vegeta report -type json dummyjson_soak.bin > dummyjson_metrics.json
 plot -title "DummyJSON 1-min Soak Test" dummyjson_soak.bin > dummyjson_chart.html
