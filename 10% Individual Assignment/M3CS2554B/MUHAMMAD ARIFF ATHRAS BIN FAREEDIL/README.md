@@ -381,7 +381,7 @@ The system exhibits a clear breaking point at **~200 concurrent users** where:
 4. **Async Processing** - Implement background processing for non-critical operations
 
 ## 🎥 Video Demonstration   
-https://img.youtube.com/vi/VIDEO_ID/0.jpg     
+[Video link](https://youtu.be/wwojQM3Gp4w)        
 Click the image above to watch the complete test execution walkthrough covering:
 * Test environment setup and configuration
 * Real-time monitoring during stress test execution
