@@ -68,7 +68,7 @@ export default function () {
   sleep(1);
 }
 
-<img width="1380" height="640" alt="image" src="https://github.com/user-attachments/assets/29d49ffa-72f6-4e15-b4b3-45c8fcd5530d" />
+<img width="1380" height="640" alt="image" src="https://github.com/user-attachments/assets/d7951c9d-26c3-49f3-b096-66c08131cb4a" />
 
 ```
 
