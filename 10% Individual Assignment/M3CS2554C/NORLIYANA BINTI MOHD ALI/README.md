@@ -69,7 +69,7 @@ export default function () {
 }
 ````
 
-\<img width="444" height="198" alt="k6\_low.js script screenshot" src="https://github.com/user-attachments/assets/693d9fae-83fd-4864-89cb-7a41ffaa8ca0" /\>
+<img width="444" height="198" alt="image" src="https://github.com/user-attachments/assets/f3f4368e-6962-4fbc-bcb0-b1a0d70e412a" />
 
 ### 🔹 `k6_high.js` (High Configuration)
 
@@ -88,7 +88,7 @@ export default function () {
 }
 ```
 
-\<img width="443" height="194" alt="k6\_high.js script screenshot" src="https://github.com/user-attachments/assets/3b7af142-23d1-41d6-88d9-94a281bfcf4b" /\>
+<img width="443" height="194" alt="image" src="https://github.com/user-attachments/assets/8956d334-c3d3-477d-a287-0f914aef5570" />
 
 -----
 
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     main()
 ```
 
-\<img width="445" height="206" alt="k6\_analysis.py script screenshot" src="https://github.com/user-attachments/assets/61ac2f6a-656d-40ef-ab99-772124631a3f" /\>
+<img width="445" height="206" alt="image" src="https://github.com/user-attachments/assets/39da7104-a90e-47ee-9f0c-f29995bad81b" />
 
 -----
 
@@ -268,11 +268,11 @@ if __name__ == "__main__":
 
 **Response Time Comparison**
 
-\<img width="488" height="243" alt="response time chart output" src="https://github.com/user-attachments/assets/1220fa10-77c5-4b26-81f6-0f85930cb2f9" /\>
+<img width="488" height="243" alt="image" src="https://github.com/user-attachments/assets/d1a643d2-2695-4c1f-8ce0-1cac0f8cfdec" />
 
 **Throughput Comparison**
 
-\<img width="481" height="241" alt="throughput chart output" src="https://github.com/user-attachments/assets/c3aba378-fa9f-4b48-80fd-2a98148b2589" /\>
+<img width="481" height="241" alt="image" src="https://github.com/user-attachments/assets/e96a75c3-ec54-4f87-b408-8672c99272fc" />
 
 -----
 
