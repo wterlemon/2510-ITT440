@@ -95,12 +95,12 @@ export default function () {
 
 Analyze & Compare
 
-Metric	Low Load (5 VUs)	High Load (20 VUs)	Observation
-Avg Response Time	46.75 ms	64.2 ms	Increased by about 17.45 ms (37%) under high load. The service is still fast, but response time is starting to climb.
-p(95) Response	93.34 ms	94.1 ms	Remained stable (only a slight increase). This is a good sign, meaning 95% of users still experienced a fast response time, even with $4\times$ the load.
-Requests/sec	4.72 /s	18.36 /s	Increased by over $3.8\times$. The system successfully handled significantly higher throughput, closely matching the $4\times$ increase in Virtual Users.
-Errors	0%	0%	No failures in either test. The service did not show any signs of reaching a critical error capacity (like a rate limit error 429).
-
+| Metric | Low Load (5 VUs) | High Load (20 VUs) | Observation |
+| :--- | :---: | :---: | :--- |
+| **Avg Response Time** | 46.75 ms | 64.2 ms | Increased by about 17.45 ms (37%) under high load. The service is still fast, but response time is starting to climb. |
+| **p(95) Response** | 93.34 ms | 94.1 ms | Remained stable (only a slight increase). This is a good sign, meaning 95% of users still experienced a fast response time, even with $4\times$ the load. |
+| **Requests/sec** | 4.72 /s | 18.36 /s | Increased by over $3.8\times$. The system successfully handled significantly higher throughput, closely matching the $4\times$ increase in Virtual Users. |
+| **Errors** | 0% | 0% | No failures in either test. The service did not show any signs of reaching a critical error capacity (like a rate limit error 429). |
 
 
 ---
