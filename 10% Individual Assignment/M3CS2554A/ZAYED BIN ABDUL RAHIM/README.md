@@ -21,6 +21,21 @@ This project demonstrates a 1-minute soak test on DummyJson using Vegeta load te
 - **Load Intensity:** 3 requests per second
 - **Total Requests:** ~180
 
+## Test Setup
+-**Tool: Vegeta v12.12.0
+-**Rate: 3
+-**Test Duration: 1 Minute
+-**Test Type: Soak Test(Reliability Test)
+-**Target Website: DummyJson
+
+## Metrics Tracked
+-**Requests
+-**Latencies
+-**Success rate
+-**Status Code
+-**Error Set
+
+
 ## 📈 Test Results & Analysis
 
 Requests      [total, rate, throughput]         180, 3.02, 2.99
@@ -95,8 +110,11 @@ Error Set:
 
 ### Vegeta Command
 ```bash
+# Attack configuration
 cd Desktop\vegeta
 vegeta attack -targets dummyjson_targets.txt -rate 3 -duration 1m -output dummyjson_soak.bin
+
+# Attack configuration
 vegeta report dummyjson_soak.bin
 vegeta report -type json dummyjson_soak.bin > dummyjson_metrics.json
 plot -title "DummyJSON 1-min Soak Test" dummyjson_soak.bin > dummyjson_chart.html
