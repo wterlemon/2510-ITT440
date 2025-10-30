@@ -108,7 +108,7 @@ export default function () {
 The performance metrics clearly show that quadrupling the Virtual User count resulted in a **significant increase in throughput** while maintaining **excellent response time consistency**.
 
   * **🚀 Throughput Difference:** The API successfully processed **3.89 times more requests per second** (18.36 reqs/s vs. 4.72 reqs/s) under the High Load configuration, confirming the service scaled effectively to meet the increased demand.
-  * **⏱️ Response Time Difference:** The average response time increased from **46.75 ms to 64.2 ms** (a 37 increase). This slight slowdown is normal under increased system utilization. Crucially, the **95th percentile (p(95))**—the metric indicating the quality of experience for the majority of users—only increased by less than 1 ms, confirming high consistency.
+  * **⏱️ Response Time Difference:** The average response time increased from **46.75 ms to 64.2 ms** (a 37 increase). This slight slowdown is normal under increased system utilization. Crucially, the **95th percentile (p(95))** the metric indicating the quality of experience for the majority of users—only increased by less than 1 ms, confirming high consistency.
 
 -----
 
@@ -128,10 +128,10 @@ The **lack of a $\text{HTTP } 429$ (Too Many Requests) error is notable**. In hi
 
 ### Resource Utilization (CPU/Memory)
 
-This is a core metric, and while direct host-server monitoring was not possible on the third-party $\text{ReqRes}$ $\text{API}$, an $\text{inference}$ regarding server resources is critical.
+This is a core metric, and while direct host-server monitoring was not possible on the third-party ReqRes API, an inference regarding server resources is critical.
 
-  * **Client-Side VM Resources:** The K6 execution proved to be lightweight. During the High Load test ($\text{20 VUs}$), the Kali Linux $\text{VM}$'s $\text{CPU}$ usage peaked at approximately **35%** and $\text{Memory}$ usage remained stable below **60%**, confirming the client-side infrastructure was not the bottleneck.
-  * **Target Server Inference:** The key performance indicators—a **0%** error rate and a near-constant $\text{p}(95)$ response time—strongly imply that the $\text{ReqRes}$ server's resources ($\text{CPU}$, $\text{Memory}$, and Network $\text{I/O}$) were **not** saturated by the **20 VU** load. Server-side resource bottlenecks would typically manifest as a rapid increase in $\text{HTTP } 500$ errors or a catastrophic failure in response time, neither of which occurred.
+  * **Client-Side VM Resources:** The K6 execution proved to be lightweight. During the High Load test (20 VUs), the Kali Linux VM's CPU usage peaked at approximately **35%** and Memory usage remained stable below **60%**, confirming the client-side infrastructure was not the bottleneck.
+  * **Target Server Inference:** The key performance indicators a **0%** error rate and a near-constant p(95) response time—strongly imply that the ReqRes server's resources (CPU}, Memory, and Network I/O) were **not** saturated by the **20 VU** load. Server-side resource bottlenecks would typically manifest as a rapid increase in HTTP 500 errors or a catastrophic failure in response time, neither of which occurred.
 
 -----
 
