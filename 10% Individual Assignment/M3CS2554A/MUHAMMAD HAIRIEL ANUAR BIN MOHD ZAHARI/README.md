@@ -1,6 +1,5 @@
 # **⚡️Reqres API Load Test using BlazeMeter⚡️**  
-<img width="3102" height="1576" alt="image" src="https://github.com/user-attachments/assets/76fce2f5-f1bb-45bb-84fe-9460a90b2ded" />
-
+<img width="900" height="350" alt="image" src="https://github.com/user-attachments/assets/42213e1a-1233-474d-83c4-4359806fc9dc" />
 
 ### Name: MUHAMMAD HAIRIEL ANUAR BIN MOHD ZAHARI
 ### Course: ITT440 
@@ -84,13 +83,18 @@ During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes
 | **Test Duration** | 10 minutes | Total execution time |
 
 **Load:** 
+
 <img width="629" height="375" alt="image" src="https://github.com/user-attachments/assets/121bbb22-645c-4c96-9fcc-e86b293f042b" />
 
+
 **Response Time:**
+
 <img width="619" height="369" alt="image" src="https://github.com/user-attachments/assets/12b5f9c2-c88a-41cc-84fa-4585d514201b" />
 
 **Main Timeline Chart:**
-<img width="987" height="554" alt="image" src="https://github.com/user-attachments/assets/51efd553-2584-4b04-93e3-c8707ccd21ad" />
+
+<img width="1920" height="1080" alt="main-timeline-chart-a492942d-2760-420b-ad75-9ad92909b2fc" src="https://github.com/user-attachments/assets/6c87ceb7-931d-4ef8-ae73-3c8b47468bc8" />
+
 
 ---
 
