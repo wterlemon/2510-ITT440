@@ -88,7 +88,7 @@ export default function () {
 }
 ```
 
-<img width="443" height="194" alt="image" src="https://github.com/user-attachments/assets/8956d334-c3d3-477d-a287-0f914aef5570" />
+<img width="1226" height="580" alt="image" src="https://github.com/user-attachments/assets/8782025d-dcf6-4d8a-b92c-d13b10f02d9a" />
 
 -----
 
@@ -268,11 +268,11 @@ if __name__ == "__main__":
 
 **Response Time Comparison**
 
-<img width="488" height="243" alt="image" src="https://github.com/user-attachments/assets/d1a643d2-2695-4c1f-8ce0-1cac0f8cfdec" />
+<img width="1318" height="652" alt="image" src="https://github.com/user-attachments/assets/52a65c3a-c1f9-4de3-8774-7d9f651d819a" />
 
 **Throughput Comparison**
 
-<img width="481" height="241" alt="image" src="https://github.com/user-attachments/assets/e96a75c3-ec54-4f87-b408-8672c99272fc" />
+<img width="1262" height="619" alt="image" src="https://github.com/user-attachments/assets/1d33f42b-2974-4634-94ac-21660d5cf615" />
 
 -----
 
