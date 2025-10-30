@@ -312,8 +312,3 @@ The **ReqRes API** maintained stable performance during the **K6 configuration c
   * [ReqRes API Documentation](https://reqres.in/)
   * [Pandas Documentation](https://pandas.pydata.org/docs/)
   * [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-
-
-
-```
-```
