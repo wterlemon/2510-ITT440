@@ -108,7 +108,7 @@ export default function () {
 The performance metrics clearly show that quadrupling the Virtual User count resulted in a **significant increase in throughput** while maintaining **excellent response time consistency**.
 
   * **🚀 Throughput Difference:** The API successfully processed **3.89 times more requests per second** (18.36 reqs/s vs. 4.72 reqs/s) under the High Load configuration, confirming the service scaled effectively to meet the increased demand.
-  * **⏱️ Response Time Difference:** The average response time increased from **46.75 ms to 64.2 ms** (a 37 increase). This slight slowdown is normal under increased system utilization. Crucially, the **95th percentile (p(95))** the metric indicating the quality of experience for the majority of users—only increased by less than 1 ms, confirming high consistency.
+  * **⏱️ Response Time Difference:** The average response time increased from **46.75 ms to 64.2 ms** (a 37 increase). This slight slowdown is normal under increased system utilization. Crucially, the **95th percentile (p(95))** the metric indicating the quality of experience for the majority of users only increased by less than 1 ms, confirming high consistency.
 
 -----
 
