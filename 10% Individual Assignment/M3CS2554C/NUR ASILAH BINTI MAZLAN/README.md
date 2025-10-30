@@ -99,7 +99,7 @@ Both defined thresholds were satisfied, indicating that the system maintained th
 ### 6.4 HTTP Summary
 //pic here
 <p align="justify">
-The HTTP summary indicates that all requests were successfully completed except for one request. One request failed when attempting to authenticate using the `/login` endpoint. The failure was deliberate as an invalid credential was used.
+The HTTP summary indicates that all requests were successfully completed except for one request. One request failed when attempting to authenticate using the |`/login`| endpoint. The failure was deliberate as an invalid credential was used.
 
 ### 6.5 Key Observations
 
