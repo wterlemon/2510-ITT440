@@ -23,7 +23,7 @@ After every test, Gatling automatically generates **amazing, detailed HTML repor
 Finally, Gatling **fits right into my automated development process (CI/CD)**, ensuring I catch performance problems early and continuously before it ever become a serious issue.
   
 ---
-## 🖥️Test environment setup.
+## 🖥️ You are now at the test run prep! (Test environment setup)
 | Category | Component/Software | Purpose in Environment |
 | :--- | :--- | :--- |
 | **Target Website** | **AUT Base URL** | `https://the-internet.herokuapp.com` |
