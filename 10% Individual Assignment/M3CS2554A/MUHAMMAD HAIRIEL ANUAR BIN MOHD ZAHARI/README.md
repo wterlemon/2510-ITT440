@@ -70,6 +70,8 @@ During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes
 
 ## **📄Test Result**
 **Summary of Results (from BlazeMeter Dashboard):**
+<img width="1288" height="105" alt="image" src="https://github.com/user-attachments/assets/5ff95015-d6a5-4561-8374-c8891ceec37a" />
+
 
 | Metric | Result | Description |
 |--------|---------|-------------|
@@ -81,8 +83,14 @@ During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes
 | **Average Bandwidth** | 46.39 MiB/s | Average data transfer per second |
 | **Test Duration** | 10 minutes | Total execution time |
 
-**Screenshot:**  
+**Load:** 
+<img width="629" height="375" alt="image" src="https://github.com/user-attachments/assets/121bbb22-645c-4c96-9fcc-e86b293f042b" />
 
+**Response Time:**
+<img width="619" height="369" alt="image" src="https://github.com/user-attachments/assets/12b5f9c2-c88a-41cc-84fa-4585d514201b" />
+
+**Main Timeline Chart:**
+<img width="987" height="554" alt="image" src="https://github.com/user-attachments/assets/51efd553-2584-4b04-93e3-c8707ccd21ad" />
 
 ---
 
