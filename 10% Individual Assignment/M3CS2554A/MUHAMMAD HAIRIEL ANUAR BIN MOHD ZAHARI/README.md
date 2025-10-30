@@ -1,4 +1,4 @@
-# ⚡ **Reqres API Load Test using BlazeMeter**  
+# **⚡️Reqres API Load Test using BlazeMeter⚡️**  
 
 
 ### Name: MUHAMMAD HAIRIEL ANUAR BIN MOHD ZAHARI
