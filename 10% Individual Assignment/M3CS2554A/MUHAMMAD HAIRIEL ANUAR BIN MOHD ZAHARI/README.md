@@ -81,7 +81,7 @@ During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes
 | **Test Duration** | 10 minutes | Total execution time |
 
 **Screenshot:**  
-*(Insert your BlazeMeter result screenshot here)*
+
 
 ---
 
