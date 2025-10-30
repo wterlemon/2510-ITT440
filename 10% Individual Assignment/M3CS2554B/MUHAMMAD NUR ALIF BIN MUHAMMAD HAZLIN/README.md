@@ -10,6 +10,7 @@ The objective of this assessment is to design, execute, and analyze a **performa
 ---
 
 ## 2. Tool Selection and Justification
+<img width="446" height="114" alt="image" src="https://github.com/user-attachments/assets/22d4d7b5-ae58-4a59-a133-7c4e4c3f767e" />
 
 **Chosen Tool:** Artillery (v2)
 **Reason for Selection:**
@@ -36,7 +37,7 @@ Key advantages of Artillery include:
 |                        | `a9_2gj4rergu3k7oag0ti6f7y4gfs6yfbm3`                                |
 | **Target Application** | [ReqRes API](https://reqres.in) – a public REST API used for testing |
 | **Network**            | Stable broadband connection                                          |
-| **Cloud Reporting**    | Enabled (Artillery Cloud)                                            |
+| **Cloud Reporting**    | Artillery Cloud                                                      |
 
 **Test Run URL:** [https://app.artillery.io/o451iqt5pybqq/load-tests/tgrp5_jx3ftg4g7zhp7rqtxg6axj9kge366_d55c](https://app.artillery.io/o451iqt5pybqq/load-tests/tgrp5_jx3ftg4g7zhp7rqtxg6axj9kge366_d55c)
 
