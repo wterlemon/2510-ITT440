@@ -5,9 +5,9 @@
 
 # 📋 Assignment Details
 - **Course:** 2510-ITT440
-- Name: ZAYED BIN ABDUL RAHIM
-- Matrix Number: 2024776461
-- Youtube Video:
+- **Name:** ZAYED BIN ABDUL RAHIM
+- **Matrix Number:** 2024776461
+- **Youtube Video:**
 
 # 📱Introduction
 This project demonstrates a 1-minute soak test on DummyJson using Vegeta load testing tool. Soak testing helps identify performance degradation, memory leaks, and stability issues under sustained load over an extended period.
@@ -48,6 +48,8 @@ vegeta report dummyjson_soak.bin
 vegeta report -type json dummyjson_soak.bin > dummyjson_metrics.json
 plot -title "DummyJSON 1-min Soak Test" dummyjson_soak.bin > dummyjson_chart.html
 dummyjson_chart.html
+```
+
 
 ## 📈 Test Results & Analysis
 
@@ -59,7 +61,7 @@ Bytes Out     [total, mean]                     0, 0.00
 Success       [ratio]                           100.00%
 Status Codes  [code:count]                      200:180
 Error Set:
-```
+
 
 # 📊 Performance Analysis
 
@@ -110,10 +112,10 @@ Error Set:
 - **Optimal Throughput:** Achieved 99% of target request rate (2.99/3.02)
 
 ### 📊 Performance Grade: **Excellent**
-- Reliability: 100% ✅
-- Responsiveness: A+ ⚡
-- Consistency: A 📈
-- Throughput: A+ 🎯
+- **Reliability:** 100% ✅
+- **Responsiveness:** A+ ⚡
+- **Consistency:** A 📈
+- **Throughput:** A+ 🎯
 
 *The system demonstrates production-ready performance with exceptional stability and responsiveness under sustained load.*
 
