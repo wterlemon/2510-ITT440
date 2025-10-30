@@ -42,6 +42,57 @@ This section details the hardware and software used to execute the performance t
 | **Script Language**    | JavaScript (k6 test scripts).                                                                                                                                    |
 
 
-## 💻 Test Plan and Configuration
-Two performance test scenarios were executed using Grafana k6. For the Smoke Test, 50 virtual users were simulated for 45 seconds to confirm that the target application (https://httpbin.org
-) was reachable and stable under a light load. For the Breakpoint Test, the number of virtual users was gradually increased from 50 to 250 in stages of 20 seconds to identify the system’s performance limit. During both tests, HTTP GET requests were sent to the /get endpoint, and key metrics such as response time, error rate, and throughput were recorded for analysis.
+## 💻 Smoke Test Configuration
+```js
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+// Smoke Test Configuration
+export let options = {
+  vus: 50,                  
+  duration: '45s',          
+  thresholds: {
+    http_req_failed: ['rate<0.05'],    
+    http_req_duration: ['p(95)<1500'],
+  },
+};
+
+export default function () {
+  const res = http.get('https://httpbin.org/get');
+  check(res, { 'status is 200': (r) => r.status === 200 });
+  sleep(1);
+}
+```
+
+## 💻 Breakpoint Test Configuration
+```js
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+// Breakpoint Test Configuration
+export let options = {
+  stages: [
+    { duration: '20s', target: 50 },   // ramp up to 50 VUs
+    { duration: '20s', target: 100 },  // ramp up to 100 VUs
+    { duration: '20s', target: 150 },  // ramp up to 150 VUs
+    { duration: '20s', target: 200 },  // ramp up to 200 VUs
+    { duration: '20s', target: 250 },  // ramp up to 250 VUs
+    { duration: '20s', target: 0 },    // ramp down
+  ],
+  thresholds: {
+    http_req_failed: ['rate<0.10'],     
+    http_req_duration: ['p(95)<2000'],  // 
+  },
+};
+
+export default function () {
+  const res = http.get('https://httpbin.org/get');  
+
+  // Check response status
+  check(res, {
+    'status is 200': (r) => r.status === 200,
+  });
+
+  sleep(1); 
+}
+```
