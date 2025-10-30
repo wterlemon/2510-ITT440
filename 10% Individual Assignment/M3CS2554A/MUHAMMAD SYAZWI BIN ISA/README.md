@@ -210,4 +210,4 @@ All platforms passed the smoke test with an overall success rate of 97.97%, conf
 
 ## 🎥 Video Demonstration
 A detailed walkthrough of the test execution and result analysis is available on YouTube:
-[Here We GO]](https://youtu.be/3_bWidNcf6I)   
+[Here We GO](https://youtu.be/3_bWidNcf6I)   
