@@ -186,4 +186,5 @@ locust -f blazedemo_soak.py --host https://blazedemo.com
 
 ---
 
-## 📘 12. YouTube Link
+## 📘 12. YouTube Link   
+https://youtu.be/tZyY7CANCKE
