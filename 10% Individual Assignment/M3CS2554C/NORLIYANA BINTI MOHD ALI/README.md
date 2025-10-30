@@ -1,6 +1,6 @@
 # Web Application Configuration Comparison Testing using K6
 
-**By:** NORLIYANA MOHD ALI
+**By:** NORLIYANA BINTI MOHD ALI
 
 **Class:** M3CS2554C
 
@@ -71,7 +71,9 @@ export default function () {
 }
 ```
 
+
 <img width="444" height="198" alt="image" src="https://github.com/user-attachments/assets/693d9fae-83fd-4864-89cb-7a41ffaa8ca0" />
+
 
 
 ### 🔹 `k6_high.js` (High Configuration)
@@ -92,9 +94,10 @@ export default function () {
 ```
 
 <img width="443" height="194" alt="image" src="https://github.com/user-attachments/assets/3b7af142-23d1-41d6-88d9-94a281bfcf4b" />
+```
+
 
 Analyze & Compare
-
 | Metric | Low Load (5 VUs) | High Load (20 VUs) | Observation |
 | :--- | :---: | :---: | :--- |
 | **Avg Response Time** | 46.75 ms | 64.2 ms | Increased by about 17.45 ms (37%) under high load. The service is still fast, but response time is starting to climb. |
@@ -265,14 +268,24 @@ if __name__ == "__main__":
     main()
 ```
 
+
+<img width="445" height="206" alt="image" src="https://github.com/user-attachments/assets/61ac2f6a-656d-40ef-ab99-772124631a3f" />
+
+
 ---
 
 ## 📈 Sample Output Charts
 
 **Response Time Comparison**
+
+<img width="488" height="243" alt="image" src="https://github.com/user-attachments/assets/1220fa10-77c5-4b26-81f6-0f85930cb2f9" />
+
 ![response\_time\_chart\_fixed.png](https://github.com/user-attachments/assets/example-response.png)
 
 **Throughput Comparison**
+
+<img width="481" height="241" alt="image" src="https://github.com/user-attachments/assets/c3aba378-fa9f-4b48-80fd-2a98148b2589" />
+
 ![throughput\_chart\_fixed.png](https://github.com/user-attachments/assets/example-throughput.png)
 
 ---
