@@ -1,4 +1,4 @@
-# Web Application Soak Testing with Vegeta
+# Web Application Soak Testing with Vegeta 🔥
 
 <img width="600" height="852" alt="image" src="https://github.com/user-attachments/assets/0760177f-6683-4f3f-90e1-6bfb18941c04" />
 
@@ -49,10 +49,52 @@ dummyjson_chart.html
 
 ## 📈 Test Results & Analysis
 
-<img width="1363" height="208" alt="image" src="https://github.com/user-attachments/assets/b48e0cc4-363c-44c6-93c6-f5183413e209" />
+### 📊 Performance Test Summary
+
+| **Metric Category** | **Specific Metric** | **Value** |
+|----------------------|---------------------|-----------|
+| **Requests** | Total Requests | 180 |
+|  | Request Rate | 3.02 req/sec |
+|  | Throughput | 2.99 req/sec |
+| **Duration** | Total Duration | 1m 0s |
+|  | Attack Duration | 59.67s |
+|  | Wait Duration | 521.924ms |
+| **Latencies** | Minimum | 106.267ms |
+|  | Mean (Average) | 391.195ms |
+|  | 50th Percentile | 375.425ms |
+|  | 90th Percentile | 522.065ms |
+|  | 95th Percentile | 679.196ms |
+|  | 99th Percentile | 857.293ms |
+|  | Maximum | 883.327ms |
+| **Data Transfer** | Bytes In (Total) | 1,581,378 bytes |
+|  | Bytes In (Mean) | 8,785.43 bytes/request |
+|  | Bytes Out (Total) | 0 bytes |
+|  | Bytes Out (Mean) | 0.00 bytes/request |
+| **Success Metrics** | Success Rate | 100.00% |
+|  | HTTP 200 Count | 180 requests |
+| **Error Analysis** | Error Set | No errors |
 
 
 # 📊 Performance Analysis
+
+### 🎯 Request Performance
+
+| **Indicator** | **Target** | **Actual** | **Efficiency** |
+|----------------|------------|-------------|----------------|
+| Request Rate | 3.02 req/sec | 3.02 req/sec | 100% |
+| Throughput | 3.02 req/sec | 2.99 req/sec | 99% |
+| Success Rate | 100% | 100% | 100% |
+
+### ⚡ Response Time Analysis
+
+| **Percentile** | **Response Time** | **Assessment** |
+|----------------|-------------------|----------------|
+| 50th (Median) | 375.425ms | Excellent |
+| 90th | 522.065ms | Very Good |
+| 95th | 679.196ms | Good |
+| 99th | 857.293ms | Acceptable |
+| Maximum | 883.327ms | Within Limits |
+
 
 ## 🎯 Latency Performance
 - Best Case: 106.267ms - Exceptional minimum response time
