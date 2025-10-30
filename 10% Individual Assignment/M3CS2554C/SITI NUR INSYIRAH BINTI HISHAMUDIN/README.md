@@ -1,4 +1,4 @@
-# Stress Testing on Library Management Using Apache JMeter
+# Web App performance Stress Testing Using Apache JMeter
 BY: SITI NUR INSYIRAH BINTI HISHAMUDIN<br>
 STUDENT ID: 2025128335<br>
 GROUP: M3CDCS2554C<br>
@@ -10,11 +10,11 @@ Performance testing is one of the most important parts to do after finishing dev
 
 ## 🧐What are the focuses of this test?
 
-This test focuses on stress testing that will verify the stability of the website under extreme load conditions which determine what and when is the limitation of the website. Besides that, by doing stress tests we are able to identify the failure or breaking point of a library management system that is built with several languages like PHP, HTML, and CSS. 
+This test focuses on stress testing that will verify the stability of the website under extreme load conditions which determine what and when is the limitation of the website. Besides that, by doing stress tests we are able to identify the failure or breaking point of a library book management that is built with several languages like PHP, HTML, and CSS. 
 
 In addition, in this test it will measure several important metric measurements such as response time, throughput, resource utilization performance, and error detection when running the test on the website within specified time.
 
-The objective of this stress test is to evaluate the performance of a library management system website under a high number of users in some period of time or in other word when website is experiencing high-traffic (load), identify bottlenecks of the website, and suggest the best way to optimize the situation according to industry environment.
+The objective of this stress test is to evaluate the performance of the website under a high number of users in some period of time or in other word when website is experiencing high-traffic (load), identify bottlenecks of the website, and suggest the best way to optimize the situation according to industry environment.
 <br>
 
 ## ⚙️Tool Selection
@@ -44,6 +44,7 @@ The objective of this stress test is to evaluate the performance of a library ma
 | **Operating System** | Windows 11 (64-bit) |
 | **Hardware** | Intel Core i3, 8GB RAM |
 | **Tool** | Apache JMeter 5.6 |
+| **Resource Utilization Tool** | Performance Monitor |
 | **Browser** | Chrome 14.1 |
 <br>
 
@@ -95,7 +96,7 @@ This stress test has several scenarios or stages that were conducted in order to
 | 12 | 6000 | 180 | 
 </div>
 
-There are some important key metric measures that are looked out in this test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time. 
+There are some important key metric measures that are looked out in this test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time.//descrb 
 
 **📏Baseline Test**
 
@@ -365,7 +366,7 @@ There are several identified bottlenecks based on the result, error message, and
 <br>
 
 ## 📃CONCLUSION
-Library Management System performance decreases and reaches the critical breaking point when there are 6000 users trying to access it within 180 seconds where the  system also starts to load slower than usual compared to when the number of users is less than 5000. Although the throughput remains stable the system also fails to process the new upcoming request since the server is saturated which also causes operating system percentage in processor privilege to increase more than 25%. 
+Library book management website performance decreases and reaches the critical breaking point when there are 6000 users trying to access it within 180 seconds where the  system also starts to load slower than usual compared to when the number of users is less than 5000. Although the throughput remains stable the system also fails to process the new upcoming request since the server is saturated which also causes operating system percentage in processor privilege to increase more than 25%. 
 
 Furthermore, at the last stage which had 6000 users the average response time for all pages that are tested increases sharply up to 12000 ms which a huge difference compared to the stage before 5000 users and the website application starts to return “This site can’t be reached” also when trying to navigate to other pages as it will take more than 10 seconds to retrieve the website back.
 
