@@ -1,4 +1,5 @@
 # **⚡️Reqres API Load Test using BlazeMeter⚡️**  
+<img width="3102" height="1576" alt="image" src="https://github.com/user-attachments/assets/76fce2f5-f1bb-45bb-84fe-9460a90b2ded" />
 
 
 ### Name: MUHAMMAD HAIRIEL ANUAR BIN MOHD ZAHARI
