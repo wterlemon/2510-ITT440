@@ -1,9 +1,9 @@
-# Web Application Configuration Comparison Testing using K6
+# 🚀 Web Application Configuration Comparison Testing using K6
 
 **By:** NORLIYANA BINTI MOHD ALI
-
+<br>
 **Class:** M3CS2554C
-
+<br>
 **Course Code:** ITT440 (10% Individual Assignment)
 
 ---
@@ -13,21 +13,20 @@
 **Title:** Configuration Comparison Performance Testing on ReqRes API using K6
 
 **Objective:**
-To design, execute, and analyze two different load configurations on the ReqRes API using the **K6 performance testing tool**.
+To design, execute, and analyze two different load configurations on the **ReqRes API** using the **K6 performance testing tool**.
 This test aims to compare system performance, focusing on response time and throughput between **low** and **high** virtual user configurations.
 
 ---
 
 ## ⚙️ Tool Justification (Why K6)
 
-K6 is a modern, open-source performance testing tool for APIs and web applications.
-It supports scripting in JavaScript, outputs results to CSV for analysis, and integrates well with visualization tools like Python and Grafana.
+K6 is a modern, open-source performance testing tool for APIs and web applications. It supports scripting in JavaScript, outputs results to CSV for analysis, and integrates well with visualization tools like Python and Grafana.
 
 **Reasons for choosing K6:**
 
-* Lightweight and CLI-based (perfect for Linux environments).
-* Simple JavaScript scripting for flexibility.
-* Provides accurate and exportable performance metrics.
+* **Lightweight and CLI-based** (perfect for Linux environments).
+* Simple **JavaScript scripting** for flexibility.
+* Provides **accurate and exportable** performance metrics.
 * Works smoothly in **Kali Linux on VMware**.
 
 ---
@@ -37,9 +36,7 @@ It supports scripting in JavaScript, outputs results to CSV for analysis, and in
 **Test Type:** Configuration Comparison Testing
 
 **Hypothesis:**
-When increasing the number of virtual users (VUs) from **5 to 20**,
-the **response time** of the ReqRes API will increase,
-and the **throughput (requests per second)** will change depending on server capacity.
+When increasing the number of virtual users (VUs) from **5 to 20**, the **response time** of the ReqRes API will increase, and the **throughput (requests per second)** will change depending on server capacity.
 
 ---
 
@@ -47,8 +44,7 @@ and the **throughput (requests per second)** will change depending on server cap
 
 **Target URL:** [https://reqres.in](https://reqres.in)
 
-**Description:** ReqRes is a free, public REST API designed for testing and front-end prototyping.
-It provides endpoints for simulating typical API responses for GET and POST requests.
+**Description:** ReqRes is a free, public REST API designed for testing and front-end prototyping. It provides endpoints for simulating typical API responses for GET and POST requests.
 
 ---
 
@@ -61,18 +57,17 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 
 export const options = {
-  vus: 5,              // 5 Virtual Users
-  duration: '30s',     // Run for 30 seconds
+  vus: 5,        // 5 Virtual Users
+  duration: '30s',   // Run for 30 seconds
 };
 
 export default function () {
-  http.get('https://reqres.in/api/users?page=2');
+  http.get('[https://reqres.in/api/users?page=2](https://reqres.in/api/users?page=2)');
   sleep(1);
 }
-```
+````
 
-
-<img width="444" height="198" alt="image" src="https://github.com/user-attachments/assets/693d9fae-83fd-4864-89cb-7a41ffaa8ca0" />
+\<img width="444" height="198" alt="k6\_low.js script screenshot" src="https://github.com/user-attachments/assets/693d9fae-83fd-4864-89cb-7a41ffaa8ca0" /\>
 
 ### 🔹 `k6_high.js` (High Configuration)
 
@@ -81,26 +76,22 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 
 export const options = {
-  vus: 20,             // 20 Virtual Users
-  duration: '30s',     // Run for 30 seconds
+  vus: 20,       // 20 Virtual Users
+  duration: '30s',   // Run for 30 seconds
 };
 
 export default function () {
-  http.get('https://reqres.in/api/users?page=2');
+  http.get('[https://reqres.in/api/users?page=2](https://reqres.in/api/users?page=2)');
   sleep(1);
 }
 ```
 
-<img width="443" height="194" alt="image" src="https://github.com/user-attachments/assets/3b7af142-23d1-41d6-88d9-94a281bfcf4b" />
-```
+\<img width="443" height="194" alt="k6\_high.js script screenshot" src="https://github.com/user-attachments/assets/3b7af142-23d1-41d6-88d9-94a281bfcf4b" /\>
 
+-----
 
+## 📊 Results: Analyze & Compare
 
-
-
-
-
-Analyze & Compare
 | Metric | Low Load (5 VUs) | High Load (20 VUs) | Observation |
 | :--- | :---: | :---: | :--- |
 | **Avg Response Time** | 46.75 ms | 64.2 ms | Increased by about 17.45 ms (37%) under high load. The service is still fast, but response time is starting to climb. |
@@ -108,8 +99,7 @@ Analyze & Compare
 | **Requests/sec** | 4.72 /s | 18.36 /s | Increased by over $3.8\times$. The system successfully handled significantly higher throughput, closely matching the $4\times$ increase in Virtual Users. |
 | **Errors** | 0% | 0% | No failures in either test. The service did not show any signs of reaching a critical error capacity (like a rate limit error 429). |
 
-
----
+-----
 
 ## 💻 Execution Environment (Kali Linux + VMware)
 
@@ -123,7 +113,7 @@ sudo apt install -y k6 python3 python3-pip
 pip install pandas matplotlib
 ```
 
----
+-----
 
 ## 🚀 Test Execution Commands
 
@@ -142,23 +132,20 @@ python3 k6_analysis.py
 
 **Explanation:**
 
-| Command                  | Description                                | Output                                      |
-| ------------------------ | ------------------------------------------ | ------------------------------------------- |
-| `--vus`                  | Number of virtual users                    | 5 or 20                                     |
-| `--duration`             | Duration of test                           | 30 seconds                                  |
-| `--out csv=`             | Export metrics to CSV                      | `k6_low_results.csv`, `k6_high_results.csv` |
-| `python3 k6_analysis.py` | Analyze both CSV files and generate charts | PNG charts                                  |
+| Command | Description | Output |
+| :--- | :--- | :--- |
+| `--vus` | Number of virtual users | 5 or 20 |
+| `--duration` | Duration of test | 30 seconds |
+| `--out csv=` | Export metrics to CSV | `k6_low_results.csv`, `k6_high_results.csv` |
+| `python3 k6_analysis.py` | Analyze both CSV files and generate charts | PNG charts |
 
----
+-----
 
-## 📊 Analysis Script (Python)
+## 📈 Analysis Script (Python)
 
 ### `k6_analysis.py`
 
-This Python script automatically reads the two CSV files, cleans the data, compares metrics, and creates two visual charts:
-
-* `response_time_chart_fixed.png`
-* `throughput_chart_fixed.png`
+This Python script automatically reads the two CSV files, cleans the data, compares metrics, and creates two visual charts: `response_time_chart_fixed.png` and `throughput_chart_fixed.png`.
 
 ```python
 #!/usr/bin/env python3
@@ -170,7 +157,7 @@ import os
 # --- Configuration ---
 LOW_CSV = "k6_low_results.csv"
 HIGH_CSV = "k6_high_results.csv"
-EXPECTED_COLUMNS = 20 
+EXPECTED_COLUMNS = 20  
 
 def read_csv_auto(path):
     if not os.path.exists(path):
@@ -271,62 +258,60 @@ if __name__ == "__main__":
     main()
 ```
 
+\<img width="445" height="206" alt="k6\_analysis.py script screenshot" src="https://github.com/user-attachments/assets/61ac2f6a-656d-40ef-ab99-772124631a3f" /\>
 
-<img width="445" height="206" alt="image" src="https://github.com/user-attachments/assets/61ac2f6a-656d-40ef-ab99-772124631a3f" />
-
-
----
+-----
 
 ## 📈 Sample Output Charts
 
 **Response Time Comparison**
 
-<img width="488" height="243" alt="image" src="https://github.com/user-attachments/assets/1220fa10-77c5-4b26-81f6-0f85930cb2f9" />
-
-![response\_time\_chart\_fixed.png](https://github.com/user-attachments/assets/example-response.png)
+\<img width="488" height="243" alt="response time chart output" src="https://github.com/user-attachments/assets/1220fa10-77c5-4b26-81f6-0f85930cb2f9" /\>
 
 **Throughput Comparison**
 
-<img width="481" height="241" alt="image" src="https://github.com/user-attachments/assets/c3aba378-fa9f-4b48-80fd-2a98148b2589" />
+\<img width="481" height="241" alt="throughput chart output" src="https://github.com/user-attachments/assets/c3aba378-fa9f-4b48-80fd-2a98148b2589" /\>
 
-![throughput\_chart\_fixed.png](https://github.com/user-attachments/assets/example-throughput.png)
-
----
+-----
 
 ## 🧠 Analysis & Discussion
 
-* Increasing from **5 VUs** to **20 VUs** caused higher average response time.
-* Throughput improved but eventually stabilized due to API limits.
-* ReqRes API handled load consistently without failure.
-* Data visualizations confirmed stable but throttled (HTTP 429) responses at higher loads.
+  * Increasing from **5 VUs** to **20 VUs** caused a measurable increase in the **average response time**.
+  * **Throughput** saw a significant improvement (from $4.72 /s$ to $18.36 /s$), closely matching the $4\times$ load increase, demonstrating good scaling.
+  * The **p(95) Response** remained stable, indicating the API is well-optimized and consistent for the majority of users under both loads.
+  * The **ReqRes API** handled the load consistently with **0% errors**, showing no critical failures or rate-limiting (HTTP 429) issues during the test.
 
----
+-----
 
 ## 💡 Recommendations
 
-1. Try longer test durations (1–5 minutes) for more stable averages.
-2. Increase users gradually (e.g., 10, 50, 100 VUs).
-3. Integrate results with Grafana or InfluxDB for live dashboards.
-4. Avoid excessive hits to public APIs; use custom endpoints for realistic testing.
+1.  Try longer test durations (1–5 minutes) for more stable averages and to observe long-term performance trends.
+2.  Increase virtual users gradually (e.g., 10, 50, 100 VUs) to identify the exact **saturation point** of the API.
+3.  Integrate K6 results with **Grafana or InfluxDB** for live, interactive dashboards.
+4.  For future realistic testing, consider using custom, private endpoints instead of public APIs to avoid excessive hits.
 
----
+-----
 
 ## 🏁 Conclusion
 
-The **ReqRes API** maintained stable performance during **K6 configuration comparison testing** on **Kali Linux (VMware)**.
-The analysis showed predictable response time growth under heavier load, proving the test environment and tool configuration worked successfully.
+The **ReqRes API** maintained stable performance during the **K6 configuration comparison testing** executed on **Kali Linux (VMware)**. The analysis confirmed the hypothesis that response time would increase under heavier load, while also demonstrating the system's strong ability to handle significantly higher throughput without generating errors. The test environment and tool configuration worked successfully.
 
----
+-----
 
 ## 🎥 YouTube Demo Link
 
 📺 *(Insert your demo link here)*
 
----
+-----
 
 ## 🧾 References
 
-* [K6 Official Documentation](https://k6.io/docs/)
-* [ReqRes API Documentation](https://reqres.in/)
-* [Pandas Documentation](https://pandas.pydata.org/docs/)
-* [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+  * [K6 Official Documentation](https://k6.io/docs/)
+  * [ReqRes API Documentation](https://reqres.in/)
+  * [Pandas Documentation](https://pandas.pydata.org/docs/)
+  * [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+
+<!-- end list -->
+
+```
+```
