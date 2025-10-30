@@ -313,7 +313,7 @@ The **ReqRes API** maintained stable performance during the **K6 configuration c
   * [Pandas Documentation](https://pandas.pydata.org/docs/)
   * [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
 
-<!-- end list -->
+
 
 ```
 ```
