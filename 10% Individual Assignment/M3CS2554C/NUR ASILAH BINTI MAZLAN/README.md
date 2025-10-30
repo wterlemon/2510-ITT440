@@ -24,6 +24,7 @@ For purposes of the experiment, the QuickPizza demo website was chosen as the ta
 </p>
 
 ## 2. Hypothesis
+<p align="justify">
 The expectation was that the QuickPizza website would be stable and responsive under a moderate user load roughly for about 75 virtual users. However, we do expect to see some slight increases in response time and potential request failures as we push towards 100 concurrent users. The bottlenecks were expected to be in the higher latency for pages that needed server-side processing, but it was hoped that the static pages would continue to respond without issue. 
 
 ## 3. Tool Selection and Justification
