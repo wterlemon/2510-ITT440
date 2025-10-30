@@ -69,7 +69,7 @@ export default function () {
 }
 ````
 
-<img width="444" height="198" alt="image" src="https://github.com/user-attachments/assets/f3f4368e-6962-4fbc-bcb0-b1a0d70e412a" />
+<img width="1122" height="540" alt="image" src="https://github.com/user-attachments/assets/edc4f5a6-025a-44c7-a484-e6c440a635f1" />
 
 ### 🔹 `k6_high.js` (High Configuration)
 
