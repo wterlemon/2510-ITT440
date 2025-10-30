@@ -26,7 +26,11 @@ The project aims to:
 **Endpoint tested:**
 GET https://reqres.in/api/users?page=2
 
-This endpoint returns a paginated list of user data in JSON format, suitable for performance testing since it involves data retrieval and network response.
+This endpoint was selected because it returns a paginated list of user data in JSON format, making it ideal for performance testing as it involves real HTTP request–response cycles. Since Reqres.in is designed for safe testing, it provides a stable and controlled environment for load testing without affecting any production systems.
+
+**Screenshot of API response:**
+
+![Reqres API Response](images/reqres_api_response.png)
 
 ---
 
