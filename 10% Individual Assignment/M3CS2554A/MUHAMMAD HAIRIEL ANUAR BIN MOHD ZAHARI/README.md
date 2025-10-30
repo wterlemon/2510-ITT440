@@ -136,15 +136,13 @@ The performance remains stable across all simulated users, which is a strong ind
 ## **Conclusion and Improvement**
 
 ### **Conclusion**
-The BlazeMeter load test confirmed the excellent stability and performance of the Reqres API.  
-With **50 virtual users** and **zero errors**, the system maintained an average response time below **100 ms**, showing outstanding efficiency and responsiveness.
+The BlazeMeter load test confirmed the excellent stability and performance of the Reqres API. With 50 virtual users and zero errors, the system maintained an average response time below 100 ms. It is showing outstanding efficiency and responsiveness.
 
 ### **Recommendations for Improvement**
-1. **Increase Load Scale:** Perform stress testing with 100–200 users to find the performance threshold.  
-2. **Include Multiple Endpoints:** Add POST, PUT, and DELETE requests to simulate diverse traffic.  
+1. **Increase Load Scale:** Perform stress testing with more users to find the performance threshold.  
+2. **Multi-Region Testing:** Execute the same test from other geographic regions to observe latency differences.  
 3. **Longer Testing Duration:** Run a soak test (1–2 hours) to detect long-term resource issues.  
-4. **Integrate Monitoring Tools:** Use APM tools (e.g., Prometheus, New Relic) for server resource tracking.  
-5. **Multi-Region Testing:** Execute the same test from other geographic regions to observe latency differences.
+4. **Integrate Monitoring Tools:** Use APM tools for server resource tracking.  
 
 ---
 
