@@ -1,9 +1,3 @@
-I have removed all LaTeX math mode syntax (the dollar signs `$`, `\text`, and `\mathbf` commands) from your $\text{README.md}$ to ensure it renders correctly on platforms like GitHub without showing errors like "$\text{text}$ is only supported in math mode."
-
-The bolding of numbers and key terms (e.g., **35%**, **0%**) has been preserved using standard Markdown double asterisks (`**`).
-
------
-
 # 🚀 Web Application Configuration Comparison Testing using K6
 
 **By:** NORLIYANA BINTI MOHD ALI
@@ -73,6 +67,9 @@ export default function () {
   http.get('[https://reqres.in/api/users?page=2](https://reqres.in/api/users?page=2)');
   sleep(1);
 }
+
+<img width="1380" height="640" alt="image" src="https://github.com/user-attachments/assets/29d49ffa-72f6-4e15-b4b3-45c8fcd5530d" />
+
 ```
 
 ### 🔹 `k6_high.js` (High Configuration)
