@@ -131,7 +131,7 @@ The **lack of a $\text{HTTP } 429$ (Too Many Requests) error is notable**. In hi
 This is a core metric, and while direct host-server monitoring was not possible on the third-party ReqRes API, an inference regarding server resources is critical.
 
   * **Client-Side VM Resources:** The K6 execution proved to be lightweight. During the High Load test (20 VUs), the Kali Linux VM's CPU usage peaked at approximately **35%** and Memory usage remained stable below **60%**, confirming the client-side infrastructure was not the bottleneck.
-  * **Target Server Inference:** The key performance indicators a **0%** error rate and a near-constant p(95) response time—strongly imply that the ReqRes server's resources (CPU}, Memory, and Network I/O) were **not** saturated by the **20 VU** load. Server-side resource bottlenecks would typically manifest as a rapid increase in HTTP 500 errors or a catastrophic failure in response time, neither of which occurred.
+  * **Target Server Inference:** The key performance indicators a **0%** error rate and a near-constant p(95) response time strongly imply that the ReqRes server's resources (CPU}, Memory, and Network I/O) were **not** saturated by the **20 VU** load. Server-side resource bottlenecks would typically manifest as a rapid increase in HTTP 500 errors or a catastrophic failure in response time, neither of which occurred.
 
 -----
 
