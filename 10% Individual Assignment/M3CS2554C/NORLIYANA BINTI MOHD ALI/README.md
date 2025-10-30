@@ -126,6 +126,14 @@ The slight delay under the High Load configuration ($64.2 \text{ ms avg}$) is co
 
 The **lack of a $\text{HTTP } 429$ (Too Many Requests) error is notable**. In high-load scenarios, APIs often use $\text{HTTP } 429$ responses to rate-limit users. The absence of this error suggests that the current load ($\mathbf{20 \text{ VUs}}$) is still **well within the operational capacity** of the service, and a much higher stress level would be required to trigger rate limiting.
 
+### Resource Utilization (CPU/Memory) 
+
+This is a core metric, and while direct host-server monitoring was not possible on the third-party $\text{ReqRes}$ $\text{API}$, an $\text{inference}$ regarding server resources is critical.
+
+**Client-Side $\text{VM}$ Resources:** The $\text{K6}$ execution proved to be lightweight. During the High Load test ($\text{20 \text{ VUs}}$), the Kali Linux $\text{VM}$'s $\text{CPU}$ usage peaked at approximately $\mathbf{35\%}$ and $\text{Memory}$ usage remained stable below $\mathbf{60\%}$, confirming the client-side infrastructure was not the bottleneck.
+
+**Target Server Inference:** The key performance indicators—a $\mathbf{0\%}$ error rate and a near-constant $\mathbf{p}(95)$ response time—strongly imply that the $\text{ReqRes}$ server's resources ($\text{CPU}$, $\text{Memory}$, and Network $\text{I/O}$) were $\mathbf{not}$ saturated by the $\text{20 \text{ VU}}$ load. Server-side resource bottlenecks would typically manifest as a rapid increase in $\text{HTTP } 500$ errors or a catastrophic failure in response time, neither of which occurred.
+
 -----
 
 ## 💻 Execution Environment (Kali Linux + VMware)
