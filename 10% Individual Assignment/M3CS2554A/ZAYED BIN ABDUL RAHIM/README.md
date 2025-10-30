@@ -5,35 +5,35 @@
 
 # 📋 Assignment Details
 - **Course:** 2510-ITT440
-- **Name: ZAYED BIN ABDUL RAHIM
-- **Matrix Number: 2024776461
-- **Youtube Video:
+- Name: ZAYED BIN ABDUL RAHIM
+- Matrix Number: 2024776461
+- Youtube Video:
 
 # 📱Introduction
 This project demonstrates a 1-minute soak test on DummyJson using Vegeta load testing tool. Soak testing helps identify performance degradation, memory leaks, and stability issues under sustained load over an extended period.
 
 ## 🛠️ Tools & Technologies
-- **Load Testing Tool:** Vegeta v12.11.0
-- **Target Platform:** DummyJson.com
-- **Test Duration:** 1 minutes
-- **Load Intensity:** 3 requests per second
-- **Total Requests:** ~180
+- Load Testing Tool: Vegeta v12.11.0
+- Target Platform: DummyJson.com
+- Test Duration: 1 minutes
+- Load Intensity: 3 requests per second
+- Total Requests: ~180
 
 
 # ⚙️ Test Environment & Methodology
 ## Test Setup
-- **Tool: Vegeta v12.12.0
-- **Rate: 3
-- **Test Duration: 1 Minute
-- **Test Type: Soak Test(Reliability Test)
-- **Target Website: DummyJson
+- Tool: Vegeta v12.12.0
+- Rate: 3
+- Test Duration: 1 Minute
+- Test Type: Soak Test(Reliability Test)
+- Target Website: DummyJson
 
 ## Metrics Tracked
-- **Requests
-- **Latencies
-- **Success rate
-- **Status Code
-- **Error Set
+- Requests
+- Latencies
+- Success rate
+- Status Code
+- Error Set
 
 # ⏱ Test Execution
 
@@ -64,37 +64,37 @@ Error Set:
 # 📊 Performance Analysis
 
 ## 🎯 Latency Performance
--Best Case: 106.267ms - Exceptional minimum response time
--Average Performance: 391.195ms - Very responsive mean latency
--Median (50th %ile): 375.425ms - Consistent with mean, indicating normal distribution
--90th Percentile: 522.065ms - 90% of requests under half-second
--Worst Case: 883.327ms - Maximum latency under 1 second
+- Best Case: 106.267ms - Exceptional minimum response time
+- Average Performance: 391.195ms - Very responsive mean latency
+- Median (50th %ile): 375.425ms - Consistent with mean, indicating normal distribution
+- 90th Percentile: 522.065ms - 90% of requests under half-second
+- Worst Case: 883.327ms - Maximum latency under 1 second
 
 ## 📈 Data Transfer Efficiency
--Total Data Received: 1.58 MB across all requests
--Average Response Size: 8.79 KB per request
--Efficient Payloads: Optimal balance between data richness and performance
+- Total Data Received: 1.58 MB across all requests
+- Average Response Size: 8.79 KB per request
+- Efficient Payloads: Optimal balance between data richness and performance
 
 ## 🔍 Key Performance Insights
 1. System Stability
--The 100% success rate demonstrates exceptional service reliability
--Consistent performance maintained throughout the 1-minute test duration
--No degradation observed under sustained load
+- The 100% success rate demonstrates exceptional service reliability
+- Consistent performance maintained throughout the 1-minute test duration
+- No degradation observed under sustained load
 
 2. Response Time Consistency
--Tight latency distribution (106ms to 883ms) indicates predictable performance
--95th percentile at 679ms shows excellent user experience for majority of requests
--Minimal variance between mean (391ms) and median (375ms) suggests balanced load handling
+- Tight latency distribution (106ms to 883ms) indicates predictable performance
+- 95th percentile at 679ms shows excellent user experience for majority of requests
+- Minimal variance between mean (391ms) and median (375ms) suggests balanced load handling
 
 3. Throughput Optimization
--Near-perfect throughput matching (2.99/3.02 = 99% efficiency)
--Minimal system overhead evidenced by low wait times
--Efficient resource utilization throughout test period
+- Near-perfect throughput matching (2.99/3.02 = 99% efficiency)
+- Minimal system overhead evidenced by low wait times
+- Efficient resource utilization throughout test period
 
 4. Scalability Indicators
--Linear performance scaling with increased load
--No evidence of resource contention or bottlenecks
--Stable memory and connection management
+- Linear performance scaling with increased load
+- No evidence of resource contention or bottlenecks
+- Stable memory and connection management
 
 
 # 🎯 Key Findings
