@@ -88,7 +88,7 @@ export default function () {
 }
 ```
 
-<img width="1226" height="580" alt="image" src="https://github.com/user-attachments/assets/8782025d-dcf6-4d8a-b92c-d13b10f02d9a" />
+<img width="1243" height="554" alt="image" src="https://github.com/user-attachments/assets/7f4cf914-fa8a-48e3-ab0d-5ddcf9c00265" />
 
 -----
 
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     main()
 ```
 
-<img width="445" height="206" alt="image" src="https://github.com/user-attachments/assets/39da7104-a90e-47ee-9f0c-f29995bad81b" />
+<img width="1226" height="580" alt="image" src="https://github.com/user-attachments/assets/8782025d-dcf6-4d8a-b92c-d13b10f02d9a" />
 
 -----
 
