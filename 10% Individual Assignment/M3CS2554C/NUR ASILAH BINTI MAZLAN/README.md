@@ -84,6 +84,7 @@ The Cloud Insights panel of Grafana gave a succinct overview of system health an
 
 ### 6.3 Threshold Evaluation
 //pic here
+<p align="justify">
 | **Metric** | **Threshold Condition** | **Observed Result** | **Status** |
 |-------------|--------------------------|----------------------|-------------|
 | HTTP Request Duration (p95) | < 2000 ms | ~2.49 ms | ✅ Passed |
