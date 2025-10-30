@@ -1,4 +1,7 @@
 # UMMU NADHWA BINTI BAHARUDDIN
+*STUDENT NAME: UMMU NADHWA BINTI BAHARUDDIN*
+
+*GROUP: M3CS255 4B*
 
 ## Title & Introduction
 This project demonstrates API testing using **Postman** with the **OpenWeatherMap API**. The purpose is to verify the functionality and performance of the weather data retrieval endpoint by sending multiple requests and validating response codes, time, and data integrity.
@@ -43,7 +46,9 @@ OpenWeatherMap provides real-time weather data via RESTful APIs. Postman is sele
 **Total Iterations:** 10  
 **All Tests Passed (100%)**
 
-*(Insert Postman result screenshot here)*<img width="939" height="145" alt="graph" src="https://github.com/user-attachments/assets/161bf509-ff57-449f-bca3-298eb211cd3e" />
+
+
+<img width="939" height="145" alt="graph" src="https://github.com/user-attachments/assets/161bf509-ff57-449f-bca3-298eb211cd3e" />
 
 
 
