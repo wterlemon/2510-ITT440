@@ -10,11 +10,32 @@ This document summarizes the core purpose, findings, and recommendations from th
   </a>
 </p>
 
-## 🛠️Tool selection justification.
+## 🛠️ Why Gatling, huh? (Tool selection justification)
 
-## ○ Test environment setup.
+I picked Gatling as my load testing tool because its modern design makes the entire performance check-up process—from generating traffic to analyzing results—more efficient and reliable.
 
-## ○ Methodology.
+Gatling uses a smart, **asynchronous architecture** which means it can handle **huge traffic** and simulate thousands of users using very little computer power. This allows me to run bigger, more realistic tests to find the application's true breaking limits.
+
+The test scenarios are written as clean, **simple, and readable code** (a DSL), making them easy to update when the application changes, which also helps the team collaborate better. 
+
+After every test, Gatling automatically generates **amazing, detailed HTML reports**. These reports give me instant insight into the results with graphs that clearly pinpoint the exact slow spots (bottlenecks) in the application. 
+
+Finally, Gatling **fits right into my automated development process (CI/CD)**, ensuring I catch performance problems early and continuously before it ever become a serious issue.
+  
+---
+## 🖥️Test environment setup.
+| Category | Component/Software | Purpose in Environment |
+| :--- | :--- | :--- |
+| **Target Website** | **AUT Base URL** | `https://the-internet.herokuapp.com` |
+| **Runtime Environment** | **Java Runtime Environment** | Executes the simulation written in Java. |
+| **Load Testing Tool** | **Gatling Open Source** | Core engine for execution and reporting. |
+| **Execution Method** | **Terminal / Command Line** | Used to execute the Gatling script via the provided **`gatling.sh`** or **`gatling.bat`** runner files. |
+| **Simulation Script** | **Class Name** | `CleanSimulation.java` |
+| **Injection Profile** | **Load Strategy** | `rampUsers(10).during(60)` (Injecting **10 users** over **60 seconds**). |
+| **Reporting/Analysis** | **Gatling HTML Reports** | The output format used to view and analyze performance metrics. |
+
+---
+## 📜Methodology.
 
 ## ○ Raw data presentation (e.g., charts/graphs).
 
