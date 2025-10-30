@@ -325,16 +325,17 @@ python stress_analysis.py
 
 ### Response Time Analysis
 
-![Response Time Chart](reports/stress_test_analysis.png)
+<img width="974" height="482" alt="image" src="https://github.com/user-attachments/assets/e8569e48-431e-4f2f-8a19-43191d0b6894" />  
 
-The response time degradation follows an exponential curve beyond 200 concurrent users. The system maintains acceptable performance (<2 seconds) up to 100 users, but rapidly deteriorates beyond this threshold.
+The response time degradation follows an exponential curve beyond 200 concurrent users. The system maintains acceptable performance (<2 seconds) up to 100 users, but rapidly deteriorates beyond this threshold.  
 
-### Failure Rate Analysis
+### Failure Rate Analysis     
+<img width="915" height="459" alt="image" src="https://github.com/user-attachments/assets/4f6756f7-0664-42ff-a4d8-939e4b642b98" />      
 
 The failure rate remains minimal (<2%) up to 100 users but shows significant degradation at higher loads. The 18.3% failure rate at 300 users indicates serious stability issues under stress conditions.
 
-### Throughput Analysis
-
+### Throughput Analysis     
+<img width="974" height="478" alt="image" src="https://github.com/user-attachments/assets/909a8066-c999-44df-9e77-9cc719657f38" />        
 System throughput peaks at approximately 28.4 RPS with 200 concurrent users, then declines as the system becomes overloaded and resource-constrained.
 
 ## 🔍 Identified Performance Bottlenecks
