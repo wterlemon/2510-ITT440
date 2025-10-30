@@ -4,20 +4,13 @@
 
 
 # 📋 Assignment Details
-- **Course:** 2510-ITT440
+- **Course:** ITT440
 - **Name:** ZAYED BIN ABDUL RAHIM
 - **Matrix Number:** 2024776461
 - **Youtube Video:**
 
 # 📱Introduction
 This project demonstrates a 1-minute soak test on DummyJson using Vegeta load testing tool. Soak testing helps identify performance degradation, memory leaks, and stability issues under sustained load over an extended period.
-
-## 🛠️ Tools & Technologies
-- Load Testing Tool: Vegeta v12.11.0
-- Target Platform: DummyJson.com
-- Test Duration: 1 minutes
-- Load Intensity: 3 requests per second
-- Total Requests: ~180
 
 
 # ⚙️ Test Environment & Methodology
@@ -27,6 +20,9 @@ This project demonstrates a 1-minute soak test on DummyJson using Vegeta load te
 - Test Duration: 1 Minute
 - Test Type: Soak Test(Reliability Test)
 - Target Website: DummyJson
+- Test Duration: 1 minutes
+- Load Intensity: 3 requests per second
+- Total Requests: ~180
 
 ## Metrics Tracked
 - Requests
