@@ -109,7 +109,7 @@ The test results and metrics were captured and visualized through the **Artiller
 ---
 
 ## 📈 Spike Load Behavior (Active Users vs Request Rate)
-<img width="700" height="350" alt="spike-load-behavior" src="insert later" />
+<img width="1394" height="371" alt="spike load behaviour" src="https://github.com/user-attachments/assets/02435bcb-d9ec-42ce-bdb8-d1dd859a16ab" />
 
 **Explanation:**  
 This chart shows the number of active virtual users and requests per second over time.  
@@ -119,7 +119,8 @@ As the spike ended, both metrics dropped steadily, confirming that the load scen
 ---
 
 ## ⚙️ Response Time Trend (Mean & 95th Percentile)
-<img width="700" height="350" alt="response-time-chart" src="insert later" />
+<img width="1391" height="370" alt="responed time trend" src="https://github.com/user-attachments/assets/66164657-9a98-43aa-ad91-75c9afe81e05" />
+
 
 **Explanation:**  
 This chart tracks the **mean** and **95th percentile** response times for key endpoints during the test.  
