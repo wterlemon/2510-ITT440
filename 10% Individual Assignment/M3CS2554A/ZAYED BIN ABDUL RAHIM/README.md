@@ -49,14 +49,7 @@ dummyjson_chart.html
 
 ## 📈 Test Results & Analysis
 
-Requests      [total, rate, throughput]         180, 3.02, 2.99
-Duration      [total, attack, wait]             1m0s, 59.67s, 521.924ms
-Latencies     [min, mean, 50, 90, 95, 99, max]  106.267ms, 391.195ms, 375.425ms, 522.065ms, 679.196ms, 857.293ms, 883.327ms
-Bytes In      [total, mean]                     1,581,378, 8,785.43
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           100.00%
-Status Codes  [code:count]                      200:180
-Error Set:
+<img width="1363" height="208" alt="image" src="https://github.com/user-attachments/assets/b48e0cc4-363c-44c6-93c6-f5183413e209" />
 
 
 # 📊 Performance Analysis
