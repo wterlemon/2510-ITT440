@@ -16,7 +16,7 @@
 
 **Objective:**
 To design, execute, and analyze two different load configurations on the **ReqRes API** using the **K6 performance testing tool**.
-This test aims to compare system performance, focusing on response time and throughput between **low** ($\text{5 VUs}$) and **high** ($\text{20 VUs}$) virtual user configurations.
+This test aims to compare system performance, focusing on response time and throughput between **low** and **high** virtual user configurations.
 
 -----
 
@@ -38,7 +38,7 @@ K6 is a modern, open-source performance testing tool for APIs and web applicatio
 **Test Type:** Configuration Comparison Testing
 
 **Hypothesis:**
-When increasing the number of virtual users ($\text{VUs}$) from **5 to 20**, the **response time** of the $\text{ReqRes}$ $\text{API}$ will increase, and the **throughput (requests per second)** will change depending on server capacity.
+When increasing the number of virtual users (VUs) from **5 to 20**, the **response time** of the ReqRes API will increase, and the **throughput (requests per second)** will change depending on server capacity.
 
 -----
 
@@ -46,7 +46,7 @@ When increasing the number of virtual users ($\text{VUs}$) from **5 to 20**, the
 
 **Target URL:** [https://reqres.in](https://reqres.in)
 
-**Description:** $\text{ReqRes}$ is a free, public $\text{REST}$ $\text{API}$ designed for testing and front-end prototyping. It provides endpoints for simulating typical $\text{API}$ responses for $\text{GET}$ and $\text{POST}$ requests.
+**Description:** ReqRes is a free, public REST API designed for testing and front-end prototyping. It provides endpoints for simulating typical API responses for GET and POST requests.
 
 -----
 
@@ -67,10 +67,9 @@ export default function () {
   http.get('[https://reqres.in/api/users?page=2](https://reqres.in/api/users?page=2)');
   sleep(1);
 }
-
-<img width="1380" height="640" alt="image" src="https://github.com/user-attachments/assets/d7951c9d-26c3-49f3-b096-66c08131cb4a" />
-
 ```
+
+<img width="1360" height="620" alt="image" src="https://github.com/user-attachments/assets/eb23868d-3079-4d2d-8b9d-a3e888652424" />
 
 ### 🔹 `k6_high.js` (High Configuration)
 
@@ -89,16 +88,18 @@ export default function () {
 }
 ```
 
+<img width="1365" height="634" alt="image" src="https://github.com/user-attachments/assets/3b7abdfe-a8df-4fcb-86ff-cf833803e246" />
+
 -----
 
 ## 📊 Results: Analyze & Compare
 
 | Metric | Low Load (5 VUs) | High Load (20 VUs) | Observation |
 | :--- | :---: | :---: | :--- |
-| **Avg Response Time** | $\text{46.75 ms}$ | $\text{64.2 ms}$ | Increased by about $\text{17.45 ms (37%)}$ under high load. The service is still fast, but response time is starting to climb. |
-| **p(95) Response** | $\text{93.34 ms}$ | $\text{94.1 ms}$ | Remained stable (only a slight increase). This is a good sign, meaning $\text{95%}$ of users still experienced a fast response time, even with $4\times$ the load. |
-| **Requests/sec** | $\text{4.72 /s}$ | $\text{18.36 /s}$ | Increased by over $3.8\times$. The system successfully handled significantly higher throughput, closely matching the $4\times$ increase in Virtual Users. |
-| **Errors** | $\text{0%}$ | $\text{0%}$ | No failures in either test. The service did not show any signs of reaching a critical error capacity (like a rate limit error 429). |
+| **Avg Response Time** | 46.75 ms | 64.2 ms | Increased by about 17.45 ms (37%) under high load. The service is still fast, but response time is starting to climb. |
+| **p(95) Response** | 93.34 ms | 94.1 ms | Remained stable (only a slight increase). This is a good sign, meaning 95% of users still experienced a fast response time, even with $4\times$ the load. |
+| **Requests/sec** | 4.72 /s | 18.36 /s | Increased by over $3.8\times$. The system successfully handled significantly higher throughput, closely matching the $4\times$ increase in Virtual Users. |
+| **Errors** | 0% | 0% | No failures in either test. The service did not show any signs of reaching a critical error capacity (like a rate limit error 429). |
 
 -----
 
@@ -106,8 +107,8 @@ export default function () {
 
 The performance metrics clearly show that quadrupling the Virtual User count resulted in a **significant increase in throughput** while maintaining **excellent response time consistency**.
 
-  * **🚀 Throughput Difference:** The $\text{API}$ successfully processed **3.89 times more requests per second** ($18.36 \text{ reqs/s}$ vs. $4.72 \text{ reqs/s}$) under the High Load configuration, confirming the service scaled effectively to meet the increased demand.
-  * **⏱️ Response Time Difference:** The average response time increased from **$46.75 \text{ ms}$ to $64.2 \text{ ms}$** (a $\text{37\%}$ increase). This slight slowdown is normal under increased system utilization. Crucially, the **95th percentile ($\text{p}(95)$)**—the metric indicating the quality of experience for the majority of users—only increased by less than $\text{1 ms}$, confirming high consistency.
+  * **🚀 Throughput Difference:** The API successfully processed **3.89 times more requests per second** ($18.36 \text{ reqs/s}$ vs. $4.72 \text{ reqs/s}$) under the High Load configuration, confirming the service scaled effectively to meet the increased demand.
+  * **⏱️ Response Time Difference:** The average response time increased from **$46.75 \text{ ms}$ to $64.2 \text{ ms}$** (a $37\%$ increase). This slight slowdown is normal under increased system utilization. Crucially, the **95th percentile ($\text{p}(95)$)**—the metric indicating the quality of experience for the majority of users—only increased by less than $1 \text{ ms}$, confirming high consistency.
 
 -----
 
@@ -115,11 +116,15 @@ The performance metrics clearly show that quadrupling the Virtual User count res
 
 ### Stability and Scalability
 
-The `reqres.in` endpoint demonstrated **strong stability and scalability** within the scope of this test (up to $\text{20 VUs}$). The service successfully absorbed a fourfold load increase without generating **any errors ($\mathbf{0\%}$ failure rate)**.
+The `reqres.in` endpoint demonstrated **strong stability and scalability** within the scope of this test (up to $20 \text{ VUs}$). The service successfully absorbed a fourfold load increase without generating **any errors ($\mathbf{0\%}$ failure rate)**.
 
 ### Performance Under Pressure
 
-The slight delay under the High Load configuration ($64.2 \text{ ms avg}$) is considered **normal behavior** for a system processing more concurrent work. The minimal change in the $\text{p}(95)$ metric is **highly positive**, proving that even with resource competition, the $\text{API}$ is fast enough to serve the vast majority of requests in under $\text{100 ms}$.
+The slight delay under the High Load configuration ($64.2 \text{ ms avg}$) is considered **normal behavior** for a system processing more concurrent work. The minimal change in the $\text{p}(95)$ metric is **highly positive**, proving that even with resource competition, the API is fast enough to serve the vast majority of requests in under $100 \text{ ms}$.
+
+### The Significance of Error Handling (HTTP 429)
+
+The **lack of a $\text{HTTP } 429$ (Too Many Requests) error is notable**. In high-load scenarios, APIs often use $\text{HTTP } 429$ responses to rate-limit users. The absence of this error suggests that the current load ($\mathbf{20 \text{ VUs}}$) is still **well within the operational capacity** of the service, and a much higher stress level would be required to trigger rate limiting.
 
 ### Resource Utilization (CPU/Memory)
 
@@ -127,10 +132,6 @@ This is a core metric, and while direct host-server monitoring was not possible 
 
   * **Client-Side VM Resources:** The K6 execution proved to be lightweight. During the High Load test ($\text{20 VUs}$), the Kali Linux $\text{VM}$'s $\text{CPU}$ usage peaked at approximately **35%** and $\text{Memory}$ usage remained stable below **60%**, confirming the client-side infrastructure was not the bottleneck.
   * **Target Server Inference:** The key performance indicators—a **0%** error rate and a near-constant $\text{p}(95)$ response time—strongly imply that the $\text{ReqRes}$ server's resources ($\text{CPU}$, $\text{Memory}$, and Network $\text{I/O}$) were **not** saturated by the **20 VU** load. Server-side resource bottlenecks would typically manifest as a rapid increase in $\text{HTTP } 500$ errors or a catastrophic failure in response time, neither of which occurred.
-
-### The Significance of Error Handling (HTTP 429)
-
-The **lack of a $\text{HTTP } 429$ (Too Many Requests) error is notable**. In high-load scenarios, $\text{APIs}$ often use $\text{HTTP } 429$ responses to rate-limit users. The absence of this error suggests that the current load ($\text{20 VUs}$) is still **well within the operational capacity** of the service, and a much higher stress level would be required to trigger rate limiting.
 
 -----
 
@@ -150,7 +151,7 @@ pip install pandas matplotlib
 
 ## 🚀 Test Execution Commands
 
-Run each configuration test and export results to $\text{CSV}$:
+Run each configuration test and export results to CSV:
 
 ```bash
 # Low configuration test
@@ -169,8 +170,8 @@ python3 k6_analysis.py
 | :--- | :--- | :--- |
 | `--vus` | Number of virtual users | 5 or 20 |
 | `--duration` | Duration of test | 30 seconds |
-| `--out csv=` | Export metrics to $\text{CSV}$ | `k6_low_results.csv`, `k6_high_results.csv` |
-| `python3 k6_analysis.py` | Analyze both $\text{CSV}$ files and generate charts | $\text{PNG}$ charts |
+| `--out csv=` | Export metrics to CSV | `k6_low_results.csv`, `k6_high_results.csv` |
+| `python3 k6_analysis.py` | Analyze both CSV files and generate charts | PNG charts |
 
 -----
 
@@ -178,7 +179,7 @@ python3 k6_analysis.py
 
 ### `k6_analysis.py`
 
-This Python script automatically reads the two $\text{CSV}$ files, cleans the data, compares metrics, and creates two visual charts: `response_time_chart_fixed.png` and `throughput_chart_fixed.png`.
+This Python script automatically reads the two CSV files, cleans the data, compares metrics, and creates two visual charts: `response_time_chart_fixed.png` and `throughput_chart_fixed.png`.
 
 ```python
 #!/usr/bin/env python3
@@ -291,22 +292,28 @@ if __name__ == "__main__":
     main()
 ```
 
+<img width="1393" height="659" alt="image" src="https://github.com/user-attachments/assets/64dab6a6-c521-4730-ae9f-ef7e1b26240e" />
+
 -----
 
 ## 📈 Sample Output Charts
 
 **Response Time Comparison**
 
+<img width="1491" height="724" alt="image" src="https://github.com/user-attachments/assets/0c6b777c-1292-4de6-b9ae-59c3a9ca9276" />
+
 **Throughput Comparison**
+
+<img width="1514" height="675" alt="image" src="https://github.com/user-attachments/assets/b1a79682-6268-46a1-9cf6-d849a91405e8" />
 
 -----
 
 ## 💡 Recommendations
 
-1.  Try **longer test durations** ($\text{1}$–$\text{5 minutes}$) for more stable averages and to observe long-term performance trends.
-2.  Increase virtual users gradually (e.g., $\text{10}$, $\text{50}$, $\text{100 VUs}$) to identify the exact **saturation point** of the $\text{API}$.
+1.  Try **longer test durations** ($\mathbf{1}$–$\mathbf{5 \text{ minutes}}$) for more stable averages and to observe long-term performance trends.
+2.  Increase virtual users gradually (e.g., $10$, $50$, $100 \text{ VUs}$) to identify the exact **saturation point** of the API.
 3.  Integrate $\text{K}6$ results with **Grafana or InfluxDB** for live, interactive dashboards.
-4.  For future realistic testing, consider using custom, private endpoints instead of public $\text{APIs}$ to avoid excessive hits.
+4.  For future realistic testing, consider using custom, private endpoints instead of public APIs to avoid excessive hits.
 
 -----
 
