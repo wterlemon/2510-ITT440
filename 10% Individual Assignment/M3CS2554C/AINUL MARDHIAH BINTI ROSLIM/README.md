@@ -10,7 +10,7 @@ This document summarizes the core purpose, findings, and recommendations from th
   </a>
 </p>
 
-## ○ Tool selection justification.
+## 🛠️Tool selection justification.
 
 ## ○ Test environment setup.
 
