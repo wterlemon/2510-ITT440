@@ -66,4 +66,9 @@ The performance analysis provided the following key results:
 |Metric | Value | Threshold (GTMetrix Goal) | Status |
 |-------|-------|---------------------------|--------|
 |**Largest Contenful Paint (LCP)** | 1.1s | &le; 1.2s | Good |
+|**Total Blocking Time** | 250ms | &le; 150ms | Needs Improvement |
+|**Cumulative Layout Shift** | 0.01 | &le; 0.1 | Good | 
+
+---
+
 
