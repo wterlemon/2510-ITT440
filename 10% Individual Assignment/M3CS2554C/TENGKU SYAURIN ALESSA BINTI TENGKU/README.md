@@ -33,20 +33,6 @@ Locust was chosen for this study due to several key reasons:
 
 In summary, Locust was selected for its simplicity, scalability, and modern Python-based design, which make it ideal for containerized performance testing environments.
 
-## Test Environment Setup and Methodology
-
-| Component | Specification |
-|:----------:|:-------------:|
-| Testing Target | Docker 28.5.1 |
-| Container Engine | Docker Desktop |
-| Target App | Nginx (`latest`) |
-| Testing Tool | Locust 2.42 |
-| Python | 3.13.9 |
-
-### Hypothesis
-The Nginx container can handle moderate concurrent loads but will show increased latency under heavy stress. OR The hypothesis is that Nginx can handle up to 400–450 concurrent users efficiently, but performance will degrade as CPU usage reaches near saturation.
-
-### Setup Procedure
 
 ## 🔧 Installations
 
@@ -87,4 +73,39 @@ The Nginx container can handle moderate concurrent loads but will show increased
   - 🐍 Python extension
   - 🐳 Docker extension </br>
 
-###
+## Setup Procedure
+
+**1. Launch Docker container**
+  ```bash
+  docker run -d -p 8088:80 --name stress-target nginx
+  ```
+ This creates a running container serving static web pages at http://localhost:8088.
+ **2. Create Locust test script**
+ ```javascript
+  from locust import HttpUser, task, between
+
+class StressUser(HttpUser):
+    wait_time = between(1, 3)
+
+    @task
+    def load_homepage(self):
+        self.client.get("/")
+  ```
+ **3. Run Locust**
+ ```bash
+  locust -f locustfile.py --host http://localhost:8088
+  ```
+ Open the web interface at http://localhost:8089 to configure and start the test.
+
+ ## Methodology
+
+| Component | Specification |
+|:----------:|:-------------:|
+| Testing Target | Docker 28.5.1 |
+| Container Engine | Docker Desktop |
+| Target App | Nginx (`latest`) |
+| Testing Tool | Locust 2.42 |
+| Python | 3.13.9 |
+
+### Hypothesis
+The Nginx container can handle moderate concurrent loads but will show increased latency under heavy stress. OR The hypothesis is that Nginx can handle up to 400–450 concurrent users efficiently, but performance will degrade as CPU usage reaches near saturation.
