@@ -96,7 +96,7 @@ The analysis reveals that the most significant performance degradation stems fro
 Recommended Immediate Action: The most impactful change would be the deployment of a Content Delivery Network (CDN) and optimizing the substantial JavaScript size (931KB) by reducing duplicate modules and ensuring efficient parsing, which will directly reduce the TBT and improve overall responsiveness. 
 
 ---
-## 🎥 YouTube Demo Link
+## YouTube Demo Link
 
 
 -----
