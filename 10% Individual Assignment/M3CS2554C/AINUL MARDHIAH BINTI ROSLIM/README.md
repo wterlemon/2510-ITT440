@@ -123,12 +123,12 @@ And also, it will based on the virtual scenarios that I created to make it suita
 
 | Step | Virtual User Action |
 | :--- | :--- |
-| **Number One** | The user **access the Login Page** and performs an HTTP **GET** request to the `/login` URL. |
-| **Number Two** | The user waits for **1 second**, simulating the time a real person takes to look at the page and prepare to type. |
-| **Number Three** | The user will **submit the login form** and performs an HTTP POST request to the `/authenticate` endpoint, sending the hardcoded **username** and **password**. | 
-| **Number Four** | The users will **verify success** and checks that the resulting page contains the certain sentences which is **"Welcome to the Secure Area..."**. |
-| **Number Five** | The user waits for **2 seconds**, simulating the time they spend viewing the secured content before doing anything else like logging out. | 
-| **Number Six** | The user will **End the virtual scenarios** by completing their session, and their performance metrices such as response times, errors are recorded. | 
+| **I** | The user **access the Login Page** and performs an HTTP **GET** request to the `/login` URL. |
+| **II** | The user waits for **1 second**, simulating the time a real person takes to look at the page and prepare to type. |
+| **III** | The user will **submit the login form** and performs an HTTP POST request to the `/authenticate` endpoint, sending the hardcoded **username** and **password**. | 
+| **IV** | The users will **verify success** and checks that the resulting page contains the certain sentences which is **"Welcome to the Secure Area..."**. |
+| **V** | The user waits for **2 seconds**, simulating the time they spend viewing the secured content before doing anything else like logging out. | 
+| **VI** | The user will **End the virtual scenarios** by completing their session, and their performance metrices such as response times, errors are recorded. | 
 
 last but not least, at **Phase 3** is where I will be making the verdiction about the results!
 
