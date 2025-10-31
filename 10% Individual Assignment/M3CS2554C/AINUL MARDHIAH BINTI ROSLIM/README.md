@@ -115,7 +115,21 @@ And then at my gatling prompt, I type the number 1 because it's corresponds to `
 
 secondly, we wiil go and see the official load run test at **PHASE 2**.
 
-5.  **Run Official Load:** Execute the full **10 users over 60 seconds** load.
+1.  **Start The Simulation**
+
+I will run the load test and execute the full **10 users over 60 seconds**
+
+And also, it will based on the virtual scenarios that I created to make it suitable for the load testing which is
+
+**Number One**, The user performs an HTTP GET request to the `/login` URL.
+
+**Number Two**, The user waits for 1 second, simulating the time a real person takes to look at the page and prepare to type.
+
+
+
+
+
+
 6.  **Monitor Safety:** Actively monitor your machine's resources and **STOP IMMEDIATELY** if the public application shows stress.
 
 ### Phase 3: Analysis & Conclusion (The Verdict)
