@@ -65,8 +65,7 @@ The performance analysis provided the following key results:
 |**Total Page Size** | 1.17 MB | A moderate size, dominated by JavaScript (931KB). |
 |**Total Page Requests** | 121 | A relatively high number of file requests, which can increase latency overhead. |
 
-
-
+---
 <img width="320" height="81" alt="image" src="https://github.com/user-attachments/assets/e6fc3aac-d537-4393-bb3d-640725c11393" />
 
 **7.2 Core Web Vitals (User Experience Metrics)**
