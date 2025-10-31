@@ -61,8 +61,13 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 ### 7. Performance Data Analysis 
 The performance analysis provided the following key results:
 
-<img width="272" height="77" alt="image" src="https://github.com/user-attachments/assets/9efbad74-ac5b-43c9-a1e7-a54926c308fa" />
-<img width="299" height="206" alt="image" src="https://github.com/user-attachments/assets/dd630e43-2b5a-469d-8fd5-3416570afed5" />
+<p align="center">
+<img width="272" height="77" alt="image" src="https://github.com/user-attachments/assets/9efbad74-ac5b-43c9-a1e7-a54926c308fa" >
+ </p>
+
+ <p align="center">
+<img width="299" height="206" alt="image" src="https://github.com/user-attachments/assets/dd630e43-2b5a-469d-8fd5-3416570afed5" >
+</p>
 
 **7.1 Overall Scoring**
 |Score/Metric | Value | Interpretation |
