@@ -54,6 +54,9 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 The performance analysis provided the following key results:
 
 **7.1 Overall Scoring**
+<img width="272" height="77" alt="image" src="https://github.com/user-attachments/assets/9efbad74-ac5b-43c9-a1e7-a54926c308fa" />
+<img width="299" height="206" alt="image" src="https://github.com/user-attachments/assets/dd630e43-2b5a-469d-8fd5-3416570afed5" />
+
 |Score/Metric | Value | Interpretation |
 |-------------|-------|----------------|
 |**Performance Score** | B (86%) | Good performance, but indicates room for optimization to achieve an 'A' grade. |
@@ -62,6 +65,8 @@ The performance analysis provided the following key results:
 |**Total Page Size** | 1.17 MB | A moderate size, dominated by JavaScript (931KB). |
 |**Total Page Requests** | 121 | A relatively high number of file requests, which can increase latency overhead. |
 
+
+<img width="320" height="81" alt="image" src="https://github.com/user-attachments/assets/e6fc3aac-d537-4393-bb3d-640725c11393" />
 
 **7.2 Core Web Vitals (User Experience Metrics)**
 |Metric | Value | Threshold (GTMetrix Goal) | Status |
