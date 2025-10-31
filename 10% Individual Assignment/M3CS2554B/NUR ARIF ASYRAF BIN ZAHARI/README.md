@@ -86,7 +86,7 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 | **Request Users Rate**                        | 534 users/sec      | Steady high throughput                            |
 | **HTTP (200+201) Responses**                  | 73,730  | Majority of requests succeeded      |
 | **HTTP 429 Responses**                  | 26,770           | Significant rate-limit errors        |
-| **Error Rate (4xx)**                    | 26.6%            | A notable portion of requests failed           |
+| **Error Rate (4xx)**                    | 26.7%            | A notable portion of requests failed           |
 | **Min Response Time**             | 2 ms             | Some requests were extremely fast |
 | **Max Response Time**             | 2,574 ms         | Some requests experienced very high latency       |
 | **Median Response Time**          | 22.9 ms          | Typical response time is low                       |
@@ -108,9 +108,9 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 
 ## Error Rate
 
-- HTTP 2xx Responses: 73,730 (~73.4%)
-- HTTP 429 Responses (Rate-Limit): 26,770 (~26.6%)
-- Observation: ~27% of requests failed due to throttling, indicating the server limits concurrent requests under stress.
+- HTTP 2xx Responses: 73,730 (73.4%)
+- HTTP 429 Responses (Rate-Limit): 26,770 (26.7%)
+- Observation: 27% of requests failed due to throttling, indicating the server limits concurrent requests under stress.
 
 ## Overall Observation
 
