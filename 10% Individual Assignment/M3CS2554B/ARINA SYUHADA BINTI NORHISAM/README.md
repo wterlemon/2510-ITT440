@@ -41,7 +41,7 @@ The purpose of this test is to evaluate the site’s **responsiveness, stability
 | **Loop Count** | 1 |
 | **Protocol** | HTTPS |
 | **Thread Group** | 1 (simulating spike users) |
-| **Listeners** | View Results Tree, Summary Report, Aggregate Report |
+| **Listeners** | Summary Report, Aggregate Report |
 
 > **Explanation:**  
 This configuration simulates a sudden spike of 100 users accessing the BlazeDemo website at the same time.  
