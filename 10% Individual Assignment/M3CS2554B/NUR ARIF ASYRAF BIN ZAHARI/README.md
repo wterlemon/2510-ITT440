@@ -44,7 +44,7 @@ The experiment used DummyJSON because it offers a free stable fake REST API that
 
 ---
 
-## Environment Setup
+## Test Environment Setup
 | **Component**          | **Details**                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------- |
 | **Environment**        | Windows 11 operating system                                                        |
