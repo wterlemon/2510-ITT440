@@ -23,6 +23,7 @@ The Spike Test focus on
 | Time Period  | Number Of User | Response time (ms) | Total request Per Second |
 |-----------|-----------|-----------|-----------|
 | **11:01 PM - 11:10 PM** | **Ramps up linearly from 0 to ~200 users.** | **Both 50th and 95th percentiles rise linearly, showing the system is getting slower under load** | **- RPS (Green): Stable. - Failures/s (Red): Flat at 0.** |
-| ~11:10 PM | Reaches the maximum load of ~200 users. | Response times (especially 95th percentile) shoot up to over 2,000 ms (2 seconds).| - Failures/s (Red): Spikes sharply from 0 to over 60 failures/second. |
+| 11:10 PM | Reaches the maximum load of ~200 users. | Response times (especially 95th percentile) shoot up to over 2,000 ms (2 seconds).| - Failures/s (Red): Spikes sharply from 0 to over 60 failures/second. |
+| 11:10:20 PM – 11:11 PM | Load is held steady at ~200 users. | Response times drop suddenly. This is misleading; it's low because requests are failing instantly, not succeeding quickly.| - Failures/s (Red): Stays high, showing the system is continuously failing and cannot recover under this load. |
 
 
