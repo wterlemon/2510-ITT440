@@ -5,17 +5,22 @@ GROUP: M3CDCS2554C<br>
 
 ## 📌What Is Performance Testing?
 
+<p align="justify">
 Performance testing is one of the most important parts to do after finishing development of a website such as load testing, stress testing, spike testing, and endurance testing. This performance testing helps to measure and identify the weakness of the website thus it will improve user experience and satisfaction when using the website. In addition, performance testing can also help to identify how the website performs under high traffic scenarios in order to know how the website responds or what are issues that the website faces in certain testing scenarios.
-<br> <br>
+</p>
+<br>
 
 ## 🧐What are the focuses of this test?
 
-This test focuses on stress testing that will verify the stability of the website under extreme load conditions which determine what and when is the limitation of the website. Besides that, by doing stress tests we are able to identify the failure or breaking point of a library book management that is built with several languages like PHP, HTML, and CSS. 
+<p align="justify">
+This test focuses on stress testing that will verify the stability of the website under extreme load conditions which determine what and when is the limitation of the website. Besides that, by doing stress tests we are able to identify the failure or breaking point of a library book management that is built with several languages like PHP, HTML, and CSS. </p>
 
-In addition, in this test it will measure several important metric measurements such as response time, throughput, resource utilization performance, and error detection when running the test on the website within specified time.
+<p align="justify">
+In addition, in this test it will measure several important metric measurements such as response time, throughput, resource utilization performance, and error detection when running the test on the website within specified time. </p>
 
-The objective of this stress test is to evaluate the performance of the website under a high number of users in some period of time or in other word when website is experiencing high-traffic (load), identify bottlenecks of the website, and suggest the best way to optimize the situation according to industry environment.
-<br> <br>
+<p align="justify">
+The objective of this stress test is to evaluate the performance of the website under a high number of users under extreme pressure, identify bottlenecks of the website, and suggest the best way to optimize weakness of the website according to industry environment.</p>
+<br>
 
 ## ⚙️Tools Selection
 
@@ -129,7 +134,8 @@ The objective of this stress test is to evaluate the performance of the website 
 
 ## 🔍Methodology
 
-This stress test has several scenarios or stages that were conducted in order to determine and identify when the performance of this website starts to drop, overload or in a bottleneck that leads to error. Each of the stages was tested and run three times to get overall and accurate results of the stress test for each of the stages with different number of users (thread). All of the pages are tested for both admin and user pages that are important to simulate realistic user behavior, from login pages to pages that contain create, read, update, and delete (CRUD) and lastly logout pages. The table below shows details of each stage. 
+<p align="justify">
+This stress test has several scenarios or stages that were conducted in order to determine and identify when the performance of this website starts to drop, overload or in a bottleneck that leads to error. Each of the stages was tested and run three times to get overall and accurate results of the stress test for each of the stages with different number of users (thread). All of the pages are tested for both admin and user pages that are important to simulate realistic user behavior, from login pages to pages that contain create, read, update, and delete (CRUD) and lastly logout pages. The table below shows details of each stage. </p>
 
 ℹ️ <ins> **Test Scenario** </ins>
 - Number of stages: 12
@@ -161,7 +167,8 @@ This stress test has several scenarios or stages that were conducted in order to
 </div>
 <br>
 
-There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time. In addition, some resource utilization that can be measure like CPU usage and privilege CPU usage (%)
+<p align="justify">
+There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time. In addition, some resource utilization that can be measure like CPU usage and privilege CPU usage (%). </p>
 
 | Metric | Explanation |
 |------------|----------|
@@ -181,8 +188,9 @@ There are some important key metrics to be measures in this stress test such as 
 
 ℹ️ <ins> **Baseline Test** </ins>
 
-Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
-<br> <br>
+<p align="justify">
+Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.</p>
+<br>
 
 ## 📈 Stress Test Output Data Report
 
@@ -449,15 +457,26 @@ Before starting to run the stress test for each stage, a baseline test will be d
 
 ### ➤ Type of Bottlenecks Observed
 
-As the user thread at stage 10 until stage 12 which has 5000 to 6000 users within 180 seconds starts to load longer than usual and the error message below appears for all pages that failed to send the request.
+<p align="justify">
+As the user thread at stage 10 until stage 12 which has 5000 to 6000 users within 180 seconds starts to load longer than usual and the error message below appears for all pages that failed to send the request.</p>
 
-***“Non HTTP response code: org.apache.http.conn.HttpHostConnectException/Non HTTP response message: Connect to localhost:80[localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect”***
+<div align="center">
+	
+***➡️ “Non HTTP response code: org.apache.http.conn.HttpHostConnectException/Non HTTP response message: Connect to localhost:80[localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect”***
 
-***“Non HTTP response code: java.net.BindException/Non HTTP response message: Address already in use: connect”***
+</div>
 
-The first error message above has a means that the server was too busy to take or make new connections for upcoming new requests. Thus, the server decides to reject the request and that is why at this stage the website shows the error percentage which indicates the failure of requests. Besides that, the web application also takes a longer time to load because the new upcoming request is waiting for the server to process it.
+<div align="center">
+	
+***➡️ “Non HTTP response code: java.net.BindException/Non HTTP response message: Address already in use: connect”***
 
-The second error message indicates that the port to run the application is running out as this problem was actually coming from the client side which is the machine that is doing the test.
+</div>
+
+<p align="justify">
+The first error message above has a means that the server was too busy to take or make new connections for upcoming new requests. Thus, the server decides to reject the request and that is why at this stage the website shows the error percentage which indicates the failure of requests. Besides that, the web application also takes a longer time to load because the new upcoming request is waiting for the server to process it. </p>
+
+<p align="justify">
+The second error message indicates that the port to run the application is running out as this problem was actually coming from the client side which is the machine that is doing the test. </p>
 
 There are several identified bottlenecks based on the result, error message, and website situation as stated below:
 
@@ -468,7 +487,9 @@ There are several identified bottlenecks based on the result, error message, and
 | 3 | **Socket/Port Exhaustion** | Connections to localhost on port 80 fail due to the server being unable to handle additional requests. Processor privilege time exceeds 25%, indicating heavy operating system usage. |
 
 ### ➤ Failure Points
-The failure points start at stage 10 with the settings of 5000 users until 6000 users within 180 seconds this can prove where the error percentage and message appear in web pages that produce more data like login page, borrowing book page, and manage book page.
+
+<p align="justify">
+The failure points start at stage 10 with the settings of 5000 users until 6000 users within 180 seconds this can prove where the error percentage and message appear in web pages that produce more data like login page, borrowing book page, and manage book page. </p>
 
 <br>
 
@@ -483,17 +504,25 @@ The failure points start at stage 10 with the settings of 5000 users until 6000 
 <br>
 
 ## 📃Conclusion
-Library book management website performance decreases and reaches the critical breaking point when there are 6000 users trying to access it within 180 seconds where the  system also starts to load slower than usual compared to when the number of users is less than 5000. Although the throughput remains stable the system also fails to process the new upcoming request since the server is saturated which also causes operating system percentage in processor privilege to increase more than 25%. 
 
-Furthermore, at the last stage which had 6000 users the average response time for all pages that are tested increases sharply up to 12000 ms which a huge difference compared to the stage before 5000 users and the website application starts to return “This site can’t be reached” also when trying to navigate to other pages as it will take more than 10 seconds to retrieve the website back.
+<p align="justify">
+Library book management website performance decreases and reaches the critical breaking point when there are 6000 users trying to access it within 180 seconds where the website also starts to load slower than usual compared to when the number of users is less than 5000. Although the throughput remains stable the website also fails to process the new upcoming request since the server is saturated that cause percentage in processor privilege to increase more than 25% that is above normal percentage. </p>
 
-Next, the CPU usage reaches the peak of 93% when there are 6000 users which shows that the CPU is overloaded as there are too many requests that come in a short period of time. The privilege percentage also increased more than 40% that led to usage of the operating system exceeding normal usage. 
+<p align="justify">
+	
+Furthermore, at the last stage which had 6000 users the average response time for all pages that are tested increases sharply up to 12000 ms which a huge difference compared to the stage before 5000 users and the website application starts to return ***“This site can’t be reached”*** also when trying to navigate to other pages as it will take more than 10 seconds to retrieve the website back. </p>
 
-The total error rate of the website increases up to 10.06% higher than other stages. Error percentage rate for login pages is up to 18% because these pages required the usage of data from database and backend to process it to get access into the system. Furthermore, managing book and borrowing pages is the second highest percentage of error rate in between 7% to  8% as it also requires the user to fill up form and edit pages like delete or modify data thus these pages will take a lot of time to send and retrieve data from and to the database.
+<p align="justify">
+Next, the CPU usage reaches the peak of 93% when there are 6000 users which shows that the CPU is overloaded as there are too many requests that come in a short period of time. The privilege percentage also increased more than 40% that led to usage of the operating system between user and kernel exceeding normal usage.</p>
 
-Last but not least, the logout pages have the least error that is below 4% but also have higher average response time up to 11000 ms which indicates that logout pages have trouble within the sessions as it took longer for the server to end each session of the pages.
+<p align="justify">
+The total error rate of the website increases up to 10.06% which is higher than other stages. Error percentage rate for login pages is up to 18% because these pages required the usage of data from database and backend to process in order to get access into the system. Furthermore, managing book and borrowing pages is the second highest percentage of error rate that is between 7% to 8% as it also requires the user to fill up form and edit pages like delete or modify data thus these pages will take a lot of time to send and retrieve data from and to the database.</p>
 
-In summary, this website's critical breaking point is when the number of users is 6000 which the CPU is almost reaching 100% usage that leads the database, backend, and server to crash thus cannot perform efficiently to complete all of the requests to the web server that lead to error.
+<p align="justify">
+Last but not least, the logout pages have the least error that is below 4% but also have higher average response time up to 11000 ms which indicates that logout pages have trouble within the sessions as it took longer for the server to end each session of the pages.</p>
+
+<p align="justify">
+In summary, this website's critical breaking point is when the number of users is 6000 which the CPU is almost reaching 100% usage that leads the database, backend, and server to crash thus cannot perform efficiently to complete all of the requests to the web server that lead to error.</p>
 
 <br>
 
