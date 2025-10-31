@@ -176,7 +176,7 @@ There are some important key metrics to be measures in this stress test such as 
 | **Throughput** | Number of requests or transactions a system processes per second under simulated workloads. |
 | **Percentile 90th** | Response time below which 90% of all request fall. |
 | **Percentile 95th** | Response time below which 95% of all request fall. |
-| **Error (%)** | Number of request that is failed or did not receive a response |
+| **Error (%)** | Number of request that is failed or did not receive a response. |
 <br>
 
 | Resource Utilization | Explanation |
@@ -194,9 +194,11 @@ Before starting to run the stress test for each stage, a baseline test will be d
 
 ## 📈 Stress Test Output Data Report
 
+ℹ️ Info: Please click on the images to see the data, if the image are not clear in your devices 👆🏻.
+
 - Test Summary
 <p align="center">
-<img width="650" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
+<img width="680" height="400" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
 </p>
 
 --- 
@@ -246,7 +248,7 @@ Before starting to run the stress test for each stage, a baseline test will be d
       <th style="border: 1px solid #555; padding: 8px;">Stage</th>
       <th style="border: 1px solid #555; padding: 8px; width: 150px;">Number of Users</th>
       <th style="border: 1px solid #555; padding: 8px;">Metric</th>
-      <th style="border: 1px solid #555; padding: 8px;">Observations</th>
+      <th style="border: 1px solid #555; padding: 8px;">Target Pages Observations</th>
     </tr>
   </thead>
   <tbody>
@@ -305,9 +307,9 @@ Before starting to run the stress test for each stage, a baseline test will be d
       <td rowspan="4" style="border: 1px solid #555; padding: 8px;">3000 – 3500</td>
       <td style="border: 1px solid #555; padding: 8px;">Average Response Time</td>
       <td style="border: 1px solid #555; padding: 8px; text-align:left;">
-        • Login ↑ at stage 6, ↓ at stage 7<br>
+        • Login pages ↑ at stage 6, ↓ at stage 7<br>
         • Manage Book ↑ then ↓ at stage 7<br>
-        • Borrow stable<br>
+        • Borrow pages stable<br>
         • Logout Admin +0.01 ms, User ↓
       </td>
     </tr>
@@ -527,7 +529,7 @@ In summary, this website's critical breaking point is when the number of users i
 <br>
 
 ## ▶️ Video Demonstration
-Youtube Link: 
+Youtube Link: https://youtu.be/EjK7TZT_eeg?si=oR1VGtWf9ba46gyx
 
 <br>
 
