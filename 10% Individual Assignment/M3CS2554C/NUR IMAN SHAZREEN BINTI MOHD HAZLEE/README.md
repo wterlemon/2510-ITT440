@@ -78,8 +78,9 @@ The performance analysis provided the following key results:
 |**Total Page Size** | 1.17 MB | A moderate size, dominated by JavaScript (931KB). |
 |**Total Page Requests** | 121 | A relatively high number of file requests, which can increase latency overhead. |
 
-
-<img width="320" height="81" alt="image" src="https://github.com/user-attachments/assets/e6fc3aac-d537-4393-bb3d-640725c11393" />
+<p align="center">
+<img width="320" height="81" alt="image" src="https://github.com/user-attachments/assets/e6fc3aac-d537-4393-bb3d-640725c11393">
+</p>
 
 **7.2 Core Web Vitals (User Experience Metrics)**
 |Metric | Value | Threshold (GTMetrix Goal) | Status |
@@ -95,7 +96,9 @@ Based on the Core Web Vitals, the user experience is generally high, with one ma
 - **Critical Finding (TBT)** : The **TBT** of 250ms significantly exceeds the 150ms threshold. This indicates that the main thread of the browser is being blocked by excessive or long-running JavaScript execution, making the page unresponsive to user input for a quarter of a second during the critical loading phase. This is the primary issue dragging down the overall Performance Score.
 
 ---
-<img width="433" height="163" alt="image" src="https://github.com/user-attachments/assets/2a5392fa-71e7-422d-b5d2-0f48eb5452c3" />
+<p align="center">
+<img width="433" height="163" alt="image" src="https://github.com/user-attachments/assets/2a5392fa-71e7-422d-b5d2-0f48eb5452c3">
+</p>
 
 ### 9. Identification of Bottlenecks and Failure Points
 Structural audits highlight the specific causes contributing to the **TBT** issue and other inefficiencies:
