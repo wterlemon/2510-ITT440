@@ -102,7 +102,7 @@ This stress test has several scenarios or stages that were conducted in order to
 </div>
 <br>
 
-There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time.
+There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time. In addition, some resource utilization that can be measure like CPU usage and privilege CPU usage (%)
 
 | Metric | Explanation |
 |------------|----------|
@@ -111,18 +111,32 @@ There are some important key metrics to be measures in this stress test such as 
 | **Percentile 90th** | Response time below which 90% of all request fall. |
 | **Percentile 95th** | Response time below which 95% of all request fall. |
 | **Error (%)** | Number of request that is failed or did not receive a response |
+<br>
+
+| Resource Utilization | Explanation |
+|------------|----------|
+| **CPU Usage (%)** | How much of the CPU's processing power is being actively used to run tasks over a specific period. |
+| **Privilege CPU Usage (%)** | How system or website perform in user or kernel mode which related to I/O disk and devices hardware. |
 
 <br>
 
 ℹ️ <ins> **Baseline Test** </ins>
 
 Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
+<br>
 
 ## 📈 Sample Output Data
 
 - Test Summary
 <p align="center">
 <img width="650" height="700" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
+</p>
+
+--- 
+
+- Resource Utilization
+<p align="center">
+<img width="662" height="268" alt="image" src="https://github.com/user-attachments/assets/29446e8c-dc9c-4de8-aaba-ce17d012e749" />
 </p>
 
 --- 
@@ -148,6 +162,13 @@ Before starting to run the stress test for each stage, a baseline test will be d
 <p align="center">
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/35e1a282-5e67-4ddc-a415-2e5471af6445" /> 
 </p>
+
+--- 
+- Error Rate
+<p align="center">
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/7498beaa-22a9-4798-89ee-95a8e525ec05" />
+</p>
+<br>
 
 ## 📝Result
 <div align="center">
