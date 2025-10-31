@@ -48,8 +48,9 @@ Endurance Testing tests the ability of your software to perform under expected u
 | **Ramp-up Period** | 5  |
 | **Protocol** | HTTP |
 
-> **Explanation:**  
-The test simulates 5 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
+> *Explanation:*
+>
+> The test simulates 5 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
 
 ---
 ### 📋 Test Scenario and Procedure
@@ -74,8 +75,9 @@ A endurance test is used to check if a system can handle a continuous workload f
 
 **6.** Run the test and monitor metrics such as average response time, throughput, and error rate.
 
-> **Explanation:**  
-Since this is a simulation, the following results are based on realistic patterns of what a high-traffic web app like ChatGPT might show under a endurance test.
+> *Explanation:*
+>   
+> Since this is a simulation, the following results are based on realistic patterns of what a high-traffic web app like ChatGPT might show under a endurance test.
 
 ---
 ### 📈 Simulated Test Results
@@ -95,8 +97,9 @@ Since this is a simulation, the following results are based on realistic pattern
 - 📈 Throughput (9.6 requests/sec) stayed steady, meaning the system handled continuous traffic well.
 - ❌ Error rate (0.01%) was very low, showing strong reliability.
 
-> **Explanation:**  
-Overall, the web application showed good speed, stability, and efficiency under long-term use.
+> *Explanation:*
+> 
+> Overall, the web application showed good speed, stability, and efficiency under long-term use.
 
 ---
 ### 📊 Raw Data :
