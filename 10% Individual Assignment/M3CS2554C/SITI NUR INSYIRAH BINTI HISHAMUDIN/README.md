@@ -17,7 +17,10 @@ In addition, in this test it will measure several important metric measurements 
 The objective of this stress test is to evaluate the performance of the website under a high number of users in some period of time or in other word when website is experiencing high-traffic (load), identify bottlenecks of the website, and suggest the best way to optimize the situation according to industry environment.
 <br> <br>
 
-## ⚙️Tool Selection
+## ⚙️Tools Selection
+
+- Web App Performance Tool
+  
 <p align="center">
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/cbb86a49-6bba-42a7-a9ad-043101588a56" />
 </p>
@@ -29,6 +32,32 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Free Open Source Tool** | A free, open-source performance testing tool. It requires no license or trial, making it cost-effective for newcomers in performance testing. |
 | **Wide Range of Protocol Types** | JMeter supports various protocols like HTTP and HTTPS for web applications. It can simulate real-world scenarios using thread groups that users can configure themselves. |
 | **Detailed Report Function** | JMeter provides multiple reporting options (e.g., Summary Report, Response Time Graph, Aggregate Report). Data can be saved in multiple formats such as `.jmx`, `.jtl`, and `.csv`. |
+
+<br>
+
+- Hosting
+<p align="center">
+<img width="440" height="114" alt="image" src="https://github.com/user-attachments/assets/51d61820-d035-4b63-a47a-69e8517f1619" />
+</p>
+
+| Feature | Description |
+|----------|--------------|
+| **Free Open Source Tool** | No license or payment required to use it. |
+| **Easy to install** | Simple configuration needed and not complex for beginner. |
+| **Combinations of Component** | Include more than one component like MYSQL, Apache, and MariaDB which is useful for web app development or testing. |
+
+<br>
+
+- Resource Utilization Tool
+<p align="center">
+<img width="320" height="156" alt="Screenshot (800)" src="https://github.com/user-attachments/assets/9e85cea1-c317-4c7a-b06b-96e850fcf1e4" />
+</p>
+
+| Feature | Description |
+|----------|--------------|
+| **Free Open Source Tool** | No license or payment required to use it. |
+| **Comprehensive Insights** | It provide clear and accurate on the analysis of resource utilization, system behaviour, and application performance which the data also can be saved into file as a record. |
+| **Operation issue detection** | Continously measure and collect metrics in the devices to detect any possible distruptions that occur. |
 
 <br> <br>
 
@@ -153,9 +182,9 @@ There are some important key metrics to be measures in this stress test such as 
 ℹ️ <ins> **Baseline Test** </ins>
 
 Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
-<br>
+<br> <br>
 
-## 📈 Report Sample for Output Data
+## 📈 Stress Test Output Data Report
 
 - Test Summary
 <p align="center">
@@ -450,7 +479,7 @@ The failure points start at stage 10 with the settings of 5000 users until 6000 
 | **Database Saturation** | Use proper indexing on all relevant columns and tables in database queries. This improves data retrieval and searching speed, reducing query execution time. |
 | **Web Server** | Increase the maximum number of thread connection pools during high-traffic periods to handle sudden spikes in user load more efficiently. |
 | **Server Side** | Optimize server-side code by minimizing synchronous or repetitive function calls. Ensure each session request is unique to reduce backend processing time, especially during login or logout operations. |
-| **Caching** | Enable caching at multiple layers — application, database, and browser. This reduces server load and minimizes redundant requests to the backend and database. |
+| **Caching** | Enable caching at multiple layers of application, database, and browser. This reduces server load and minimizes redundant requests to the backend and database. |
 <br>
 
 ## 📃Conclusion
@@ -478,6 +507,7 @@ Youtube Link:
 - GeeksforGeeks. (2019, April 18). What is Stress Testing in Software Testing? GeeksforGeeks. https://www.geeksforgeeks.org/software-testing/stress-testing-software-testing/ <br>
 - What Is a Website Performance Test? | Website Testing | Akamai. (2024). Akamai. https://www.akamai.com/glossary/what-is-a-website-performance-test <br>
 - Metrics for performance tests - Performance Testing - Alibaba Cloud Documentation Center. (2024). Alibabacloud.com. https://www.alibabacloud.com/help/en/pts/performance-test-pts-3-0/product-overview/test-metrics
+- Lenovo. (2023). What Are the Advantages of Performance Monitoring Tools? Lenovo. https://www.lenovo.com/us/en/knowledgebase/what-are-the-advantages-of-performance-monitoring-tools/?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOoqD67_Tmk09m9fjHwOLdp_XfyQDVJ8fLWYZnFg30a4rHrNHT_6A
 
 ‌
 
