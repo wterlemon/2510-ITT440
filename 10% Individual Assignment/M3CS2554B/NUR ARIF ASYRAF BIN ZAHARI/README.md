@@ -25,13 +25,18 @@ The assignment demands Artillery execution of a stress test on DummyJSON API to 
 ---
 
 ## Tool & Test Selection Justification
+
 <p align="center">
 <img width="500" height="243" alt="1_p4IQfjORMIMZtN8SJRjzcA" src="https://github.com/user-attachments/assets/9bcc62c7-bf15-4428-a6d8-d43b25c77ad2" />    
-<img width="500" height="497" alt="image" src="https://github.com/user-attachments/assets/51d8c870-99b9-4708-ba60-9dffb25ca339" />
 
 ## Performance Testing Tool (Artillery)
 
 The experiment used Artillery because this open-source tool enables simple testing framework designed for HTTP, WebSocket, and API-level testing. Stress testing through YAML script execution. The tool delivers precise measurements of response times and errors while Built-in Cloud dashboard for reporting which is Artillery Cloud generates visual performance graphs for better analysis.
+
+---
+
+<p align="center">
+<img width="500" height="497" alt="image" src="https://github.com/user-attachments/assets/51d8c870-99b9-4708-ba60-9dffb25ca339" />
 
 ## Target Web Application (DummyJson)
 
