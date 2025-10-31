@@ -1,5 +1,7 @@
-# NUR ARIF ASYRAF BIN ZAHARI
 # Comprehensive Web Application Performance Testing & Analysis
+### STUDENT NAME : NUR ARIF ASYRAF BIN ZAHARI
+### ITT440 - INDIVIDUAL ASSIGNMENT
+### GROUP : M3CS2554B
 
 ---
 
