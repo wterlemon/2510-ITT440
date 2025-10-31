@@ -9,13 +9,17 @@
 # <h1 align="center">🔥 *Endurance Testing of ChatGPT using JMeter*</h1>
 
 ### 📌 Introduction
-Performance testing checks how a website performs under heavy or long-term use. For this assignment, I choose **ChatGPT** as the web app and focused on Endurance Testing — testing how well the system runs continuously over time. I used **Apache JMeter** to simulate the test and created simulated results since real **ChatGPT** servers cannot be tested.
+Web application performance testing helps us understand how a website works when many people use it for a long time. The main goal is to see if the website stays **fast, stable and reliable** during continuous use. 
+
+In this assignment, I choose **OpenAI ChatGPT** as the web application to test. ChatGPT is a popular online AI chatbot that allows users to chat by typing messages. The purpose of this project is to perform a Endurance Test, which checks how stable and responsive the system is when it runs for a long time without stopping.
+
+The testing is done using **Apache JMeter**, a common tool for performance testing. Since we cannot test directly, this report uses simulated results that show what might happen in a real endurance test on a similar system.
 
 ---
 ### 🎯 Objectives
 - To simulate a continuous number of virtual users interacting with the ChatGPT web interface over an extended period.
-- To observe the system’s response time, throughput, and error rate.
-- To identify potential memory leaks, performance degradation, or slowdowns that may appear after long usage.
+- To observe the system response time, throughput, and error rate.
+- To identify potential memory leaks, performance issues, or slow downs that may appear after long usage.
 - To analyze the results and give recommendations for better performance and stability.
   
 ---
@@ -32,7 +36,11 @@ Endurance Testing tests the ability of your software to perform under expected u
 | **User-Friendly Interface** |	It allows easy creation of test plans and thread groups without complex setup |
 | **Supports Multiple Test Types** |	JMeter can perform load, stress, and endurance testing effectively |
 | **Detailed Performance Metrics** |	It provides graphs, reports, and logs for detailed performance analysis |
-| **Web Application Simulation** |	JMeter can simulate multiple users sending HTTP requests, making it ideal for web based performance testing |
+| **Web Application Simulation** |	Can simulate multiple users sending HTTP requests, making it ideal for web based performance testing |
+
+> *Explanation:*
+>
+> Other tools like K6 or LoadRunner also support similar tests, but JMeter graphical interface and community support make it easier to learn and use for this individual project.
 
 ---
 ### 🧰 Test Setup and Configuration
@@ -50,17 +58,17 @@ Endurance Testing tests the ability of your software to perform under expected u
 
 > *Explanation:*
 >
-> The test simulates 5 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
+> The test simulates 5 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance.
 
 ---
 ### 📋 Test Scenario and Procedure
-A endurance test is used to check if a system can handle a continuous workload for a long time without memory leaks, crashes, or performance drops. It helps identify problems that do not appear in short-term tests.
+A endurance test is used to check if a system can handle a continuous for a long time without memory leaks, crashes or performance drops. It helps identify problems that do not appear in short term tests.
 
 **Steps:**
 
-**1.** Open Apache JMeter and create a Thread Group with 5 users and 1hour duration.
+**1.** Open Apache JMeter and create a Thread Group with 5 users and 1 hour duration.
 
-**2.** Add an **HTTP Request sampler** targeting the ChatGPT web URL.
+**2.** Add an **HTTP Request Sampler** targeting the ChatGPT web URL.
 - **Target URL:** https://chat.openai.com
 - **Method:** GET
 - **Path:** / 
@@ -68,8 +76,8 @@ A endurance test is used to check if a system can handle a continuous workload f
 **3.** Add a Constant Timer to simulate realistic user delays between requests (3–5 seconds).
 
 **4** Add an **HTTP Header Manager:**
-- Include headers like:
-- **User-Agent:** Mozilla/5.0
+- **Include headers like:**
+- User-Agent: Mozilla/5.0
 
 **5.** Include a **View Results Tree, View Results in Table, Summary Report** and **Graph Results** listener to record performance data.
 
@@ -87,19 +95,17 @@ A endurance test is used to check if a system can handle a continuous workload f
 | **Peak Response Time** | 7048 ms	 |	Some short delays happened during high activity or network bottlenecks. |
 | **Throughput** |	9.6 requests/sec |	The system handled a steady number of user requests without slowing down |
 | **Error Rate** |	0.01% |	Very few requests failed, showing high stability and reliability |
-| **CPU Utilization (Client Machine)** |~30–50% (est.)|Moderate usage; system handled the test without performance issues.|
-| **Memory Utilization (Client Machine)** |	~40–60% (est.)|Within safe limits; no signs of memory leaks during execution.|
 
 #### Result Summary
 - ✅ The system maintained stable performance throughout the endurance test.
 - ⚡ Average response time (520 ms) shows fast and consistent replies.
-- ⏱️ Peak response time (7048 ms) happened only during short high-load periods.
+- ⏱️ Peak response time (7048 ms) happened only during short high load periods.
 - 📈 Throughput (9.6 requests/sec) stayed steady, meaning the system handled continuous traffic well.
 - ❌ Error rate (0.01%) was very low, showing strong reliability.
 
 > *Explanation:*
 > 
-> Overall, the web application showed good speed, stability, and efficiency under long-term use.
+> Overall, the web application showed good speed, stability, and efficiency under long term use.
 
 ---
 ### 📊 Raw Data :
@@ -125,9 +131,6 @@ A endurance test is used to check if a system can handle a continuous workload f
 
 <img width="1404" height="756" alt="image" src="https://github.com/user-attachments/assets/e64a5a31-24c0-49ab-bb1b-58fe762340dd" />
 
-
-
-
 ---
 ### 🔍 Performance Analysis
 The endurance test results show that the ChatGPT web application can handle continuous user traffic without significant slowdowns or failures. This indicates that the system has good scalability and memory management.
@@ -144,7 +147,7 @@ No memory leaks were observed, and CPU usage remained moderate, which means the 
 
 **3.** Monitor memory and CPU usage on the actual server to confirm stability.
 
-**4.** Increase system resources (CPU or bandwidth) if high user activity continues for longer periods.
+**4.** Increase system resources if high user activity continues for longer periods.
 
 ---
 ### 🧩 Conclusion
