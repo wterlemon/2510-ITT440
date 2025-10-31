@@ -40,17 +40,80 @@ Finally, Gatling **fits right into my automated development process (CI/CD)**, e
 firstly we will go to **PHASE 1** where I initializing my pre - framework in my computer terminal
 
 1.  **Write Java Code**
+
 The coding below is my java coding that Gatling had used to make a Stimulation Load test at `https://the-internet.herokuapp.com`
+```java
+package example;
+
+import static io.gatling.javaapi.core.CoreDsl.*;
+import static io.gatling.javaapi.http.HttpDsl.*;
+
+import io.gatling.javaapi.core.*;
+import io.gatling.javaapi.http.*;
+
+public class CleanSimulation extends Simulation {
+
+  private static final HttpProtocolBuilder httpProtocol = http
+      .baseUrl("https://the-internet.herokuapp.com")
+      .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+
+  private static final ScenarioBuilder scn = scenario("Heroku App Login Workflow FINAL FIX")
+      
+      // Step 1: GET the Login Page
+      .exec(
+          http("T01_GET_Login_Page")
+              .get("/login")
+              .check(status().is(200))
+      )
+      .pause(1) 
+      
+      // Step 2: POST the login form data, which includes the automatic redirect to /secure
+      .exec(
+          http("T02_POST_Login_and_Access_Secure")
+              .post("/authenticate")
+              .formParam("username", "tomsmith") 
+              .formParam("password", "SuperSecretPassword!")
+              
+              // Check the final state after the redirect (the secured page)
+              .check(status().is(200)) 
+              // Verification: Check for a unique element on the secured page
+              .check(css("h4").is("Welcome to the Secure Area. When you are done click logout below."))
+      )
+      
+      .pause(2) 
+      
+      .exec(session -> {
+          System.out.println("Login Sequence Complete!");
+          return session;
+      });
 
 
-1.  **Launch Gatling**
+  // 3. Injection Profile: 10 users over 60 seconds
+  {
+    setUp(
+      scn.injectOpen(
+        // Inject 10 users gradually over 60 seconds for stable, sustained metrics
+        rampUsers(10).during(60) 
+      )
+    )
+    .protocols(httpProtocol)
+    // 4. Assertion: Expecting success
+    .assertions(
+        global().failedRequests().percent().lte(1.0)
+    );
+  }
+}
+```
+2.  **Launch Gatling**
+
 From my Computer terminal or command prompt, I had navigated to my project root
-3.  **Define Goal:** Set the objective (e.g., $p95 < 2.0$ seconds).
-4.  **Define Success:** Confirm the assertion: Global failed requests must be **$\le 1.0\%$**.
-5.  **Launch & Select:** Run the `.\mvnw.cmd gatling:test` command and select the `CleanSimulation`.
-6.  **Smoke Test:** Run a 1-user test to verify the **POST** to `/authenticate` and the **CSS check** for the "Welcome to the Secure Area" header are successful.
+`cd "C:\Users\Ainul Mardhiah\Gatling Open Source"` 
 
-### Phase 2: Execution (The Test Run)
+After that, I had run and execute my specific command, which is `.\mvnw.cmd gatling:test`.
+
+And then at my gatling prompt, I type the number 1 because it's corresponds to `example.CleanSimulation` and press Enter.
+
+secondly, we wiil go and see the official load run test at **PHASE 2**.
 
 5.  **Run Official Load:** Execute the full **10 users over 60 seconds** load.
 6.  **Monitor Safety:** Actively monitor your machine's resources and **STOP IMMEDIATELY** if the public application shows stress.
