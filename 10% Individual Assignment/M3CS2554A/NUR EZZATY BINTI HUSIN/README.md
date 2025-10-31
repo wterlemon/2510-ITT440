@@ -96,28 +96,30 @@ Since this is a simulation, the following results are based on realistic pattern
 Overall, the web application showed good speed, stability, and efficiency under long-term use.
 
 ---
-#### Raw Data :
+### 📊 Raw Data :
 
-*Response Time Graph*
+<p align="center">
 <img width="1637" height="541" alt="image" src="https://github.com/user-attachments/assets/5b75a5f5-913f-43de-ad6d-1f20b8c9ceed" />
+<p align="center">Response Time Graph</p>
+  
+---
+<p align="center">
+<img width="1643" height="543" alt="image" src="https://github.com/user-attachments/assets/e1c18eb7-1eb5-4f57-968c-34c98fe5eb4a" />
+<p align="center">Throughput Graph</p>
 
-
-*Throughput Graph*
-
-*Error Graph*
-
+---
+<p align="center">
 <img width="812" height="300" alt="image" src="https://github.com/user-attachments/assets/7ee7a5f0-bda3-4a0e-9492-98038509988d" />
+<p align="center">Error Graph</p>
 
+---
 <img width="1641" height="368" alt="image" src="https://github.com/user-attachments/assets/23ce63cf-47ba-4e8d-8733-a142113275a3" />
 
 <img width="1638" height="500" alt="image" src="https://github.com/user-attachments/assets/46d3135b-28fa-40fb-9511-d8ef333038ae" />
 
-<img width="1638" height="540" alt="image" src="https://github.com/user-attachments/assets/7d4c4a40-5d47-4e1e-83fd-688e24bf27f4" />
 
 
 
-
-<img width="1493" height="513" alt="image" src="https://github.com/user-attachments/assets/d8507f24-1b7c-4962-acad-3060c0ab353f" />
 
 <img width="1404" height="756" alt="image" src="https://github.com/user-attachments/assets/e64a5a31-24c0-49ab-bb1b-58fe762340dd" />
 
@@ -126,7 +128,7 @@ Overall, the web application showed good speed, stability, and efficiency under 
 
 ---
 ### 🔍 Performance Analysis
-The soak test results show that the ChatGPT web application can handle continuous user traffic without significant slowdowns or failures. This indicates that the system has good scalability and memory management.
+The endurance test results show that the ChatGPT web application can handle continuous user traffic without significant slowdowns or failures. This indicates that the system has good scalability and memory management.
 
 The small increase in response time during peak usage may come from temporary server queue delays or user-side latency. The low error rate shows that the server can recover quickly from transient issues.
 
