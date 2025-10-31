@@ -3,13 +3,13 @@
 #### 👥 GROUP : M3CS2554A
 
 ---
+<p align="center">
+<img width="522" height="212" alt="asf-logo" src="https://github.com/user-attachments/assets/ca7bfbd0-e880-41ab-a93e-5faa2eb4e420" />
+
 # <h1 align="center">🔥 *Endurance Testing of ChatGPT using JMeter*</h1>
 
-<p align="center">
-<img width="250" height="174" alt="logo jmeter" src="https://github.com/user-attachments/assets/d7592b5b-5432-40fc-a210-f899c9628e7a" />
-
 ### 📌 Introduction
-Performance testing checks how a website performs under heavy or long-term use. For this assignment, I chose **ChatGPT** as the web app and focused on Endurance Testing — testing how well the system runs continuously over time. I used **Apache JMeter** to simulate the test and created simulated results since real **ChatGPT** servers cannot be tested.
+Performance testing checks how a website performs under heavy or long-term use. For this assignment, I choose **ChatGPT** as the web app and focused on Endurance Testing — testing how well the system runs continuously over time. I used **Apache JMeter** to simulate the test and created simulated results since real **ChatGPT** servers cannot be tested.
 
 ---
 ### 🎯 Objectives
@@ -48,6 +48,7 @@ Endurance Testing tests the ability of your software to perform under expected u
 | **Ramp-up Period** | 5  |
 | **Protocol** | HTTP |
 
+> **Explanation:**  
 The test simulates 5 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
 
 ---
@@ -73,6 +74,7 @@ A endurance test is used to check if a system can handle a continuous workload f
 
 **6.** Run the test and monitor metrics such as average response time, throughput, and error rate.
 
+> **Explanation:**  
 Since this is a simulation, the following results are based on realistic patterns of what a high-traffic web app like ChatGPT might show under a endurance test.
 
 ---
@@ -91,8 +93,9 @@ Since this is a simulation, the following results are based on realistic pattern
 - ⚡ Average response time (520 ms) shows fast and consistent replies.
 - ⏱️ Peak response time (7048 ms) happened only during short high-load periods.
 - 📈 Throughput (9.6 requests/sec) stayed steady, meaning the system handled continuous traffic well.
-- 🧩 Error rate (0.01%) was very low, showing strong reliability.
+- ❌ Error rate (0.01%) was very low, showing strong reliability.
 
+> **Explanation:**  
 Overall, the web application showed good speed, stability, and efficiency under long-term use.
 
 ---
@@ -109,17 +112,13 @@ Overall, the web application showed good speed, stability, and efficiency under 
 
 ---
 <p align="center">
+  
 <img width="812" height="300" alt="image" src="https://github.com/user-attachments/assets/7ee7a5f0-bda3-4a0e-9492-98038509988d" />
 <p align="center">Error Graph</p>
 
 ---
+- A Statistics table providing in one table a summary of all metrics per transaction including 3 configurable percentiles:
 <img width="1641" height="368" alt="image" src="https://github.com/user-attachments/assets/23ce63cf-47ba-4e8d-8733-a142113275a3" />
-
-<img width="1638" height="500" alt="image" src="https://github.com/user-attachments/assets/46d3135b-28fa-40fb-9511-d8ef333038ae" />
-
-
-
-
 
 <img width="1404" height="756" alt="image" src="https://github.com/user-attachments/assets/e64a5a31-24c0-49ab-bb1b-58fe762340dd" />
 
@@ -145,12 +144,12 @@ No memory leaks were observed, and CPU usage remained moderate, which means the 
 **4.** Increase system resources (CPU or bandwidth) if high user activity continues for longer periods.
 
 ---
-### ✅ Conclusion
-This assignment demonstrated how a soak test can be performed using Apache JMeter to evaluate the long-term performance of a web application.
+### 🧩 Conclusion
+This assignment demonstrated how a endurance test can be performed using Apache JMeter to evaluate the long-term performance of a web application.
 
 Even though the actual test on ChatGPT could not be performed directly, the simulated results showed how an application behaves under continuous load. The analysis suggests that the system remains stable with acceptable response times and minimal errors, which indicates good performance and scalability.
 
-From this experiment, I learned the importance of planning test parameters carefully, monitoring key performance indicators (KPIs), and interpreting test data to make meaningful conclusions. Soak testing is valuable because it helps identify long-term performance issues that normal short-duration tests cannot detect
+From this experiment, I learned the importance of planning test parameters carefully, monitoring key performance indicators (KPIs), and interpreting test data to make meaningful conclusions. Endurance testing is valuable because it helps identify long-term performance issues that normal short duration tests cannot detect
 
 ---
 ### 📚 References
