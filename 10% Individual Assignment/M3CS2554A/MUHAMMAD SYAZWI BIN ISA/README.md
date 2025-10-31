@@ -4,7 +4,7 @@
 **Course:** ITT440  
 **Name:** MUHAMMAD SYAZWI BIN ISA  
 **Matrix Number:** 2024783361    
-**YouTube Video:** [Here we go](https://youtu.be/3_bWidNcf6I)
+**YouTube Video:** https://youtu.be/3_bWidNcf6I
 
 ---
 
