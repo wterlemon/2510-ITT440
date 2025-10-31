@@ -11,6 +11,7 @@
 <p align="center">
 <img width="250" height="134" alt="image" src="https://github.com/user-attachments/assets/25e76800-9219-4048-b2f0-f66346524470" >
 </p>
+
 ---
 ## 1. Introduction
 This report documents the performance analysis of a publicly hosted GitHub repository page (https://github.com/NurImanShazreen/Individual-Assignment-ITT440.git) using the GTMetrix web performance auditing tool. The primary goal of this analysis is to establish a performance baseline, identify existing inefficiencies, and recommend actionable strategies for optimization. The test was conducted on **October 31 2025**, from the **Seattle, WA, USA** test server location.
