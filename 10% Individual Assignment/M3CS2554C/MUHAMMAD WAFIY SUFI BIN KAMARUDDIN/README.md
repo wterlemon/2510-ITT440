@@ -8,13 +8,22 @@ This report presents the results of spike testing conducted on the Parabank web 
 - To assess the stability and reliability of the Parabank website.
 # Scope
 
-The Spiket Test focus on 
+The Spike Test focus on 
 
 - login page perfomance
 - checkout process under high load
 
 # Tool Used
-| Column 1 | Column 2 | Column 3 |
-|-----------|-----------|-----------|
-| Row 1 Data | Row 1 Data | Row 1 Data |
-| Row 2 Data | Row 2 Data | Row 2 Data |
+| Tool | Purpose |
+|-----------|-----------|
+| Locust | Load and spike testing tool | 
+| Parabank | A dummy banking website for testing |
+
+# Test Summary
+| Time Period  | Number Of User | Response time (ms) | Total request Per Second |
+|-----------|-----------|-----------|-----------|
+| **11:01 PM - 11:10 PM** | **Ramps up linearly from 0 to ~200 users.** | **Both 50th and 95th percentiles rise linearly, showing the system is getting slower under load** | **- RPS (Green): Stable.
+- Failures/s (Red): Flat at 0.** |
+| Row 2 Data | Row 2 Data | Row 2 Data |  |
+
+
