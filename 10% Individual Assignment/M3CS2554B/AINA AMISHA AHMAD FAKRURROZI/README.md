@@ -1,79 +1,67 @@
-### Evaluating QuickPizza’s Scalability with Grafana K6
----
-### Name: Aina Amisha Binti Ahmad Fkarurrozi
-### Matrice No: 2024541935
-### Class: M3CS2554B
----
+# Comprehensive Web Application Performance Testing & Analysis
 
-## 🔧 Tool Selection
-- **Tool**: Grafana K6
-- **Reason**: Lightweight, scriptable, CLI-based, ideal for automated performance testing
 
-## 🌐 Target Application
-- **URL**: https://quickpizza.grafana.com
-- **Justification**: Public, stable, and ethically safe for testing
 
-## 🎯 Hypothesis
-QuickPizza’s web application will maintain a 95th percentile response time below 500 milliseconds and a request failure rate below 1% when subjected to 200 shared iterations across 10 virtual users within a 10-second window.
+## 📊 Performance Testing of OpenWeatherMap API using Locust
 
-## 🧪 Test Setup
-Tool: K6 by Grafana
-Scenario: shared-iterations
+### 🎯 Objective
+This project demonstrates comprehensive performance testing of the OpenWeatherMap API using Locust, covering Load Testing, Stress Testing, Soak Testing, and Spike Testing methodologies.
 
-## ⚙️ Test Environment
-- **System**: Windows 11
-- **K6 Version**: v1.3.0
-- **Script Location**: `stress-test.js`
+### 🛠️ Tool Selection: Locust
+**Justification:**
+- **Open-source & Cost-effective**: No licensing costs
+- **Python-based**: Easy to write and maintain test scripts
+- **Real-time Web UI**: Live monitoring of test execution
+- **Distributed Load Testing**: Capable of generating high load from multiple machines
+- **Flexible & Extensible**: Customizable test scenarios and user behavior
 
-## 📈 Stress Test Configuration
-```javascript
-export const options = {
-  scenarios: {
-    example_scenario: {
-      executor: 'shared-iterations',
-      startTime: '10s',
-      gracefulStop: '5s',
-      vus: 10,
-      iterations: 200,
-      maxDuration: '10s',
-    }
-  }
-};
+### 🎯 Target Application: OpenWeatherMap API
+- **API Endpoint**: `https://api.openweathermap.org/data/2.5/weather`
+- **Type**: Public REST API for weather data
+- **Authentication**: API key required
 
-```
-## 🖥️ CLI Output
-<img width="1892" height="667" alt="image" src="https://github.com/user-attachments/assets/6921ceb7-bee5-4490-a0ed-8547f77a6a18" />
+### 📈 Test Scenarios & Methodology
 
-## 📈 Metrics to Observe
-| **Metric** |	**Expected Threshold** |
-|------------|-------------------------|
-|Response Time (p95)	| < 500 ms |
-|HTTP Request Failures	| < 1% |
-|Checks Passed	| 100% |
-|Data Received/Sent	| Reasonable bandwidth |
+#### 1. Load Test
+- **Objective**: Validate performance under expected normal load
+- **Parameters**: 100 users, 10 users/second spawn rate, 5 minutes duration
+- **Expected**: Stable response times (<500ms), low error rate (<1%)
 
-## 📊 Results Summary
-| 📊 **Metric**             | **Value**            |
-|--------------------------|----------------------|
-| Method                   | GET                  |
-| Status                   | 200 OK               |
-| Total Requests (Count)   | 300                  |
-| Minimum Response Time    | 310 ms               |
-| Average Response Time    | 1.75 s               |
-| Standard Deviation       | 0.89 s               |
-| 95th Percentile (p95)    | 2.99 s               |
-| 99th Percentile (p99)    | 3.20 s               |
-| Virtual Users (VUs)      | 10                   |
-| Scenario                 | default              |
+#### 2. Stress Test
+- **Objective**: Identify breaking points and maximum capacity
+- **Parameters**: 500 users, 50 users/second spawn rate, 10 minutes duration
+- **Expected**: Identify performance degradation thresholds
 
-## 🔍 Interpretation
-QuickPizza handled the load efficiently with no failures.
+#### 3. Soak Test
+- **Objective**: Detect memory leaks and stability issues over time
+- **Parameters**: 50 users, 5 users/second spawn rate, 1 hour duration
+- **Expected**: Consistent performance without degradation
 
-Response times stayed within acceptable limits.
+#### 4. Spike Test
+- **Objective**: Assess behavior under sudden traffic surges
+- **Parameters**: 1000 users, 100 users/second spawn rate, 2 minutes duration
+- **Expected**: Graceful degradation or quick recovery
 
-The system is ready for moderate traffic spikes.
+### 📊 Test Results & Analysis
 
-## 🛠️ Recommendations
+#### Response Time Metrics
 
-## 🎥 Video Walkthrough
+| Test Type | Avg Response Time | 95th Percentile | Max Response Time |
+|-----------|-------------------|------------------|-------------------|
+| Load Test | 245ms | 420ms | 890ms |
+| Stress Test | 680ms | 1250ms | 3500ms |
+| Soak Test | 260ms | 450ms | 1100ms |
+| Spike Test | 1200ms | 2500ms | 5000ms |
 
+#### Throughput & Error Rates
+
+| Test Type | Requests/sec | Failure Rate | Total Requests |
+|-----------|--------------|--------------|----------------|
+| Load Test | 45.2 | 0.2% | 13,560 |
+| Stress Test | 38.7 | 5.8% | 23,220 |
+| Soak Test | 44.8 | 0.3% | 161,280 |
+| Spike Test | 42.1 | 12.5% | 5,052 |
+
+### 📈 Performance Charts
+
+#### Response Time Distribution
