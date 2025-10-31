@@ -1,9 +1,10 @@
 # Comprehensive Web Application Performance Testing & Analysis
 
-# Assignment Overview
-**Name: Aina Amisha binti Ahmad Fakrurrozi
-**Matric No: 2024541935
-**Class: M3CS2554B
+**Name:** Aina Amisha binti Ahmad Fakrurrozi
+
+**Matric No:** 2024541935
+
+**Class:** M3CS2554B
 
 ## 📊 Performance Testing of OpenWeatherMap API using Locust
 
@@ -68,3 +69,36 @@ This project demonstrates comprehensive performance testing of the OpenWeatherMa
 ### 📈 Performance Charts
 
 #### Response Time Distribution
+
+
+### 🔍 Identified Bottlenecks
+
+1. **API Rate Limiting**: OpenWeatherMap imposes rate limits causing increased errors during stress and spike tests
+2. **Response Time Degradation**: Significant increase in 95th percentile response times under high load
+3. **Error Rate Spike**: Under sudden load spikes, error rates exceed 10%
+4. **Geographic Latency**: Variations based on request origin and target server location
+
+### 💡 Recommendations for Improvement
+
+1. **Implement Caching**: Cache frequent weather queries to reduce API calls
+2. **Rate Limit Awareness**: Implement client-side rate limiting and queueing
+3. **CDN Integration**: Use content delivery networks for static weather data
+4. **Horizontal Scaling**: Distribute load across multiple API endpoints
+5. **Async Processing**: Implement asynchronous request handling for better throughput
+
+### 🎥 Video Presentation
+[![Performance Testing Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtube.com/embed/VIDEO_ID)
+
+### 📂 Project Structure
+
+
+### 🚀 How to Run
+1. Install dependencies: `pip install -r requirements.txt`
+2. Update API key in `locustfile.py`
+3. Run specific test: `locust -f locustfile.py --host=https://api.openweathermap.org --users 100 --spawn-rate 10 --run-time 5m`
+4. View results in web UI: `http://localhost:8089`
+
+### 📝 Conclusion
+The OpenWeatherMap API demonstrates robust performance under normal load conditions but shows limitations under extreme stress and sudden traffic spikes. Implementation of caching strategies and proper rate limit management would significantly enhance performance and reliability for high-traffic applications.
+
+
