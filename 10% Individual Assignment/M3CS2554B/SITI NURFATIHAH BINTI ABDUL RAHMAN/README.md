@@ -1,4 +1,4 @@
-# Web Application Soak Testing using Artillery  
+# 🌐 Web Application Soak & Spike Testing using Artillery  
 **By:** SITI NURFATIHAH BINTI ABDUL RAHMAN  
 **Class:** M3CS2554B  
 **Course Code:** ITT440 (10% Individual Assignment)
@@ -7,11 +7,11 @@
 
 ## 🎯 Title & Objective
 
-**Title:** Comprehensive Web Application Soak Testing & Analysis using Artillery  
+**Title:** Comprehensive Web Application Soak & Spike Testing & Analysis using Artillery  
 
 **Objective:**  
-To design, execute, and analyze a soak test on a public web API using the Artillery performance testing tool.  
-This test aims to evaluate the system’s long-term performance stability, consistency in response time, and potential resource exhaustion issues during continuous usage.
+To design, execute, and analyze **soak** and **spike** tests on a public web API using the Artillery performance testing tool.  
+These tests aim to evaluate the system’s **long-term stability (soak test)** and its **ability to handle sudden surges in traffic (spike test)**.  
 
 ---
 
@@ -19,16 +19,21 @@ This test aims to evaluate the system’s long-term performance stability, consi
 
 Artillery is a lightweight, open-source performance testing tool for modern web applications and APIs.  
 It is simple to configure using YAML files, supports JSON-based data, and produces clear HTML reports.  
-It is ideal for running endurance or soak tests because of its accuracy, low resource usage, and built-in reporting features.
+It is ideal for both **endurance (soak)** and **stress (spike)** tests due to its accuracy, low resource usage, and built-in reporting features.
 
 ---
 
-## 🧪 Test Type & Hypothesis
+## 🧪 Test Types & Hypotheses
 
-**Test Type:** Soak Testing  
+### **Test 1: Soak Testing**
 **Hypothesis:**  
 The ReqRes API will remain stable and responsive during a 15-minute soak test at a constant rate of 2 virtual users per second.  
-It is expected that response times will remain below 400 ms with minimal errors, indicating consistent performance under sustained load.
+Response times are expected to stay below 400 ms with minimal errors, demonstrating consistent performance over time.
+
+### **Test 2: Spike Testing**
+**Hypothesis:**  
+The ReqRes API will handle a sudden spike in user load — from low to very high — without crashing or producing significant errors.  
+It is expected that response times may briefly increase but will recover quickly once the load decreases.
 
 ---
 
@@ -38,10 +43,11 @@ It is expected that response times will remain below 400 ms with minimal errors,
 **Description:** ReqRes is a free, publicly accessible REST API used for front-end testing and prototyping.  
 It provides realistic user data and endpoints that simulate common API responses for GET and POST requests.
 
-## 🧩 Test Plan (YAML Configuration)
+---
 
-Below is the YAML configuration file used in this soak test:
+## 🧩 Test Plan (YAML Configurations)
 
+### 🧱 **Soak Test Configuration**
 ```yaml
 config:
   target: "https://reqres.in"
@@ -65,6 +71,35 @@ scenarios:
 ```
 
 ---
+
+### ⚡ **Spike Test Configuration**
+```yaml
+config:
+  target: "https://reqres.in"
+  phases:
+    - duration: 60     # Warm-up phase
+      arrivalRate: 2
+    - duration: 30     # Sudden spike
+      arrivalRate: 50
+    - duration: 60     # Recovery phase
+      arrivalRate: 2
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "ReqRes API Spike Test"
+    flow:
+      - get:
+          url: "/api/users?page=2"
+      - post:
+          url: "/api/users"
+          json:
+            name: "SpikeTest"
+            job: "tester"
+```
+
+---
 ## 📈 Response Time Chart
 <img width="702" height="338" alt="response-time png" src="https://github.com/user-attachments/assets/94190e73-646b-40b0-8859-64819a7f5898" />
 
@@ -72,10 +107,9 @@ scenarios:
 ## ⚙️ Requests per Second (Throughput)
 <img width="707" height="405" alt="rps-chart png" src="https://github.com/user-attachments/assets/30c98a82-89a8-447f-8b28-4e56521e81ef" />
 
-
 ---
 
-## 📊 Results (Artillery Soak Test)
+## 📈 Soak Test Results
 
 | Metric | Value | Description |
 |---------|--------|-------------|
@@ -92,47 +126,80 @@ scenarios:
 
 ---
 
-### 🧠 Summary of Results
-
-- The **ReqRes API** successfully handled **3,600 total requests** during a continuous **15-minute soak test**.  
-- The API maintained **100% uptime**, with **no client errors or test failures**.  
-- Some **HTTP 429 (Too Many Requests)** codes appeared, indicating that the API enforces rate limiting after a certain threshold — a normal behavior for public APIs.  
-- Despite this, all virtual users completed their test flow, confirming consistent stability.
+### 🧠 Soak Test Summary
+- The **ReqRes API** handled **3,600 total requests** in 15 minutes with **no test failures**.  
+- Some **HTTP 429 (Too Many Requests)** appeared — expected for a public API with rate limiting.  
+- The system remained stable and consistent throughout the test.
 
 ---
 
-## 🔍 Analysis & Discussion
+## ⚡ Spike Test Results
 
-During the soak test, the **ReqRes API** demonstrated stable response times throughout the **15-minute duration**.  
-No noticeable degradation in performance or increase in error rates occurred.  
-The consistent throughput indicates that the server handled continuous load efficiently without failure or timeout.  
+| Metric | Value | Description |
+|---------|--------|-------------|
+| **Duration** | 19 minutes 58 seconds | Total test runtime |
+| **Started** | 01/11/2025, 02:32:23 | Test start time |
+| **Completed** | 01/11/2025, 02:52:22 | Test end time |
+| **Total Requests** | 17,601 | All requests made |
+| **Timeout Errors** | 17,413 | Requests that did not respond in time |
+| **Connection Resets** | 260 | Server closed the connection |
+| **SSL Errors** | 158 | Self-signed certificate issue |
+| **Virtual Users Created** | 17,598 | Users started during test |
+| **Virtual Users Failed** | 17,831 | Users that failed to complete scenario |
 
-The presence of **HTTP 429 (Too Many Requests)** responses suggests that the public API has built-in rate-limiting, which is expected behavior to protect the service from excessive load.  
-Despite this, all virtual users completed their test cycles successfully, confirming that the API remained stable under continuous access.
+---
+
+### 🧠 Spike Test Summary
+- When traffic **spiked suddenly to 50 users/sec**, the API experienced heavy load.  
+- **Timeout and connection errors** increased significantly, showing the API’s limit under extreme traffic.  
+- The test revealed **bottlenecks in response handling** and possible SSL configuration issues.  
+- After the load dropped, the system likely recovered, showing partial resilience.
+
+---
+
+## 🔍 Comparative Analysis
+
+| Aspect | Soak Test | Spike Test |
+|--------|------------|------------|
+| **Objective** | Long-term stability | Sudden load tolerance |
+| **Duration** | 15 minutes | ~20 minutes |
+| **Load Pattern** | Constant, steady | Sharp rise and fall |
+| **System Behavior** | Stable, consistent | Unstable during spike |
+| **Errors** | 0 | High timeout & SSL errors |
+| **Conclusion** | Excellent endurance | Needs better scaling under spikes |
 
 ---
 
 ## 💡 Recommendations
 
-1. Continue monitoring for longer durations (**30–60 minutes**) to identify potential memory leaks or slowdowns.  
-2. Gradually increase the user load (e.g., 5–10 users/sec) to evaluate scalability limits.  
-3. Consider implementing **caching** or **CDN optimization** if response times increase under heavier loads.  
-4. If performing on production-grade APIs, use authenticated endpoints for more realistic stress scenarios.
+1. **For Soak Stability:**  
+   - Continue with longer tests (30–60 mins).  
+   - Observe for memory leaks or slow degradation.
+
+2. **For Spike Resilience:**  
+   - Implement **load balancing** or **auto-scaling** to handle traffic surges.  
+   - Fix SSL configurations and timeout settings.  
+   - Optimize backend response handling for bursty traffic.
+
+3. **General Improvements:**  
+   - Add caching or CDN layers.  
+   - Use authenticated endpoints for realistic enterprise tests.  
 
 ---
 
 ## 🏁 Conclusion
 
-The **ReqRes API** successfully maintained stability and low latency during a **15-minute soak test** at **2 virtual users per second**.  
-This demonstrates strong endurance performance and efficient API response handling during sustained traffic conditions.  
-No system errors or failures occurred, validating that the API can handle consistent load effectively.
+The **ReqRes API** performed **very well under continuous load (soak test)** but showed **significant strain during sudden load spikes**.  
+This indicates that while the system is **stable for normal sustained use**, it requires **optimization for rapid traffic surges**.  
+
+Overall, both tests successfully demonstrated **Artillery’s capability** to measure endurance and stress behavior in web APIs.  
 
 ---
 
 ## 🎥 YouTube Demo Link
 
-📺 **Watch my Artillery test execution and report analysis here:**  
-[]
+📺 **Watch my Artillery Soak & Spike Test execution and report analysis here:**  
+*()*
 
 ---
 
@@ -141,6 +208,7 @@ No system errors or failures occurred, validating that the API can handle consis
 - [Artillery Official Documentation](https://www.artillery.io/docs)  
 - [ReqRes API Documentation](https://reqres.in/)  
 - [Node.js Documentation](https://nodejs.org/en/docs)
+
 
 
 
