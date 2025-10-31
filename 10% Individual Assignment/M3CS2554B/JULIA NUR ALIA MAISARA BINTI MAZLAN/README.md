@@ -1,9 +1,8 @@
 # JULIA NUR ALIA MAISARA BINTI MAZLAN
-# 🧩 ITT440 – Web Application Load Testing using Locust
+# 🧩 Web Application Load Testing using Locust
 
 ### **Tool:** Locust (Python-based Load Testing Framework)  
 ### **Target Site:** [BooksToScrape](https://books.toscrape.com)  
-### **Date:** October 2025  
 
 ---
 
