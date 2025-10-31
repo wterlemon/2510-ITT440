@@ -65,6 +65,8 @@ The test simulates 10 virtual users continuously sending requests to ChatGPT ove
 
 #### Result Summary :
 #### Graph :
+<img width="1669" height="943" alt="image" src="https://github.com/user-attachments/assets/8a7a5a2c-9e22-4c97-b455-4a16501879fe" />
+
 
 ---
 ### 🔍 Performance Analysis
