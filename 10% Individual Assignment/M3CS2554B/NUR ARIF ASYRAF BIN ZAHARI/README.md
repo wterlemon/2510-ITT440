@@ -98,3 +98,19 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 
 ---
 
+### Performance Summary
+
+### Throughput
+
+- Request Rate: 534 requests/sec
+- Total Requests: 100,500
+- Observation: High throughput shows the API can handle continuous heavy load.
+
+### Error Rate
+
+- HTTP 2xx Responses: 73,730 (~73.4%)
+- HTTP 429 Responses (Rate-Limit): 26,770 (~26.6%)
+- Observation: ~27% of requests failed due to throttling, indicating the server limits concurrent requests under stress.
+
+---
+
