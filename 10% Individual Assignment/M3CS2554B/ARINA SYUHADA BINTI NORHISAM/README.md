@@ -36,8 +36,8 @@ The purpose of this test is to evaluate the site’s **responsiveness, stability
 ##  Test Plan & Configuration
 | Parameter | Configuration |
 |------------|----------------|
-| **Threads (Users)** | 100 |
-| **Ramp-Up Time** | 1 second |
+| **Threads (Users)** | 200 |
+| **Ramp-Up Time** | 10 second |
 | **Loop Count** | 1 |
 | **Protocol** | HTTPS |
 | **Thread Group** | 1 (simulating spike users) |
