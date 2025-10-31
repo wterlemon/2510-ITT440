@@ -6,4 +6,7 @@
 
 ---
 ## Introduction
-ts
+This report documents the performance analysis of a publicly hosted GitHub repository page (https://github.com/NurImanShazreen/Individual-Assignment-ITT440.git) using the GTMetrix web performance auditing tool. The primary goal of this project is to establish a performance baseline, identify existing inefficiencies, and recommend actionable strategies for optimization. The test was conducted on October 31 2025, from the Seattle, WA, USA test server location.
+
+---
+## OBjectives
