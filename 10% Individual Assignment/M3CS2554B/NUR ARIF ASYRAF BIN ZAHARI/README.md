@@ -11,7 +11,7 @@
 
 ### **Introduction:**
 
-The assignment demands Artillery execution of a stress test on DummyJSON API to evaluate its operational stability when facing high traffic volumes. The test evaluates API performance under heavy traffic conditions to detect rate limit violations that result in HTTP 429 errors and assesses its recovery time after traffic decreases. The test evaluates API scalability through performance metrics which include response time and data processing capacity and error frequency during warm-up and high load and recovery phases.
+The assignment demands Artillery execution of a stress test on DummyJSON API to evaluate its operational stability when facing high traffic volumes. The test evaluates API performance under heavy traffic conditions to detect rate limit violations that result in HTTP 429 errors and assesses its recovery time after traffic decreases. The test evaluates API scalability through performance metrics which include response time and data processing capacity and error frequency during warm-up, high load and recovery phases.
 
 ---
 
