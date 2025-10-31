@@ -11,4 +11,8 @@ This report documents the performance analysis of a publicly hosted GitHub repos
 ---
 ## Objectives
 The core objectives of this performance analysis are:
-1. 
+
+| :--- | 
+| 1. To evaluate the overall load speed and efficiency of the target GitHub repository page using industry-standard metrics, including Google's Core Web Vitals. |
+| 2. To establish a quantifiable performance baseline by determining the performance score and structure score. |
+
