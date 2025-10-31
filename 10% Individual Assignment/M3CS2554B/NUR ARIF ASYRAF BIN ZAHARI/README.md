@@ -75,3 +75,21 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 | **Warm-up Phase**             | 30 seconds   | 20 users/sec                 | Begins with moderate virtual user traffic to prepare the DummyJSON API for consistent load testing.                        |
 | **Sustained High Load Phase** | 120 seconds  | 150 users/sec                | Applies continuous heavy virtual user traffic to test the API’s stability, response time, and error handling under stress. |
 | **Recovery Phase**            | 30 seconds   | 50 users/sec                 | Gradually reduces the number of virtual users to observe how the API performance stabilizes after intense usage.           |
+
+## Test Result Summary
+
+| Metric                                  | Result       | Observation                               |
+| --------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------- |
+| **Total Requests**                      | 100,500          | High number of requests                           |
+| **Request User Rate**                        | 534 user/sec      | Steady high throughput                            |
+| **HTTP (200+201) Responses**                  | 73,730  | Majority of requests succeeded      |
+| **HTTP 429 Responses**                  | 26,770           | Significant rate-limit errors        |
+| **Error Rate (4xx)**                    | 26.6%            | A notable portion of requests failed           |
+| **Min Response Time**             | 2 ms             | Some requests were extremely fast |
+| **Max Response Time**             | 2,574 ms         | Some requests experienced very high latency       |
+| **Median Response Time**          | 22.9 ms          | Typical response time is low                       |
+| **95th Percentile** | 290.1 ms         | Most requests completed within acceptable time            |
+| **99th Percentile** | 415.8 ms         | Worst-case requests were slower            |
+| **Virtual Users Created**               | 20,100           | Large number of users simulated                        |
+| **Virtual Users Completed**             | 20,100           | All simulated users completed successfully                     |
+| **Virtual Users Failed**                | 0                | No test script errors occurred.                                    |
