@@ -1,14 +1,11 @@
 # Comprehensive Web Application Performance Testing & Analysis
-
+---
 ### STUDENT NAME : NUR ARIF ASYRAF BIN ZAHARI
 ### ITT440 - INDIVIDUAL ASSIGNMENT
 ### GROUP : M3CS2554B
-
 ---
 
-## **Title & Introduction**
-
-# 🔍 Stress Testing of DummyJSON using Artillery
+# 🔍 Stress Testing on DummyJSON using Artillery
 
 ### **Introduction:**
 
