@@ -5,11 +5,11 @@
 ####  GROUP : M3CS2554C
 
 ---
-## Introduction
+## 1. Introduction
 This report documents the performance analysis of a publicly hosted GitHub repository page (https://github.com/NurImanShazreen/Individual-Assignment-ITT440.git) using the GTMetrix web performance auditing tool. The primary goal of this analysis is to establish a performance baseline, identify existing inefficiencies, and recommend actionable strategies for optimization. The test was conducted on **October 31 2025**, from the **Seattle, WA, USA** test server location.
 
 ---
-## Objectives
+## 2. Objectives
 The core objectives of this performance analysis are:
 
  1. To evaluate the overall load speed and efficiency of the target GitHub repository page using industry-standard metrics, including Google's Core Web Vitals. 
@@ -19,13 +19,13 @@ The core objectives of this performance analysis are:
  5. To provide a concise summary of findings and initial recommendations for performance improvement. 
 
 ---
-### What is a Load Speed?
+### 3. What is a Load Speed?
 Load speed or web performance is a measure of how quickly a web page's content becomes fully visible and interactive to the user. It encompasses several key phases, starting from the moment a user requests a URL until the page is visually stable and able to respond reliably to user inputs. High load speed translates directly into a better User Experience (UX).
 
 Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used by tools like GTMetrix to measure 3 aspects of UX: loading, interactivity, and visual stability.
 
 ---
-### Tool Selection Justification
+### 4. Tool Selection Justification
 |Feature | Description |
 |---------|------------|
 |**User-centric Metrics** | Clear scoring based on metrics that reflect the actual user experience. |
@@ -33,7 +33,7 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |**Waterfall Chart** | A visua breakdown of every single resource request (CSS, JS, images), crucial for identifying specific slow-loading files. | 
 
 ---
-### Test Environment Setup
+### 5. Test Environment Setup
 |Parameter | Configuration | Justification |
 |----------|---------------|---------------|
 |**Tested URL** | https://github.com/NurImanShazreen/Individual-Assignment-ITT440.git | The specific target page URL |
@@ -42,7 +42,7 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |**Connection Speed** | Unthrottled (Simulated) | Measures performance under ideal network conditions to isolate server and code inefficiencies. | 
 
 ---
-### Methodology
+### 6.  Methodology
 |Step | Description |
 |-----|-------------|
 |**Baseline test Execution** | The target URL was submitted to GTMetrix with the specified environment settings. |
@@ -50,10 +50,10 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |**Interpretation** | Each metric and audit finding was interpreted against accepted industry thresholds to determine teh grade (**Good, OK, Poor**) and identify the areas requiring the most urgent attention. |
 
 ---
-### Performance Data Analysis 
+### 7. Performance Data Analysis 
 The performance analysis provided the following key results:
 
-**8.1 Overall Scoring**
+**7.1 Overall Scoring**
 |Score/Metric | Value | Interpretation |
 |-------------|-------|----------------|
 |**Performance Score** | B (86%) | Good performance, but indicates room for optimization to achieve an 'A' grade. |
@@ -62,13 +62,19 @@ The performance analysis provided the following key results:
 |**Total Page Size** | 1.17 MB | A moderate size, dominated by JavaScript (931KB). |
 |**Total Page Requests** | 121 | A relatively high number of file requests, which can increase latency overhead. |
 
-**8.2 Core Web Vitals (User Experience Metrics)**
+
+**7.2 Core Web Vitals (User Experience Metrics)**
 |Metric | Value | Threshold (GTMetrix Goal) | Status |
 |-------|-------|---------------------------|--------|
 |**Largest Contenful Paint (LCP)** | 1.1s | &le; 1.2s | Good |
-|**Total Blocking Time** | 250ms | &le; 150ms | Needs Improvement |
-|**Cumulative Layout Shift** | 0.01 | &le; 0.1 | Good | 
+|**Total Blocking Time (TBT)** | 250ms | &le; 150ms | Needs Improvement |
+|**Cumulative Layout Shift (CLS)** | 0.01 | &le; 0.1 | Good | 
 
 ---
+### 8. Result Interpretation
+Based on the Core Web Vitals, the user experience is generally high, with one major exception:
+- **Positive Findings (LCP** and **CLS)** : The **LCP** of 1.1s is within the accepted good range, meaning the main content loads quickly. The **CLS** of 0.01 is nearly perfect, indicating that the page is visually stable with no noticeable layout shifts, which is excellent for usability. 
+- **Critical Finding (TBT)** : The **TBT** of 250ms significantly exceeds the 150ms threshold. This indicates that the main thread of the browser is being blocked by excessive or long-running JavaScript execution, making the page unresponsive to user input for a quarter of a second during the critical loading phase. This is the primary issue dragging down the overall Performance Score.
 
+---
 
