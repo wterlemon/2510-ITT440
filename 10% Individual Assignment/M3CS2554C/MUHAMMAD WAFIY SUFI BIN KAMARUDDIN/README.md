@@ -7,3 +7,8 @@ This report presents the results of spike testing conducted on the Parabank web 
 *To monitor response time, error rate, and recovery time.
 *To assess the stability and reliability of the Parabank website.
 # Scope
+
+The Spiket Test focus on 
+
+login page perfomance
+checkout process under high load
