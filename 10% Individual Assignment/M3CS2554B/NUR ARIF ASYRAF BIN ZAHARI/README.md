@@ -45,6 +45,7 @@ The experiment used DummyJSON because it offers a free stable fake REST API that
 ---
 
 ## Test Environment Setup
+
 | **Component**          | **Details**                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------- |
 | **Environment**        | Windows 11 operating system                                                        |
@@ -56,4 +57,22 @@ The experiment used DummyJSON because it offers a free stable fake REST API that
 | **Test Duration**      | 3 minutes, 13 seconds                                                               |
 | **Load Pattern**       | Warm-up → Sustained High Load → Recovery                                           |
 | **Reporting Platform** | Artillery Cloud Dashboard                                                          |
+
+Test Run URL : https://app.artillery.io/otv0ucti84aw9
+
+---
+
+## Hypothesis Application's Performance
+
+The DummyJSON API will maintain operational stability at normal usage levels but will start to show delayed responses and HTTP 429 rate-limiting errors when handling large numbers of users. The API will experience rising latency and server throttling timeouts when request numbers exceed its maximum processing threshold. The API performance will return to normal after load reduction during the recovery phase because the system failure is not the cause of performance degradation under stress.
+
+---
+
+## Test Plan Analysis
+
+| **Phase**                     | **Duration** | **Arrival Rate (Requests/sec)** | **Description**                                                                                               |
+| ----------------------------- | ------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Warm-up Phase**             | 30 seconds   | 20 req/sec                      | Begins with moderate traffic to prepare the DummyJSON API for consistent load testing.                        |
+| **Sustained High Load Phase** | 120 seconds  | 150 req/sec                     | Applies continuous heavy traffic to test the API’s stability, response time, and error handling under stress. |
+| **Recovery Phase**            | 30 seconds   | 50 req/sec                      | Gradually reduces the traffic load to observe how the API performance stabilizes after intense usage.         |
 
