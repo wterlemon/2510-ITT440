@@ -225,7 +225,7 @@ Before starting to run the stress test for each stage, a baseline test will be d
 </p>
 
 --- 
-- CPU Performence Summary
+- CPU Performance Summary
 <p align="center">
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/35e1a282-5e67-4ddc-a415-2e5471af6445" /> 
 </p>
