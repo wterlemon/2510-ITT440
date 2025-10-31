@@ -19,7 +19,7 @@ The Spike Test focus on
 | Locust | Load and spike testing tool | 
 | Parabank | A dummy banking website for testing |
 
-# Test Summary
+# Test Summary 200 User
 | Time Period  | Number Of User | Response time (ms) | Total request Per Second |
 |-----------|-----------|-----------|-----------|
 | **11:01 PM - 11:10 PM** | **Ramps up linearly from 0 to ~200 users.** | **Both 50th and 95th percentiles rise linearly, showing the system is getting slower under load** | **- RPS (Green): Stable. - Failures/s (Red): Flat at 0.** |
