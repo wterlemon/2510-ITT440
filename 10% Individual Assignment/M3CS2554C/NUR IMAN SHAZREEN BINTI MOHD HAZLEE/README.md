@@ -30,6 +30,17 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |---------|------------|
 |**User-centric Metrics** | Clear scoring based on metrics that reflect the actual user experience. |
 |**Actionable Diagnostics** | Detailed structure audits, complete with **Impact Levels** (Low, Medium, High) and specific potential savings, allowing for targeted optimization efforts. |
+|**Waterfall Chart** | A visua breakdown of every single resource request (CSS, JS, images), crucial for identifying specific slow-loading files. | 
+
+---
+### Test Environment Setup
+|Parameter | Configuration | Justification |
+|----------|---------------|---------------|
+|**Tested URL** | https://github.com/NurImanShazreen/Individual-Assignment-ITT440.git | The specific target page URL |
+|**Test Server Location** | Seattle, WA, USA | Used as the initial baseline test environment. A more representative location is recommended for future tests targeting an Asian audience to account for realistic network latency. |
+|**Browser** | Chrome (Version 125.0.0.0) | Standard test browser, reflecting the most common modern user agent. |
+|**Connection Speed** | Unthrottled (Simulated) | Measures performance under ideal network conditions to isolate server and code inefficiencies. | 
+
 
 
 
