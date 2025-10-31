@@ -77,4 +77,22 @@ Based on the Core Web Vitals, the user experience is generally high, with one ma
 - **Critical Finding (TBT)** : The **TBT** of 250ms significantly exceeds the 150ms threshold. This indicates that the main thread of the browser is being blocked by excessive or long-running JavaScript execution, making the page unresponsive to user input for a quarter of a second during the critical loading phase. This is the primary issue dragging down the overall Performance Score.
 
 ---
+### 9. Identification of Bottlenecks and Failure Points
+Structural audits highlight the specific causes contributing to the **TBT** issue and other inefficiencies:
+|Audit Finding | Impact Level | Failure Detail | Proposed Bottleneck Fix |
+|--------------|--------------|----------------|-------------------------|
+|Use a Content Delivery Network (CDN) | Med | 106 resources found that could benefit from a CDN. | Implement a robust CDN to serve static assests (CSS, JS, images) closer to users, improving **TTFB** and **FCP**. |
+|Avoid an excessive DOM size (TBT) | Med-Low | 1024 elements in the Document Object Model. | Refactor the page structure to reduce unnecessary nesting and overall element count, which reduces the time the browser spends processing the layout. |
+|Serve static assests with an efficient cache policy | Med-Low | Potential savings of 1.86KB. | Ensure proper HTTP caching headers (**Cache-Control** and **Expires**) are set for all static resources to allow returning users to load the page faster. |
+|Reduce unused CSS (FCP/LCP) | Low | Potential savings of 106KB. | Use tools to identify and remove unused CSS or implement "Critical CSS" to load only the styles necessary for the initial view first. | 
+|Remove duplicate modules in JavaScript bundles (TBT) | Low | Potential savings of 102KB. | Investigate the JavaScript bundling process to ensure libraries or modules are not included more than once, directly addressing unnecessary main thread work. |
 
+---
+### 10. Summary
+The GitHub repository page demonstrates an overall **Good(B/86%)** performance, achieving success in loading the main content quickly (LCP: 1.1s) and maintaining visual stability (CLS: 0.01). 
+
+The analysis reveals that the most significant performance degradation stems from **Total Blocking Time (TBT = 250ms)**, driven by excessive JavaScript execution and a high volume of file requests (121). 
+
+Recommended Immediate Action: The most impactful change would be the deployment of a Content Delivery Network (CDN) and optimizing the substantial JavaScript size (931KB) by reducing duplicate modules and ensuring efficient parsing, which will directly reduce the TBT and improve overall responsiveness. 
+
+---
