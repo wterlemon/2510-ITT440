@@ -7,7 +7,7 @@
 
 ## **Title & Introduction**
 
-# 🔍 Spike Testing of JSONPlaceHolder using Grafana k6
+# 🔍 Stress Testing of DummyJSON using Artillery
 
 ### **Introduction:**
 
