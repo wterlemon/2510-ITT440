@@ -72,7 +72,7 @@ The objective of this stress test is to evaluate the performance of the website 
 
 | Component | Details |
 |------------|----------|
-| **Application** | Visual Studio Code |
+| **Code Platform** | Visual Studio Code |
 | **Language** | PHP 8.2, HTML, CSS |
 | **Database** | phpMyAdmin |
 | **Web Server** | Apache 2.4 |
