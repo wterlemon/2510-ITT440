@@ -532,16 +532,15 @@ In summary, this website's critical breaking point is when the number of users i
 <br>
 
 ## ▶️ Video Demonstration
-Youtube Link: https://youtu.be/EjK7TZT_eeg?si=oR1VGtWf9ba46gyx
+🎬 Youtube Link: https://youtu.be/EjK7TZT_eeg?si=oR1VGtWf9ba46gyx
 
-<br>
 
 ## 🌐 References
 - Apache Software Foundation. (2019). Apache JMeterTM. Apache.org. https://jmeter.apache.org/ <br>
 - GeeksforGeeks. (2019, April 18). What is Stress Testing in Software Testing? GeeksforGeeks. https://www.geeksforgeeks.org/software-testing/stress-testing-software-testing/ <br>
 - What Is a Website Performance Test? | Website Testing | Akamai. (2024). Akamai. https://www.akamai.com/glossary/what-is-a-website-performance-test <br>
 - Metrics for performance tests - Performance Testing - Alibaba Cloud Documentation Center. (2024). Alibabacloud.com. https://www.alibabacloud.com/help/en/pts/performance-test-pts-3-0/product-overview/test-metrics
-- Lenovo. (2023). What Are the Advantages of Performance Monitoring Tools? Lenovo. https://www.lenovo.com/us/en/knowledgebase/what-are-the-advantages-of-performance-monitoring-tools/?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOoqD67_Tmk09m9fjHwOLdp_XfyQDVJ8fLWYZnFg30a4rHrNHT_6A
+- Lenovo. (2023). What Are the Advantages of Performance Monitoring Tools? Lenovo. https://www.lenovo.com/us/en/knowledgebase/what-are-the-advantages-of-performance-monitoring-tools/orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOoqD67_Tmk09m9fjHwOLdp_XfyQDVJ8fLWYZnFg30a4rHrNHT_6A
 
 ‌
 
