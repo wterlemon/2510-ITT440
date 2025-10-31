@@ -22,8 +22,7 @@ The Spike Test focus on
 # Test Summary
 | Time Period  | Number Of User | Response time (ms) | Total request Per Second |
 |-----------|-----------|-----------|-----------|
-| **11:01 PM - 11:10 PM** | **Ramps up linearly from 0 to ~200 users.** | **Both 50th and 95th percentiles rise linearly, showing the system is getting slower under load** | **- RPS (Green): Stable.
-- Failures/s (Red): Flat at 0.** |
+| **11:01 PM - 11:10 PM** | **Ramps up linearly from 0 to ~200 users.** | **Both 50th and 95th percentiles rise linearly, showing the system is getting slower under load** | **- RPS (Green): Stable.- Failures/s (Red): Flat at 0.** |
 | Row 2 Data | Row 2 Data | Row 2 Data |  |
 
 
