@@ -92,7 +92,7 @@ This means the API handled approximately **0.44 requests per second** during the
 
   **- Average Response Time:** 102 ms  
   **- Total Iterations:** 20  
-  **- Duration:** 1m 26s
+  **- Duration:** 1m 26s  
   **- All Tests Passed (100%)**  
   
 
@@ -159,7 +159,6 @@ This means the API handled approximately **4.2 requests per second** during the 
 | 🟢 Light       | 20         | 2000ms  | 1m 26s      | 102 ms            | 0.23                |
 | 🟡 Medium      | 50         | 1000ms  | 1m 54s      | 87 ms             | 0.44                |
 | 🔴 Stress      | 100        | 0ms     | 23.8s       | 82 ms             | 4.2                 |
-
 
 
 ### 📈 Insights
