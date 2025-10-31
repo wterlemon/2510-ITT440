@@ -6,7 +6,7 @@ GROUP: M3CDCS2554C<br>
 ## 📌What Is Performance Testing?
 
 Performance testing is one of the most important parts to do after finishing development of a website such as load testing, stress testing, spike testing, and endurance testing. This performance testing helps to measure and identify the weakness of the website thus it will improve user experience and satisfaction when using the website. In addition, performance testing can also help to identify how the website performs under high traffic scenarios in order to know how the website responds or what are issues that the website faces in certain testing scenarios.
-<br>
+<br> <br>
 
 ## 🧐What are the focuses of this test?
 
@@ -15,7 +15,7 @@ This test focuses on stress testing that will verify the stability of the websit
 In addition, in this test it will measure several important metric measurements such as response time, throughput, resource utilization performance, and error detection when running the test on the website within specified time.
 
 The objective of this stress test is to evaluate the performance of the website under a high number of users in some period of time or in other word when website is experiencing high-traffic (load), identify bottlenecks of the website, and suggest the best way to optimize the situation according to industry environment.
-<br>
+<br> <br>
 
 ## ⚙️Tool Selection
 <p align="center">
@@ -29,7 +29,8 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Free Open Source Tool** | A free, open-source performance testing tool. It requires no license or trial, making it cost-effective for newcomers in performance testing. |
 | **Wide Range of Protocol Types** | JMeter supports various protocols like HTTP and HTTPS for web applications. It can simulate real-world scenarios using thread groups that users can configure themselves. |
 | **Detailed Report Function** | JMeter provides multiple reporting options (e.g., Summary Report, Response Time Graph, Aggregate Report). Data can be saved in multiple formats such as `.jmx`, `.jtl`, and `.csv`. |
-<br> 
+
+<br> <br>
 
 ## 🧪 Test Environment & Configuration
 
@@ -65,6 +66,35 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Listeners** | 1. Simple Data Writer<br>2. Aggregate Report<br>3. View Results Tree |
 | **Built-in Tools** | Generate HTML Report |
 | **Example Full path** | localhost/LBM/loginLibrary.php |
+<br>
+
+### 👀Preview Some Of Target Web App Pages
+
+- **Login Admin** 
+<p align="center">
+<img width="800" alt="Screenshot (796)" src="https://github.com/user-attachments/assets/017d9ba5-a381-415d-ad33-7a58bf0c4800" />
+</p>
+
+---
+
+- **Login User**
+<p align="center">
+<img width="800" alt="Screenshot (797)" src="https://github.com/user-attachments/assets/47d5e4f1-46c3-4964-a0f6-764f516b3dbd" />
+</p>
+
+---
+
+- **Manage Book**
+<p align="center">
+<img width="800" alt="Screenshot (798)" src="https://github.com/user-attachments/assets/1bf67389-3c95-45b6-9bb6-221a79b682e4" />
+</p>
+
+---
+
+- **Borrow Book**
+<p align="center">
+<img width="800" alt="Screenshot (799)" src="https://github.com/user-attachments/assets/217fc7bc-9bcf-44cd-bf1a-d0af0e27daec" />
+</p>
 
 <br>
 
@@ -125,18 +155,18 @@ There are some important key metrics to be measures in this stress test such as 
 Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.
 <br>
 
-## 📈 Sample Output Data
+## 📈 Report Sample for Output Data
 
 - Test Summary
 <p align="center">
-<img width="650" height="700" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
+<img width="650" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
 </p>
 
 --- 
 
 - Resource Utilization
 <p align="center">
-<img width="662" height="268" alt="image" src="https://github.com/user-attachments/assets/29446e8c-dc9c-4de8-aaba-ce17d012e749" />
+<img width="550" alt="image" src="https://github.com/user-attachments/assets/29446e8c-dc9c-4de8-aaba-ce17d012e749" />
 </p>
 
 --- 
@@ -407,13 +437,13 @@ There are several identified bottlenecks based on the result, error message, and
 | 1 | **Database Bottleneck** | Slow response to website applications, especially on login pages that handle important user data required for authentication. |
 | 2 | **Connection Saturation** | The server cannot accept new incoming connections during the later stages of the test, leading to higher error rates on data-heavy pages such as login pages. New requests are dropped, causing failures. |
 | 3 | **Socket/Port Exhaustion** | Connections to localhost on port 80 fail due to the server being unable to handle additional requests. Processor privilege time exceeds 25%, indicating heavy operating system usage. |
-<br>
 
 ### ➤ Failure Points
 The failure points start at stage 10 with the settings of 5000 users until 6000 users within 180 seconds this can prove where the error percentage and message appear in web pages that produce more data like login page, borrowing book page, and manage book page.
 
+<br>
 
-## ✅ RECOMMENDATIONS BASED ON INDUSTRY BEST PRACTICE
+## ✅ Recommendations Based On Industry Best Practice
 
 | Area | Recommendation |
 |:------|:---------------|
@@ -423,7 +453,7 @@ The failure points start at stage 10 with the settings of 5000 users until 6000 
 | **Caching** | Enable caching at multiple layers — application, database, and browser. This reduces server load and minimizes redundant requests to the backend and database. |
 <br>
 
-## 📃CONCLUSION
+## 📃Conclusion
 Library book management website performance decreases and reaches the critical breaking point when there are 6000 users trying to access it within 180 seconds where the  system also starts to load slower than usual compared to when the number of users is less than 5000. Although the throughput remains stable the system also fails to process the new upcoming request since the server is saturated which also causes operating system percentage in processor privilege to increase more than 25%. 
 
 Furthermore, at the last stage which had 6000 users the average response time for all pages that are tested increases sharply up to 12000 ms which a huge difference compared to the stage before 5000 users and the website application starts to return “This site can’t be reached” also when trying to navigate to other pages as it will take more than 10 seconds to retrieve the website back.
@@ -436,8 +466,12 @@ Last but not least, the logout pages have the least error that is below 4% but a
 
 In summary, this website's critical breaking point is when the number of users is 6000 which the CPU is almost reaching 100% usage that leads the database, backend, and server to crash thus cannot perform efficiently to complete all of the requests to the web server that lead to error.
 
+<br>
 
 ## ▶️ Video Demonstration
+Youtube Link: 
+
+<br>
 
 ## 🌐 References
 - Apache Software Foundation. (2019). Apache JMeterTM. Apache.org. https://jmeter.apache.org/ <br>
