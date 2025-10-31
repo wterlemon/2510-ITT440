@@ -140,7 +140,9 @@ In addition, I can get the overall reports documentation to analyse the **Global
 
 ---
 
-## ○ Raw data presentation (e.g., charts/graphs).
+## 😍 Looking at the beautifully mesmerizing factual charts or graphs  (Raw data presentation)
+
+
 
 ## ○ Interpretation of results.
 
