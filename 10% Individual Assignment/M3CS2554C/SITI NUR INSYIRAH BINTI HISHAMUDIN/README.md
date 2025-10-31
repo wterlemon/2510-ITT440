@@ -177,8 +177,8 @@ There are some important key metrics to be measures in this stress test such as 
 |------------|----------|
 | **Average Response Time** | The total time elapsed from when a client sends a request to a server until the client receives the complete response from that server. |
 | **Throughput** | Number of requests or transactions a system processes per second under simulated workloads. |
-| **Percentile 90th** | Response time below which 90% of all request fall. |
-| **Percentile 95th** | Response time below which 95% of all request fall. |
+| **Percentile 90th** | Response time below which 90% of all request complete. |
+| **Percentile 95th** | Response time below which 95% of all request complete. |
 | **Error (%)** | Number of request that is failed or did not receive a response. |
 <br>
 
