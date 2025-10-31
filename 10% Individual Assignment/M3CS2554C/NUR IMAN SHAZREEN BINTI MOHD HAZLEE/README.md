@@ -50,6 +50,20 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |**Interpretation** | Each metric and audit finding was interpreted against accepted industry thresholds to determine teh grade (**Good, OK, Poor**) and identify the areas requiring the most urgent attention. |
 
 ---
+### Performance Data Analysis 
+The performance analysis provided the following key results:
 
+**8.1 Overall Scoring**
+|Score/Metric | Value | Interpretation |
+|-------------|-------|----------------|
+|**Performance Score** | B (86%) | Good performance, but indicates room for optimization to achieve an 'A' grade. |
+|**Structure Score** | 92% |Excellent structure and adherence to best practices, suggesting the performance issues are minor and specific. | 
+|**Fully Loaded Time** | 2.4s | The total time for the page to completely stop all activity, it is a good overall result. |
+|**Total Page Size** | 1.17 MB | A moderate size, dominated by JavaScript (931KB). |
+|**Total Page Requests** | 121 | A relatively high number of file requests, which can increase latency overhead. |
 
+**8.2 Core Web Vitals (User Experience Metrics)**
+|Metric | Value | Threshold (GTMetrix Goal) | Status |
+|-------|-------|---------------------------|--------|
+|**Largest Contenful Paint (LCP)** | 1.1s | &le; 1.2s | Good |
 
