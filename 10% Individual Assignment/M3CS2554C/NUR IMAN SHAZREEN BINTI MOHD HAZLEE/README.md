@@ -41,6 +41,15 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |**Browser** | Chrome (Version 125.0.0.0) | Standard test browser, reflecting the most common modern user agent. |
 |**Connection Speed** | Unthrottled (Simulated) | Measures performance under ideal network conditions to isolate server and code inefficiencies. | 
 
+---
+###Methodology
+|Step | Description |
+|-----|-------------|
+|**Baseline test Execution** | The target URL was submitted to GTMetrix with the specified environment settings. |
+|**Data Extraction and Categorization** | The resulting report data was systematically extracted and categorized into 3 groups: **Overall Scores, Performance Metrics(Core Web Vitals)** and **Structural Audits**. |
+|**Interpretation** | Each metric and audit finding was interpreted against accepted industry thresholds to determine teh grade (**Good, OK, Poor**) and identify the areas requiring the most urgent attention. |
+
+---
 
 
 
