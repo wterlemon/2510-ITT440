@@ -82,6 +82,8 @@ Based on the Core Web Vitals, the user experience is generally high, with one ma
 - **Critical Finding (TBT)** : The **TBT** of 250ms significantly exceeds the 150ms threshold. This indicates that the main thread of the browser is being blocked by excessive or long-running JavaScript execution, making the page unresponsive to user input for a quarter of a second during the critical loading phase. This is the primary issue dragging down the overall Performance Score.
 
 ---
+<img width="433" height="163" alt="image" src="https://github.com/user-attachments/assets/2a5392fa-71e7-422d-b5d2-0f48eb5452c3" />
+
 ### 9. Identification of Bottlenecks and Failure Points
 Structural audits highlight the specific causes contributing to the **TBT** issue and other inefficiencies:
 |Audit Finding | Impact Level | Failure Detail | Proposed Bottleneck Fix |
