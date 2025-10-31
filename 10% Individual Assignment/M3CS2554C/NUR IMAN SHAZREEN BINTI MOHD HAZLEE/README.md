@@ -42,7 +42,7 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |**Connection Speed** | Unthrottled (Simulated) | Measures performance under ideal network conditions to isolate server and code inefficiencies. | 
 
 ---
-###Methodology
+### Methodology
 |Step | Description |
 |-----|-------------|
 |**Baseline test Execution** | The target URL was submitted to GTMetrix with the specified environment settings. |
