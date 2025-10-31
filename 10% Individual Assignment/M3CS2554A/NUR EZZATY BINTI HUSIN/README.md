@@ -26,7 +26,7 @@ Endurance Testing tests the ability of your software to perform under expected u
 - To analyze the results and give recommendations for better performance and stability.
 
 ---
-### 🧪 Tool Selection
+### 🧪 Key Features of Apache Jmeter
 | **Features** |	**Explaination** |
 |------------|----------|
 | **Free and Open-Source** |	Apache JMeter is free to use and open-source, making it suitable for both academic and professional projects |
@@ -44,10 +44,11 @@ Endurance Testing tests the ability of your software to perform under expected u
 | **Processor**	| Intel Core i5 |
 | **Target Application** |	https://chat.openai.com |
 | **Test Duration** |	1 hour |
-| **Virtual Users** (Threads) |	10 |
-| **Ramp-up Period** | 5 minutes |
+| **Virtual Users** (Threads) |	5 |
+| **Loop Count** |	Infinite |
+| **Ramp-up Period** | 5  |
 
-The test simulates 10 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
+The test simulates 5 virtual users continuously sending requests to ChatGPT over a period of 1 hour. This setup represents a medium load that stays constant for a long duration to observe if the system can maintain stable performance
 
 ---
 ### 📋 Test Scenario and Procedure
@@ -56,16 +57,19 @@ The test simulates 10 virtual users continuously sending requests to ChatGPT ove
 ### 📈 Simulated Test Results
 | **Metric** |**Average Value**	| **Observation** |
 |------------|----------|----------|
-| **Average Response Time** |	 |	 |
-| **Peak Response Time** |	 |	 |
-| **Throughput** |	 |	 |
-| **Error Rate** |	 |	 |
-| **CPU Utilization (Client Machine)** |	 |	 |
-| **Memory Utilization (Client Machine)** |	 |	 |
+| **Average Response Time** | 520 ms	 | Generally responsive under load; suitable for moderate traffic |
+| **Peak Response Time** | 7048 ms	 |	Some latency spikes observed; may indicate backend or network bottlenecks. |
+| **Throughput** |	9.6 requests/sec |	Higher throughput than previous runs; system handled increased load well. |
+| **Error Rate** |	0.01% |	Excellent reliability; no failed requests during the test. |
+| **CPU Utilization (Client Machine)** |~30–50% (est.)|Moderate usage; system handled the test without performance issues.	 |
+| **Memory Utilization (Client Machine)** |	~40–60% (est.)|Within safe limits; no signs of memory leaks during execution.|
 
 #### Result Summary :
-#### Graph :
-<img width="1669" height="943" alt="image" src="https://github.com/user-attachments/assets/8a7a5a2c-9e22-4c97-b455-4a16501879fe" />
+<img width="1493" height="513" alt="image" src="https://github.com/user-attachments/assets/d8507f24-1b7c-4962-acad-3060c0ab353f" />
+
+<img width="1404" height="756" alt="image" src="https://github.com/user-attachments/assets/e64a5a31-24c0-49ab-bb1b-58fe762340dd" />
+
+
 
 
 ---
