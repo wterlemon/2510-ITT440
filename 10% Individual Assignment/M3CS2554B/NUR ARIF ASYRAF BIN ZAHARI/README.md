@@ -7,7 +7,7 @@
 
 ## **Title & Introduction**
 
-### **Title: Performance Testing on DummyJSON using Taurus (Stress Test)**
+### **Title: 🔍 Stress Testing of DummyJSON using Artillery
 
 ### **Introduction:**
 
