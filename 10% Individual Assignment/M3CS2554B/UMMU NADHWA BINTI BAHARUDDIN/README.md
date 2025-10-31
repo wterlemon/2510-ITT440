@@ -56,7 +56,7 @@ Postman is used in this project to test the OpenWeatherMap API's performance and
 
   <img width="925" height="230" alt="image" src="https://github.com/user-attachments/assets/844b9261-51f9-4aa7-91b4-a36f1173d779" />
 
-## 📈 Throughput
+## 📈 THROUGHPUT
 Throughput helps measure how many requests the API can handle per second during a load test. It's a key performance metric in API testing.
 
 **Example:**
@@ -88,25 +88,28 @@ This means the API handled approximately **0.44 requests per second** during the
 | 2         | ✅ PASS | 40                | 807                |
 | 3         | ✅ PASS | 34                | 807                |
 | 4         | ✅ PASS | 257               | 807                |
-| 5 - 20    | ✅ PASS | ~87 avg           | 807                |
+| 5 - 20    | ✅ PASS | ~102 avg          | 807                |
 
-  **- Average Response Time:** 87 ms  
+  **- Average Response Time:** 102 ms  
   **- Total Iterations:** 20  
-  **- Duration:** 1m 54s  
+  **- Duration:** 1m 26s
   **- All Tests Passed (100%)**  
+  
 
-## 📈 Throughput
+<img width="1106" height="222" alt="image" src="https://github.com/user-attachments/assets/6daa6028-53c6-482c-ba43-9a33502d9f54" />
+
+
+## 📈 THROUGHPUT
 **Result:**
-- Total Requests: 20
-- Total Duration: 114 seconds
+- Total Requests: 20 requests
+- Total Duration: 86 seconds
 
 
 ```
-Throughput = 20 / 114 ≈ 0.44 requests/sec
+Throughput = 20 / 86 ≈ 0.23 requests/sec
 ```
 
-This means the API handled approximately **0.44 requests per second** during the test.  
-
+This means the API handled approximately **0.23 requests per second** during the test.  
 
 ## 🧪 ANOTHER TEST & CONFIGURATION (Stress Load Test)
 - **Parameters:**<br>
@@ -125,44 +128,62 @@ This means the API handled approximately **0.44 requests per second** during the
 | 2         | ✅ PASS | 40                | 807                |
 | 3         | ✅ PASS | 34                | 807                |
 | 4         | ✅ PASS | 257               | 807                |
-| 5 - 100   | ✅ PASS | ~87 avg           | 807                |
+| 5 - 100   | ✅ PASS | ~82 avg           | 807                |
 
-  **- Average Response Time:** 87 ms  
+  **- Average Response Time:** 82 ms  
   **- Total Iterations:** 100  
-  **- Duration:** 1m 54s  
+  **- Duration:** 23s 779ms  
   **- All Tests Passed (100%)**  
 
-## 📈 Throughput
+
+  <img width="1229" height="223" alt="image" src="https://github.com/user-attachments/assets/6174ccfd-1f36-450c-83c4-d27ff8227b33" />
+
+
+## 📈 THROUGHPUT
 **Result:**
-- Total Requests: 50
-- Total Duration: 114 seconds
+- Total Requests: 100
+- Total Duration: 23s 779ms
 
 
 ```
-Throughput = 50 / 114 ≈ 0.44 requests/sec
+Throughput = 100 / 23.779 ≈ 4.2 requests/sec
 ```
 
-This means the API handled approximately **0.44 requests per second** during the test.  
+This means the API handled approximately **4.2 requests per second** during the test.  
 
 
-## 📌 Analysis & Discussion
-- All requests returned a `200 OK` status, confirming successful communication with the API.
-- Response times were stable, with minor variation due to network latency.
-- The consistent response size (807 B) indicates structured and reliable JSON output.
+## 🚀 LOAD TEST SUMMARY
 
-## 💡 Recommendations
+| Test Type      | Iterations | Delay   | Duration    | Avg Response Time | Throughput (req/sec) |
+|---------------|------------|---------|-------------|--------------------|----------------------|
+| 🟢 Light       | 20         | 2000ms  | 1m 26s      | 102 ms            | 0.23                |
+| 🟡 Medium      | 50         | 1000ms  | 1m 54s      | 87 ms             | 0.44                |
+| 🔴 Stress      | 100        | 0ms     | 23.8s       | 82 ms             | 4.2                 |
+
+
+
+### 📈 Insights
+All tests passed successfully with 100% success rate. Response times remained under 120 ms across all load levels, demonstrating strong API stability. Throughput increased significantly under stress conditions, indicating good scalability and performance.  
+
+## 📌 ANALYSIS & DISCUSSION
+✅ All requests returned a 200 OK status, confirming successful communication with the API.  
+⏱️ Response times were stable across Light, Medium, and Stress tests, with averages of 102 ms, 87 ms, and 82 ms respectively.  
+📦 The consistent response size (807 B) indicates structured and reliable JSON output.  
+⚡ Throughput increased significantly under stress conditions (4.2 req/sec), showing good scalability.  
+ 
+## 💡 RECOMMENDATIONS
 - Implement Postman monitors for real-time API uptime tracking.
 - Expand testing with invalid parameters (negative test cases).
 - Automate collection runs via CI/CD for continuous testing.
 
-## ✅ Conclusion
+## ✅ CONCLUSION
 The OpenWeatherMap API demonstrated strong reliability and stability throughout all test iterations. Each request returned a successful `200 OK` status, confirming that the endpoint is functioning as intended. Response times were consistently within acceptable limits, with only minor fluctuations attributed to network latency. The uniform response size and structured JSON output further validate the integrity and predictability of the data provided by the API.
 
 Overall, these results indicate that the OpenWeatherMap API is well-suited for real-time weather data retrieval in production environments. Its performance under repeated requests suggests that it can handle moderate traffic without degradation in speed or accuracy. For future improvements, integrating automated monitoring and expanding negative test cases will enhance robustness and ensure continued reliability under diverse conditions.
 
-## 🔗 References
+## 🔗 REFERENCES
 - [OpenWeatherMap API Documentation](https://openweathermap.org/api)
 - [Postman Learning Center](https://learning.postman.com/)
 
-## ▶️ Embedded YouTube Video Link
+## ▶️ EMBEDEED YOUTUBE VIDEO LINK
 [Click here to watch the demo](https://www.youtube.com/)
