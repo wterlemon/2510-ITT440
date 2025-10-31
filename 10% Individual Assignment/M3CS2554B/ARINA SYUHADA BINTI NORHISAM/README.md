@@ -72,8 +72,6 @@ The objective is to observe how the server performs and whether it can handle th
 - **Throughput Trend** – (Line Chart)  
 - **Error Rate (%)** – (Pie or Line Chart)
 
-*(You can insert screenshots of your JMeter reports or generated charts here.)*
-
 ---
 
 ## Analysis & Discussion
