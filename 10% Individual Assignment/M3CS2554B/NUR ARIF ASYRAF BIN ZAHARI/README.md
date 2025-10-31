@@ -54,7 +54,7 @@ The experiment used DummyJSON because it offers a free stable fake REST API that
 | **Execution Method**   | `artillery run stress_test.yml --record --key a9_x5xh12axy495k0pmfhng64nkpf3u2kti` |
 | **Target Endpoint**    | [DummyJSON API](https://dummyjson.com) – REST API for fake data testing            |
 | **Test Category**      | Stress Test                                                                        |
-| **Test Duration**      | 3 minutes, 13 seconds                                                               |
+| **Test Duration**      | 3 minutes, 6 seconds                                                               |
 | **Load Pattern**       | Warm-up → Sustained High Load → Recovery                                           |
 | **Reporting Platform** | Artillery Cloud Dashboard                                                          |
 
@@ -70,9 +70,8 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 
 ## Test Plan
 
-| **Phase**                     | **Duration** | **Arrival Rate (Requests/sec)** | **Description**                                                                                               |
-| ----------------------------- | ------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Warm-up Phase**             | 30 seconds   | 20 req/sec                      | Begins with moderate traffic to prepare the DummyJSON API for consistent load testing.                        |
-| **Sustained High Load Phase** | 120 seconds  | 150 req/sec                     | Applies continuous heavy traffic to test the API’s stability, response time, and error handling under stress. |
-| **Recovery Phase**            | 30 seconds   | 50 req/sec                      | Gradually reduces the traffic load to observe how the API performance stabilizes after intense usage.         |
-
+| **Phase**                     | **Duration** | **Arrival Rate (Users/sec)** | **Description**                                                                                                            |
+| ----------------------------- | ------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Warm-up Phase**             | 30 seconds   | 20 users/sec                 | Begins with moderate virtual user traffic to prepare the DummyJSON API for consistent load testing.                        |
+| **Sustained High Load Phase** | 120 seconds  | 150 users/sec                | Applies continuous heavy virtual user traffic to test the API’s stability, response time, and error handling under stress. |
+| **Recovery Phase**            | 30 seconds   | 50 users/sec                 | Gradually reduces the number of virtual users to observe how the API performance stabilizes after intense usage.           |
