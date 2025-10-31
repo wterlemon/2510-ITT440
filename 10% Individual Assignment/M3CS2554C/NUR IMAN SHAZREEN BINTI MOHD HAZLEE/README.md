@@ -3,6 +3,10 @@
 ####  STUDENT NAME : NUR IMAN SHAZREEN BINTI MOHD HAZLEE
 ####  ITT440 - INDIVIDUAL ASSIGNMENT 
 ####  GROUP : M3CS2554C
+---
+<img width="252" height="132" alt="image" src="https://github.com/user-attachments/assets/98e81f4f-aa05-4463-a5d0-eb8b50864f49" />
+
+<img width="250" height="134" alt="image" src="https://github.com/user-attachments/assets/25e76800-9219-4048-b2f0-f66346524470" />
 
 ---
 ## 1. Introduction
