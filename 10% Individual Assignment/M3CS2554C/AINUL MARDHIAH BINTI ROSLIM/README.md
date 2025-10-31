@@ -115,29 +115,28 @@ And then at my gatling prompt, I type the number 1 because it's corresponds to `
 
 secondly, we wiil go and see the official load run test at **PHASE 2**.
 
-1.  **Start The Simulation**
+3.  **Start The Simulation**
 
 I will run the load test and execute the full **10 users over 60 seconds**
 
-And also, it will based on the virtual scenarios that I created to make it suitable for the load testing which is
+And also, it will based on the virtual scenarios that I created to make it suitable for the load testing which is :-
 
-**Number One**, The user performs an HTTP GET request to the `/login` URL.
+| Step | Virtual User Action |
+| :--- | :--- |
+| **Number One** | The user **access the Login Page** and performs an HTTP **GET** request to the `/login` URL. |
+| **Number Two** | The user waits for **1 second**, simulating the time a real person takes to look at the page and prepare to type. |
+| **Number Three** | The user will **submit the login form** and performs an HTTP POST request to the `/authenticate` endpoint, sending the hardcoded **username** and **password**. | 
+| **Number Four** | The users will **verify success** and checks that the resulting page contains the certain sentences which is **"Welcome to the Secure Area..."**. |
+| **Number Five** | The user waits for **2 seconds**, simulating the time they spend viewing the secured content before doing anything else like logging out. | 
+| **Number Six** | The user will **End the virtual scenarios** by completing their session, and their performance metrices such as response times, errors are recorded. | 
 
-**Number Two**, The user waits for 1 second, simulating the time a real person takes to look at the page and prepare to type.
+last but not least, at **Phase 3** is where I will be making the verdiction about the results!
 
+4. **Get the finalized result**
 
+The terminal will show the Gatling process and at the end of it will send a `Build Succes` or `Build Failed` depending on the app performance.
 
-
-
-
-6.  **Monitor Safety:** Actively monitor your machine's resources and **STOP IMMEDIATELY** if the public application shows stress.
-
-### Phase 3: Analysis & Conclusion (The Verdict)
-
-7.  **Validate Success:** Check the HTML report failure rate against the **$\le 1.0\%$ assertion**.
-8.  **Analyze $p95$:** Determine the overall response time quality by reviewing the **$95^{th}$ Percentile ($p95$)** for the critical request: `"T02_POST_Login_and_Access_Secure"`.
-9.  **Pinpoint Bottleneck:** Compare the timings between **T01** (page load) and **T02** (login processing) to identify the slowest step.
-10. **Final Report:** Document the results, stating whether the test **Passed or Failed** the established goal.
+In addition, I can get the overall reports documentation to analyse the **Global failed requests percentage**, **Response time 95th percentile (p95)**, **Throughput**, and the app **Bottleneck**.  
 
 ---
 
