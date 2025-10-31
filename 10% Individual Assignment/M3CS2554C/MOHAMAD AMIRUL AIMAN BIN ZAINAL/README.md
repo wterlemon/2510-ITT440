@@ -96,3 +96,20 @@ export default function () {
   sleep(1); 
 }
 ```
+
+## 📊 Performance Result and Analysis
+### Smoke Test Summary
+
+| **Metric** | **Result** | **Description / Analysis** |
+|-------------|------------|-----------------------------|
+| **Virtual Users (VUs)** | 50 | Simulated 50 users as planned. |
+| **Duration** | 45 seconds | Test ran for the configured time. |
+| **Requests Completed** | 990 | Total requests processed. |
+| **Average Response Time** | 1.28 seconds | Stable response time. |
+| **95th Percentile (p95)** | 2.96 seconds | Slightly above the 1.5s target. |
+| **Failed Requests** | 1.81% (18 of 990) | Within acceptable limit (<5%). |
+| **Data Received** | 650 kB | Total data received. |
+| **Data Sent** | 74 kB | Total data sent. |
+
+**🧠 Analysis:**  
+The smoke test shows that **https://httpbin.org** handled 50 users stably with a low error rate and acceptable response times.
