@@ -3,7 +3,7 @@
 
 # NUR ARIF ASYRAF BIN ZAHARI
 <img width="451" height="152" alt="image" src="https://github.com/user-attachments/assets/1ac4d202-9b8c-4986-be3d-7185a541209b" />
-
+#  Performance Testing Report – Stress Test (Taurus + Reqres.in)
 
 ## **Title & Introduction**
 
@@ -22,3 +22,9 @@ The assignment demands Artillery execution of a stress test on DummyJSON API to 
 - Observe **rate-limiting thresholds** for write operations (POST, PUT, DELETE).  
 - Assess API **resilience** and responsiveness during sustained stress.
 
+
+
+
+
+
+<img width="451" height="152" alt="image" src="https://github.com/user-attachments/assets/1ac4d202-9b8c-4986-be3d-7185a541209b" />
