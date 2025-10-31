@@ -6,14 +6,14 @@ GROUP: M3CDCS2554C<br>
 ## 📌What Is Performance Testing?
 
 <p align="justify">
-Performance testing is one of the most important parts to do after finishing development of a website such as load testing, stress testing, spike testing, and endurance testing. This performance testing helps to measure and identify the weakness of the website thus it will improve user experience and satisfaction when using the website. In addition, performance testing can also help to identify how the website performs under high traffic scenarios in order to know how the website responds or what are issues that the website faces in certain testing scenarios.
+Performance testing is one of the most important parts to do after finish development of a website such as load testing, stress testing, spike testing, and endurance testing. This performance testing helps to measure and identify weakness of the website thus it will improve user experience and satisfaction when using the website. In addition, performance testing can also help to identify how the website performs under high traffic scenarios in order to know how the website responds or what are issues that the website faces in certain testing scenarios.
 </p>
 <br>
 
 ## 🧐What are the focuses of this test?
 
 <p align="justify">
-This test focuses on stress testing that will verify the stability of the website under extreme load conditions which determine what and when is the limitation of the website. Besides that, by doing stress tests we are able to identify the failure or breaking point of a library book management that is built with several languages like PHP, HTML, and CSS. </p>
+This test focuses on stress testing that will verify the stability of the website under extreme load conditions which determine what and when is the limitation of the website. Besides that, by doing stress tests we are able to identify the failure or breaking point of a library book management website that is built with several languages like PHP, HTML, and CSS. </p>
 
 <p align="justify">
 In addition, in this test it will measure several important metric measurements such as response time, throughput, resource utilization performance, and error detection when running the test on the website within specified time. </p>
@@ -61,7 +61,7 @@ The objective of this stress test is to evaluate the performance of the website 
 | Feature | Description |
 |----------|--------------|
 | **Free Open Source Tool** | No license or payment required to use it. |
-| **Comprehensive Insights** | It provide clear and accurate on the analysis of resource utilization, system behaviour, and application performance which the data also can be saved into file as a record. |
+| **Comprehensive Insights** | It provide clear and accurate analysis of resource utilization, system behaviour, and application performance which the data also can be saved into file as a record. |
 | **Operation issue detection** | Continously measure and collect metrics in the devices to detect any possible distruptions that occur. |
 
 <br> <br>
@@ -93,8 +93,11 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Number of Users** | 500 – 6000 |
 | **Ramp-Up Period (s)** | 60 – 180 |
 | **Loop Count** | 1 |
+| **Protocol** | HTTP |
+| **Port** | 80 |
 | **Server Path URL** | `localhost/LBM` |
 | **Page Request Tested Paths** | 1. `/loginLibrary.php`<br>2. `/loginUser.php`<br>3. `/borrowing.php`<br>4. `/listBookLibrary.php`<br>5. `/logoutLibrary.php`<br>6. `/ogoutLibrary.php` |
+| **Parameter** | 1. username<br> 2. password<br> 3. userIC |
 | **Config Elements** | 1. HTTP Header Manager<br>2. HTTP Cookies Manager |
 | **Delay Timer (ms)** | 3000 ms |
 | **Listeners** | 1. Simple Data Writer<br>2. Aggregate Report<br>3. View Results Tree |
@@ -168,7 +171,7 @@ This stress test has several scenarios or stages that were conducted in order to
 <br>
 
 <p align="justify">
-There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (s), error rate (%), percentile 90th and 95th response time. In addition, some resource utilization that can be measure like CPU usage and privilege CPU usage (%). </p>
+There are some important key metrics to be measures in this stress test such as average response time (ms), throughput (bps), error rate (%), percentile 90th and 95th response time. In addition, some resource utilization that can be measure like CPU usage and privilege CPU usage (%). </p>
 
 | Metric | Explanation |
 |------------|----------|
@@ -182,19 +185,19 @@ There are some important key metrics to be measures in this stress test such as 
 | Resource Utilization | Explanation |
 |------------|----------|
 | **CPU Usage (%)** | How much of the CPU's processing power is being actively used to run tasks over a specific period. |
-| **Privilege CPU Usage (%)** | How system or website perform in user or kernel mode which related to I/O disk and devices hardware. |
+| **Privilege CPU Usage (%)** | How system or website perform in user or kernel mode which related to I/O disk and device hardware. |
 
 <br>
 
 ℹ️ <ins> **Baseline Test** </ins>
 
 <p align="justify">
-Before starting to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.</p>
+Before start to run the stress test for each stage, a baseline test will be done with 300 users within 50 seconds to ensure that the connection is stable and all of the components in good condition.</p>
 <br>
 
 ## 📈 Stress Test Output Data Report
 
-ℹ️ Info: Please click on the images to see the data, if the image are not clear in your devices 👆🏻.
+ℹ️ Info: Please click on the images to see the data if the image are not clear in your devices 👆🏻.
 
 - Test Summary
 <p align="center">
@@ -475,7 +478,7 @@ As the user thread at stage 10 until stage 12 which has 5000 to 6000 users withi
 </div>
 
 <p align="justify">
-The first error message above has a means that the server was too busy to take or make new connections for upcoming new requests. Thus, the server decides to reject the request and that is why at this stage the website shows the error percentage which indicates the failure of requests. Besides that, the web application also takes a longer time to load because the new upcoming request is waiting for the server to process it. </p>
+The first error message above means that the server was too busy to take or make new connections for upcoming new requests. Thus, the server decides to reject the request and that is why at this stage the website shows the error percentage which indicates the failure of requests. Besides that, the web application also takes a longer time to load because the new upcoming request is waiting for the server to process it. </p>
 
 <p align="justify">
 The second error message indicates that the port to run the application is running out as this problem was actually coming from the client side which is the machine that is doing the test. </p>
