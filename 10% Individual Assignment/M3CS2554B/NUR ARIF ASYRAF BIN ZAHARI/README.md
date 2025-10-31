@@ -68,7 +68,7 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 
 ---
 
-## Test Plan Analysis
+## Test Plan
 
 | **Phase**                     | **Duration** | **Arrival Rate (Requests/sec)** | **Description**                                                                                               |
 | ----------------------------- | ------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
