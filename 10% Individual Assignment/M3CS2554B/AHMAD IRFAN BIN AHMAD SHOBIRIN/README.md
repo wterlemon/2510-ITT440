@@ -1,9 +1,9 @@
 # 🧪 Comprehensive Web Application Performance Testing & Analysis
 
 ### **Tool Used:** Artillery  
-### **Performance Test Type:** Load Test  
-### **Target Application:** [Reqres Public API](https://reqres.in)  
-### **Student Name:** *[Your Name]*  
+### **Performance Test Type:** Scalability Test  
+### **Target Application:** [Discord API](https://discord.com/api)  
+### **Student Name:** *AHMAD IRFAN BIN AHMAD SHOBIRIN*  
 ### **Date:** 01 November 2025  
 
 ---
