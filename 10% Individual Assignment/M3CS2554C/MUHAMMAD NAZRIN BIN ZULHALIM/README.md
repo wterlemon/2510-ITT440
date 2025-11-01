@@ -10,9 +10,28 @@
 ### The objective of this is to analyse how ‘https://demo.nopcommerce.com’ will behave under soak testing using Grafana k6. k6 is used to simulate continuous real life traffic loads and identify performance degradation, memory and resource leaks and stability issues. The result of the test will be the indicators(KPIs) of the key performance and application endurance.
 
 ---
-## :dart: Target Application
-### The application selected for this analysis is 'https://demo.nopcommerce.com', a publicly accessible demo e-commerce platform. This application was chosen because e-commerce needs to be able to handle continuous traffic and complex user flows.
+## 🔨 Tools Selection
+## 🔥Grafana k6
+## 🚀 Key Features of Grafana k6
 
+| Feature | Description |
+| :--- | :--- |
+| **Primary Approach** | 💻 **Code-Driven** |
+| **Test Scripting** | Tests are written in **JavaScript (ES6)** as simple `.js` code files. |
+| **Target Audience** | Developers, SREs, and DevOps/QA teams practicing "performance-as-code". |
+| **Core Technology** | Written in **Go (GoLang)**, making it a fast, single native binary with no external dependencies. |
+| **Performance** | **Very Low Resource Usage.** It uses an event-loop-based model, not a thread-per-user, allowing a single machine to simulate tens of thousands of users. |
+| **CI/CD Integration** | **Native & Simple.** Designed for automation. You can define pass/fail criteria (called **Thresholds**) directly in your script, which is perfect for CI/CD pipelines. |
+| **Protocol Support** | **Modern & Web-Focused.** Excellent out-of-the-box support for HTTP/1.1, HTTP/2, WebSockets, and gRPC. |
+| **Reporting** | Provides a detailed command-line summary. It's built to stream metrics to external dashboards, most notably **Grafana**, InfluxDB, or Datadog. |
+| **Extensibility** | Supports extensions (like `xk6-browser`) to add capabilities, such as real browser automation for frontend performance. |
+---
+## :dart: Target Application
+## 🎯 **`https://demo.nopcommerce.com`**
+| Feature | Description |
+| :--- | :--- |
+| **:dart: Target Application** | The application we're testing is **`https://demo.nopcommerce.com`**, which is a public demo of an online store. |
+| **Why This Target?** | We chose an e-commerce site because it's a perfect, real-world challenge. Online stores have to do two very hard things at once:<br><br>1.  **Handle Heavy Traffic:** They must stay fast and stable even when thousands of people are shopping at the same time (like during a Black Friday sale).<br><br>2.  **Handle Complex Journeys:** People don't just look at one page. They perform a series of steps (a "user flow") like searching for a product, adding it to their cart, logging in, and checking out. This multi-step journey puts much more stress on the servers and database than simple page browsing.<br><br>Since this is a public demo, it's the perfect, safe environment to simulate this kind of heavy, realistic user activity without breaking a real business. |
 ---
 ## 🛠️ Test Environment
 | Component | Details |
