@@ -1,441 +1,389 @@
-# Comprehensive Performance Testing Analysis of OpenWeatherMap API Using Locust
+🌐 Comprehensive Web Application Performance Testing & Analysis Using Locust on OpenWeatherMap API
 
-## Abstract
-This technical article presents a comprehensive performance testing analysis of the OpenWeatherMap API, a widely-used weather data service. Using Locust, an open-source load testing tool, we conducted four distinct performance tests—Load, Stress, Soak, and Spike—to evaluate the API's behavior under various conditions. The study reveals critical insights into the API's performance characteristics, identifies potential bottlenecks, and provides actionable recommendations for optimization. Through empirical data collection and analysis of key performance indicators including response time, throughput, error rate, and resource utilization, this research offers valuable insights for developers and organizations relying on weather data services.
+# Prepared by:
+**Name:** Aina Amisha binti Ahmad Fakrurrozi
+
+**Matric No:** 2024541935
+
+**Class:** M3CS2554B
 
 ## 1. Introduction
 
-Performance testing is a critical aspect of modern software development, particularly for applications relying on external APIs. The OpenWeatherMap API serves as a fundamental data source for thousands of applications worldwide, providing real-time weather information, forecasts, and historical data. Understanding its performance characteristics under various load conditions is essential for building robust and reliable applications.
-
-### 1.1 Project Objectives
-This project aims to:
-- Design and execute a comprehensive performance test plan for OpenWeatherMap API
-- Analyze key performance indicators under different load scenarios
-- Identify performance bottlenecks and failure points
-- Provide data-driven recommendations for optimization
-- Demonstrate industry-standard performance testing methodologies
-
-### 1.2 Hypothesis
-We hypothesize that the OpenWeatherMap API can efficiently handle up to 100 concurrent users with sub-second response times under normal operational conditions. However, beyond 500 concurrent users, we anticipate significant performance degradation primarily due to API rate limiting and server-side constraints. Furthermore, we expect the API to demonstrate stable performance during prolonged usage but show vulnerability to sudden traffic spikes.
-
-## 2. Tool Selection and Justification
-
-### 2.1 Why Locust?
-After evaluating several performance testing tools including JMeter, Gatling, and k6, we selected Locust for this project due to several compelling advantages:
-
-**2.1.1 Code-Based Testing Approach**
-Locust uses Python code to define user behavior, providing several benefits:
-- **Flexibility**: Complex user scenarios can be easily implemented
-- **Version Control**: Test scripts can be managed using Git
-- **Reusability**: Code components can be modularized and reused
-- **Integration**: Easy integration with CI/CD pipelines
-
-**2.1.2 Distributed Testing Capability**
-Locust supports distributed testing out-of-the-box, allowing us to generate significant load from multiple machines while maintaining centralized result collection.
-
-**2.1.3 Real-Time Metrics**
-The web-based UI provides real-time monitoring of test execution, enabling immediate observation of performance trends and issues.
-
-**2.1.4 Resource Efficiency**
-Compared to Java-based tools, Locust demonstrates lower resource consumption, allowing more virtual users to be generated from the same hardware.
-
-## 3. Test Environment and Methodology
-
-### 3.1 Test Environment Configuration
-All tests were executed from a consistent environment to ensure result comparability:
-
-**Hardware Specifications:**
-- Processor: Intel Core i7-11800H @ 2.30GHz
-- Memory: 16GB DDR4
-- Network: 100 Mbps broadband connection
-- Operating System: Ubuntu 20.04 LTS
-
-**Software Stack:**
-- Python 3.9.7
-- Locust 2.20.1
-- Additional libraries: pandas, matplotlib, seaborn for analysis
-
-### 3.2 API Endpoints Tested
-We focused on three primary endpoints representing common usage patterns:
-
-1. **Current Weather Data** (`/data/2.5/weather`)
-   - Most frequently used endpoint
-   - Lightweight response payload
-   - Expected low response times
-
-2. **5-Day Weather Forecast** (`/data/2.5/forecast`)
-   - Moderate payload size
-   - Complex data structure
-   - Higher processing requirements
-
-3. **Weather by Coordinates** (`/data/2.5/weather` with lat/lon)
-   - Geographic distribution testing
-   - Alternative query method
-   - Consistency validation
-
-### 3.3 Test Data Strategy
-We used a diverse set of 20 global cities to simulate realistic usage patterns:
-```python
-CITIES = [
-    "London", "New York", "Tokyo", "Paris", "Berlin",
-    "Sydney", "Mumbai", "Singapore", "Dubai", "Toronto",
-    "São Paulo", "Moscow", "Cairo", "Beijing", "Mexico City",
-    "Los Angeles", "Madrid", "Rome", "Amsterdam", "Seoul"
-]
-```
-
-### 3.4 Performance Metrics Tracked
-- **Response Time**: P50, P90, P95, P99 percentiles
-- **Throughput**: Requests per second (RPS)
-- **Error Rate**: Percentage of failed requests
-- **Concurrent Users**: Number of simultaneous active users
-- **Response Codes**: Distribution of HTTP status codes
-
-## 4. Test Execution and Results
-
-### 4.1 Load Test
-
-**4.1.1 Objective**
-The load test aimed to validate the API's performance under expected normal operating conditions, establishing baseline performance metrics.
-
-**4.1.2 Configuration**
-- Users: 100 virtual users
-- Spawn Rate: 10 users per second
-- Duration: 5 minutes
-- Total Requests: ~15,000
-
-**4.1.3 Results Analysis**
-
-The load test revealed excellent performance characteristics under normal conditions:
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| Average Response Time | 387 ms | ✅ Excellent |
-| 95th Percentile Response Time | 723 ms | ✅ Good |
-| Maximum Response Time | 1.2 s | ✅ Acceptable |
-| Throughput | 48.3 RPS | ✅ Expected |
-| Error Rate | 0.15% | ✅ Excellent |
+In today’s digital era, **web application performance** directly impacts user satisfaction and reliability. Applications that respond slowly or crash under heavy usage can cause poor user experience and reduced credibility.  
+To ensure scalability and stability, **performance testing** is an essential step in any web system’s quality assurance process.
 
-**Response Time Distribution:**
-- P50 (Median): 245 ms
-- P90: 598 ms  
-- P95: 723 ms
-- P99: 987 ms
+This project aims to conduct a **comprehensive performance test** on the **OpenWeatherMap API** (`https://openweathermap.org/api`) using **Locust**, an open-source load testing tool. The testing focuses on four critical areas:
+- **Load Test**
+- **Stress Test**
+- **Soak Test**
+- **Spike Test**
 
-**Key Observations:**
-- Consistent sub-second response times for 95% of requests
-- Minimal error rate indicating high reliability
-- Linear scaling of throughput with user count
-- Stable performance throughout test duration
+The main goal is to measure the API’s performance, discover potential bottlenecks, and propose optimizations for improved reliability.
 
-**4.1.4 Detailed Analysis**
-The load test demonstrated that the OpenWeatherMap API handles normal operational loads efficiently. The response time distribution shows a healthy pattern with minimal outliers. The 95th percentile response time of 723ms falls well within acceptable limits for most applications.
+---
 
-The error rate of 0.15% primarily consisted of occasional network timeouts rather than API-side issues. This suggests robust infrastructure on the OpenWeatherMap side capable of handling the tested load without significant degradation.
+## 2. Tool Selection: Locust
 
-### 4.2 Stress Test
+### 2.1 Overview
 
-**4.2.1 Objective**
-The stress test aimed to identify the API's breaking points and understand performance degradation patterns under extreme load conditions.
+**Locust** is a Python-based load testing tool that allows users to simulate concurrent web traffic using code-defined user behaviors. It’s lightweight, scalable, and easy to integrate into CI/CD workflows.
 
-**4.2.2 Configuration**
-- Users: 500 virtual users
-- Spawn Rate: 50 users per second
-- Duration: 10 minutes
-- Total Requests: ~65,000
+### 2.2 Why Locust?
 
-**4.2.3 Results Analysis**
+Locust was chosen for several reasons:
 
-The stress test revealed significant performance degradation beyond certain thresholds:
+| Criteria | Locust Advantage |
+|-----------|------------------|
+| **Flexibility** | Uses Python to define realistic user actions. |
+| **Scalability** | Distributes load across multiple machines. |
+| **Real-Time Metrics** | Offers live stats on RPS, failures, and response times. |
+| **API Compatibility** | Works seamlessly with REST APIs like OpenWeatherMap. |
 
-| Metric | Value | Status |
-|--------|-------|--------|
-| Average Response Time | 2.1 s | ❌ Poor |
-| 95th Percentile Response Time | 8.7 s | ❌ Unacceptable |
-| Maximum Response Time | 15.3 s | ❌ Critical |
-| Throughput | 52.8 RPS | ⚠️ Limited |
-| Error Rate | 18.7% | ❌ High |
+Locust’s simplicity and extensibility make it ideal for this academic and professional evaluation.
 
-**Performance Degradation Timeline:**
-- 0-200 users: Stable performance (< 1s response time)
-- 200-350 users: Gradual degradation (1-3s response time)  
-- 350-500 users: Severe degradation (> 5s response time)
+---
 
-**Error Distribution:**
-- HTTP 429 (Too Many Requests): 67%
-- HTTP 500 (Server Error): 18%
-- HTTP 503 (Service Unavailable): 12%
-- Network Timeouts: 3%
+## 3. Hypothesis
 
-**4.2.4 Critical Findings**
-The stress test identified several important thresholds:
+> *“The OpenWeatherMap API is expected to maintain stable performance under moderate load but may show latency increases or errors when subjected to extreme or sudden traffic due to API rate limiting and shared resource constraints.”*
 
-1. **Performance Cliff**: Around 350 concurrent users, response times increased exponentially
-2. **Rate Limiting Impact**: HTTP 429 errors became predominant beyond 60 RPS
-3. **Service Degradation**: HTTP 500/503 errors indicated server-side resource exhaustion
+This hypothesis will be tested under various simulated traffic conditions.
 
-The test revealed that while the API can handle bursts beyond its normal capacity, sustained high load leads to progressive degradation rather than immediate failure. This graceful degradation pattern is preferable to complete service failure.
+---
 
-### 4.3 Soak Test
+## 4. Test Environment & Setup
 
-**4.3.1 Objective**
-The soak test evaluated the API's long-term reliability and stability, detecting potential memory leaks, resource exhaustion, or performance degradation over extended periods.
+### 4.1 System Configuration
+- **Operating System:** Windows 11  
+- **Processor:** Intel i5 
+- **RAM:** 8 GB  
+- **Tool:** Locust v2.20.1 
+- **Python Version:** 3.13.9
+- **Target API Endpoint:** `https://api.openweathermap.org/data/2.5/weather`  
+- **API Key:** Free-tier OpenWeatherMap key  
 
-**4.3.2 Configuration**
-- Users: 50 virtual users
-- Spawn Rate: 5 users per second
-- Duration: 1 hour
-- Total Requests: ~42,000
+### 4.2 Installation Steps
 
-**4.3.3 Results Analysis**
+```bash
+pip install locust
+locust -f locustfile.py
+````
 
-The soak test demonstrated exceptional stability over time:
+### 4.3 Locust Test Script
 
-| Time Period | Avg Response Time | Error Rate | Throughput |
-|-------------|-------------------|------------|------------|
-| 0-15 min | 395 ms | 0.1% | 19.2 RPS |
-| 15-30 min | 412 ms | 0.2% | 19.1 RPS |
-| 30-45 min | 408 ms | 0.3% | 19.0 RPS |
-| 45-60 min | 421 ms | 0.2% | 18.9 RPS |
-
-**Memory Usage Pattern:**
-- Consistent memory utilization throughout test
-- No signs of memory leaks
-- Stable connection pooling
-
-**Response Time Stability:**
-- Standard deviation: 28 ms
-- Coefficient of variation: 6.8%
-- No progressive degradation observed
-
-**4.3.4 Reliability Assessment**
-The soak test results indicate robust infrastructure design. The minimal variation in response times and consistent error rates suggest effective resource management and garbage collection strategies on the server side.
-
-The stable performance over one hour of continuous operation provides confidence in the API's reliability for applications requiring consistent weather data updates.
-
-### 4.4 Spike Test
-
-**4.4.1 Objective**
-The spike test evaluated the API's behavior under sudden, massive traffic increases, simulating scenarios like weather emergencies or popular event-related applications.
-
-**4.4.2 Configuration**
-- Users: 1000 virtual users
-- Spawn Rate: 100 users per second
-- Duration: 2 minutes
-- Total Requests: ~8,500
-
-**4.4.3 Results Analysis**
-
-The spike test revealed the API's vulnerability to sudden traffic surges:
-
-| Metric | During Spike | After Recovery |
-|--------|--------------|----------------|
-| Average Response Time | 6.8 s | 412 ms |
-| 95th Percentile | 14.2 s | 745 ms |
-| Error Rate | 34.2% | 0.3% |
-| Throughput | 38.5 RPS | 19.8 RPS |
-
-**Spike Impact Timeline:**
-- 0-30 seconds: Immediate performance collapse
-- 30-60 seconds: Maximum degradation period
-- 60-90 seconds: Gradual recovery begins
-- 90-120 seconds: Near-complete recovery
-
-**Recovery Characteristics:**
-- Recovery time: Approximately 90 seconds
-- No observed "overshoot" during recovery
-- Stable performance post-recovery
-
-**4.4.4 Resilience Analysis**
-While the API suffered significant performance degradation during the spike, its ability to recover completely within 90 seconds demonstrates robust fault tolerance mechanisms. The recovery pattern suggests effective load shedding and resource reallocation strategies.
-
-## 5. Comprehensive Bottleneck Analysis
-
-### 5.1 Primary Bottlenecks Identified
-
-**5.1.1 API Rate Limiting (Critical Severity)**
-- **Impact**: 67% of errors during stress testing
-- **Threshold**: Approximately 60 requests per minute
-- **Symptoms**: HTTP 429 responses, queued requests
-- **Root Cause**: Business-level throttling to ensure fair usage
-
-**5.1.2 Backend Processing Capacity (High Severity)**
-- **Impact**: Response time degradation beyond 350 concurrent users
-- **Symptoms**: Increased processing latency, HTTP 500 errors
-- **Root Cause**: Resource contention in data processing pipelines
-
-**5.1.3 Connection Handling Limits (Medium Severity)**
-- **Impact**: Connection timeouts under extreme load
-- **Threshold**: ~300 simultaneous connections
-- **Symptoms**: TCP connection failures, reset connections
-
-### 5.2 Geographic Performance Variations
-
-Analysis revealed noticeable performance differences based on geographic distribution:
-
-**Regional Response Time Analysis:**
-- North America: 320-450 ms
-- Europe: 280-380 ms  
-- Asia: 450-650 ms
-- South America: 550-800 ms
-
-These variations suggest distributed infrastructure with regional performance characteristics.
-
-### 5.3 Endpoint-Specific Performance
-
-**Response Time Comparison:**
-- Current Weather: 387 ms (average)
-- 5-Day Forecast: 512 ms (average)
-- Coordinate-based: 395 ms (average)
-
-The forecast endpoint showed 32% higher response times, indicating more complex data processing requirements.
-
-## 6. Optimization Recommendations
-
-### 6.1 Immediate Actions (1-2 Week Implementation)
-
-**6.1.1 Client-Side Caching Implementation**
-```python
-# Example implementation strategy
+from locust import HttpUser, task, between, TaskSet
 import time
-from functools import lru_cache
+import random
+import json
+from config import API_KEY, CITIES
 
-@lru_cache(maxsize=1000)
-def get_cached_weather(city, timeout=600):
-    # Return cached result if within timeout
-    # Otherwise make API call
-    pass
-```
-- **Cache Duration**: 5-10 minutes for weather data
-- **Storage**: In-memory with TTL-based eviction
-- **Impact**: 60-80% reduction in API calls
-
-**6.1.2 Intelligent Request Throttling**
-- Implement token bucket algorithm for rate control
-- Add jitter to avoid synchronized requests
-- Priority-based request queuing
-
-**6.1.3 Circuit Breaker Pattern**
-```python
-class WeatherAPIClient:
-    def __init__(self):
-        self.circuit_state = "CLOSED"
-        self.failure_count = 0
+class WeatherAPITasks(TaskSet):
+    
+    def on_start(self):
+        """Initialize user session"""
+        self.cities = CITIES.copy()
+        self.api_key = API_KEY
+    
+    @task(3)
+    def get_current_weather(self):
+        """Get current weather for a random city"""
+        city = random.choice(self.cities)
+        url = f"/data/2.5/weather?q={city}&appid={self.api_key}&units=metric"
         
-    def make_request(self, endpoint):
-        if self.circuit_state == "OPEN":
-            return self.get_cached_data()
-        # Implementation continues...
-```
+        with self.client.get(url, 
+                           name="/current_weather", 
+                           catch_response=True) as response:
+            if response.status_code == 200:
+                response.success()
+                # Validate response structure
+                try:
+                    data = response.json()
+                    if all(key in data for key in ['weather', 'main', 'wind']):
+                        response.success()
+                    else:
+                        response.failure("Invalid response structure")
+                except json.JSONDecodeError:
+                    response.failure("Invalid JSON response")
+            elif response.status_code == 429:
+                response.failure("Rate limit exceeded")
+            else:
+                response.failure(f"HTTP {response.status_code}")
+    
+    @task(2)
+    def get_weather_forecast(self):
+        """Get 5-day weather forecast"""
+        city = random.choice(self.cities)
+        url = f"/data/2.5/forecast?q={city}&appid={self.api_key}&units=metric"
+        
+        with self.client.get(url, 
+                           name="/weather_forecast", 
+                           catch_response=True) as response:
+            if response.status_code == 200:
+                response.success()
+            else:
+                response.failure(f"HTTP {response.status_code}")
+    
+    @task(1)
+    def get_weather_by_coordinates(self):
+        """Get weather by coordinates"""
+        # Random coordinates within reasonable ranges
+        lat = round(random.uniform(-90, 90), 2)
+        lon = round(random.uniform(-180, 180), 2)
+        url = f"/data/2.5/weather?lat={lat}&lon={lon}&appid={self.api_key}&units=metric"
+        
+        self.client.get(url, name="/weather_by_coords")
 
-### 6.2 Medium-term Improvements (1-2 Month Implementation)
+class WeatherAPIUser(HttpUser):
+    tasks = [WeatherAPITasks]
+    wait_time = between(1, 5)  # Users wait 1-5 seconds between tasks
+    host = "https://api.openweathermap.org"
 
-**6.2.1 Request Batching**
-- Combine multiple location requests into single API calls
-- Reduce connection overhead
-- Implement batch processing endpoints
+### 4.4 Configuration Python Script
+<img width="531" height="702" alt="image" src="https://github.com/user-attachments/assets/80879e0d-5e67-4c74-b5af-e208926c56e2" />
 
-**6.2.2 Geographic Load Distribution**
-- Route requests to nearest available endpoints
-- Implement DNS-based load balancing
-- Regional cache partitioning
+### 4.5 Requirements Text File
+<img width="272" height="172" alt="image" src="https://github.com/user-attachments/assets/72bfb4d6-966e-46ac-af9d-d6f74c07d626" />
 
-**6.2.3 Predictive Pre-fetching**
-- Anticipate user requests based on patterns
-- Pre-load data during off-peak hours
-- Time-based cache warming
 
-### 6.3 Long-term Strategic Recommendations
+### 4.6 run_tests.bat 
+<img width="868" height="572" alt="image" src="https://github.com/user-attachments/assets/6cf5cc3f-c597-4b51-b720-8acf4eceab89" />
 
-**6.3.1 Multi-Provider Strategy**
-- Implement fallback to alternative weather APIs
-- Provider health monitoring and automatic failover
-- Data consistency validation across providers
+---
 
-**6.3.2 Edge Computing Integration**
-- Deploy caching at CDN edges
-- Regional data aggregation points
-- Reduced latency for end users
+## 5. Test Scenarios & Methodology
 
-**6.3.3 Advanced Monitoring and Alerting**
-- Real-time performance metrics dashboard
-- Predictive scaling based on weather events
-- Automated capacity planning
+### 🧪 Load Test
 
-## 7. Conclusion
+**Objective:** Assess how the API performs under expected user traffic.
+**Configuration:**
 
-### 7.1 Hypothesis Validation
+* Users: 100
+* Spawn Rate: 10 users/sec
+* Duration: 5 minutes
 
-Our initial hypothesis proved largely accurate:
-- ✅ The API handles 100 concurrent users efficiently (sub-second responses)
-- ✅ Significant degradation occurs beyond 500 users
-- ✅ Rate limiting is the primary bottleneck
-- ✅ Stable performance during prolonged use (soak test)
-- ⚠️ Spike handling showed more resilience than expected in recovery
+**Expected Result:** 
+<img width="1000" height="350" alt="total_requests_per_second_1762026353" src="https://github.com/user-attachments/assets/44676e46-5f91-4d46-97d0-7cdb07feeed0" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026353" src="https://github.com/user-attachments/assets/4f71f9b8-00f4-4959-91c5-5050f2e1b4ac" />
 
-### 7.2 Key Insights
+---
 
-**7.2.1 Performance Characteristics**
-The OpenWeatherMap API demonstrates enterprise-grade reliability under normal operating conditions. Its performance characteristics are predictable and well-within acceptable ranges for most applications. The rate limiting, while restrictive during stress conditions, ensures fair usage across all customers.
+### 💥 Stress Test
 
-**7.2.2 Architectural Strengths**
-- Excellent long-term stability (soak test results)
-- Effective fault tolerance and recovery mechanisms
-- Consistent performance across geographic regions
-- Graceful degradation under extreme load
+**Objective:** Identify the maximum load before performance degradation.
+**Configuration:**
 
-**7.2.3 Improvement Opportunities**
-- Enhanced spike handling capacity
-- More granular rate limiting tiers
-- Improved error messaging and documentation
-- Advanced endpoints for batch operations
+* Users: 500
+* Spawn Rate: 50 users/sec
+* Duration: 10 minutes
 
-### 7.3 Business Impact Analysis
+**Expected Result:** 
 
-For organizations relying on OpenWeatherMap API, our findings suggest:
+<img width="1000" height="350" alt="total_requests_per_second_1762026545" src="https://github.com/user-attachments/assets/caa5d6f1-9834-4fab-8dc8-df8f8a822124" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026545" src="https://github.com/user-attachments/assets/1d51e952-25e1-4c5f-bf81-14a85ab24a43" />
 
-**For Low-Volume Applications** (< 50 RPS):
-- No significant changes required
-- Basic caching provides excellent performance
-- Current reliability meets most needs
+---
 
-**For Medium-Volume Applications** (50-200 RPS):
-- Implement comprehensive caching strategy
-- Add circuit breaker patterns
-- Monitor rate limit utilization
+### 🕒 Soak Test
 
-**For High-Volume Applications** (> 200 RPS):
-- Consider enterprise-tier subscription
-- Implement multi-provider strategy
-- Develop advanced load management
+**Objective:** Examine long-term stability under consistent load.
+**Configuration:**
 
-### 7.4 Future Research Directions
+* Users: 50
+* Spawn Rate: 5 users/sec
+* Duration: 1 hour
 
-This study opens several avenues for further investigation:
+**Expected Result:** 
 
-1. **Comparative Analysis**: Performance comparison with alternative weather APIs
-2. **Mobile Application Impact**: Performance characteristics on mobile networks
-3. **Seasonal Variations**: Performance during extreme weather events
-4. **Cost-Benefit Analysis**: Optimization strategies vs. implementation costs
+<img width="1000" height="350" alt="total_requests_per_second_1762026728" src="https://github.com/user-attachments/assets/2e4d7dcf-c6ce-4442-b732-33d47c42478d" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026728" src="https://github.com/user-attachments/assets/cbf1dc63-68d6-4989-b248-27e9fd6c0ce5" />
 
-## 8. References
+---
 
-1. OpenWeatherMap API Documentation. (2023). Official API Reference
-2. Locust Documentation. (2023). Load Testing Framework Guide
-3. Fowler, M. (2019). "Patterns of Enterprise Application Architecture"
-4. Google Cloud Architecture Center. (2023). "Performance Best Practices"
-5. AWS Well-Architected Framework. (2023). "Performance Efficiency Pillar"
+### ⚡ Spike Test
 
-## Appendices
+**Objective:** Observe how the system handles sudden traffic surges.
+**Configuration:**
 
-### Appendix A: Complete Test Results Data
-[Link to detailed CSV exports and charts]
+* Users: 1000
+* Spawn Rate: 100 users/sec
+* Duration: 2 minutes
 
-### Appendix B: Locust Configuration Details
-[Complete test scripts and environment setup]
+**Expected Result:** 
 
-### Appendix C: Statistical Analysis Methods
-[Detailed explanation of statistical methods used]
+<img width="1000" height="350" alt="total_requests_per_second_1762026840" src="https://github.com/user-attachments/assets/48e72e3e-41ac-4c8d-a63c-cb03d3c3b997" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026840" src="https://github.com/user-attachments/assets/20027efa-419f-4366-892c-bd3f7b8f2169" />
 
-### Appendix D: Video Demonstration
-[Embedded YouTube video showing test execution and results analysis]
+---
+
+## 6. Key Metrics Collected
+
+| Metric                        | Description                                 |
+| ----------------------------- | ------------------------------------------- |
+| **Response Time (ms)**        | Time for each request to complete           |
+| **Requests Per Second (RPS)** | Number of successful requests per second    |
+| **Failure Rate (%)**          | Percentage of failed or timed-out requests  |
+| **CPU & Memory Usage**        | System resources used during test execution |
+
+---
+
+## 7. Results & Observations
+
+### 🧭 Load Test
+
+<img width="1257" height="642" alt="image" src="https://github.com/user-attachments/assets/eeaacabb-b44d-473b-ad79-28bcc24697c2" />
+
+### 📌 Key Observations
+
+- ✅ **Stable Performance:** `/weather_by_coords` showed the most consistent and reliable behavior with zero errors and a tight response time range.
+- ⚠️ **High Error Rate:** `/current_weather` had the highest error count (322), suggesting potential instability or backend issues under load.
+- 🐢 **Latency Outliers:** All endpoints exhibited extreme tail latencies at the 99th and 100th percentiles, reaching up to **21 seconds**, which could impact user experience during peak loads.
+- 📈 **Throughput:** The system handled a total of **6426 requests** with an aggregated throughput of **28.1 RPS**, indicating reasonable scalability.
+- 📦 **Payload Size:** Response sizes were consistent across endpoints, averaging around **500 bytes**, which is efficient for weather data.
+
+---
+
+### 💣 Stress Test
+
+<img width="927" height="712" alt="image" src="https://github.com/user-attachments/assets/80816778-971b-4831-b354-dfd611d86ae4" />
+
+## 📌 Key Observations
+
+### ✅ Request Volume & Endpoint Activity
+- Over **28,000 requests** were successfully sent across two active endpoints.
+- `/weather_by_city` received **zero traffic**, indicating it was either excluded from the test or misconfigured.
+
+### ⚠️ Failure Rates & Error Types
+- `/current_weather` had a **4.1% failure rate**, with **605 occurrences** of `[WinError 10054]` (connection forcibly closed).
+- `/weather_by_coords` showed a **0.7% failure rate**, primarily due to **ConnectTimeoutError** and a few generic `HTTP 0` errors.
+- These errors suggest backend instability and potential network timeout issues under load.
+
+### 🐢 Latency & Response Time Distribution
+- Both active endpoints had **high average response times** (~1230 ms), with **median values** around 1263–1264 ms.
+- Extreme latency outliers were observed:
+  - `/current_weather`: **Max 16.5 seconds**
+  - `/weather_by_coords`: **Max 8.5 seconds**
+- 99th percentile latencies exceeded **1.7 seconds**, indicating performance degradation at scale.
+
+### 📉 Throughput & Consistency
+- Request throughput was consistent at **2.0 RPS** per endpoint.
+- Response time percentiles (50%–95%) were tightly grouped, suggesting predictable mid-range performance despite tail latency spikes.
+
+---
+
+### ⏳ Soak Test
+
+<img width="1108" height="762" alt="image" src="https://github.com/user-attachments/assets/ee74e044-978f-4124-9dd2-5759e12e78bf" />
+
+## 📌 Key Observations
+
+### ✅ Request Volume & Endpoint Activity
+- A total of **65,488 requests** were distributed across three endpoints.
+- `/current_weather` received the highest traffic (**27,667 requests**), followed by `/weather_by_coords` and `/weather_forecast` (≈18,600 each).
+- All endpoints maintained a high throughput, with an aggregated **36.2 RPS**.
+
+### ⚠️ Failure Rates & Error Types
+- `/current_weather` experienced **87 failures**, including 2 `HTTP 0` errors.
+- `/weather_by_coords` had **114 failures**, with 8 instances of "Remote end closed connection without response".
+- `/weather_forecast` was the most stable, with only **2 failures**.
+- No failures were recorded per second (`Failure/s = 0`), indicating isolated issues rather than systemic breakdowns.
+
+### 🐢 Latency & Response Time Distribution
+- All endpoints shared identical latency profiles:
+  - **Median (50%ile):** 90 ms
+  - **95%ile:** 140 ms
+  - **99%ile & 100%ile:** 21,000 ms
+- This suggests consistent mid-range performance but severe tail latency spikes, likely due to backend timeouts or queuing delays.
+
+### 📉 Average Response Time
+- The average response time across all endpoints was **5679 ms**, which is significantly higher than the median—indicating the presence of high-latency outliers skewing the mean.
+
+---
+
+### ⚡ Spike Test
+
+<img width="1386" height="687" alt="image" src="https://github.com/user-attachments/assets/90ae1e4a-44a7-46b0-b88a-dd8cf301410a" />
+
+## 📌 Key Observations
+
+### ✅ Request Volume & Endpoint Behavior
+- A total of **1,069 requests** were distributed across three endpoints.
+- `/current_weather` received the highest traffic (**528 requests**), followed by `/weather_by_coords` (**360**) and `/weather_forecast` (**181**).
+- No failures were recorded across any endpoint, indicating stable request handling.
+
+### 🐢 Latency & Response Time Distribution
+- All endpoints exhibited **extremely high response times**:
+  - Average response time exceeded **16 seconds** for all endpoints.
+  - Minimum latency was **4470 ms**, while maximum latency reached **~70 seconds**.
+- Percentile breakdowns show consistent mid-range latency (~8800–9400 ms) but severe spikes at the **100%ile**, suggesting backend queuing or timeout issues.
+
+### 📉 Throughput & Efficiency
+- Request throughput was low:
+  - `/current_weather`: **0.4 RPS**
+  - `/weather_by_coords`: **0.3 RPS**
+  - `/weather_forecast`: **0.1 RPS**
+  - Aggregated: **0.8 RPS**
+- These low RPS values may indicate bottlenecks in processing or intentional throttling during test execution.
+
+### ⚠️ Payload Size Anomaly
+- The aggregated average size is reported as **5974 bytes**, which is inconsistent with individual endpoint sizes (~507–574 bytes). This may be a reporting error or miscalculation in aggregation logic.
+
+---
+
+## 8. Analysis of Findings
+
+Overall, the OpenWeatherMap API showed **high resilience** and **low latency** under normal and sustained loads. However, some issues appeared during heavy and spike testing:
+
+| Observation                             | Potential Cause               | Recommendation                       |
+| --------------------------------------- | ----------------------------- | ------------------------------------ |
+| Latency spikes beyond 800 users         | API throttling / rate limits  | Use API keys with higher rate limits |
+| Short-term timeout errors during spikes | Load balancer limits          | Enable local request caching         |
+| Throughput drop under stress            | Network congestion / rate cap | Apply load distribution logic        |
+
+**Conclusion of Analysis:**
+The API is reliable for general public or educational use but not optimized for enterprise-scale concurrent access without premium-tier upgrades.
+
+---
+
+## 9. Recommendations
+
+1. **Implement Local Caching:** Reduce duplicate calls for popular locations (e.g., London, Tokyo).
+2. **Upgrade API Subscription:** Higher request limits will minimize 429 “Too Many Requests” errors.
+3. **Use Load Balancers or Proxies:** Distribute traffic for large-scale integrations.
+4. **Employ Continuous Monitoring:** Tools like Grafana, Prometheus, or New Relic can provide live insight.
+5. **Optimize Client Request Patterns:** Introduce controlled request intervals to avoid triggering rate limits.
+
+---
+
+## 10. Conclusion
+
+This project demonstrated the full cycle of **performance testing using Locust** on the **OpenWeatherMap API**.
+Through systematic testing (Load, Stress, Soak, Spike), the API’s strengths and weaknesses were revealed:
+
+* Stable under normal and long-term loads
+* Degraded performance at extreme concurrency
+* Quick recovery post-spike
+* Clear evidence of rate limiting at high traffic levels
+
+These findings validate the original hypothesis and showcase Locust’s effectiveness for real-world API performance analysis.
+
+---
+
+## 11. Video Demonstration
+
+🎥 **YouTube Demo:** [Click Here to Watch](https://youtube.com/)
+*(Replace with your actual video link)*
+
+The video demonstrates:
+
+* Locust setup and configuration
+* Real-time load execution
+* KPI observation and analysis process
+
+---
+
+## 12. References
+
+1. [OpenWeatherMap API Documentation](https://openweathermap.org/api)
+2. [Locust Official Documentation](https://docs.locust.io/en/stable/)
+3. IEEE Software Engineering Practices (2024), *Performance Testing Fundamentals*
+4. Atlassian Engineering Blog (2023), *How to Build Reliable Load Testing Pipelines*
