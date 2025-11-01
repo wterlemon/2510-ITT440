@@ -54,10 +54,10 @@ The performance tests were conducted on a personal workstation equipped with the
 
 | Component | Specification |
 |------------|----------------|
-| **Processor (CPU)** | Intel Core i7-12700H (12 Cores, 20 Threads, up to 4.7 GHz) |
-| **Memory (RAM)** | 16 GB DDR4 |
+| **Processor (CPU)** | AMD Ryzen 5 5500U with Radeon Graphics (2.10 GHz) |
+| **Memory (RAM)** | 8 GB DDR4 |
 | **Storage** | 512 GB NVMe SSD |
-| **Network** | 100 Mbps Stable Broadband Connection |
+| **Network** | 300 Mbps Stable Broadband Connection |
 | **Operating System** | Windows 11 Pro (64-bit) |
 
 ---
