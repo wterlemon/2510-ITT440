@@ -112,8 +112,17 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 - HTTP 429 Responses (Rate-Limit): 26,770 (26.7%)
 - Observation: 27% of requests failed due to throttling, indicating the server limits concurrent requests under stress.
 
-<p align="center">
+## Raw Data Presentation
+
 <img width="1378" height="566" alt="image" src="https://github.com/user-attachments/assets/cb400c17-8603-4e81-abbe-ba8a2c60ff3d" />
+Three separate phases made up the evaluation: Warm-up, Sustained High Load, and Recovery. VUs and request rate escalation were part of the warm-up phase, which maintained steady response times at low levels. System stability under high stress circumstances was proved by the Sustained High Load phase, which reached a sustained load of 600–900 req/s while all VUs remained active and response times saw a little p95 rise. The system was able to resume regular operations, demonstrating its quick recovery times and steady performance.
+
+---
+
+<img width="1379" height="376" alt="image" src="https://github.com/user-attachments/assets/ebb36622-577c-4923-9283-d6341676d0a6" />
+The test system processed 100.5K requests which resulted in fast successful responses with median 23 ms response times and 95% of responses under 290 ms and a maximum response time of 2.5 seconds. The system returned 200/201 responses for 73% of requests but produced 26.7K (27%) rate-limit errors which indicated excellent performance with only occasional throttling during high traffic conditions.
+
+---
 
 ## Overall Observation
 
