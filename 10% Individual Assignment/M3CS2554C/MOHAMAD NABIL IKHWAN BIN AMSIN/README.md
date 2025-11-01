@@ -48,6 +48,22 @@ The results from these tests were analyzed to identify performance bottlenecks a
 
 ---
 
+## 💻 Hardware Configuration
+
+The performance tests were conducted on a personal workstation equipped with the following specifications:
+
+| Component | Specification |
+|------------|----------------|
+| **Processor (CPU)** | Intel Core i7-12700H (12 Cores, 20 Threads, up to 4.7 GHz) |
+| **Memory (RAM)** | 16 GB DDR4 |
+| **Storage** | 512 GB NVMe SSD |
+| **Network** | 100 Mbps Stable Broadband Connection |
+| **Operating System** | Windows 11 Pro (64-bit) |
+
+---
+
+> ⚙️ The chosen hardware configuration ensured sufficient computational resources to simulate multiple concurrent users in Apache JMeter without client-side bottlenecks. It provided a stable environment for executing load, stress, and spike test scenarios effectively.
+
 ## 📋 Test Scenarios Conducted
 | Test Type | Description | Key Purpose |
 |------------|-------------|--------------|
