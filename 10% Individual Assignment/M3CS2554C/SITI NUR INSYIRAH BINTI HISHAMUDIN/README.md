@@ -142,8 +142,7 @@ This stress test has several scenarios or stages that were conducted in order to
 
 ℹ️ <ins> **Test Scenario** </ins>
 - Number of stages: 12
-- Each stage was tested 3 times and data were combined to get the accurate results of the stage. <br>
-- For example : 6000 users x 3 = 18,000 samples [ Trial 1 - trial 3 test data for 6000 users are combined ]
+- Each stage was tested 3 times and data were combined to get the accurate results of each stage. <br>
 
 🎯 <ins> **Target Pages** </ins> <br>
  - **Admin** 
