@@ -134,8 +134,12 @@ The test system processed 100.5K requests which resulted in fast successful resp
 
 | **Section**                   | **Description**                                                                                                                                                                                                                                                                                                               |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Interpretation of Results** | The Artillery stress test proved that the DummyJSON API maintained excellent stability when processing numerous requests at high volumes. The system processed 534 requests per second on average while keeping response times at 34.8 ms during peak usage. The system produced HTTP 429 (rate limit) errors and experienced delays when traffic reached its maximum allowed requests. The API system demonstrated excellent recovery capabilities after traffic levels returned to normal. |
-| **Identified Bottlenecks**    | The main bottleneck identified was the high number of HTTP 429 (Too Many Requests) errors which accounted for 26% of all errors, accounting for approximately 26.7% of overall responses, showing that the API's rate limit was surpassed during peak usage. This indicates that the existing capacity of the system is inadequate for peak traffic. Moreover, minor delays in response time indicate potential backend or network latency problems, impacting overall performance and scalability |
+| **Interpretation of Results** | - The DummyJSON API handled varying loads effectively with a median response time of 34.8 ms and throughput of 534 req/sec. |
+|                               | - HTTP 429 errors appeared during peak load, indicating the API reached its rate limit. |
+|                               | - The system recovered quickly, showing good resilience and scalability. |
+| **Identified Bottlenecks**    | - High HTTP 429 (Too Many Requests) errors (~26%) show that the rate limit was exceeded under heavy load. |
+|                               | - Slight response time increases suggest possible backend or network latency. |
+|                               | - These issues limit throughput and scalability during peak conditions. |
 
 ---
 
