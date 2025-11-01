@@ -50,7 +50,7 @@ To design, execute, and critically analyze a **performance test plan** for a web
 
 ## 🌐 Target Web Application  
 
-**Target URL:** `https://reqres.in` *(Sample API for testing purposes)*  
+**Target URL:** `https://jsonplaceholder.typicode.com/` *(Sample API for testing purposes)*  
 
 ### 🧩 Hypothesis  
 
