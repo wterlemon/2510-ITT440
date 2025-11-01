@@ -2,7 +2,7 @@
 **Tool:** Apache JMeter  
 **Student Name:** MOHAMAD NABIL IKHWAN BIN AMSIN  
 **Student ID:** 2025394987
-**Course:** ITT440 - NETWORK PROGRAMMING 
+**Course:** ITT440-NETWORK PROGRAMMING 
 **Submission Date:** 
 
 ---
