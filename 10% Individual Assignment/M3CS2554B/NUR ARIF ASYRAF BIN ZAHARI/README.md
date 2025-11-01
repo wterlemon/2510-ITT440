@@ -140,7 +140,7 @@ The test system processed 100.5K requests which resulted in fast successful resp
 
 | **Section**                   | **Description**                                                                                                                                                                                                                                                                                                               |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Bottlenecks Isued Identified**    | - High HTTP 429 (Too Many Requests) errors (~26%) show that the rate limit was exceeded under heavy load. |
+| **Bottlenecks Identified**    | - High HTTP 429 (Too Many Requests) errors (~26%) show that the rate limit was exceeded under heavy load. |
 |                               | - Slight response time increases suggest possible backend or network latency. |
 |                               | - These issues limit throughput and scalability during peak conditions. |
 
