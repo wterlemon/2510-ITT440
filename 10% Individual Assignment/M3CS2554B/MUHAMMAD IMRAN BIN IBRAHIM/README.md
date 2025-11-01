@@ -21,3 +21,11 @@
 |                         | Active VUs           | **90 constant**              | Held steady load throughout test 🧍‍♂️🧍‍♀️🧍‍♂️                    |
 | **📡 Network**          | Data Received        | **403 MB (335 kB/s)**        | That’s how much data the test got from the server.                  |
 |                         | Data Sent            | **11 MB (8.8 kB/s)**         | Outgoing requests from your test script.                            |
+
+
+## Result of Stress Test (Graph)
+
+
+
+
+![Screenshot 2025-11-01 133907](https://github.com/user-attachments/assets/92f2db85-f68e-482f-9f75-f0450f739807)
