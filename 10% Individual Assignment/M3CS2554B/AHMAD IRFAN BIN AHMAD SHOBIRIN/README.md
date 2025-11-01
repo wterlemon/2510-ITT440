@@ -1,4 +1,4 @@
-# 🧪 Comprehensive Web Application Performance Testing & Analysis
+#  Comprehensive Web Application Performance Testing & Analysis
 
 ### **Tool Used:** Artillery  
 ### **Performance Test Type:** Scalability Test  
@@ -9,10 +9,12 @@
 ---
 
 
-## 📘 **1. Objective**
+##  **Objective**
 
-This assignment aims to design, execute, and analyze a performance test plan for a web application using **Artillery**, focusing on the system’s scalability and stability under concurrent user load. The objective is to identify performance bottlenecks, measure key performance indicators (KPIs), and provide recommendations for improvement.
-
+To assess the DummyJSON API's stability and performance under various load scenarios.
+ To watch how the API reacts during the recovery, warm-up, and prolonged high load stages.
+ To find possible timeout problems or performance bottlenecks when traffic is high.
+ For performance analysis, response times, throughput, and error rates are measured.
 ---
 ## Tool & Test Selection Justification
 
@@ -45,7 +47,7 @@ The experiment used the Discord API because it provides a reliable, developer-fr
 ---
 
 
-## ⚙️ **2. Test Plan**
+##  **Test Plan**
 
 | **Section**                          | **Details**                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,7 +90,7 @@ scenarios:
 
 ---
 
-## 📊 **3. Test Results Summary**
+##  **Test Results Summary**
 
 ### **Artillery Summary Report**
 
@@ -124,7 +126,7 @@ vusers.session_length:
 
 ---
 
-## 📈 **4. Data Analysis & Interpretation**
+##  **Data Analysis & Interpretation**
 
 | Metric | Observation | Interpretation |
 |--------|--------------|----------------|
@@ -134,14 +136,14 @@ vusers.session_length:
 | **HTTP 404 Errors** | 5984 | Suggests requests to a non-existent endpoint or query mismatch. |
 | **User Completion Rate** | 2992/3000 (99.7%) | Excellent session completion rate under load. |
 
-### 📉 Observed Bottlenecks
+###  Observed Bottlenecks
 - 404 responses indicate the API endpoint was incorrect or rate-limited under stress.  
 - Slight response latency spike at high concurrency (p99 = 889 ms).  
 - Minor connection resets suggest socket timeout under heavy load.
 
 ---
 
-## 🧠 **5. Recommendations**
+##  **Recommendations**
 
 1. **Validate endpoint configuration** — confirm `/api/users?page=2` accepts concurrent requests.  
 2. **Enable caching or CDN** to reduce backend load.  
@@ -151,19 +153,19 @@ vusers.session_length:
 
 ---
 
-## 🧩 **6. Conclusion**
+##  **Conclusion**
 
 The performance test demonstrated that the target API handles moderate concurrent load effectively with an average response time below 300 ms and high completion rates. However, consistent 404 errors and occasional connection resets suggest configuration or rate-limiting issues under sustained high traffic. Future tests will explore long-duration soak tests and scaling improvements.
 
 ---
 
-## 🎥 **7. Demonstration Video**
+##  **Demonstration Video**
 
 ➡️ [YouTube Demo Link – *Insert here after uploading your presentation*](https://youtube.com)
 
 ---
 
-## 🧾 **8. Repository Structure**
+##  **Repository Structure**
 
 ```
 /artillery-performance-test
