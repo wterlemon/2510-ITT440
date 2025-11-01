@@ -17,7 +17,9 @@ This assignment aims to design, execute, and analyze a performance test plan for
 ## Tool & Test Selection Justification
 
 <p align="center">
-<img width="500" height="243" alt="1_p4IQfjORMIMZtN8SJRjzcA" src="https://github.com/user-attachments/assets/9bcc62c7-bf15-4428-a6d8-d43b25c77ad2" />    
+<img width="500" height="243" alt="1_p4IQfjORMIMZtN8SJRjzcA" src="https://github.com/user-attachments/assets/9bcc62c7-bf15-4428-a6d8-d43b25c77ad2" />   
+
+Artillery is an open-source tool that facilitates a straightforward testing framework for HTTP, WebSocket, and API-level testing, it was employed in the experiment. YAML script execution for stress testing. The tool provides accurate error and reaction time measurements, and its integrated cloud dashboard for reporting is For improved analysis, Artillery Cloud creates graphic performance graphs.
 
 ---
 
