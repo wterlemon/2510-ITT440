@@ -122,8 +122,6 @@ The evaluation consisted of three distinct stages which included Warm-up followe
 <img width="1379" height="376" alt="image" src="https://github.com/user-attachments/assets/ebb36622-577c-4923-9283-d6341676d0a6" />
 The test system processed 100.5K requests which resulted in fast successful responses with median 23 ms response times and 95% of responses under 290 ms and a maximum response time of 2.5 seconds. The system returned 200/201 responses for 73% of requests but produced 26.7K (26.7%) rate-limit errors which indicated excellent performance with only occasional throttling during high traffic conditions.
 
----
-
 ## Overall Observation
 
 - The API sustains high throughput efficiently.
@@ -132,3 +130,9 @@ The test system processed 100.5K requests which resulted in fast successful resp
 
 ---
 
+### Interpretation and Bottlenecks
+
+| **Section**                   | **Description**                                                                                                                                                                                                                                                                                                               |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Interpretation of Results** | The system maintained stable throughput and low response times during the test. Average and 95th percentile response times were within acceptable limits, showing the API handled concurrent users efficiently. Minor response spikes occurred at peak load, indicating brief latency under stress.                           |
+| **Identified Bottlenecks**    | The occurrence of HTTP 429 errors and increased response times at peak load suggest rate limiting or resource exhaustion. The bottleneck likely comes from limited server capacity or concurrency handling. Improving rate limit settings, scaling server resources, or enhancing load balancing could mitigate these issues. |
