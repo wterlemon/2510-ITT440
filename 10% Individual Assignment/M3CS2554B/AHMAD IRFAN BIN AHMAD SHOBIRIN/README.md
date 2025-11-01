@@ -21,7 +21,27 @@ This assignment aims to design, execute, and analyze a performance test plan for
 
 Artillery is an open-source tool that facilitates a straightforward testing framework for HTTP, WebSocket, and API-level testing, it was employed in the experiment. YAML script execution for stress testing. The tool provides accurate error and reaction time measurements, and its integrated cloud dashboard for reporting is For improved analysis, Artillery Cloud creates graphic performance graphs.
 
+<p align="center">
+<img width="500" height="497" alt="image" src="https://tasshin.com/wp-content/uploads/2023/11/discord.jpg" />
+  
+## Target Web Application (Discord)
+
+The experiment used the Discord API because it provides a reliable, developer-friendly platform with real-world scalability. The API supports both REST and WebSocket communication, allowing realistic simulations of user interactions and message exchanges. Its well-documented endpoints and stable performance make it ideal for evaluating system response times, rate limits, and stability under high user load using Artillery.
 ---
+## Test Environment Setup
+
+| Component         | Details                                  |
+| ----------------- | ---------------------------------------- |
+| **Tool**          | Artillery (v2.x)                         |
+| **Machine**       | Localhost (Windows 10, 16GB RAM, i7 CPU) |
+| **Network**       | 100 Mbps broadband                       |
+| **Target API**    | `https://discord.com/api`                |
+| **Test Duration** | 180 seconds                              |
+| **Virtual Users** | 3000 created, 2992 completed             |
+| **Arrival Rate**  | 31 requests/sec                          |
+
+---
+
 
 ## ⚙️ **2. Test Plan**
 
