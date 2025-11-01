@@ -3,11 +3,11 @@
 Belum siap lagi <br>
 <br>
 
-## 🧑‍🎓 Student Information
+## 🧑‍🎓 Student Information 
 
-| Field       | Details             |
+| Field       | Details             | 
 |-------------|---------------------|
-| 👤 **NAME**    | MUHAMMAD ZAKWAN 'IRFAN BIN MOHD ZAMRY   |
+| 👤 **NAME**    | MUHAMMAD ZAKWAN 'IRFAN BIN MOHD ZAMRY   | 
 | 🆔 **STUDENT ID** | 2025127509    |
 | 📘 **TITLE**     | SPIKE TESTING ON JSONPLACEHOLDER WEB |
 
@@ -17,7 +17,12 @@ Belum siap lagi <br>
 
 | 🧪 **Spike Testing** | 🔗 **Do You Know JSONPlaceholder?** |
 |----------------------|--------------------------------------|
-| Spike testing is a type of performance testing that evaluates how a website or application handles sudden, extreme surges in traffic or load — like flash sales, viral posts, or ticket releases. It helps ensure your system remains stable and responsive under pressure. | JSONPlaceholder is a free online REST API service that provides fake data for testing and prototyping web applications. It's widely used by developers to simulate backend responses without needing a real server — perfect for learning, demos, and mockups. |
+| Spike testing is a type of performance testing that evaluates how a website or application handles sudden, extreme surges in traffic or load like flash sales, viral posts, or ticket releases. It helps ensure your system remains stable and responsive under pressure. | JSONPlaceholder is a free online REST API service that provides fake data for testing and prototyping web applications. It's widely used by developers to simulate backend responses without needing a real server perfect for learning, demos, and mockups. |
+<br>
+
+**What we want to know from this test ?**  💡
+<br>
+- How JSONPlaceholder website handle suddent high users at one time, and how it recover from that.
 
 # 🧰 TOOL SELECTION
 - Apache JMeter <br>
@@ -34,18 +39,22 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 
 # 💻 TEST ENVIRONMENT SETUP & METHODOLOGY 
 
+**Setup:**
 | Component | Description |
 |------------|-------------|
 | **Platform** | Ubuntu 22.04 LTS (Linux-based) |
 | **Tool** | JMeter |
-| **Target Website** | JSONPlaceHolder |
+| **Target Website** | JSONPlaceholder |
 
- **Step by step**
- 1.
- 2.
- 3.
- 4.
- 5.
+**Configuration:**
+| Parameter                     | Value                                      |
+|------------------------------|--------------------------------------------|
+| Number of Users              | 180 Users                                  |
+| User Percentages Before Spike     | 5%                                         |
+| User Percentages During Spike     | 90%                                        |
+| User Percentages After Spike      | 5%                                         |
+| Loop Count                   | 10 Times (Each user sends 10 requests)     |
+| Ramp-Up Period               | 1 Second (All users start instantly)       |
  
 
 # 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
@@ -64,7 +73,11 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 <br>
 
 # 📂 RAW DATA PRESENTATION
-UUU
+<img width="421" height="236" alt="image" src="https://github.com/user-attachments/assets/1c1a146e-04a6-40e5-ba11-070d9a6f7309" /> <img width="421" height="239" alt="image" src="https://github.com/user-attachments/assets/358db2a3-8780-45b9-bd14-85947d5dff11" />
+
+
+
+
 
 # 📊INTERPRETATION OF RESULT & IDENTIFIED BOTTLENECKS
 ASDFG
