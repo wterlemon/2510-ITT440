@@ -25,6 +25,9 @@ The results from these tests were analyzed to identify performance bottlenecks a
 
 ## 🧰 Tool Used: Apache JMeter
 
+<img width="1920" height="650" alt="image" src="https://github.com/user-attachments/assets/f9c49813-b859-4d18-8674-243f1085f6ae" />
+
+
 ### 📘 What is Apache JMeter?
 **Apache JMeter** is an open-source tool developed by the **Apache Software Foundation**, used primarily for **performance and load testing** of web applications. It simulates multi-user interactions and provides detailed performance reports through built-in listeners and custom extensions.
 
