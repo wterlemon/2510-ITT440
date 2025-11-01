@@ -138,11 +138,12 @@ The objective of this stress test is to evaluate the performance of the website 
 ## 🔍Methodology
 
 <p align="justify">
-This stress test has several scenarios or stages that were conducted in order to determine and identify when the performance of this website starts to drop, overload or in a bottleneck that leads to error. Each of the stages was tested and run three times to get overall and accurate results of the stress test for each of the stages with different number of users (thread). All of the pages are tested for both admin and user pages that are important to simulate realistic user behavior, from login pages to pages that contain create, read, update, and delete (CRUD) and lastly logout pages. The table below shows details of each stage. </p>
+This stress test has several scenarios or stages that were conducted in order to determine when the performance of this website starts to drop, overload or in a bottleneck that leads to error. Each of the stages was tested and run three times to get overall and accurate results of the stress test for each of the stages with different number of users (thread). All of the pages are tested for both admin and user pages that are important to simulate realistic user behavior, from login pages to pages that contain create, read, update, and delete (CRUD) and lastly logout pages. The table below shows details of each stage. </p>
 
 ℹ️ <ins> **Test Scenario** </ins>
 - Number of stages: 12
 - Each stage was tested 3 times and data were combined to get the accurate results of the stage. <br>
+- For example : 6000 users x 3 = 18,000 samples [ Trial 1 - trial 3 test data for 6000 users are combined ]
 
 🎯 <ins> **Target Pages** </ins> <br>
  - **Admin** 
