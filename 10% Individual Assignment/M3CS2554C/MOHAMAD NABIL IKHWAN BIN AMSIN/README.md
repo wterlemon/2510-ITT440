@@ -1,26 +1,16 @@
-<img width="1920" height="650" alt="image" src="https://github.com/user-attachments/assets/0a6e3603-2c51-40e4-af58-16b9b7d35700" />
-
 <div align="center">
 
-  # 🧪 Comprehensive Web Application Performance Testing & Analysis  
+# 🧪 Comprehensive Web Application Performance Testing & Analysis  
+<img width="1920" height="650" alt="image" src="https://github.com/user-attachments/assets/953c0e39-66b8-4493-bb14-71f46b5b6722" />
+
 ### Using **Apache JMeter**  
 
-*Individual Assignment*  
-
-💻 **Name:**  
-MOHAMAD NABIL IKHWAN BIN AMSIN
-
-🆔 **Student ID:**  
-2025394987  
-
-🏫 **Class:**  
-M3CDCS2554C  
-
-📚 **Course:**  
-ITT440 - Network Programming  
-
-📅 **Submission Date:**  
-WEEK 4
+*Individual Assignment* 
+💻 **Name:** MOHAMAD NABIL IKHWAN BIN AMSIN  
+🆔 **Student ID:** 2025394987
+🏫 **Class:** M3CDCS2554C 
+📚 **Course:** ITT440 - Network Programming 
+📅 **Submission Date:** Week 4 
 
 </div>
 
@@ -50,7 +40,7 @@ To design, execute, and critically analyze a **performance test plan** for a web
 
 ## 🌐 Target Web Application  
 
-**Target URL:** `https://jsonplaceholder.typicode.com/` *(Sample API for testing purposes)*  
+**Target URL:** `https://reqres.in` *(Sample API for testing purposes)*  
 
 ### 🧩 Hypothesis  
 
@@ -68,3 +58,19 @@ To design, execute, and critically analyze a **performance test plan** for a web
 | Apache JMeter | 5.6 or above |
 | Internet Connection | Stable |
 | OS | Windows / macOS / Linux |
+
+### 🪜 Installation Steps  
+
+```bash
+# 1. Download Apache JMeter
+https://jmeter.apache.org/download_jmeter.cgi
+
+# 2. Extract and navigate to the 'bin' directory
+cd apache-jmeter-*/bin
+
+# 3. Launch JMeter
+jmeter.bat     # Windows
+./jmeter.sh    # macOS/Linux
+
+# 4. Verify Java installation
+java -version
