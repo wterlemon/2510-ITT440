@@ -120,7 +120,7 @@ Three separate phases made up the evaluation: Warm-up, Sustained High Load, and 
 ---
 
 <img width="1379" height="376" alt="image" src="https://github.com/user-attachments/assets/ebb36622-577c-4923-9283-d6341676d0a6" />
-The test system processed 100.5K requests which resulted in fast successful responses with median 23 ms response times and 95% of responses under 290 ms and a maximum response time of 2.5 seconds. The system returned 200/201 responses for 73% of requests but produced 26.7K (27%) rate-limit errors which indicated excellent performance with only occasional throttling during high traffic conditions.
+The test system processed 100.5K requests which resulted in fast successful responses with median 23 ms response times and 95% of responses under 290 ms and a maximum response time of 2.5 seconds. The system returned 200/201 responses for 73% of requests but produced 26.7K (26.7%) rate-limit errors which indicated excellent performance with only occasional throttling during high traffic conditions.
 
 ---
 
