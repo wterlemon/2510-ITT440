@@ -11,3 +11,12 @@
 - To measure the system’s response time, throughput, and error rate during and after the spike period.
 - To observe how quickly the system recovers after the sudden increase in load.
 - To analyze the test results and provide recommendations for improving performance and stability.
+
+
+---
+### Tool Used:Grafana K6
+
+<p align="center">
+<img width="500" height="243" alt="image" src="https://github.com/user-attachments/assets/5df4a326-0bf7-4b27-8fdc-4072251865ba" />
+
+
