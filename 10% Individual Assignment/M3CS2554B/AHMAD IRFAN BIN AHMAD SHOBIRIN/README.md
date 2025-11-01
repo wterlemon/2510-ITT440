@@ -8,9 +8,16 @@
 
 ---
 
+
 ## 📘 **1. Objective**
 
 This assignment aims to design, execute, and analyze a performance test plan for a web application using **Artillery**, focusing on the system’s scalability and stability under concurrent user load. The objective is to identify performance bottlenecks, measure key performance indicators (KPIs), and provide recommendations for improvement.
+
+---
+## Tool & Test Selection Justification
+
+<p align="center">
+<img width="500" height="243" alt="1_p4IQfjORMIMZtN8SJRjzcA" src="https://github.com/user-attachments/assets/9bcc62c7-bf15-4428-a6d8-d43b25c77ad2" />    
 
 ---
 
