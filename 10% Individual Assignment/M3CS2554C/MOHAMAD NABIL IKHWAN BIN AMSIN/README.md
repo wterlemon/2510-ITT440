@@ -81,12 +81,6 @@ Data was visualized using spreadsheets and charts to compare performance across 
 
 ---
 
-## 🎥 Demo Video
-A walkthrough video demonstrating the test execution and configuration steps is available here:  
-👉 [Watch on YouTube](https://youtube.com/your-video-link)
-
----
-
 ## 💼 Repository Contents
 ```plaintext
 ├── test_plans/       # JMeter .jmx files
