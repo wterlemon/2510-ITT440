@@ -115,7 +115,7 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 ## Raw Data Presentation
 
 <img width="1378" height="566" alt="image" src="https://github.com/user-attachments/assets/cb400c17-8603-4e81-abbe-ba8a2c60ff3d" />
-Three separate phases made up the evaluation: Warm-up, Sustained High Load, and Recovery. VUs and request rate escalation were part of the warm-up phase, which maintained steady response times at low levels. System stability under high stress circumstances was proved by the Sustained High Load phase, which reached a sustained load of 600–900 req/s while all VUs remained active and response times saw a little p95 rise. The system was able to resume regular operations, demonstrating its quick recovery times and steady performance.
+The evaluation consisted of three distinct stages which included Warm-up followed by Sustained Load and then Recovery. The system maintained fast response times throughout the Warm-up period while the load continued to rise. The system maintained 600–900 req/s performance during the Sustained phase while keeping latency at a low level. The system restored its performance to normal levels during Recovery which demonstrated its ability to maintain stability and recover from stress.
 
 ---
 
