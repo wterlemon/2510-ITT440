@@ -137,6 +137,9 @@ The test system processed 100.5K requests which resulted in fast successful resp
 | **Interpretation of Results** | - The DummyJSON API handled varying loads effectively with a median response time of 34.8 ms and throughput of 534 req/sec. |
 |                               | - HTTP 429 errors appeared during peak load, indicating the API reached its rate limit. |
 |                               | - The system recovered quickly, showing good resilience and scalability. |
+
+| **Section**                   | **Description**                                                                                                                                                                                                                                                                                                               |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Identified Bottlenecks**    | - High HTTP 429 (Too Many Requests) errors (~26%) show that the rate limit was exceeded under heavy load. |
 |                               | - Slight response time increases suggest possible backend or network latency. |
 |                               | - These issues limit throughput and scalability during peak conditions. |
