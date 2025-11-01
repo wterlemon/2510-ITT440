@@ -144,7 +144,7 @@ The test system processed 100.5K requests which resulted in fast successful resp
 - Optimize its rate limiting mechanism to process multiple requests simultaneously before it starts throttling.
 - Upgrade load balancing implementation to distribute traffic equally across all servers and protect against single server overload.
 - Optimize atabase performance optimization through improved indexing and query optimization and data caching techniques.
-- - Needs additional server resources including CPU power and memory capacity and extra instances to boost its request processing abilities.
+- Needs additional server resources including CPU power and memory capacity and extra instances to boost its request processing abilities.
 - Use continuous monitoring tools to track performance data which helps identify performance bottlenecks as they occur.
 - System requires scheduled load and stress testing to verify new improvements while ensuring ongoing system stability.
 
