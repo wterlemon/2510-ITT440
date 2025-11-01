@@ -139,7 +139,7 @@ The test system processed 100.5K requests which resulted in fast successful resp
 
 ---
 
-### Recommendations
+## Recommendations For Further Testing
 
 - Optimize its rate limiting mechanism to process multiple requests simultaneously before it starts throttling.
 - Needs additional server resources including CPU power and memory capacity and extra instances to boost its request processing abilities.
