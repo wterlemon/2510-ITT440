@@ -5,7 +5,7 @@
 # 🧪 Comprehensive Web Application Performance Testing & Analysis  
 ### Using **Apache JMeter**  
 
-📘 *Individual Assignment*  
+*Individual Assignment*  
 
 💻 **Name:**  
 MOHAMAD NABIL IKHWAN BIN AMSIN
