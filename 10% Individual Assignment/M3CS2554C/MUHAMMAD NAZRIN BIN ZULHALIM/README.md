@@ -44,8 +44,22 @@
 
 ---
 ## :microscope: Test Methodology: Simulating Realistic Behaviour
-### To ensure the testing is valid, a realistic user scenario was created. The test simulates a user browsing the site, searching for a product and viewing certain product's page, with random pause between each steps.
+### To ensure the testing is valid, a realistic user scenario was created. The test simulates a user browsing the site, searching for a product and viewing certain product's page, with random pause between each steps. The test runs for a total of **35 minutes** and is broken into the following stages:
 
----
-## :train: Soak Test: Configuration and Execution
-###  The k6 'options' were configured to simulate a sustained, moderate load over a certain period of time such for 35 minutes. The test ramps up to 50 Virtual Users over 5 minutes then continues to rises up to 200 Virtual Users and then 300 Virtual Users and will be hold at that for the duration of the test.
+* **Stage 1 (Warm-up):** Ramp up from 0 to **50** users over 5 minutes.
+* **Stage 2 (Building Load):** Ramp up from 50 to **100** users over 5 minutes.
+* **Stage 3 (Growing Load):** Ramp up from 100 to **200** users over 5 minutes.
+* **Stage 4 (Peak Load):** Ramp up from 200 to **300** users over 5 minutes.
+* **Stage 5 (Soak Test):** Hold the peak load of **300** users steady for **10 minutes**. This is where we look for stability issues.
+* **Stage 6 (Ramp Down):** Gradually remove all users over 5 minutes.
+
+### The User Simulation: What Are They Doing?
+The VU are designed to act like real, curious shoppers, not just bots hitting the homepage. Each user will repeatedly execute a 3-step "Browse and Search" journey.
+
+1.  **Visit Homepage:** The user first lands on the `demo.nopcommerce.com` homepage.
+2.  **"Think Time":** The user pauses for 1-3 seconds, just like a real person would.
+3.  **Search for Product:** The user then uses the search bar to look for `"laptop"`.
+4.  **"Think Time":** The user pauses for another 1-3 seconds while looking at the results.
+5.  **View Product:** Finally, the user clicks on a specific product, the `"Apple MacBook Pro 13-inch"`, to see its details.
+6.  **"Think Time":** The user pauses for 1-3 seconds to "read" the page before starting their journey over again.
+
