@@ -19,7 +19,7 @@ This assignment aims to design, execute, and analyze a performance test plan for
 | **Section**                          | **Details**                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Test Title**                       | Artillery Scalability & Discord API                                                                                                           |
-| **Objective**                        | To evaluate the performance and scalability of the Reqres API under concurrent user load using Artillery, focusing on response time, throughput, and error rate. |
+| **Objective**                        | To evaluate the performance and scalability of the Discord API under concurrent user load using Artillery, focusing on response time, throughput, and error rate. |
 | **Tool Used**                        | Artillery v2.x                                                                                                                                                   |
 | **Test Type**                        | Scalability Test                                                                                                                               |
 | **Test Date**                        | 01 November 2025                                                                                                                                                 |
