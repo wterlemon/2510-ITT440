@@ -2,7 +2,7 @@
 
 ### **Tool Used:** Artillery  
 ### **Performance Test Type:** Scalability Test  
-### **Target Application:** [Discord API]((https://discord.com/developers/docs/reference))  
+### **Target Application:** [Discord API](https://discord.com/developers/docs/reference)  
 ### **Student Name:** *AHMAD IRFAN BIN AHMAD SHOBIRIN*  
 ### **Date:** 01 November 2025  
 
