@@ -15,6 +15,7 @@ To assess the DummyJSON API's stability and performance under various load scena
  To watch how the API reacts during the recovery, warm-up, and prolonged high load stages.
  To find possible timeout problems or performance bottlenecks when traffic is high.
  For performance analysis, response times, throughput, and error rates are measured.
+ 
 ---
 ## Tool & Test Selection Justification
 
