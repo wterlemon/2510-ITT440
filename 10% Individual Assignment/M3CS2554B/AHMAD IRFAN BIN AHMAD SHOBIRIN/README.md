@@ -96,33 +96,23 @@ scenarios:
 ### **Artillery Summary Report**
 
 ```
---------------------------------
-Summary report @ 16:51:37(+0800)
---------------------------------
+| **Metric**                         | **Result** | **Interpretation**                                                                    |
+| ---------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
+| **Total Requests Sent**            | 5,992      | Total number of HTTP requests executed during the test.                               |
+| **Requests per Second**            | ~31/sec    | Indicates stable throughput at moderate concurrency.                                  |
+| **Virtual Users Created**          | 3,000      | Number of concurrent simulated users.                                                 |
+| **Virtual Users Completed**        | 2,992      | Almost all users successfully completed their sessions.                               |
+| **Virtual Users Failed**           | 8          | Minimal failures, likely due to transient connection resets.                          |
+| **HTTP 4xx Errors (404)**          | 5,984      | Most requests hit non-existent endpoint — indicates misconfiguration or invalid path. |
+| **Connection Errors (ECONNRESET)** | 8          | Occurred under heavy concurrency, minor network/socket resets.                        |
+| **Minimum Response Time**          | 216 ms     | Fastest response recorded.                                                            |
+| **Maximum Response Time**          | 2,240 ms   | Longest response observed during peak load.                                           |
+| **Average (Mean) Response Time**   | 278 ms     | Average response time remained well under 300 ms.                                     |
+| **95th Percentile (p95)**          | 488 ms     | 95% of requests completed in under 0.5 seconds.                                       |
+| **99th Percentile (p99)**          | 889 ms     | Small number of outlier requests during high concurrency.                             |
+| **Average Session Length**         | 2,702 ms   | Average duration per virtual user session.                                            |
+| **Downloaded Bytes**               | 0          | No response body due to 404 responses.                                                |
 
-errors.ECONNRESET: ............................................................. 8
-http.codes.404: ................................................................ 5984
-http.downloaded_bytes: ......................................................... 0
-http.request_rate: ............................................................. 31/sec
-http.requests: ................................................................. 5992
-http.response_time:
-  min: 216
-  max: 2240
-  mean: 278.2
-  median: 247.2
-  p95: 487.9
-  p99: 889.1
-http.responses: 5984
-vusers.completed: 2992
-vusers.created: 3000
-vusers.failed: 8
-vusers.session_length:
-  min: 2485.3
-  max: 10619.6
-  mean: 2702.3
-  median: 2566.3
-  p95: 3328.3
-  p99: 3752.7
 ```
 
 ---
