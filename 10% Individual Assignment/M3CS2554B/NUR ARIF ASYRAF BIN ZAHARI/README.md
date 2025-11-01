@@ -151,6 +151,8 @@ The test system processed 100.5K requests which resulted in fast successful resp
 
 ## Conclusion
 
-The system operated with high stability while handling maximum capacity by processing large amounts of data without significant system failures. The system processed most requests at fast speeds but showed occasional delayed responses and rate limit messages when handling maximum capacity. The API will achieve improved reliability and consistency in future high-load situations through enhanced scalability and rate optimization and resource management improvements.
+The Artillery performance test evaluated the DummyJSON API through various load tests which successfully demonstrated its performance capabilities. The system operated at a stable rate while processing 534 requests per second with an average response time of 34.8 ms. The API showed fast recovery from rate-limited errors which occurred in 26% of responses during peak traffic but the system maintained strong scalability and resilience. The system performs well under normal to heavy traffic but additional performance enhancements and extended testing are needed to achieve better long-term stability and reduce rate-limiting events.
 
 ---
+
+## **YouTube Demo:**
