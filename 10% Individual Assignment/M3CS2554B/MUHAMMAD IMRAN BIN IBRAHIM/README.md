@@ -4,8 +4,6 @@
 
 ## Result of load Test where the number of users ramps up (Table)
 
-## K6 Stress Test Results - 20 VUs
-
 | Section | Metric | Result | Explanation |
 |---------|--------|--------|-------------|
 | **Scenario** | Virtual Users (VUs) | 20 max | Tested with up to 20 concurrent users |
