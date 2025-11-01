@@ -14,17 +14,29 @@ This assignment aims to design, execute, and analyze a performance test plan for
 
 ---
 
-## ⚙️ **2. Test Environment Setup**
+## ⚙️ **2. Test Plan**
 
-| Component | Details |
-|------------|----------|
-| **Tool** | Artillery (v2.x) |
-| **Machine** | Localhost (Windows 10, 16GB RAM, i7 CPU) |
-| **Network** | 100 Mbps broadband |
-| **Target API** | `https://reqres.in/api/users?page=2` |
-| **Test Duration** | 180 seconds |
-| **Virtual Users** | 3000 created, 2992 completed |
-| **Arrival Rate** | 31 requests/sec |
+| **Section**                          | **Details**                                                                                                                                                      |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Test Title**                       | Artillery Scalability & Discord API                                                                                                           |
+| **Objective**                        | To evaluate the performance and scalability of the Reqres API under concurrent user load using Artillery, focusing on response time, throughput, and error rate. |
+| **Tool Used**                        | Artillery v2.x                                                                                                                                                   |
+| **Test Type**                        | Scalability Test                                                                                                                               |
+| **Test Date**                        | 01 November 2025                                                                                                                                                 |
+| **Test Engineer**                    | *Ahmad Irfan*                                                                                                                                                    |
+| **Target System / API Endpoint**     | `https://discord.com/api`                                                                                                                             |
+| **Test Duration**                    | 3 minutes (180 seconds)                                                                                                                                          |
+| **Load Model**                       | Stepwise ramp-up (10 → 20 virtual users per second)                                                                                                              |
+| **Number of Virtual Users (VUs)**    | 3000 created                                                                                                                                                     |
+| **Test Scenario Description**        | Each virtual user sends a `GET` request to `/api/users?page=2`, simulating typical client behavior retrieving paginated user data.                               |
+| **KPIs Measured**                    | - Response Time (min, mean, p95, p99)  <br> - Throughput (requests/sec) <br> - Error Rate <br> - Virtual User Completion                                         |
+| **Performance Thresholds (Targets)** | - Average Response Time ≤ 500 ms  <br> - Error Rate ≤ 2%  <br> - 95% Responses < 1s                                                                              |
+| **Test Environment**                 | Localhost (Windows 10, Intel i7, 16GB RAM) <br> Network: 100 Mbps broadband                                                                                      |
+| **Monitoring Tools**                 | Artillery CLI and built-in metrics                                                                                                                               |
+| **Assumptions**                      | Discord API remains accessible and stable throughout testing.                                                                                              |
+| **Risks / Constraints**              | DIscord API may have rate limiting or IP blocking during extended scalability tests.                                                                                     |
+| **Success Criteria**                 | API maintains <5% error rate and <500 ms mean response time under 30 requests/sec load.                                                                          |
+
 
 ### **Configuration File (artillery.yml)**
 
