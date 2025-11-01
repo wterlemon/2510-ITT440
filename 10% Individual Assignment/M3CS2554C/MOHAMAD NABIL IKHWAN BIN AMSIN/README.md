@@ -1,8 +1,6 @@
 <div align="center">
 
 # 🧪 Comprehensive Web Application Performance Testing & Analysis  
-<img width="1920" height="650" alt="image" src="https://github.com/user-attachments/assets/953c0e39-66b8-4493-bb14-71f46b5b6722" />
-
 ### Using **Apache JMeter**  
 
 *Individual Assignment* 
