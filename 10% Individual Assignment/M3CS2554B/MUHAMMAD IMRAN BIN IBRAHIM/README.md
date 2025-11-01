@@ -27,6 +27,10 @@
 | | Data Sent | 114 kB (1.1 kB/s) | Total data uploaded to server |
 | **Cloud** | Grafana Dashboard | Available online | Full results at provided Grafana Cloud URL |
 
+## Result of load Test where the number of users ramps up (Graph)
+
+![Screenshot 2025-11-01 135811](https://github.com/user-attachments/assets/ac34b07e-99c3-4b13-9712-38170125a2c9)
+
 
 ## Result of Stress Test (Table)
 
