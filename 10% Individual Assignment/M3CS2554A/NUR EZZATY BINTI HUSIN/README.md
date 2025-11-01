@@ -163,6 +163,8 @@ Apache JMeter Official Documentation – https://jmeter.apache.org
 
 OpenAI ChatGPT – https://chat.openai.com
 
+Wikipedia - Soak Testing
+
 BlazeMeter Blog – Understanding Soak Testing in JMeter
 
 TutorialsPoint – JMeter Performance Testing Basics
