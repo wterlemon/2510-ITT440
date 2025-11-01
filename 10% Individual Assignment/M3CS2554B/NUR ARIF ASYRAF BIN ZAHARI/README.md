@@ -136,3 +136,14 @@ The test system processed 100.5K requests which resulted in fast successful resp
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Interpretation of Results** | The system maintained stable throughput and low response times during the test. Average and 95th percentile response times were within acceptable limits, showing the API handled concurrent users efficiently. Minor response spikes occurred at peak load, indicating brief latency under stress.                           |
 | **Identified Bottlenecks**    | The occurrence of HTTP 429 errors and increased response times at peak load suggest rate limiting or resource exhaustion. The bottleneck likely comes from limited server capacity or concurrency handling. Improving rate limit settings, scaling server resources, or enhancing load balancing could mitigate these issues. |
+
+---
+
+### Recommendations
+
+-Optimize its rate limiting mechanism to process multiple requests simultaneously before it starts throttling.
+-Needs additional server resources including CPU power and memory capacity and extra instances to boost its request processing abilities.
+-Upgrade load balancing implementation to distribute traffic equally across all servers and protect against single server overload.
+-Optimize atabase performance optimization through improved indexing and query optimization and data caching techniques.
+-Use continuous monitoring tools to track performance data which helps identify performance bottlenecks as they occur.
+-System requires scheduled load and stress testing to verify new improvements while ensuring ongoing system stability.
