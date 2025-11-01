@@ -112,6 +112,9 @@ The DummyJSON API will maintain operational stability at normal usage levels but
 - HTTP 429 Responses (Rate-Limit): 26,770 (26.7%)
 - Observation: 27% of requests failed due to throttling, indicating the server limits concurrent requests under stress.
 
+<p align="center">
+<img width="1378" height="566" alt="image" src="https://github.com/user-attachments/assets/cb400c17-8603-4e81-abbe-ba8a2c60ff3d" />
+
 ## Overall Observation
 
 - The API sustains high throughput efficiently.
