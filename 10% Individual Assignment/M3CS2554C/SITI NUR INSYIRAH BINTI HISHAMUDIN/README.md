@@ -497,7 +497,7 @@ There are several identified bottlenecks based on the result, error message, and
 ### ➤ Failure Points
 
 <p align="justify">
-The failure points start at stage 10 with the settings of 5000 users until 6000 users within 180 seconds this can prove where the error percentage and message appear in web pages that produce more data like login page, borrowing book page, and manage book page. </p>
+The failure points start at stage 10 with the settings of 5000 users until 6000 users within 180 seconds which can be prove when error percentage and message appear in web pages that produce more data like login pages, borrowing book page, and manage book page. </p>
 
 <br>
 
@@ -518,7 +518,7 @@ Library book management website performance decreases and reaches the critical b
 
 <p align="justify">
 	
-Furthermore, at the last stage which had 6000 users the average response time for all pages that are tested increases sharply up to 12000 ms which a huge difference compared to the stage before 5000 users and the website application starts to return ***“This site can’t be reached”*** also when trying to navigate to other pages as it will take more than 10 seconds to retrieve the website back. </p>
+Furthermore, at the last stage which had 6000 users the average response time for all pages that are tested increases sharply up to 12000 ms which a huge difference compared to the stage before 5000 users and the website application starts to return ***“This site can’t be reached”*** and when trying to navigate to other pages it will take more than 10 seconds to retrieve the website back. </p>
 
 <p align="justify">
 Next, the CPU usage reaches the peak of 93% when there are 6000 users which shows that the CPU is overloaded as there are too many requests that come in a short period of time. The privilege percentage also increased more than 40% that led to usage of the operating system between user and kernel exceeding normal usage.</p>
