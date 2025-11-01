@@ -97,7 +97,7 @@ The objective of this stress test is to evaluate the performance of the website 
 | **Port** | 80 |
 | **Server Path URL** | `localhost/LBM` |
 | **Page Request Tested Paths** | 1. `/loginLibrary.php`<br>2. `/loginUser.php`<br>3. `/borrowing.php`<br>4. `/listBookLibrary.php`<br>5. `/logoutLibrary.php`<br>6. `/ogoutLibrary.php` |
-| **Parameter** | 1. username<br> 2. password<br> 3. userIC |
+| **Parameter For Login Pages** | 1. username<br> 2. password<br> 3. userIC |
 | **Config Elements** | 1. HTTP Header Manager<br>2. HTTP Cookies Manager |
 | **Delay Timer (ms)** | 3000 ms |
 | **Listeners** | 1. Simple Data Writer<br>2. Aggregate Report<br>3. View Results Tree |
@@ -142,13 +142,18 @@ This stress test has several scenarios or stages that were conducted in order to
 
 ℹ️ <ins> **Test Scenario** </ins>
 - Number of stages: 12
-- Each stage was tested 3 times and data were combined to get the accurate results of the stage.
-- Sequence of pages tested: <br>1. Login Admin <br>
-				         2. Login User <br>
-         3. Manage Book <br>
-                                                        4. Borrowing <br>
-         5. Logout Admin <br>
-         6. Logout User	<br>
+- Each stage was tested 3 times and data were combined to get the accurate results of the stage. <br>
+
+🎯 <ins> **Target Pages** </ins> <br>
+ - **Admin** 
+  1. Login Admin <br>
+  2. Manage Book <br>
+  3. Logout Admin <br>
+
+  - **User**
+  1. Login User <br>
+  2. Borrow Book <br>
+  3. Logout User
 
 <div align="center">
 
@@ -197,11 +202,9 @@ Before start to run the stress test for each stage, a baseline test will be done
 
 ## 📈 Stress Test Output Data Report
 
-ℹ️ Info: Please click on the images to see the data if the image are not clear in your devices 👆🏻.
-
 - Test Summary
 <p align="center">
-<img width="680" height="400" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
+<img width="750" height="650" alt="Screenshot 2025-10-29 210913" src="https://github.com/user-attachments/assets/85b1e1ae-8f40-4a5f-96ca-db6002c94f78" /> 
 </p>
 
 --- 
