@@ -1,8 +1,8 @@
-# 🌐 Comprehensive Web Application Performance Testing & Analysis Using K6 on Shopist.io
+# Comprehensive Web Application Performance Testing & Analysis Using K6 on Shopist.io
 
 **Prepared by:**  
 Name: *Dinah Sofiya binti Normaira*  
-Matric No: *(insert here)*  
+Matric No: *2024789121*  
 Class: *M3CS2554B*  
 
 ---
