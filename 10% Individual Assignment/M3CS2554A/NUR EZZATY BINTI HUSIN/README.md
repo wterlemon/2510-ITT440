@@ -110,25 +110,26 @@ A endurance test is used to check if a system can handle a continuous for a long
 ---
 ### 📊 Raw Data :
 
+As shown in the Response Time Graph, the response time stayed steady most of the time, with only a few endurance during heavy load.
 <p align="center">
 <img width="1637" height="541" alt="image" src="https://github.com/user-attachments/assets/5b75a5f5-913f-43de-ad6d-1f20b8c9ceed" />
-<p align="center">Response Time Graph</p>
+<p align="center">Figure 1 : Response Time Graph</p>
   
 ---
+The Throughput Graph shows a smooth line, proving that the system could handle constant user activity.
 <p align="center">
 <img width="1643" height="543" alt="image" src="https://github.com/user-attachments/assets/e1c18eb7-1eb5-4f57-968c-34c98fe5eb4a" />
-<p align="center">Throughput Graph</p>
+<p align="center">Figure 2 : Throughput Graph</p>
 
 ---
+The Error Graph confirms that errors were almost zero throughout the test.
 <p align="center">
-  
 <img width="812" height="300" alt="image" src="https://github.com/user-attachments/assets/7ee7a5f0-bda3-4a0e-9492-98038509988d" />
-<p align="center">Error Graph</p>
+<p align="center">Figure 3 : Error Graph</p>
 
 ---
-- A Statistics table providing in one table a summary of all metrics per transaction including 3 configurable percentiles:
+A Statistics table providing in one table a summary of all metrics per transaction including 3 configurable percentiles:
 <img width="1641" height="368" alt="image" src="https://github.com/user-attachments/assets/23ce63cf-47ba-4e8d-8733-a142113275a3" />
-
 <img width="1404" height="756" alt="image" src="https://github.com/user-attachments/assets/e64a5a31-24c0-49ab-bb1b-58fe762340dd" />
 
 ---
@@ -138,6 +139,10 @@ The endurance test results show that the ChatGPT web application can handle cont
 The small increase in response time during peak usage may come from temporary server queue delays or user-side latency. The low error rate shows that the server can recover quickly from transient issues.
 
 No memory leaks were observed, and CPU usage remained moderate, which means the test environment and tool handled the simulation efficiently.
+
+> *Explanation:*
+>
+> From the graphs above, we can see that response time, throughput, and error rate remained stable, supporting the conclusion that ChatGPT is highly scalable.
 
 ---
 ### 🚧 Recommendations
