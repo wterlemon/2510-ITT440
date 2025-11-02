@@ -125,6 +125,8 @@ This test type helps measure how well the system scales, how response time chang
 
 <br>
 
+---
+
 ## 💻 6. Scalability Test Scripts
 
 Below are two variations of the same scalability test, adjusted for different testing environments.
@@ -240,4 +242,9 @@ export default function () {
   });
 }
 ```
+<br>
+
+---
+
+
 
