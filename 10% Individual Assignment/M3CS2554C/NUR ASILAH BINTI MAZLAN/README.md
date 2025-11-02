@@ -53,7 +53,6 @@ This configuration enabled controlled load escalation and sustained stress condi
 
 
 ## 5. Methodology and Execution
-//pic of script here
 ```javascript
 import http from 'k6/http';
 import { sleep } from 'k6';
@@ -152,7 +151,7 @@ Throughput followed the number of users ramped and held a steady state at 682 RP
 
 ### 7.3 Failure and Error Handling
 <p align="justify">
-The one failed HTTP 403 request observed was not unexpected from the /login endpoint confirming authentication logic was acting in the intended mode rather than exhibiting a performance error. The Logs tab confirmed no connection timeouts nor any unexpected 5xx server errors occurred. 
+The one failed HTTP 403 request observed was not unexpected from the `/login` endpoint confirming authentication logic was acting in the intended mode rather than exhibiting a performance error. The Logs tab confirmed no connection timeouts nor any unexpected 5xx server errors occurred. 
 
 ### 7.4 Resource Utilization Perspective
 <p align="justify">
@@ -168,7 +167,6 @@ The Analysis tab in Grafana aggregated the run to be “Healthy”, with all thr
 - **Improve Login Simulation:** Use valid credentials to test actual authentication load.  
 - **Add Resource Monitoring:** Integrate backend CPU and memory metrics for complete system visibility.  
 - **Implement Continuous Testing:** Automate recurring stress tests after major code updates to ensure consistent performance.
-
 
 ## 9. Conclusion
 <p align="justify">
