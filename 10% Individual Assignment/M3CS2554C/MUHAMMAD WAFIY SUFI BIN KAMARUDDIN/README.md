@@ -19,6 +19,13 @@ The Spike Test focus on
 | Locust | Load and spike testing tool | 
 | Parabank | A dummy banking website for testing |
 
+# Test Plan
+| Phase | Action | Duration | No Of User |
+| Baseline Test | Normal Load Testing | 1 Minutes | 1 User |
+| Spike Test 1 | Sudden Increase | 1 Minutes | 200 User |
+| Spike Test 2 | Extreme Load | 2 Minutes | 1000 User |
+
+
 # Test Summary 200 User
 | Time Period  | Number Of User | Response time (ms) | Total request Per Second |
 |-----------|-----------|-----------|-----------|
@@ -26,4 +33,9 @@ The Spike Test focus on
 | 11:10 PM | Reaches the maximum load of ~200 users. | Response times (especially 95th percentile) shoot up to over 2,000 ms (2 seconds).| - Failures/s (Red): Spikes sharply from 0 to over 60 failures/second. |
 | 11:10:20 PM – 11:11 PM | Load is held steady at ~200 users. | Response times drop suddenly. This is misleading; it's low because requests are failing instantly, not succeeding quickly.| - Failures/s (Red): Stays high, showing the system is continuously failing and cannot recover under this load. |
 
-
+# Test Summary 1000 User 
+| Time Period  | Number Of User | Response time (ms) | Total request Per Second |
+|-----------|-----------|-----------|-----------|
+| 11:02 | 200 User | 0 ms | - 50th Percentile (Orange): Stable and very low (near 0 ms). - 95th Percentile (Purple): Stable and very low (near 0 ms). - Both lines are flat, showing the system is handling the load easily. | RPS (Green) : Low and Stable / Failure (Red): Flat at 0 and no errors.
+| 11:19 | 1000 Users | - 50th Percentile (Orange): Jumps to an unstable ~1,000-2,000 ms (1-2 seconds). - 95th Percentile (Purple): Explodes to volatile peaks of over 20,000 ms (20+ seconds).
+The huge gap shows a very inconsistent user experience. | RPS (Green): Becomes extremely high and violatile (spiking between 50 and 250 RPS). - Failures/s (Red): Failures appear immediately (red dots) and correlate with the RPS peaks. The system is dropping requests and producing errors under the new load. |
