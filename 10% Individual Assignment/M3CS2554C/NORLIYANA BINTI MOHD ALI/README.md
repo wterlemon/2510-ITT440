@@ -52,6 +52,8 @@ When increasing the number of virtual users (VUs) from **5 to 20**, the **respon
 
 ## 🌐 Target Application Description
 
+<img width="830" height="710" alt="image" src="https://github.com/user-attachments/assets/b6bbe83a-4372-4f3b-85a8-e7c8e9be19b2" />
+
 **Target URL:** [https://reqres.in](https://reqres.in)
 
 **Description:** ReqRes is a free, public REST API designed for testing and front-end prototyping. It provides endpoints for simulating typical API responses for GET and POST requests.
