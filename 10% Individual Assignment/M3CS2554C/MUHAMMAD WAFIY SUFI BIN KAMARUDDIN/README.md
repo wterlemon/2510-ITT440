@@ -37,5 +37,4 @@ The Spike Test focus on
 | Time Period  | Number Of User | Response time (ms) | Total request Per Second |
 |-----------|-----------|-----------|-----------|
 | 11:02 | 200 User | 0 ms | - 50th Percentile (Orange): Stable and very low (near 0 ms). - 95th Percentile (Purple): Stable and very low (near 0 ms). - Both lines are flat, showing the system is handling the load easily. | RPS (Green) : Low and Stable / Failure (Red): Flat at 0 and no errors.
-| 11:19 | 1000 Users | 50th Percentile (Orange): Jumps to an unstable ~1,000-2,000 ms (1-2 seconds). -95th Percentile (Purple): Explodes to volatile peaks of over 20,000 ms (20+ seconds).
-The huge gap shows a very inconsistent user experience. |  |
+| 11:19 | 1000 Users | 50th Percentile (Orange): Jumps to an unstable ~1,000-2,000 ms (1-2 seconds). | The huge gap shows a very inconsistent user experience. |
