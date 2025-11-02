@@ -79,7 +79,7 @@ export default function () {
   http.post('https://test.k6.io/login', payload);
   sleep(1);
 }
-
+```
 The script simulates a typical user flow visiting the homepage, reading a news section, checking contact details, and then attempting a login. This utilized intentionally invalid credentials to simulate authentication handling under load.
 
 Test execution was conducted by writing the script into the Grafana Cloud K6 Script Editor and clicking ‘Run Test’. Real time metrics were served on the Grafana dashboards showing total requests, the failure rate, and response duration.
