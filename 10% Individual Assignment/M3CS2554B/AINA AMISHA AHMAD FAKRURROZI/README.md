@@ -370,7 +370,7 @@ These findings validate the original hypothesis and showcase Locust’s effectiv
 
 ## 11. Video Demonstration
 
-🎥 **YouTube Demo:** [Click Here to Watch]([https://youtu.be/Nt6uVCwBlHQ?si=IpC4fTz6J-bXybAE)]
+🎥 **YouTube Demo:** [► Watch on YouTube](https://youtu.be/Nt6uVCwBlHQ)
 
 The video demonstrates:
 
