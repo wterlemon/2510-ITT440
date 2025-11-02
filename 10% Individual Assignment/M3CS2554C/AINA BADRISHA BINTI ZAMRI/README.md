@@ -449,7 +449,7 @@ Based on the scalability test outcomes and performance analysis, several optimiz
 
 ---
 
-## 🏁 9. Conclusion & Personal Reflection
+## 🏁 9. Conclusion and Reflection
 
 Throughout this project, executing the scalability test for BlazeDemo using Grafana k6 CLI and Grafana Cloud was a very insightful experience for me. It allowed me to understand how scalability testing works in practice. It's not just from a theoretical perspective but by actually observing how the system reacts under different levels of traffic.
 
