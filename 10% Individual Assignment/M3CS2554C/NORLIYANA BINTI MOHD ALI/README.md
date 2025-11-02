@@ -3,7 +3,7 @@
 
 # 🚀 Web Application Configuration Comparison Testing using K6
 
-**By:** NORLIYANA BINTI MOHD ALI
+**Name:** NORLIYANA BINTI MOHD ALI
 <br>
 
 **Matric:** 2024575715
