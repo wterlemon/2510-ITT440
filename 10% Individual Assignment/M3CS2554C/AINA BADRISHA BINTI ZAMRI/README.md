@@ -133,7 +133,7 @@ Below are two variations of the same scalability test, adjusted for different te
 
 
 
-### **(A) Local Execution – Up to 500 VUs**
+### **(A) <ins>Local Execution – Up to 500 VUs</ins>**
 
 --> This version is executed via the k6 CLI locally.  
 --> There is no enforced VU limit, so it can simulate large-scale testing.
@@ -187,7 +187,7 @@ export default function () {
   });
 }
 ```
-### **(B) Grafana Cloud Execution – Up to 100 VUs**
+### **(B) <ins>Grafana Cloud Execution – Up to 100 VUs</ins>**
 
 --> This version of the scalability test is executed through Grafana Cloud’s k6 platform.  
 --> Grafana Cloud’s free tier limits concurrent virtual users (VUs) to 100, so this script is optimized within that constraint.  
@@ -258,9 +258,9 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 ### **7.1 Local CLI Scalability Test (500 VUs)**
 
 --> This test was executed locally using the k6 CLI and allowed a maximum of 500 virtual users.  
---> The goal was to identify the upper scalability limit of the BlazeDemo site without external restrictions.
+--> The goal was to identify the upper scalability limit of the BlazeDemo site without external restrictions.<br>
 
-**📊 Summary of Key Metrics**
+**📊 <ins>Summary of Key Metrics<ins>**
 
 | **Metric** | **Result** |
 |-------------|------------|
@@ -275,7 +275,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 
 <br>
 
-**🧠 Analysis**
+**🧠 <ins>Analysis</ins>**
 
 - The system successfully handled up to 500 concurrent users without breaching the performance thresholds.  
 - Average response time (~396 ms) and p(95) response time (~593 ms) indicate strong backend stability.  
@@ -283,7 +283,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 - The increasing iteration duration (up to 6 s at the 95th percentile) shows that response time gradually grows as VUs ramp up but remains acceptable within limits.  
 - This confirms that BlazeDemo scales effectively up to 500 users locally.<br><br>
 
-**📷 CLI Execution Output:**
+**📷 <ins>CLI Execution Output:</ins>**
 
 <p align="center">
   <a href="https://github.com/aaxxyeon-bit/images/blob/main/scalability%20500.png?raw=true" target="_blank">
@@ -295,7 +295,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
   <sub>Figure 2: Terminal output showing scalability test up to 500 VUs executed locally using k6 CLI — click image to view in full size.</sub>
 </p>
 
-<br><br>
+<br>
 
 <p align="center">
   <a href="https://github.com/aaxxyeon-bit/images/blob/main/scalability%20500%202.png?raw=true" target="_blank">
@@ -313,9 +313,9 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 ### **7.2 Grafana Cloud Scalability Test (100 VUs)**
 
 --> This version was executed using Grafana Cloud’s k6 platform, which has a maximum limit of 100 concurrent VUs.  
---> It visualizes results in real time through Grafana dashboards.
+--> It visualizes results in real time through Grafana dashboards.<br>
 
-**📊 Summary of Key Metrics**
+**📊 <ins>Summary of Key Metrics</ins>**
 
 | **Metric** | **Result** |
 |-------------|------------|
@@ -327,7 +327,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 
 <br>
 
-**🧠 Analysis**
+**🧠 <ins>Analysis</ins>**
 
 - The performance was stable up to 100 users although p(95) response time (~2.5s) is notably higher than in the local run.  
 - The slight increase in response latency may result from network distance, cloud infrastructure overhead or Grafana’s shared environment.  
@@ -335,7 +335,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 - The Peak RPS (52.83) reflects efficient request throughput even at higher load stages.  
 - The visualization clearly shows a correlation between VU ramp-up and request rate, demonstrating the scalability behavior under cloud monitoring.<br><br>
 
-**📷 Grafana Cloud Dashboard Visualization:**
+**📷 <ins>Grafana Cloud Dashboard Visualization:</ins>**
 
 <p align="center">
   <a href="https://github.com/aaxxyeon-bit/images/blob/main/Screenshot%202025-11-03%20005936.png?raw=true" target="_blank">
@@ -380,22 +380,11 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 
 <br><br>
 
-During the warm-up phase, CPU usage started around 15%, with memory consumption at approximately 170 MB as the test initialized and virtual users (VUs) began connecting. As the load transitioned into the small and medium load stages, both CPU and memory utilization increased steadily, reaching around 60–65% CPU and 270 MB RAM by the medium phase.
+During the warm-up phase, CPU usage started around 15%, with memory consumption at approximately 170 MB as the test initialized and virtual users (VUs) began connecting. As the load transitioned into the small and medium load stages, both CPU and memory utilization increased steadily to reach around 60–65% CPU and 270 MB RAM by the medium phase.
 
-At the high load stage (100 VUs), resource utilization peaked — CPU usage climbed to roughly 80%, while memory consumption reached about 310 MB, correlating directly with the maximum number of active VUs. This behavior demonstrates the expected linear scalability, where system resource consumption increases proportionally with simulated user load.
+At the high load stage (100 VUs), resource utilization peaked and CPU usage climbed to roughly 80% while memory consumption reached about 310 MB, corresponding directly with the maximum number of active VUs. This behavior shows the expected linear scalability, where system resource consumption increases proportionally with simulated user load.
 
-Finally, during the cool-down stage, as virtual users ramped down, both CPU and memory usage dropped sharply back to baseline levels (≈30% CPU and ≈200 MB RAM), confirming no residual memory leaks or abnormal resource retention after test completion.
-
-**🧠 Interpretation:**
-
-- The CPU and memory utilization patterns show that the system scaled efficiently with increasing virtual users.
-- The peak values (80% CPU, 310 MB RAM) remained below critical thresholds, indicating adequate processing capacity and resource stability under sustained load.
-- The smooth rise and fall of both curves suggest the load generator and target application maintained consistent performance throughout the test.
-- No irregular spikes or plateauing were observed, implying effective garbage collection and balanced workload distribution.
-
-**Conclusion:**
-
-Overall, the CPU and memory usage trends validate that the scalability test was properly executed and that the system resources were sufficient to handle the 100 VU load without any sign of saturation, bottlenecking, or instability.
+Finally, during the cool-down stage, as virtual users ramped down, both CPU and memory usage dropped sharply back to baseline levels (≈30% CPU and ≈200 MB RAM) and confirming no remaining memory leaks or abnormal resource keeping after test completion.
 
 <br><br>
 
