@@ -38,4 +38,4 @@ The Spike Test focus on
 |-----------|-----------|-----------|-----------|
 | 11:02 | 200 User | 0 ms | - 50th Percentile (Orange): Stable and very low (near 0 ms). - 95th Percentile (Purple): Stable and very low (near 0 ms). - Both lines are flat, showing the system is handling the load easily. | RPS (Green) : Low and Stable / Failure (Red): Flat at 0 and no errors.
 | 11:19 | 1000 Users | - 50th Percentile (Orange): Jumps to an unstable ~1,000-2,000 ms (1-2 seconds). - 95th Percentile (Purple): Explodes to volatile peaks of over 20,000 ms (20+ seconds).
-The huge gap shows a very inconsistent user experience. | RPS (Green): Becomes extremely high and violatile (spiking between 50 and 250 RPS). - Failures/s (Red): Failures appear immediately (red dots) and correlate with the RPS peaks. The system is dropping requests and producing errors under the new load. |
+The huge gap shows a very inconsistent user experience. |  |
