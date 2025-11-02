@@ -23,6 +23,7 @@ Belum siap lagi <br>
 **What we want to know from this test ?**  💡
 <br>
 - How JSONPlaceholder website handle suddent high users at one time, and how it recover from that.
+<br>
 
 # 🧰 TOOL SELECTION
 - Apache JMeter <br>
@@ -44,39 +45,50 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 |------------|-------------|
 | **Platform** | Ubuntu 22.04 LTS (Linux-based) |
 | **Tool** | JMeter |
-| **Target Website** | JSONPlaceholder |
+| **Target Website** | [JSONPlaceholder](https://jsonplaceholder.typicode.com/) |
 
 **Configuration:**
 | Parameter                     | Value                                      |
 |------------------------------|--------------------------------------------|
 | Number of Users              | 180 Users                                  |
-| User Percentages Before Spike     | 5%                                         |
-| User Percentages During Spike     | 90%                                        |
-| User Percentages After Spike      | 5%                                         |
+| User Percentages  | 5% (Before Spike)                                  |
+|    | 90% (During Spike)                                 |
+|     | 5% (After Spike)                                    |
 | Loop Count                   | 10 Times (Each user sends 10 requests)     |
-| Ramp-Up Period               | 1 Second (All users start instantly)       |
+| Ramp-Up Period               | 1 Second (All users start at the same time)       |
  
 
 # 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
 
-- 🚀 **Custom Thread Groups**  
+- 🚀 **Custom Thread Groups** (set amount of users)  
   can simulate sudden traffic spikes using custom thread groups like Ultimate Thread Group.
 
-- ⏱️ **Sync Timer**  
+- ⏱️ **Sync Timer** (use ramp-up)  
   allow all virtual users hit the server at the same time — perfect for spike testing.
 
 
-- 📊 **Real-Time Performance Metrics**  
+- 📊 **Real-Time Performance Metrics** (results analyzation)  
   have built-in listeners to monitor response time, error rate, and system behavior during the spike.
 
 <br>
 <br>
 
 # 📂 RAW DATA PRESENTATION
-<img width="421" height="236" alt="image" src="https://github.com/user-attachments/assets/1c1a146e-04a6-40e5-ba11-070d9a6f7309" /> <img width="421" height="239" alt="image" src="https://github.com/user-attachments/assets/358db2a3-8780-45b9-bd14-85947d5dff11" />
+|              Amount of users                  |          Before spike throughput (5% of 180 users)             |
+|--------------------------------|-----------------------------|
+|<img width="402" height="244" alt="image" src="https://github.com/user-attachments/assets/9d505f0e-a995-447b-8498-fde485ac84ed" /> | <img width="402" height="240" alt="image" src="https://github.com/user-attachments/assets/6ba0f47b-9a6a-4a77-8145-4516a7cc71a5" /> |
 
+| **During spike throughput (90% of 180 users)**   |  **After spike throughput (5% of 180 users)**   |
+|-------------------------------|---------------------------------|
+| <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/6b401e7d-09f1-421e-8a44-7ccc19f222f7" /> | <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/10104827-a3d7-495a-87b9-97bfc1d5c234" /> |
 
+| **Summary report**   |  **Aggregate report**   |
+|-------------------------------|---------------------------------|
+| <img width="402" height="241" alt="image" src="https://github.com/user-attachments/assets/9c8c7cfc-7b6c-4e07-a589-cb18ba04ef49" /> | <img width="404" height="229" alt="image" src="https://github.com/user-attachments/assets/07e64cdb-0095-476a-90f5-92c79e9ec583" /> |
 
+| **Response time graph <br> (◼️Before spike, 🟥During spike, 🟩After spike)**   |  **Status results in table**   |
+|-------------------------------|---------------------------------|
+| <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/58625624-3954-44c1-ae70-ad3051dad0f2" /> | <img width="402" height="250" alt="image" src="https://github.com/user-attachments/assets/40a0aa11-6538-406a-9330-b460f3e59890" />|
 
 
 # 📊INTERPRETATION OF RESULT & IDENTIFIED BOTTLENECKS
