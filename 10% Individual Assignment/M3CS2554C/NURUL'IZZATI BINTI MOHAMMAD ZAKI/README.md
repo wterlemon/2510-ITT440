@@ -2,7 +2,7 @@
 
 **Name:** Nurul’Izzati binti Mohammad Zaki  
 **Student ID:** 2025395205  
-**Class:** M3CS2554c
+**Class:** M3CS2554C
 
 🎥 **Demo Video:** [Watch on YouTube](https://youtu.be/YOUR_VIDEO_LINK)
 
@@ -80,3 +80,4 @@ This gradual increase simulates real-world traffic, helping to identify how perf
 ### Step 1: Run test locally and save results
 ```bash
 artillery run jsonplaceholder-load-test.yml -o results/test_output.json
+
