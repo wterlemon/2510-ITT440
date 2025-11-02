@@ -14,6 +14,7 @@
 
 ---
 
+
 ## 🧩 1. Introduction
 
 
@@ -66,7 +67,7 @@ This powerful visualization made it easier to observe system behavior, identify 
 
 ---
 
-## 🧩 3. Test Type & Justification
+## 🧩 3. Test Type and Justification
 
 
 ### <ins>Selected Test Type: **Scalability Test**</ins>
