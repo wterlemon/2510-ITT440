@@ -466,7 +466,7 @@ Overall, this assignment gave me hands-on exposure to real testing practices and
 
 ## 🎥 10. Video Demonstration
 
-📽️ *A walkthrough video of the test setup, execution, and Grafana visualization will be added here.*
+📽️ *A walkthrough video of the test setup, execution, and Grafana visualization.*
 
 **➡️ [Watch the Demonstration Video](https://github.com/aaxxyeon-bit/blazedemo_scalability_test)** 
 
