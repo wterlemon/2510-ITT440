@@ -54,6 +54,32 @@ This configuration enabled controlled load escalation and sustained stress condi
 
 ## 5. Methodology and Execution
 //pic of script here
+```javascript
+import http from 'k6/http';
+import { sleep } from 'k6';
+
+// stages configuration
+export let options = {
+  stages: [
+    { duration: '1m', target: 50 },
+    { duration: '1m', target: 75 },
+    { duration: '2m', target: 100 },
+  ],
+  thresholds: {
+    http_req_duration: ['p(95)<2000'],
+    http_req_failed: ['rate<0.05'],
+  },
+};
+
+export default function () {
+  http.get('https://test.k6.io/');
+  http.get('https://test.k6.io/news.php');
+  http.get('https://test.k6.io/contacts.php');
+  const payload = { login: 'admin', password: '123' };
+  http.post('https://test.k6.io/login', payload);
+  sleep(1);
+}
+
 The script simulates a typical user flow visiting the homepage, reading a news section, checking contact details, and then attempting a login. This utilized intentionally invalid credentials to simulate authentication handling under load.
 
 Test execution was conducted by writing the script into the Grafana Cloud K6 Script Editor and clicking ‘Run Test’. Real time metrics were served on the Grafana dashboards showing total requests, the failure rate, and response duration.
@@ -145,10 +171,18 @@ The Analysis tab in Grafana aggregated the run to be “Healthy”, with all thr
 
 
 ## 9. Conclusion
-
+<p align="justify">
+It was demonstrated through this experiment on how stress testing can measure a web application’s stability when subjected to rising load of users. The use of Grafana Cloud K6 web environment facilitated a smooth, installation free approach to the experiment and supported the real time visualizing of metrics.
+<p align="justify">
+Even though the free-tier plan is limited to a maximum of 100 virtual users, the test was able to successfully indicate QuickPizza’s ability to sustain its performance while it was being stressed. QuickPizza was able to obtain low response times while obtaining high throughput and did not experience any critical performance failures. The one HTTP 403 failure that occurred on login indicated simulated behaviour of the program and was not an indication of instability.
+<p align="justify">
+In conclusion, QuickPizza was able to process the simulated concurrent traffic successfully and did so within defined performance thresholds. The experiment provides evidence Grafana Cloud K6 is a great option as an accessible tool for academic and professional load testing purposes. 
 
 ## 10. Reflection
-
+<p align="justify">
+This project offered a hands-on experience utilizing real world performance testing concepts. Initially, I faced difficulties establishing local execution via Visual Studio Code and the command prompt which in particular related to authentication and token configuration. Once I moved to Grafana K6’s web interface, these difficulties were greatly reduced and it enhanced my comprehension of testing workflows in the cloud. 
+<p align="justify">
+From this assignment, I learned how to create load profiles, interpret response metrics, and find bottlenecks using real world testing data. I also gained an even greater appreciation for how using visual dashboards quickly speeds the interpretation of trends. This experience overall reinforced my understanding of performance testing best practices and the concept is especially relevant to make sure end users are satisfied with the web systems. 
 
 ## 11. Video Demonstration
 A short walkthrough video showcasing the test execution, configuration steps, and the result visualization is available on : 
