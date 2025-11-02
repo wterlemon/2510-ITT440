@@ -22,6 +22,8 @@ This test aims to compare system performance, focusing on response time and thro
 
 ## ⚙️ Tool Justification (Why K6)
 
+<img width="1059" height="675" alt="image" src="https://github.com/user-attachments/assets/86472659-848e-4db7-8f54-331f05c578f5" />
+
 K6 is a modern, open-source performance testing tool for APIs and web applications. It supports scripting in JavaScript, outputs results to CSV for analysis, and integrates well with visualization tools like Python and Grafana.
 
 **Reasons for choosing K6:**
