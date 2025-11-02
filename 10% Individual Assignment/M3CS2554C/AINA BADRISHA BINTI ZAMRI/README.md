@@ -255,7 +255,7 @@ This section presents and analyzes the outcomes of the scalability test executed
 Both tests evaluated BlazeDemo’s performance stability as the number of virtual users (VUs) increased gradually.<br><br>
 
 
-### **(A) Local Execution — 500 VUs (CLI)**
+### **7.1 Local CLI Scalability Test (500 VUs)**
 
 --> This test was executed locally using the k6 CLI and allowed a maximum of 500 virtual users.  
 --> The goal was to identify the upper scalability limit of the BlazeDemo site without external restrictions.
@@ -310,7 +310,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 <br><br>
  
 
-### **(B) Grafana Cloud Execution — 100 VUs**
+### **7.2 Grafana Cloud Scalability Test (100 VUs)**
 
 --> This version was executed using Grafana Cloud’s k6 platform, which has a maximum limit of 100 concurrent VUs.  
 --> It visualizes results in real time through Grafana dashboards.
@@ -349,7 +349,7 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 
 <br><br>
 
-### **📈 Comparative Insights**
+### **📈 7.3 Comparative Insights**
 
 | **Aspect** | **Local (500 VUs)** | **Grafana Cloud (100 VUs)** |
 |-------------|---------------------|------------------------------|
@@ -360,6 +360,25 @@ Both tests evaluated BlazeDemo’s performance stability as the number of virtua
 | **Environment** | Local machine | Grafana Cloud |
 | **Visualization** | CLI metrics | Real-time dashboard |
 | **Scalability Observation** | Excellent up to 500 users | Stable under 100 users but higher latency |
+
+<br><br>
+
+### ⚙️ 7.4 Resource Utilization Analysis
+
+To complement the performance metrics, CPU and memory usage were monitored during executions.  
+The line chart below illustrates the CPU usage trend during the test execution.<br><br>
+
+<p align="center">
+  <a href="https://github.com/aaxxyeon-bit/images/blob/main/Screenshot%202025-11-03%20005936.png?raw=true" target="_blank">
+    <img src="https://github.com/aaxxyeon-bit/images/blob/main/Screenshot%202025-11-03%20005936.png?raw=true" 
+         alt="Grafana Cloud visualization of the scalability test (up to 100 VUs)." 
+         width="800px"/>
+  </a>
+  <br/>
+  <sub>Figure 4: Grafana Cloud visualization of the scalability test (up to 100 VUs). — click image to view in full size.</sub>
+</p>
+
+
 
 ---
 
