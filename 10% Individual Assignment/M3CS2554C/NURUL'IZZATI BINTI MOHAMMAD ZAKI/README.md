@@ -78,8 +78,10 @@ This gradual increase simulates real-world traffic, helping to identify how perf
 ## 🧰 Test Execution
 
 ### Step 1: Run test locally and save results
-```bash
-artillery run jsonplaceholder-load-test.yml -o results/test_output.json
+
+
+---
+
 ## 🧮 Test Summary
 
 | **Metric** | **Result** |
@@ -230,6 +232,7 @@ Overall, this project successfully demonstrates how **Artillery** can be used to
 
 **📁 File:** `results/jsonplaceholder-load-test-report.json`  
 **🔗 Dashboard:** _Artillery Cloud – Interactive Metrics View_
+
 
 
 
