@@ -1,39 +1,38 @@
 <h1 align="center"># WEB PERFORMANCE TESTING</h1>
-<img width="1024" height="149" alt="JSONPLACEHOLDER" src="https://github.com/user-attachments/assets/f42984a7-add7-40bd-8c8b-166d9220fc0d" />
-Belum siap lagi <br>
+<img width="1024" height="293" alt="LOAD-TESTING-ON-JSONPLACEHOLD-03-11-2025" src="https://github.com/user-attachments/assets/d112f20d-b2bf-4df2-9774-605e2d33270c" />
 <br>
-
 ## 🧑‍🎓 Student Information 
 
 | Field       | Details             | 
 |-------------|---------------------|
 | 👤 **NAME**    | MUHAMMAD ZAKWAN 'IRFAN BIN MOHD ZAMRY   | 
 | 🆔 **STUDENT ID** | 2025127509    |
-| 📘 **TITLE**     | SPIKE TESTING ON JSONPLACEHOLDER WEB |
+| 📘 **TITLE**     | LOAD TESTING ON JSONPLACEHOLDER WEB |
 
 ##
 
 # 💡 INTRODUCTION TO WEB PERFORMANCE TESTING
 
-| 🧪 **Spike Testing** | 🔗 **Do You Know JSONPlaceholder?** |
+| 🧪 **Load Testing** | 🔗 **Do You Know JSONPlaceholder?** |
 |----------------------|--------------------------------------|
-| Spike testing is a type of performance testing that evaluates how a website or application handles sudden, extreme surges in traffic or load like flash sales, viral posts, or ticket releases. It helps ensure your system remains stable and responsive under pressure. | JSONPlaceholder is a free online REST API service that provides fake data for testing and prototyping web applications. It's widely used by developers to simulate backend responses without needing a real server perfect for learning, demos, and mockups. |
+| Load testing happens when you simulate many users using your website or app at the same time. It’s like giving your system a workout to see how strong and fast it is under pressure. | JSONPlaceholder is a free online REST API service that provides fake data for testing and prototyping web applications. It's widely used by developers to simulate backend responses without needing a real server perfect for learning, demos, and mockups. |
 <br>
 
 **What we want to know from this test ?**  💡
 <br>
-- How JSONPlaceholder website handle suddent high users at one time, and how it recover from that.
+- We want to know if the system stays fast, stable, and error-free when many users use it at once.
 <br>
 
 # 🧰 TOOL SELECTION
 - Apache JMeter <br>
 <img width="349" height="104" alt="image" src="https://github.com/user-attachments/assets/564c25c4-bad6-4d3f-b6a4-ce40440f31eb" />
  <br>
-I'm using this powerful open-source tool to perform spike testing by simulating sudden surges in user traffic. JMeter allows me to configure thread groups that rapidly increase load, helping me observe how the system responds under pressure. <br>
+I'm using this powerful open-source tool to perform load testing by simulating continuous heavy load in user traffic. JMeter helping me observe how the system responds under pressure. <br>
 <br>
 
 - UBuntu Linux <br>
-<img width="297" height="134" alt="image" src="https://github.com/user-attachments/assets/19746cc7-2c56-4f8b-b5f0-3e80789f76ca" />
+<img width="449" height="334" alt="image" src="https://github.com/user-attachments/assets/7e6baef3-52e8-49fb-8331-cc9f0ef4ebe9" />
+
  <br>
 I'm using Ubuntu Linux as the operating system to host and execute my performance tests. Its stability, security, and lightweight footprint make it ideal for server-side testing environments. <br>
 <br>
@@ -43,44 +42,42 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 **Setup:**
 | Component | Description |
 |------------|-------------|
-| **Platform** | Ubuntu 22.04 LTS (Linux-based) |
+| **Platform** | Ubuntu 24.04.2 LTS (Linux-based) |
+| **Hardware model** | intel Core i5 |
 | **Tool** | JMeter |
 | **Target Website** | [JSONPlaceholder](https://jsonplaceholder.typicode.com/) |
 
 **Configuration:**
 | Parameter                     | Value                                      |
 |------------------------------|--------------------------------------------|
-| Number of Users              | 180 Users                                  |
-| User Percentages  | 5% (Before Spike)                                  |
-|    | 90% (During Spike)                                 |
-|     | 5% (After Spike)                                    |
-| Loop Count                   | 10 Times (Each user sends 10 requests)     |
-| Ramp-Up Period               | 1 Second (All users start at the same time)       |
+| Number of Users              | 200 Users (normal), 1000 Users (Heavy load)              |
+| Loop Count                   | 5 Times (Each user sends 5 requests)     |
+| Ramp-Up Period               | 60 Second (All users use the system in one period)       |
  
 
 # 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
 
 - 🚀 **Custom Thread Groups** (set amount of users)  
-  can simulate sudden traffic spikes using custom thread groups like Ultimate Thread Group.
+  can simulate heavy traffic loads using custom thread groups.
 
 - ⏱️ **Sync Timer** (use ramp-up)  
-  allow all virtual users hit the server at the same time — perfect for spike testing.
+  allow all virtual users hit the server in period of times — perfect for load testing.
 
 
 - 📊 **Real-Time Performance Metrics** (results analyzation)  
-  have built-in listeners to monitor response time, error rate, and system behavior during the spike.
+  have built-in listeners to monitor response time, error rate, and system behavior during the load.
 
 <br>
 <br>
 
 # 📂 RAW DATA PRESENTATION
-|              Amount of users                  |          Before spike throughput (5% of 180 users)             |
+|              Normal load of users                  |          Heavy load of users          |
 |--------------------------------|-----------------------------|
-|<img width="402" height="244" alt="image" src="https://github.com/user-attachments/assets/9d505f0e-a995-447b-8498-fde485ac84ed" /> | <img width="402" height="240" alt="image" src="https://github.com/user-attachments/assets/6ba0f47b-9a6a-4a77-8145-4516a7cc71a5" /> |
+|<img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/0f99e64d-46cb-4961-8ad6-e16831880073" /> | <img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/04e10d06-5eff-405f-bab3-3c3e3e2f9646" />|
 
-| **During spike throughput (90% of 180 users)**   |  **After spike throughput (5% of 180 users)**   |
+| HTTP request   |  **After spike throughput (5% of 180 users)**   |
 |-------------------------------|---------------------------------|
-| <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/6b401e7d-09f1-421e-8a44-7ccc19f222f7" /> | <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/10104827-a3d7-495a-87b9-97bfc1d5c234" /> |
+| <img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/fcf22ab5-d921-4a88-88ca-8796ba9174ce" />| <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/10104827-a3d7-495a-87b9-97bfc1d5c234" /> |
 
 | **Summary report**   |  **Aggregate report**   |
 |-------------------------------|---------------------------------|
