@@ -147,6 +147,9 @@ This is a core metric, and while direct host-server monitoring was not possible 
 
 ## 💻 Execution Environment (Kali Linux + VMware)
 
+<img width="940" height="629" alt="image" src="https://github.com/user-attachments/assets/ae8cb1c2-63a6-49e4-8b6a-28bf00af2bf3" />
+<img width="940" height="527" alt="image" src="https://github.com/user-attachments/assets/009b09aa-b7a8-4a5b-9936-27c9c03ce96f" />
+
 All commands were executed inside **Kali Linux (VMware)** terminal.
 
 ### Installation:
