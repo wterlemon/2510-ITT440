@@ -18,7 +18,7 @@
 
 
 ### <ins>Objective</ins>  
-The purpose of this project is to design, execute, and critically analyze a performance test plan for a real-world web application using Grafana k6. The test aims to evaluate the scalability and stability of the target web application and identifying potential bottlenecks under varying user loads.<br><br>
+The purpose of this project is to **design, execute, and critically analyze a performance test plan** for a real-world web application using **Grafana k6**. The test aims to evaluate the **scalability and stability** of the target web application and identifying potential bottlenecks under varying user loads.<br><br>
 
 
 ### 🌐 <ins>Target Web Application</ins>  
@@ -27,20 +27,20 @@ BlazeDemo is a public simple flight booking demonstration site often used for te
 
 
 ###  <ins>Hypothesis</ins>  
-It is hypothesized that **BlazeDemo** can handle moderate user loads (up to 100 concurrent users) with stable response times. However, beyond this threshold, the application may begin to experience performance degradation due to limited server capacity or backend response delays.
+It is hypothesized that **BlazeDemo** can handle moderate user loads (up to 100 concurrent users) with stable response times. However, beyond this threshold, the application may begin to experience **performance degradation** due to limited server capacity or backend response delays.
 
 --- 
 
 ## ⚙️ 2. Tool Selection Justification  
 
 ###  <ins>Selected Tool: Grafana k6 CLI</ins>
-k6 is a modern, developer-centric load and performance testing tool built for both local and cloud-based execution. It was chosen for the following reasons:
+**k6** is a modern, developer-centric load and performance testing tool built for both local and cloud-based execution. It was chosen for the following reasons:
 
 | No. | 🧩 **Feature** | 💡 **Reason for Selection** |
 |:---:|:----------------:|:----------------------------:|
 | 1 | Open-source & Developer-friendly | Freely available and highly customizable for performance testing without license cost. |
 | 2 | Scriptable in JavaScript | Enables writing realistic user scenarios using a language familiar to most developers. |
-| 3 | CLI & Cloud Options | Offers both local command line and Grafana Cloud execution modes for flexibility. |
+| 3 | CLI & Cloud Options | Offers both local command-line and Grafana Cloud execution modes for flexibility. |
 | 4 | Grafana Integration | Provides seamless visualization and monitoring of real-time metrics via Grafana dashboards. |
 | 5 | Automation & CI/CD Ready | Can be easily integrated into automated pipelines for continuous performance testing. |
 | 6 | Lightweight Design | Minimal resource usage, ideal for testing APIs and lightweight web applications. |
@@ -52,7 +52,7 @@ Grafana Cloud Dashboard is used to visualize the performance testing results fro
 Grafana provides clear and interactive visual insights into key metrics such as request duration, virtual user (VU) ramp-up patterns, and pass/fail thresholds.  
 This powerful visualization made it easier to observe system behavior, identify performance bottlenecks, and understand trends over time through detailed charts and dashboards.<br><br>
 
-###  <ins>Screenshot: Terminal Running k6</ins>
+###  <ins>Screenshot: Terminal Running k6 (BlazeDemo Scalability Test)</ins>
 
 <p align="center">
   <a href="https://github.com/aaxxyeon-bit/images/blob/main/k6_terminal_run.png?raw=true" target="_blank">
@@ -66,7 +66,7 @@ This powerful visualization made it easier to observe system behavior, identify 
 
 ---
 
-## 🧩 Test Type & Justification
+## 🧩 3. Test Type & Justification
 
 
 ### <ins>Selected Test Type: **Scalability Test**</ins>
@@ -82,3 +82,162 @@ with increasing concurrent users. This test helps evaluate how efficiently the b
 and whether the system remains stable, responsive, and efficient as user demand grows.
 
 ---
+
+## 🧪 4. Test Environment Setup  
+
+| Component | Description |
+|------------|-------------|
+| **Testing Tool** | Grafana k6 (CLI & Cloud Integration) |
+| **IDE** | Visual Studio Code |
+| **Execution Mode** | Cloud Execution (`k6 cloud`) |
+| **Virtual Users (VUs)** | Maximum 100 (within free-tier limit) |
+| **Test Duration** | 18 minutes (ramp-up and ramp-down included) |
+| **Metrics Monitored** | Response Time, Throughput, Error Rate, CPU, Memory |
+
+---
+
+## 🧬 5. Test Scenario
+
+The scalability test simulates gradually increasing virtual users (VUs) to evaluate how BlazeDemo handles higher user traffic and maintains performance stability over time.
+
+This test type helps measure how well the system scales, how response time changes as load increases, and at which point performance begins to degrade.
+
+
+
+### 🔹 <ins>Test Scenario Overview</ins>
+
+| **Stage** | **Description** | **Purpose / Reason** |
+|------------|-----------------|-----------------------|
+| **Warm-up** | Starts with a small number of users accessing the website. | Allows caching, server initialization, and resource allocation before the main load begins. |
+| **Small Load** | Simulates light, typical usage conditions. | Confirms system responsiveness under expected user traffic. |
+| **Medium Load** | Gradually increases user traffic. | Tests how performance scales when more users access the site simultaneously. |
+| **High Load** | Pushes the system to upper thresholds (heavy traffic). | Identifies the scalability limit and monitors response time and throughput. |
+| **Cool-down** | Gradual reduction of users after the high load phase. | Checks how efficiently the system recovers after intensive usage. |
+
+<br>
+
+### 🧠 <ins>Why Use Multiple Stages?</ins>
+
+- 📈 **Smooth scaling** — prevents overwhelming the system abruptly.  
+- 📈 **Identifies early bottlenecks** — shows when performance degradation starts.  
+- 📈 **Mimics real-world patterns** — simulates natural traffic growth and decline cycles.  
+- 📈 **Improves reliability analysis** — helps observe how the system behaves before, during, and after peak load.
+
+<br>
+
+## 💻 6. Scalability Test Scripts
+
+Below are two variations of the same scalability test, adjusted for different testing environments.
+
+
+
+### **(A) Local Execution – Up to 500 VUs**
+
+--> This version is executed via the k6 CLI locally.  
+--> There is no enforced VU limit, so it can simulate large-scale testing.
+
+```js
+import http from 'k6/http';
+import { check, sleep, group } from 'k6';
+import { Trend } from 'k6/metrics';
+
+// optional custom metric
+let pageLoadTrend = new Trend('page_load_time_ms');
+
+export let options = {
+  // stages define a ramp-up scalability profile
+  stages: [
+    { duration: '2m', target: 10 },     // warm-up
+    { duration: '3m', target: 100 },     // small load
+    { duration: '5m', target: 250 },    // medium load
+    { duration: '5m', target: 500 },    // high load (scale up)
+    { duration: '3m', target: 0 }       // scale down
+  ],
+  thresholds: {
+    // example pass/fail thresholds you can later adjust
+    'http_req_failed': ['rate<0.05'],       // <5% errors
+    'http_req_duration': ['p(95)<1500']     // 95% requests < 1500ms
+  },
+  // other settings
+  vus: 1
+};
+
+const BASE = 'https://blazedemo.com';
+
+export default function () {
+  group('homepage + search', function () {
+    let res1 = http.get(BASE + '/');
+    pageLoadTrend.add(res1.timings.duration);
+    check(res1, {
+      'homepage status 200': (r) => r.status === 200,
+    });
+    sleep(1 + Math.random() * 2);
+
+    // simulate searching flights => open reserve page
+    // We use a GET to /reserve.php with query params (this mimics selecting a flight)
+    // adjust params if needed after exploring the site manually
+    let res2 = http.get(BASE + '/reserve.php?fromPort=Paris&toPort=Buenos%20Aires');
+    pageLoadTrend.add(res2.timings.duration);
+    check(res2, {
+      'reserve page 200': (r) => r.status === 200,
+    });
+    sleep(Math.random() * 3);
+  });
+}
+```
+### **(B) Grafana Cloud Execution – Up to 100 VUs**
+
+--> This version of the scalability test is executed through Grafana Cloud’s k6 platform.  
+--> Grafana Cloud’s free tier limits concurrent virtual users (VUs) to 100, so this script is optimized within that constraint.  
+--> It streams test metrics directly to the Grafana Cloud dashboard for real-time visualization and analysis.
+
+```js
+import http from 'k6/http';
+import { check, sleep, group } from 'k6';
+import { Trend } from 'k6/metrics';
+
+// optional custom metric
+let pageLoadTrend = new Trend('page_load_time_ms');
+
+export let options = {
+  // stages define a ramp-up scalability profile
+  stages: [
+    { duration: '2m', target: 10 },     // warm-up
+    { duration: '3m', target: 30 },     // small load
+    { duration: '5m', target: 60 },    // medium load
+    { duration: '5m', target: 100 },    // high load (scale up)
+    { duration: '3m', target: 0 }       // scale down
+  ],
+  thresholds: {
+    // example pass/fail thresholds you can later adjust
+    'http_req_failed': ['rate<0.05'],       // <5% errors
+    'http_req_duration': ['p(95)<1500']     // 95% requests < 1500ms
+  },
+  // other settings
+  vus: 1
+};
+
+const BASE = 'https://blazedemo.com';
+
+export default function () {
+  group('homepage + search', function () {
+    let res1 = http.get(BASE + '/');
+    pageLoadTrend.add(res1.timings.duration);
+    check(res1, {
+      'homepage status 200': (r) => r.status === 200,
+    });
+    sleep(1 + Math.random() * 2);
+
+    // simulate searching flights => open reserve page
+    // We use a GET to /reserve.php with query params (this mimics selecting a flight)
+    // adjust params if needed after exploring the site manually
+    let res2 = http.get(BASE + '/reserve.php?fromPort=Paris&toPort=Buenos%20Aires');
+    pageLoadTrend.add(res2.timings.duration);
+    check(res2, {
+      'reserve page 200': (r) => r.status === 200,
+    });
+    sleep(Math.random() * 3);
+  });
+}
+```
+
