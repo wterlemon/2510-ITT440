@@ -188,20 +188,6 @@ The approach aligns with **performance engineering best practices** and shows Ar
 
 ---
 
-## 🎥 Test Execution and Video Walkthrough
-
-A short demonstration video accompanies this project.  
-It walks through the following steps:
-
-1. Setting up the test environment and YAML configuration.  
-2. Executing the Artillery test via terminal commands.  
-3. Reviewing live terminal output and interpreting metrics.  
-4. Viewing graphical analytics on Artillery Cloud.  
-
-🎬 **YouTube Demo Video:** [https://youtu.be/YOUR_VIDEO_LINK](https://youtu.be/YOUR_VIDEO_LINK)
-
----
-
 ## 🧾 Justification Based on Industry Standards
 
 The testing plan and conclusions align with **industry best practices** for performance testing:
@@ -232,6 +218,7 @@ Overall, this project successfully demonstrates how **Artillery** can be used to
 
 **📁 File:** `results/jsonplaceholder-load-test-report.json`  
 **🔗 Dashboard:** _Artillery Cloud – Interactive Metrics View_
+
 
 
 
