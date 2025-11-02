@@ -18,7 +18,7 @@
 
 
 ### <ins>Objective</ins>  
-The purpose of this project is to **design, execute, and critically analyze a performance test plan** for a real-world web application using **Grafana k6**. The test aims to evaluate the **scalability and stability** of the target web application and identifying potential bottlenecks under varying user loads.<br><br>
+The purpose of this project is to design, execute, and critically analyze a performance test plan for a real-world web application using Grafana k6. The test aims to evaluate the scalability and stability of the target web application and identifying potential bottlenecks under varying user loads.<br><br>
 
 
 ### 🌐 <ins>Target Web Application</ins>  
@@ -27,20 +27,20 @@ BlazeDemo is a public simple flight booking demonstration site often used for te
 
 
 ###  <ins>Hypothesis</ins>  
-It is hypothesized that **BlazeDemo** can handle moderate user loads (up to 100 concurrent users) with stable response times. However, beyond this threshold, the application may begin to experience **performance degradation** due to limited server capacity or backend response delays.
+It is hypothesized that **BlazeDemo** can handle moderate user loads (up to 100 concurrent users) with stable response times. However, beyond this threshold, the application may begin to experience performance degradation due to limited server capacity or backend response delays.
 
 --- 
 
 ## ⚙️ 2. Tool Selection Justification  
 
 ###  <ins>Selected Tool: Grafana k6 CLI</ins>
-**k6** is a modern, developer-centric load and performance testing tool built for both local and cloud-based execution. It was chosen for the following reasons:
+k6 is a modern, developer-centric load and performance testing tool built for both local and cloud-based execution. It was chosen for the following reasons:
 
 | No. | 🧩 **Feature** | 💡 **Reason for Selection** |
 |:---:|:----------------:|:----------------------------:|
 | 1 | Open-source & Developer-friendly | Freely available and highly customizable for performance testing without license cost. |
 | 2 | Scriptable in JavaScript | Enables writing realistic user scenarios using a language familiar to most developers. |
-| 3 | CLI & Cloud Options | Offers both local command-line and Grafana Cloud execution modes for flexibility. |
+| 3 | CLI & Cloud Options | Offers both local command line and Grafana Cloud execution modes for flexibility. |
 | 4 | Grafana Integration | Provides seamless visualization and monitoring of real-time metrics via Grafana dashboards. |
 | 5 | Automation & CI/CD Ready | Can be easily integrated into automated pipelines for continuous performance testing. |
 | 6 | Lightweight Design | Minimal resource usage, ideal for testing APIs and lightweight web applications. |
