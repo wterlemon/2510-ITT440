@@ -150,13 +150,22 @@ The test system processed 100.5K requests which resulted in fast successful resp
 
 ---
 
-## Recommendations For Further Testing
+## Recommendations
 
-- Scalability Testing: Gradually increase virtual users to identify maximum sustainable throughput and system limits.
-- Rate Limit Optimization: Adjust API rate limits and implement retry mechanisms to reduce HTTP 429 errors.
-- Endurance Testing: Run longer tests to assess stability, detect memory leaks, and monitor resource usage.
-- Backend Profiling: Analyze database, CPU, and network performance to locate bottlenecks.
-- Stress-to-Failure Test: Push the system beyond limits to evaluate recovery and failure behavior.
+### API Performance Improvement:
+- Raise rate-limit thresholds to reduce HTTP 429 errors.
+- Optimize backend handling for high request loads.
+- Add caching to speed up frequent API responses.
+
+### System Scalability Enhancement:
+- Apply load balancing to distribute traffic evenly.
+- Enable auto-scaling for dynamic resource usage.
+- Monitor performance using real-time dashboards.
+
+### Further Testing:
+- Run spike tests for sudden load increases.
+- Conduct soak tests for long-term stability.
+- Validate SLA targets for consistent response times.
 
 ---
 
