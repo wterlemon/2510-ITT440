@@ -111,5 +111,28 @@ export default function () {
 | **Data Received** | 650 kB | Total data received. |
 | **Data Sent** | 74 kB | Total data sent. |
 
+### Breakpoint Test Summary
+| **Metric** | **Result** | **Description / Analysis** |
+|-------------|------------|-----------------------------|
+| **Virtual Users (VUs)** | 250 | Simulated 250 users as configured. |
+| **Duration** | 2m 30s | Test executed for the planned duration. |
+| **Requests Completed** | 3,900 | All iterations finished successfully. |
+| **Average Response Time** | 2.94s | Higher than ideal, may need optimization. |
+| **95th Percentile (p95)** | 9.62s | Exceeds 2s target; performance issue detected. |
+| **Failed Requests** | 0.61% (24 of 3,900) | Within acceptable failure threshold. |
+| **Iteration Duration (avg)** | 4.03s | Indicates moderate server processing time. |
+| **Data Received** | 2.8 MB | Normal data throughput. |
+| **Data Sent** | 319 kB | Consistent network output. |
+
+
 **🧠 Analysis:**  
-The smoke test shows that **https://httpbin.org** handled 50 users stably with a low error rate and acceptable response times.
+Smoke test : **https://httpbin.org** handled 50 users stably with a low error rate and acceptable response times.
+<br>Breakpoint test :  The system handled the load stably, but response times exceeded the target, indicating a need for performance optimization.<br>
+
+## 📈 Visual Comparisons
+<img width="1562" height="980" alt="image" src="https://github.com/user-attachments/assets/5698bdfb-d961-4aa1-9e44-eee228f96108" />
+
+<br><img width="1566" height="980" alt="image" src="https://github.com/user-attachments/assets/3fd1032e-5d1e-43dd-ad58-31421e984ce6" /><br>
+
+
+
