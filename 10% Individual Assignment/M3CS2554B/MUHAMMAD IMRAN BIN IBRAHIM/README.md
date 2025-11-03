@@ -2,8 +2,52 @@
 
 <img width="1200" height="976" alt="K6_software_logo svg" src="https://github.com/user-attachments/assets/0d9ea5f2-686b-4115-944c-9ed9631744f5" />
 
+## Introduction to Performance Testing with k6
 
+What is Performance Testing?
+Performance testing is the process of evaluating how a system behaves under specific workload conditions. It helps identify bottlenecks, measure response times, and ensure your application can handle expected traffic.
 
+What is k6?
+k6 is an open-source, developer-centric performance testing tool developed by Grafana Labs. It's designed for testing the performance of APIs, microservices, and websites.
+
+## Objective 
+
+Why We Do Performance Testing
+Main Goals:
+Find how many users your website can handle
+
+Make sure your website doesn't crash when many people use it
+
+Check if your website loads fast enough
+
+Find problems before real users do
+
+What We Want to Know:
+How fast does your website load?
+
+Can 100 people use it at the same time?
+
+What happens when 1000 people visit?
+
+Does it work the same way every time?
+
+What We Test:
+APIs (the behind-the-scenes parts)
+
+Websites (what users see)
+
+Mobile app backends
+
+Database speed
+
+What We Find:
+Slow pages that need fixing
+
+Parts that break under heavy load
+
+How much traffic your site can handle
+
+When you need better servers
 
 ## Result of load Test where the number of users ramps up (Table)
 
