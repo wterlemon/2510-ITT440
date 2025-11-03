@@ -52,7 +52,7 @@ Why We Do Performance Testing
 
 
 
-## Result of load Test where the number of users ramps up (Table)
+## 📊 Result of load Test where the number of users ramps up (Table)
 
 | Section | Metric | Result | Explanation |
 |---------|--------|--------|-------------|
@@ -82,7 +82,7 @@ Why We Do Performance Testing
 ![Screenshot 2025-11-01 135811](https://github.com/user-attachments/assets/ac34b07e-99c3-4b13-9712-38170125a2c9)
 
 
-## Result of Stress Test (Table)
+## 📊 Result of Stress Test (Table)
 
 
 
