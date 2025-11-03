@@ -111,3 +111,27 @@ Why We Do Performance Testing
 
 
 ![Screenshot 2025-11-01 133907](https://github.com/user-attachments/assets/92f2db85-f68e-482f-9f75-f0450f739807)
+
+
+
+## ⚙️ Technical Recommendations
+
+| Metric                | Recommended Target | Why It Matters                       |
+| --------------------- | ------------------ | ------------------------------------ |
+| **Avg Response Time** | ≤ 300 ms           | Keeps user experience snappy         |
+| **p95 Response Time** | ≤ 800 ms           | Ensures most users get quick replies |
+| **Error Rate**        | ≤ 1%               | Guarantees stability under stress    |
+| **CPU Usage**         | ≤ 80% under peak   | Prevents overload                    |
+| **Memory Growth**     | < 5% per hour      | Avoids leaks over long tests         |
+
+
+🏁 Conclusion 
+
+The web application performed smoothly during the 1-minute load test, showing fast response times and no errors.
+During the 20-minute stress test, the system remained stable and responsive, with only slight latency increases under heavy load.
+Overall, the results indicate that the application is well-optimized for normal traffic and handles stress conditions effectively.
+Further testing with higher user loads and longer durations is recommended to confirm long-term stability and scalability.
+
+## 🎬 Youtube Demo 
+
+https://youtu.be/1cTuM4IhvWE?si=GjnLZfYK_krPenmc
