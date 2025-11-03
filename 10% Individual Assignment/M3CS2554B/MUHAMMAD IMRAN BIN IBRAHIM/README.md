@@ -125,7 +125,7 @@ Why We Do Performance Testing
 | **Memory Growth**     | < 5% per hour      | Avoids leaks over long tests         |
 
 
-🏁 Conclusion 
+## 🏁 Conclusion 
 
 The web application performed smoothly during the 1-minute load test, showing fast response times and no errors.
 During the 20-minute stress test, the system remained stable and responsive, with only slight latency increases under heavy load.
