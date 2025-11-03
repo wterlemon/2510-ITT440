@@ -2,7 +2,7 @@
 
 ## 📖 Overview
 This project demonstrates a basic **load testing** process on a WordPress website using **BlazeMeter (based on Apache JMeter)**.  
-The goal of this test is to analyze how a WordPress site performs under different user loads — focusing on response time, throughput, and error rate.
+The goal of this test is to analyze how a WordPress site performs under different user loads — focusing on response time, throughput, and error rate
 
 ---
 
