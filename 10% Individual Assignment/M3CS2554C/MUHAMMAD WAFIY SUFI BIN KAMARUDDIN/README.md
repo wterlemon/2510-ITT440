@@ -1,4 +1,4 @@
-<img width="1841" height="1125" alt="total_requests_per_second_1761750658 657" src="https://github.com/user-attachments/assets/9ba69133-d59d-4198-bf26-081c2c25cf46" /># Analyzing Banking Web Application Stability Through Spike Testing
+# Analyzing Banking Web Application Stability Through Spike Testing
 
 Name: MUHAMMAD WAFIY SUFI BIN KAMARUDDIN
 Group: M3CS2554C
@@ -36,11 +36,16 @@ The Spike Test focus on
 | 11:10 PM | Reaches the maximum load of ~200 users. | Response times (especially 95th percentile) shoot up to over 2,000 ms (2 seconds).| - Failures/s (Red): Spikes sharply from 0 to over 60 failures/second. |
 | 11:10:20 PM – 11:11 PM | Load is held steady at ~200 users. | Response times drop suddenly. This is misleading; it's low because requests are failing instantly, not succeeding quickly.| - Failures/s (Red): Stays high, showing the system is continuously failing and cannot recover under this load. |
 
+# Locust Graph Result
+  <img width="1841" height="1125" alt="total_requests_per_second_1761750658 657" src="https://github.com/user-attachments/assets/29d97a47-b335-477f-9168-39afd6069f0c" />
+
 # Test Summary 1000 User 
 | Time Period  | Number Of User | Response time (ms) | Total request Per Second |
 |-----------|-----------|-----------|-----------|
 | 11:02 | 200 User | 0 ms | - 50th Percentile (Orange): Stable and very low (near 0 ms). - 95th Percentile (Purple): Stable and very low (near 0 ms). - Both lines are flat, showing the system is handling the load easily. | RPS (Green) : Low and Stable / Failure (Red): Flat at 0 and no errors.
 | 11:19 | 1000 Users | 50th Percentile (Orange): Jumps to an unstable ~1,000-2,000 ms (1-2 seconds). | The huge gap shows a very inconsistent user experience. |
 
-  <img width="1841" height="1125" alt="total_requests_per_second_1761750658 657" src="https://github.com/user-attachments/assets/29d97a47-b335-477f-9168-39afd6069f0c" />
+# Locust Graph Result For 1000 User
 
+
+<img width="1841" height="1125" alt="total_requests_per_second_1761751165 101" src="https://github.com/user-attachments/assets/d6f172fb-d5d4-4bdf-b5a3-445f85c0e691" />
