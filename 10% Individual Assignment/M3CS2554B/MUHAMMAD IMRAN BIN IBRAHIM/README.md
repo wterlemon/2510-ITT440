@@ -13,41 +13,36 @@ k6 is an open-source, developer-centric performance testing tool developed by Gr
 ## Objective 
 
 Why We Do Performance Testing
+
 Main Goals:
-Find how many users your website can handle
 
-Make sure your website doesn't crash when many people use it
+1.Find how many users your website can handle
 
-Check if your website loads fast enough
+2.Make sure your website doesn't crash when many people use it
 
-Find problems before real users do
+3.Check if your website loads fast enough
+
+4.Find problems before real users do
 
 What We Want to Know:
-How fast does your website load?
 
-Can 100 people use it at the same time?
+1.How fast does your website load?
 
-What happens when 1000 people visit?
+2.Can 100 people use it at the same time?
 
-Does it work the same way every time?
+3.What happens when 1000 people visit?
 
-What We Test:
-APIs (the behind-the-scenes parts)
-
-Websites (what users see)
-
-Mobile app backends
-
-Database speed
+4.Does it work the same way every time?
 
 What We Find:
-Slow pages that need fixing
 
-Parts that break under heavy load
+1.Slow pages that need fixing
 
-How much traffic your site can handle
+2.Parts that break under heavy load
 
-When you need better servers
+3.How much traffic your site can handle
+
+4.When you need better servers
 
 ## Result of load Test where the number of users ramps up (Table)
 
