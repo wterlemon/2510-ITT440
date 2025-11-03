@@ -1,6 +1,6 @@
 # MUHAMMAD IMRAN BIN IBRAHIM
 
-<img width="1200" height="976" alt="K6_software_logo svg" src="https://github.com/user-attachments/assets/0d9ea5f2-686b-4115-944c-9ed9631744f5" />
+<img width="900" height="700" alt="K6_software_logo svg" src="https://github.com/user-attachments/assets/0d9ea5f2-686b-4115-944c-9ed9631744f5" />
 
 ## Introduction to Performance Testing with k6
 
