@@ -4,11 +4,10 @@
 
 ## Introduction to Performance Testing with k6
 
-What is Performance Testing?
-Performance testing is the process of evaluating how a system behaves under specific workload conditions. It helps identify bottlenecks, measure response times, and ensure your application can handle expected traffic.
-
-What is k6?
-k6 is an open-source, developer-centric performance testing tool developed by Grafana Labs. It's designed for testing the performance of APIs, microservices, and websites.
+| **Section**                         | **Description**                                                                                                                                                                                                                       |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 💡 **What is Performance Testing?** | Performance testing is the process of evaluating how a system behaves under specific workload conditions. It helps identify bottlenecks, measure response times, and ensure your application can handle expected traffic.             |
+| ⚙️ **What is k6?**                  | k6 is an open-source, developer-centric performance testing tool developed by Grafana Labs. It’s designed for testing the performance of APIs, microservices, and websites.           
 
 ## Objective 
 
