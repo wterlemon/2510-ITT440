@@ -1,10 +1,5 @@
 # 💻 Analyzing Banking Web Application Stability Through Spike Testing  
 
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/your-repo?style=flat-square&color=brightgreen)
-![Status](https://img.shields.io/badge/Status-Completed-blue?style=flat-square)
-![Tool](https://img.shields.io/badge/Tool-Locust-orange?style=flat-square)
-![Website](https://img.shields.io/badge/Tested_on-Parabank-lightgrey?style=flat-square)
-
 ---
 
 ## 👤 Author Information
@@ -112,5 +107,5 @@ The Spike Test focuses on:
 ---
 
 <p align="center">
-  🚀 *End of Report — Banking Web App Stability Analysis by Wafiy Sufi*
+  🚀 *Video Link (Coming Soon) — Banking Web App Stability Analysis by Wafiy Sufi*
 </p>
