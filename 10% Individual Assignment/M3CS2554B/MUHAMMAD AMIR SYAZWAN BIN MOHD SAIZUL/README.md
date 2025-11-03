@@ -108,7 +108,7 @@ Running 30s test @ https://httpbin.org/get
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency     85.32ms   10.14ms 201.47ms   90%
     Req/Sec     295.23    30.21   340.00     85%
-35320 requests in 30.02s, 25.4MB read
+  35320 requests in 30.02s, 25.4MB read
 Requests/sec:   1175.12
 Transfer/sec:      0.85MB
 ```
