@@ -1,4 +1,7 @@
-# Analyzing Banking Web Application Stability Through Spike Testing
+<img width="1841" height="1125" alt="total_requests_per_second_1761750658 657" src="https://github.com/user-attachments/assets/9ba69133-d59d-4198-bf26-081c2c25cf46" /># Analyzing Banking Web Application Stability Through Spike Testing
+
+Name: MUHAMMAD WAFIY SUFI BIN KAMARUDDIN
+Group: M3CS2554C
 
 # Introduction
 This report presents the results of spike testing conducted on the Parabank web application — a dummy online banking site used for testing purposes. The goal is to observe how the system handles sudden increases in user load and how it recovers once the traffic drops.
@@ -38,3 +41,6 @@ The Spike Test focus on
 |-----------|-----------|-----------|-----------|
 | 11:02 | 200 User | 0 ms | - 50th Percentile (Orange): Stable and very low (near 0 ms). - 95th Percentile (Purple): Stable and very low (near 0 ms). - Both lines are flat, showing the system is handling the load easily. | RPS (Green) : Low and Stable / Failure (Red): Flat at 0 and no errors.
 | 11:19 | 1000 Users | 50th Percentile (Orange): Jumps to an unstable ~1,000-2,000 ms (1-2 seconds). | The huge gap shows a very inconsistent user experience. |
+
+  <img width="1841" height="1125" alt="total_requests_per_second_1761750658 657" src="https://github.com/user-attachments/assets/29d97a47-b335-477f-9168-39afd6069f0c" />
+
