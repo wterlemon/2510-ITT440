@@ -33,7 +33,7 @@ The goal is to simulate concurrent users accessing the site and analyze the syst
 |------|--------------|
 | **wrk** | High-performance open-source HTTP benchmarking tool designed to generate heavy concurrent loads using threads. |
 | **Linux Terminal** | Command-line interface to execute wrk commands and analyze outputs. |
-| **httpbin.org** | Public API that returns HTTP request and response data — ideal for testing purposes. |
+| **httpbin.org** | Public API that returns HTTP request and response data, ideal for testing purposes. |
 
 ---
 
