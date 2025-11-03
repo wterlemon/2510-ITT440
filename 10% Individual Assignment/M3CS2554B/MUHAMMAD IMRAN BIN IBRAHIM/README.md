@@ -31,6 +31,17 @@ Why We Do Performance Testing
 | 3️⃣                         | How much traffic your site can handle                        |
 | 4️⃣                         | When you need better servers                                 |
 
+## 🧰 Test Environment Overview
+
+| Component                   | Tool / Platform                                                   | Purpose                                                        |
+| --------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| 💻 **Load Generator**       | **K6 running on Kali Linux (VirtualBox)**                         | Used to simulate multiple virtual users and send HTTP requests |
+| 📊 **Monitoring Dashboard** | **Grafana** + **InfluxDB**                                        | Collects and visualizes K6 test metrics in real-time           |
+| 🌍 **Target System**        | Your **web application / API** (status = 200 OK for all requests) | The app being tested, hosted locally or remotely               |
+| 🧩 **Data Source**          | InfluxDB v1.x (`http://localhost:8086`)                           | Stores K6 output metrics for Grafana visualization             |
+| 🧱 **Host Machine**         | Likely Windows 10 (VirtualBox host)                               | Runs both Grafana (via browser) and Kali VM for load testing   |
+
+
 
 ## Result of load Test where the number of users ramps up (Table)
 
