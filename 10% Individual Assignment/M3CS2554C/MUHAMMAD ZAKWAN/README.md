@@ -55,7 +55,7 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 | Ramp-Up Period               | 60 Second (All users use the system in one period)       |
  
 
-# 🔐 KEY FEATURES OF JMETER (Related to Spike Testing)
+# 🔐 KEY FEATURES OF JMETER (Related to load testing)
 
 - 🚀 **Custom Thread Groups** (set amount of users)  
   can simulate heavy traffic loads using custom thread groups.
@@ -75,17 +75,17 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 |--------------------------------|-----------------------------|
 |<img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/0f99e64d-46cb-4961-8ad6-e16831880073" /> | <img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/04e10d06-5eff-405f-bab3-3c3e3e2f9646" />|
 
-| HTTP request   |  **After spike throughput (5% of 180 users)**   |
+| HTTP request   |  **Constant timer**   |
 |-------------------------------|---------------------------------|
-| <img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/fcf22ab5-d921-4a88-88ca-8796ba9174ce" />| <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/10104827-a3d7-495a-87b9-97bfc1d5c234" /> |
+| <img width="414" height="254" alt="image" src="https://github.com/user-attachments/assets/fcf22ab5-d921-4a88-88ca-8796ba9174ce" />| <img width="414" height="240" alt="image" src="https://github.com/user-attachments/assets/db24f311-cecd-42f5-b25f-8d45f6787985" />|
 
-| **Summary report**   |  **Aggregate report**   |
+| **Aggregate graph** <br> (average response time)   |  Response time graph <br> (response time changes over time)   |
 |-------------------------------|---------------------------------|
-| <img width="402" height="241" alt="image" src="https://github.com/user-attachments/assets/9c8c7cfc-7b6c-4e07-a589-cb18ba04ef49" /> | <img width="404" height="229" alt="image" src="https://github.com/user-attachments/assets/07e64cdb-0095-476a-90f5-92c79e9ec583" /> |
+| Normal: (2,772 Milliseconds)<br> <img width="412" height="239" alt="image" src="https://github.com/user-attachments/assets/fe33ea69-5e09-4ef5-ac70-702dbc06614e" /> <br> Heavy load: (5,138 Milliseconds) <br> <img width="412" height="239" alt="image" src="https://github.com/user-attachments/assets/84c8a01a-7baa-4286-991e-27f807fe927f" />| Normal: (system got faster and more stable over time) <br> <img width="413" height="268" alt="image" src="https://github.com/user-attachments/assets/b60451dd-1d5b-463c-a85a-3ab2efde7e81" /> <br> Heavy load: (System unstable)<br> <img width="413" height="268" alt="image" src="https://github.com/user-attachments/assets/e690a681-c5e9-4760-82fc-b0d52b981cb1" /> |
 
-| **Response time graph <br> (◼️Before spike, 🟥During spike, 🟩After spike)**   |  **Status results in table**   |
+| Summary report (from JMeter)   |  **Status results in table**   |
 |-------------------------------|---------------------------------|
-| <img width="402" height="245" alt="image" src="https://github.com/user-attachments/assets/58625624-3954-44c1-ae70-ad3051dad0f2" /> | <img width="402" height="250" alt="image" src="https://github.com/user-attachments/assets/40a0aa11-6538-406a-9330-b460f3e59890" />|
+| <img width="412" height="250" alt="image" src="https://github.com/user-attachments/assets/9ca06f9f-48f4-4dde-a782-60fbd7b4e95c" />| <img width="402" height="250" alt="image" src="https://github.com/user-attachments/assets/40a0aa11-6538-406a-9330-b460f3e59890" /> <br>  <br> |
 
 
 # 📊INTERPRETATION OF RESULT & IDENTIFIED BOTTLENECKS
