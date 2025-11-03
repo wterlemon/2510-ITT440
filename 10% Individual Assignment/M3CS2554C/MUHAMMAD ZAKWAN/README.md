@@ -1,7 +1,8 @@
 <h1 align="center"># WEB PERFORMANCE TESTING</h1>
 <img width="1024" height="293" alt="LOAD-TESTING-ON-JSONPLACEHOLD-03-11-2025" src="https://github.com/user-attachments/assets/d112f20d-b2bf-4df2-9774-605e2d33270c" />
 <br>
-## 🧑‍🎓 Student Information 
+
+##🧑‍🎓 Student Information 
 
 | Field       | Details             | 
 |-------------|---------------------|
@@ -89,13 +90,28 @@ I'm using Ubuntu Linux as the operating system to host and execute my performanc
 
 
 # 📊INTERPRETATION OF RESULT & IDENTIFIED BOTTLENECKS
-ASDFG
+**Performance comparison: (Normal vs Heavy load)**
+| Metric/<br>Graph type | 🟢 Normal load  | 🔴 Heavy load |
+|-------------------------------|---------------------------------|-----------|
+| Aggregate<br> response time | 🐇 2,772 ms<br>(fast & efficient) | 🐢5,138 ms<br>(slower)|
+| Response<br>time trend | 📉 Steady decrease over time <br>(system stabilized) | 📈 Sharp spike <br>(Unstable) |
+| System behavior | 🧊 Cold start,<br> then smooth recovery | 🔥 Overload event,<br> temporary bottleneck |
+
+**Bottlenecks:**
+| Bottlenecks type | Evidence from graph  | Interpretation |
+|-------------------------------|---------------------------------|--------------|
+|🔺 Cold start | High initial response<br> times that gradually improve | Backend warming up,<br> caching delay |
+|🔸 Unexpected bottleneck | Response time suddent increase to<br> 24,000 ms, then fast recover | Temporary overload |
+|◾ Average latency | Aggregate graph of response time shows<br> a big different between 2,772 ms<br> for normal load and 5,138 ms for heavy load| Early delays significantly<br> impacted overall performance |
 
 # 🆕RECOMMENDATION FOR IMPROVEMENT
-TYUI
+🔧 Server & Backend
+- Enable warm-up routines to reduce cold start delays
+- Optimize database queries and add indexing for faster data access
+- Use caching for frequently accessed data to speed up responses
+
 
 # 🗒️ CONCLUSION
-LALALA
-I
+The [JSONPlaceholder](https://jsonplaceholder.typicode.com/) performs efficiently under normal load but shows signs of latency and instability under heavy load, highlighting the need for backend optimization and better load management.
 
-
+<h1 align="right">By: Muhammad Zakwan (CDCS2554C)</h1>
