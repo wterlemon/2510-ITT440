@@ -14,35 +14,24 @@ k6 is an open-source, developer-centric performance testing tool developed by Gr
 
 Why We Do Performance Testing
 
-Main Goals:
+| **Category**                | **Details**                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| 🎯 **Main Goals**           |                                                              |
+| 1️⃣                         | Find how many users your website can handle                  |
+| 2️⃣                         | Make sure your website doesn't crash when many people use it |
+| 3️⃣                         | Check if your website loads fast enough                      |
+| 4️⃣                         | Find problems before real users do                           |
+| 🔍 **What We Want to Know** |                                                              |
+| 1️⃣                         | How fast does your website load?                             |
+| 2️⃣                         | Can 100 people use it at the same time?                      |
+| 3️⃣                         | What happens when 1000 people visit?                         |
+| 4️⃣                         | Does it work the same way every time?                        |
+| 🧩 **What We Find**         |                                                              |
+| 1️⃣                         | Slow pages that need fixing                                  |
+| 2️⃣                         | Parts that break under heavy load                            |
+| 3️⃣                         | How much traffic your site can handle                        |
+| 4️⃣                         | When you need better servers                                 |
 
-1.Find how many users your website can handle
-
-2.Make sure your website doesn't crash when many people use it
-
-3.Check if your website loads fast enough
-
-4.Find problems before real users do
-
-What We Want to Know:
-
-1.How fast does your website load?
-
-2.Can 100 people use it at the same time?
-
-3.What happens when 1000 people visit?
-
-4.Does it work the same way every time?
-
-What We Find:
-
-1.Slow pages that need fixing
-
-2.Parts that break under heavy load
-
-3.How much traffic your site can handle
-
-4.When you need better servers
 
 ## Result of load Test where the number of users ramps up (Table)
 
