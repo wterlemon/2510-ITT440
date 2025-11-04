@@ -107,5 +107,5 @@ The Spike Test focuses on:
 ---
 
 <p align="center">
-  🚀 *Video Link (Coming Soon) — Banking Web App Stability Analysis by Wafiy Sufi*
+  🚀 *[Video Link (Coming Soon)](https://youtu.be/QZkTbFNKAcM) — Banking Web App Stability Analysis by Wafiy Sufi*
 </p>
